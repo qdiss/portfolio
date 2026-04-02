@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Adis Klobodanovic — Full-Stack Developer</title>
+
+    <!-- SEO -->
+    <meta
+      name="description"
+      content="Full-stack developer specialising in React, Next.js & Node. I build fast, clean web apps that ship — not just look good in Figma."
+    />
+    <meta name="author" content="Adis Klobodanovic" />
+    <link rel="canonical" href="https://adis.dev" />
+
+    <!-- Open Graph -->
+    <meta
+      property="og:title"
+      content="Adis Klobodanovic — Full-Stack Developer"
+    />
+    <meta
+      property="og:description"
+      content="Full-stack developer. React, Next.js, Node. Building things people actually use."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://adis.dev" />
+    <meta property="og:image" content="https://adis.dev/og-image.png" />
+
+    <!-- Twitter card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Adis Klobodanovic — Full-Stack Developer"
+    />
+    <meta
+      name="twitter:description"
+      content="Full-stack developer. React, Next.js, Node. Building things people actually use."
+    />
+    <meta name="twitter:image" content="https://adis.dev/og-image.png" />
+
+    <!-- Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Plausible Analytics (privacy-friendly, no cookies) -->
+    <!-- Replace adis.dev with your actual domain after deploying -->
+    <script
+      defer
+      data-domain="adis.dev"
+      src="https://plausible.io/js/script.js"
+    ></script>
+    <script>
+      // Google Consent Mode V2 - Default denied
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+
+      gtag("consent", "default", {
+        ad_storage: "denied",
+        ad_user_data: "denied",
+        ad_personalization: "denied",
+        analytics_storage: "denied",
+        region: [
+          "AT",
+          "BE",
+          "BG",
+          "HR",
+          "CY",
+          "CZ",
+          "DK",
+          "EE",
+          "FI",
+          "FR",
+          "DE",
+          "GR",
+          "HU",
+          "IS",
+          "IE",
+          "IT",
+          "LV",
+          "LI",
+          "LT",
+          "LU",
+          "MT",
+          "NL",
+          "NO",
+          "PL",
+          "PT",
+          "RO",
+          "SK",
+          "SI",
+          "ES",
+          "SE",
+          "GB",
+          "CH",
+        ],
+      });
+
+      // Google Tag Manager
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-XXXXXXX"); // Zamijeni sa svojim GTM ID
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

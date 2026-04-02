@@ -1,0 +1,32 @@
+{
+  "categories": [
+    {
+      "id": "essential",
+      "name": "Essential Cookies",
+      "description": "Neophodni za funkcionisanje sajta. Ne mogu se isključiti.",
+      "required": true,
+      "cookies": ["session", "csrf", "auth"]
+    },
+    {
+      "id": "analytics",
+      "name": "Analytics Cookies",
+      "description": "Pomažu nam da razumijemo kako posjetioci koriste sajt.",
+      "required": false,
+      "cookies": ["_ga", "_gid", "_gat"]
+    },
+    {
+      "id": "functional",
+      "name": "Functional Cookies",
+      "description": "Pamte vaše preferencije za bolje iskustvo.",
+      "required": false,
+      "cookies": ["language", "theme", "preferences"]
+    },
+    {
+      "id": "marketing",
+      "name": "Marketing Cookies",
+      "description": "Koriste se za prikazivanje relevantnih reklama.",
+      "required": false,
+      "cookies": ["_fbp", "_gcl", "personalization"]
+    }
+  ]
+}
