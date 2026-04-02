@@ -1,9 +1,8 @@
 import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
-import { useTheme } from "../context/ThemeContext";
+import { useLang } from "../context/LangContext";
 import Nav from "../components/Nav";
 
-// ─── Scroll progress (same as App) ───────────────────────────────────────────
 function ScrollProgress() {
   const [p, setP] = useState(0);
   useEffect(() => {
@@ -33,7 +32,6 @@ function ScrollProgress() {
   );
 }
 
-// ─── Animated entry ───────────────────────────────────────────────────────────
 function useReveal() {
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -56,13 +54,25 @@ function useReveal() {
   }, []);
 }
 
-// ─── Contact form (same as CTA, self-contained) ───────────────────────────────
 const EMAILJS_SERVICE_ID = "YOUR_SERVICE_ID";
 const EMAILJS_TEMPLATE_ID = "YOUR_TEMPLATE_ID";
 const EMAILJS_PUBLIC_KEY = "YOUR_PUBLIC_KEY";
 const BUDGETS = ["< $1k", "$1k – $3k", "$3k – $8k", "$8k+", "Not sure yet"];
 
-function ContactForm() {
+const inputStyle = {
+  width: "100%",
+  padding: "0.8rem 1rem",
+  borderRadius: "10px",
+  border: "1px solid var(--border)",
+  background: "var(--card-bg, var(--bg2))",
+  color: "var(--text)",
+  fontSize: "0.9rem",
+  fontFamily: "inherit",
+  transition: "border-color 0.2s",
+  boxSizing: "border-box",
+};
+
+function ContactForm({ t }) {
   const formRef = useRef(null);
   const [sending, setSending] = useState(false);
   const [done, setDone] = useState(false);
@@ -119,10 +129,10 @@ function ContactForm() {
             marginBottom: "0.5rem",
           }}
         >
-          Message received.
+          {t.hire_msg_received_title}
         </h3>
         <p style={{ color: "var(--muted)", fontWeight: 300 }}>
-          I'll reply within 24 hours. Usually sooner.
+          {t.hire_msg_received_sub}
         </p>
       </div>
     );
@@ -139,21 +149,21 @@ function ContactForm() {
         <input
           name="name"
           type="text"
-          placeholder="Your name"
+          placeholder={t.hire_name}
           required
           style={inputStyle}
         />
         <input
           name="from_email"
           type="email"
-          placeholder="your@email.com"
+          placeholder={t.hire_email}
           required
           style={inputStyle}
         />
       </div>
       <select name="budget" required defaultValue="" style={inputStyle}>
         <option value="" disabled>
-          Budget range
+          {t.hire_budget}
         </option>
         {BUDGETS.map((b) => (
           <option key={b} value={b}>
@@ -163,7 +173,7 @@ function ContactForm() {
       </select>
       <textarea
         name="message"
-        placeholder="Tell me about your project — what it does, who it's for, any deadline."
+        placeholder={t.hire_message}
         required
         style={{ ...inputStyle, minHeight: "130px", resize: "vertical" }}
       />
@@ -179,26 +189,11 @@ function ContactForm() {
           opacity: sending ? 0.6 : 1,
         }}
       >
-        {sending ? "Sending..." : "Send message →"}
+        {sending ? t.hire_sending : t.hire_send}
       </button>
     </form>
   );
 }
-
-const inputStyle = {
-  width: "100%",
-  padding: "0.8rem 1rem",
-  borderRadius: "10px",
-  border: "1px solid var(--border)",
-  background: "var(--card-bg, var(--bg2))",
-  color: "var(--text)",
-  fontSize: "0.9rem",
-  fontFamily: "inherit",
-  transition: "border-color 0.2s",
-  boxSizing: "border-box",
-};
-
-// ─── Page sections ─────────────────────────────────────────────────────────────
 
 const PACKAGES = [
   {
@@ -317,8 +312,8 @@ const WONT_DO = [
   "Taking on more than I can deliver well",
 ];
 
-// ─── Main component ────────────────────────────────────────────────────────────
 export default function HirePage() {
+  const { t } = useLang();
   useReveal();
 
   useEffect(() => {
@@ -347,7 +342,7 @@ export default function HirePage() {
         .steps-list { display: flex; flex-direction: column; gap: 0; margin-top: 2.5rem; }
         .step-row { display: grid; grid-template-columns: 56px 1fr; gap: 1.5rem; padding: 1.75rem 0; border-bottom: 1px solid var(--border); align-items: start; }
         .step-row:last-child { border-bottom: none; }
-        .step-num { font-family: var(--font-display); font-size: 0.75rem; color: var(--accent); font-weight: 700; letter-spacing: 0.08em; padding-top: 0.3rem; }
+        .step-num { font-family: var(--font-display); font-size: 1rem; color: var(--accent); font-weight: 700; letter-spacing: 0.08em; padding-top: 0.3rem; }
         .step-title { font-family: var(--font-display); font-size: 1.05rem; font-weight: 600; letter-spacing: -0.02em; margin-bottom: 0.4rem; }
         .step-body { color: var(--muted); font-size: 0.9rem; font-weight: 300; line-height: 1.75; }
         .needs-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; margin-top: 2.5rem; }
@@ -360,6 +355,14 @@ export default function HirePage() {
         .wont-list li::before { content: '—'; color: var(--muted2); flex-shrink: 0; }
         .hire-form-wrap { background: var(--bg2); border: 1px solid var(--border); border-radius: 24px; padding: 2.5rem; }
         .hire-hero-glow { position: absolute; top: -100px; right: -80px; width: 500px; height: 500px; background: radial-gradient(circle, rgba(200,240,96,0.07) 0%, transparent 65%); pointer-events: none; }
+        /* Light mode input fixes */
+        [data-theme="light"] input, [data-theme="light"] select, [data-theme="light"] textarea {
+          background: #fff !important;
+          color: #111 !important;
+          border-color: rgba(0,0,0,0.15) !important;
+        }
+        [data-theme="light"] input::placeholder, [data-theme="light"] textarea::placeholder { color: #888 !important; }
+        [data-theme="light"] .need-card, [data-theme="light"] .hire-form-wrap, [data-theme="light"] .pkg-card { background: #fff; border-color: rgba(0,0,0,0.1); }
         @media(max-width: 768px) {
           .pkg-grid { grid-template-columns: 1fr; }
           .needs-grid { grid-template-columns: 1fr; }
@@ -372,7 +375,7 @@ export default function HirePage() {
       <ScrollProgress />
       <Nav />
 
-      {/* ── Hero ── */}
+      {/* Hero */}
       <section
         style={{
           minHeight: "60vh",
@@ -389,7 +392,7 @@ export default function HirePage() {
         <div className="hire-hero-glow" />
         <div className="hero-tag reveal">
           <div className="pulse-dot" />
-          <span>Currently taking new projects</span>
+          <span>{t.hire_tag}</span>
         </div>
         <h1
           style={{
@@ -402,7 +405,7 @@ export default function HirePage() {
           }}
           className="reveal"
         >
-          Let's build
+          {t.hire_h1_1}
           <br />
           <em
             style={{
@@ -411,7 +414,7 @@ export default function HirePage() {
               fontWeight: 400,
             }}
           >
-            something real.
+            {t.hire_h1_2}
           </em>
         </h1>
         <p
@@ -425,26 +428,24 @@ export default function HirePage() {
           }}
           className="reveal"
         >
-          This page is for people who want to understand how I work before
-          reaching out. Scroll through, see if it fits. The form is at the
-          bottom.
+          {t.hire_intro}
         </p>
         <div className="reveal">
           <a href="#form" className="btn-primary">
-            Skip to form →
+            {t.hire_skip}
           </a>
         </div>
       </section>
 
       <div className="hire-divider" />
 
-      {/* ── What's included in every project ── */}
+      {/* What's included */}
       <div className="hire-section">
-        <div className="section-label reveal">Standard</div>
+        <div className="section-label reveal">{t.hire_std_label}</div>
         <h2 className="section-title reveal">
-          What's included
+          {t.hire_std_title_1}
           <br />
-          <em>in every project</em>
+          <em>{t.hire_std_title_2}</em>
         </h2>
         <p
           style={{
@@ -456,8 +457,7 @@ export default function HirePage() {
           }}
           className="reveal"
         >
-          Regardless of scope or price. These aren't upsells — they're the
-          baseline.
+          {t.hire_std_sub}
         </p>
         <div
           style={{
@@ -541,13 +541,13 @@ export default function HirePage() {
 
       <div className="hire-divider" />
 
-      {/* ── Packages ── */}
+      {/* Packages */}
       <div className="hire-section-wide">
-        <div className="section-label reveal">Pricing</div>
+        <div className="section-label reveal">{t.hire_pricing_label}</div>
         <h2 className="section-title reveal">
-          Packages
+          {t.hire_pricing_title_1}
           <br />
-          <em>& what they cost</em>
+          <em>{t.hire_pricing_title_2}</em>
         </h2>
         <p
           style={{
@@ -558,8 +558,7 @@ export default function HirePage() {
           }}
           className="reveal"
         >
-          Fixed-price, not hourly. You know the number before anything starts.
-          Scope changes get a change order — no silent billing.
+          {t.hire_pricing_sub}
         </p>
         <div className="pkg-grid reveal">
           {PACKAGES.map((pkg) => (
@@ -595,13 +594,13 @@ export default function HirePage() {
 
       <div className="hire-divider" />
 
-      {/* ── Selected work ── */}
+      {/* Selected work */}
       <div className="hire-section-wide">
-        <div className="section-label reveal">Work</div>
+        <div className="section-label reveal">{t.hire_work_label}</div>
         <h2 className="section-title reveal">
-          Things I've
+          {t.hire_work_title_1}
           <br />
-          <em>actually built</em>
+          <em>{t.hire_work_title_2}</em>
         </h2>
         <p
           style={{
@@ -612,7 +611,7 @@ export default function HirePage() {
           }}
           className="reveal"
         >
-          Not side projects. Client work and shipped products.
+          {t.hire_work_sub}
         </p>
         <div
           style={{
@@ -627,18 +626,18 @@ export default function HirePage() {
             {
               emoji: "🏥",
               tags: ["Next.js", "TypeScript", "Full-stack"],
-              title: "MediBook — Appointment Booking",
-              desc: "Patients were calling to book appointments. Built a self-scheduling system with real-time availability, confirmation emails, and a UI that works on any phone.",
+              title: t.p1_title,
+              desc: t.p1_desc,
               href: "https://medibook-pi.vercel.app/",
-              link: "View project →",
+              link: t.proj_view,
             },
             {
               emoji: "🏠",
               tags: ["Next.js", "TailwindCSS", "Client project"],
-              title: "Dalmatinske Vizure",
-              desc: "Real estate client. Needed a site as good-looking as the properties. Built for speed, visual clarity, and converting visitors into enquiries.",
+              title: t.p2_title,
+              desc: t.p2_desc,
               href: "https://dalmatinske-vizure.com",
-              link: "View live →",
+              link: t.proj_live,
             },
           ].map((p) => (
             <a
@@ -653,9 +652,9 @@ export default function HirePage() {
               </div>
               <div className="project-body">
                 <div className="project-tags">
-                  {p.tags.map((t) => (
-                    <span key={t} className="tag">
-                      {t}
+                  {p.tags.map((tag) => (
+                    <span key={tag} className="tag">
+                      {tag}
                     </span>
                   ))}
                 </div>
@@ -668,7 +667,7 @@ export default function HirePage() {
         </div>
         <div style={{ marginTop: "1.5rem", textAlign: "center" }}>
           <Link
-            to="/work"
+            to="/"
             style={{
               fontSize: "0.85rem",
               color: "var(--muted)",
@@ -676,18 +675,20 @@ export default function HirePage() {
               borderBottom: "1px solid var(--border)",
             }}
           >
-            See all projects on the portfolio →
+            {t.hire_see_all}
           </Link>
         </div>
       </div>
 
       <div className="hire-divider" />
+
+      {/* Process */}
       <div className="hire-section">
-        <div className="section-label reveal">Process</div>
+        <div className="section-label reveal">{t.hire_proc_label}</div>
         <h2 className="section-title reveal">
-          How it actually
+          {t.hire_proc_title_1}
           <br />
-          <em>works</em>
+          <em>{t.hire_proc_title_2}</em>
         </h2>
         <p
           style={{
@@ -698,8 +699,7 @@ export default function HirePage() {
           }}
           className="reveal"
         >
-          Seven steps. Each one is designed to remove a thing that makes working
-          with developers annoying.
+          {t.hire_proc_sub}
         </p>
         <div className="steps-list">
           {STEPS.map((step, i) => (
@@ -719,13 +719,13 @@ export default function HirePage() {
 
       <div className="hire-divider" />
 
-      {/* ── What I need from you ── */}
+      {/* What I need from you */}
       <div className="hire-section">
-        <div className="section-label reveal">Expectations</div>
+        <div className="section-label reveal">{t.hire_exp_label}</div>
         <h2 className="section-title reveal">
-          What I need
+          {t.hire_exp_title_1}
           <br />
-          <em>from you</em>
+          <em>{t.hire_exp_title_2}</em>
         </h2>
         <p
           style={{
@@ -736,8 +736,7 @@ export default function HirePage() {
           }}
           className="reveal"
         >
-          Projects go wrong on both sides. Here's what makes things go right on
-          yours.
+          {t.hire_exp_sub}
         </p>
         <div className="needs-grid">
           {NEED_FROM_YOU.map((item, i) => (
@@ -755,12 +754,13 @@ export default function HirePage() {
 
       <div className="hire-divider" />
 
-      {/* ── What I won't do ── */}
+      {/* What I won't do */}
       <div className="hire-section">
-        <div className="section-label reveal">Limits</div>
+        <div className="section-label reveal">{t.hire_limits_label}</div>
         <h2 className="section-title reveal">
-          What I<br />
-          <em>won't do</em>
+          {t.hire_limits_title_1}
+          <br />
+          <em>{t.hire_limits_title_2}</em>
         </h2>
         <p
           style={{
@@ -772,8 +772,7 @@ export default function HirePage() {
           }}
           className="reveal"
         >
-          Not a list of excuses — a list of things that reliably ruin projects.
-          I've learned these the hard way so you don't have to.
+          {t.hire_limits_sub}
         </p>
         <ul className="wont-list reveal">
           {WONT_DO.map((item) => (
@@ -784,13 +783,13 @@ export default function HirePage() {
 
       <div className="hire-divider" />
 
-      {/* ── Contact form ── */}
+      {/* Contact form */}
       <div id="form" className="hire-section">
-        <div className="section-label reveal">Start</div>
+        <div className="section-label reveal">{t.hire_start_label}</div>
         <h2 className="section-title reveal">
-          Ready to
+          {t.hire_start_title_1}
           <br />
-          <em>get started?</em>
+          <em>{t.hire_start_title_2}</em>
         </h2>
         <p
           style={{
@@ -802,11 +801,10 @@ export default function HirePage() {
           }}
           className="reveal"
         >
-          Fill this in. I'll reply within 24 hours with either a time to talk or
-          an honest "not a fit" if the project isn't right for me.
+          {t.hire_start_sub}
         </p>
         <div className="hire-form-wrap reveal">
-          <ContactForm />
+          <ContactForm t={t} />
         </div>
         <p
           style={{
@@ -817,7 +815,7 @@ export default function HirePage() {
             textAlign: "center",
           }}
         >
-          Prefer email?{" "}
+          {t.hire_prefer_email}{" "}
           <a
             href="mailto:adis.klobodanovic@gmail.com"
             style={{ color: "var(--accent)" }}
@@ -827,7 +825,6 @@ export default function HirePage() {
         </p>
       </div>
 
-      {/* ── Footer ── */}
       <div
         style={{
           borderTop: "1px solid var(--border)",
@@ -851,11 +848,11 @@ export default function HirePage() {
             letterSpacing: "-0.02em",
           }}
         >
-          adis<span style={{ color: "var(--accent)" }}>.</span>dev
+          adiss<span style={{ color: "var(--accent)" }}>.</span>dev
         </Link>
         <span>© {new Date().getFullYear()} Adis Klobodanovic</span>
         <Link to="/" style={{ color: "var(--muted)", textDecoration: "none" }}>
-          ← Back to portfolio
+          {t.hire_back}
         </Link>
       </div>
     </>

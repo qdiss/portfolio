@@ -1,76 +1,10 @@
 import { useEffect, useState } from "react";
 import { useParams, Link, Navigate } from "react-router-dom";
 import { posts, getPost, formatDate } from "../content/posts/index.js";
-import { useTheme } from "../context/ThemeContext";
+import { useLang } from "../context/LangContext";
 import Nav from "../components/Nav.jsx";
 
-// ─── Simple Markdown-ish renderer ─────────────────────────────────────────────
-// Handles: ## headings, **bold**, `code`, --- dividers, paragraphs
-function renderContent(raw) {
-  const blocks = raw.trim().split(/\n\n+/);
-  return blocks.map((block, i) => {
-    const trimmed = block.trim();
-    if (!trimmed) return null;
-
-    // Horizontal rule
-    if (trimmed === "---") {
-      return (
-        <hr
-          key={i}
-          style={{
-            border: "none",
-            borderTop: "1px solid var(--border)",
-            margin: "2.5rem 0",
-          }}
-        />
-      );
-    }
-
-    // ## Heading
-    if (trimmed.startsWith("## ")) {
-      return (
-        <h2
-          key={i}
-          style={{
-            fontFamily: "var(--font-display)",
-            fontSize: "1.35rem",
-            fontWeight: 700,
-            letterSpacing: "-0.025em",
-            margin: "2.5rem 0 1rem",
-            lineHeight: 1.25,
-          }}
-        >
-          {trimmed.slice(3)}
-        </h2>
-      );
-    }
-
-    // Paragraph — inline formatting
-    const lines = trimmed.split("\n");
-    return (
-      <p
-        key={i}
-        style={{
-          color: "var(--muted)",
-          fontWeight: 300,
-          lineHeight: 1.9,
-          fontSize: "1.025rem",
-          marginBottom: "1.25rem",
-        }}
-      >
-        {lines.map((line, li) => (
-          <span key={li}>
-            {li > 0 && <br />}
-            {renderInline(line)}
-          </span>
-        ))}
-      </p>
-    );
-  });
-}
-
 function renderInline(text) {
-  // Split on **bold** and `code`
   const parts = text.split(/(\*\*[^*]+\*\*|`[^`]+`)/);
   return parts.map((part, i) => {
     if (part.startsWith("**") && part.endsWith("**")) {
@@ -98,7 +32,6 @@ function renderInline(text) {
         </code>
       );
     }
-    // Handle [text](url) links
     return part
       .replace(/\[([^\]]+)\]\(([^)]+)\)/g, "__LINK__")
       .split("__LINK__")
@@ -123,7 +56,63 @@ function renderInline(text) {
   });
 }
 
-// Content loader — lazy imports each post file
+function renderContent(raw) {
+  const blocks = raw.trim().split(/\n\n+/);
+  return blocks.map((block, i) => {
+    const trimmed = block.trim();
+    if (!trimmed) return null;
+    if (trimmed === "---") {
+      return (
+        <hr
+          key={i}
+          style={{
+            border: "none",
+            borderTop: "1px solid var(--border)",
+            margin: "2.5rem 0",
+          }}
+        />
+      );
+    }
+    if (trimmed.startsWith("## ")) {
+      return (
+        <h2
+          key={i}
+          style={{
+            fontFamily: "var(--font-display)",
+            fontSize: "1.35rem",
+            fontWeight: 700,
+            letterSpacing: "-0.025em",
+            margin: "2.5rem 0 1rem",
+            lineHeight: 1.25,
+          }}
+        >
+          {trimmed.slice(3)}
+        </h2>
+      );
+    }
+    const lines = trimmed.split("\n");
+    return (
+      <p
+        key={i}
+        style={{
+          color: "var(--muted)",
+          fontWeight: 300,
+          lineHeight: 1.9,
+          fontSize: "1.025rem",
+          marginBottom: "1.25rem",
+        }}
+      >
+        {lines.map((line, li) => (
+          <span key={li}>
+            {li > 0 && <br />}
+            {renderInline(line)}
+          </span>
+        ))}
+      </p>
+    );
+  });
+}
+
 const contentModules = {
   "why-your-landing-page-is-slow": () =>
     import("../content/posts/why-your-landing-page-is-slow.js"),
@@ -133,8 +122,7 @@ const contentModules = {
     import("../content/posts/nextjs-app-router-honest-thoughts.js"),
 };
 
-// ─── Related posts ────────────────────────────────────────────────────────────
-function RelatedPosts({ currentSlug }) {
+function RelatedPosts({ currentSlug, t }) {
   const related = posts.filter((p) => p.slug !== currentSlug).slice(0, 2);
   return (
     <div
@@ -154,7 +142,7 @@ function RelatedPosts({ currentSlug }) {
           marginBottom: "1.5rem",
         }}
       >
-        More posts
+        {t.post_more}
       </div>
       <div style={{ display: "flex", flexDirection: "column", gap: "0" }}>
         {related.map((post) => (
@@ -198,10 +186,10 @@ function RelatedPosts({ currentSlug }) {
   );
 }
 
-// ─── Main ─────────────────────────────────────────────────────────────────────
 export default function PostPage() {
   const { slug } = useParams();
-  const post = getPost(slug);
+  const { t } = useLang();
+  const post = findPost(slug);
   const [content, setContent] = useState(null);
   const [loading, setLoading] = useState(true);
 
@@ -209,7 +197,6 @@ export default function PostPage() {
     window.scrollTo(0, 0);
     if (!post) return;
     document.title = `${post.title} — Adis Klobodanovic`;
-
     const loader = contentModules[slug];
     if (loader) {
       loader().then((mod) => {
@@ -226,14 +213,13 @@ export default function PostPage() {
   return (
     <>
       <style>{`
-        .post-page { max-width: 680px; margin: 0 auto; padding: 8rem 2.5rem 5rem; }
+        .post-page { max-width: 900px; margin: 0 auto; padding: 8rem 2.5rem 5rem; }
         @media(max-width: 600px) { .post-page { padding: 7rem 1.5rem 4rem; } }
       `}</style>
 
       <Nav />
 
       <article className="post-page">
-        {/* Header */}
         <div style={{ marginBottom: "3rem" }}>
           <div
             style={{
@@ -299,7 +285,6 @@ export default function PostPage() {
           }}
         />
 
-        {/* Body */}
         {loading ? (
           <div
             style={{
@@ -316,7 +301,6 @@ export default function PostPage() {
           <p style={{ color: "var(--muted)" }}>Content not found.</p>
         )}
 
-        {/* CTA */}
         <div
           style={{
             marginTop: "3.5rem",
@@ -335,7 +319,7 @@ export default function PostPage() {
               marginBottom: "0.45rem",
             }}
           >
-            Building something?
+            {t.post_building}
           </div>
           <p
             style={{
@@ -346,20 +330,18 @@ export default function PostPage() {
               marginBottom: "1.25rem",
             }}
           >
-            If this was useful, you might like working together. I take on a few
-            projects a month — mostly web apps, landing pages, and SaaS
-            products.
+            {t.post_building_sub}
           </p>
           <Link
             to="/hire"
             className="btn-primary"
             style={{ fontSize: "0.85rem" }}
           >
-            See how to hire me →
+            {t.post_hire_link}
           </Link>
         </div>
 
-        <RelatedPosts currentSlug={slug} />
+        <RelatedPosts currentSlug={slug} t={t} />
       </article>
 
       <div
@@ -384,13 +366,13 @@ export default function PostPage() {
             textDecoration: "none",
           }}
         >
-          adis<span style={{ color: "var(--accent)" }}>.</span>dev
+          adiss<span style={{ color: "var(--accent)" }}>.</span>dev
         </Link>
         <Link
           to="/blog"
           style={{ color: "var(--muted)", textDecoration: "none" }}
         >
-          ← Back to blog
+          {t.post_back}
         </Link>
       </div>
     </>

@@ -7,7 +7,7 @@ Most developers assume their site is slow because of something complex. Bad rend
 
 **Too many fonts.** Every font family you load is a render-blocking request. Load two weights of one font, not three families. If you're using Google Fonts, at minimum add \`display=swap\` to the URL. Better: self-host them with \`@font-face\` so there's no third-party DNS lookup.
 
-**Scripts nobody remembers adding.** Intercom. That cookie banner. The LinkedIn insight tag. The Hotjar snippet from 2022 that nobody uses anymore. Each one adds network requests and parse time. Open Chrome DevTools → Network → sort by size. You'll be surprised what's in there.
+**Scripts nobody remembers adding.** Intercom. That cookie banner. The LinkedIn insight tag. The Hotjar snippet from 2022 that nobody uses anymore. Each one adds network requests and parse time. Open Chrome DevTools   Network   sort by size. You'll be surprised what's in there.
 
 ---
 
@@ -35,4 +35,4 @@ In order of impact per hour of work:
 SSR, edge functions, CDN configuration — these matter at scale. If you're getting under 10k visits a month, they're not your bottleneck. Fix the obvious stuff first. A 4MB image is costing you more than any render strategy decision.
 
 The boring fixes are boring because they work. Do those first.
-`
+`;

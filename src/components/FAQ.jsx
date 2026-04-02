@@ -24,6 +24,11 @@ export default function FAQ() {
     { q: t.faq3_q, a: t.faq3_a },
     { q: t.faq4_q, a: t.faq4_a },
     { q: t.faq5_q, a: t.faq5_a },
+    { q: t.faq6_q, a: t.faq6_a },
+    { q: t.faq7_q, a: t.faq7_a },
+    { q: t.faq8_q, a: t.faq8_a },
+    { q: t.faq9_q, a: t.faq9_a },
+    { q: t.faq10_q, a: t.faq10_a },
   ]
   return (
     <section style={{ background: 'var(--bg2)' }}>

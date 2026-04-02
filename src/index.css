@@ -26,6 +26,7 @@
   --text: #1a1816;
   --muted: #7a7672;
   --muted2: #b5b0aa;
+  --accent: #4d6900;
   --border: rgba(0, 0, 0, 0.07);
   --border2: rgba(0, 0, 0, 0.14);
 }
@@ -699,7 +700,7 @@ section {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1.25rem;
-  max-height: 500px;
+  max-height: 600px;
   overflow: hidden;
 }
 .testimonial-card {
@@ -879,9 +880,9 @@ section {
 
 /* FAQ */
 .faq-list {
-  display: flex;
-  flex-direction: column;
-  max-width: 680px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem;
 }
 .faq-item {
   border-bottom: 1px solid var(--border);
@@ -1234,6 +1235,9 @@ footer p {
   .blog-grid {
     grid-template-columns: 1fr;
   }
+  .faq-list {
+    grid-template-columns: 1fr;
+  }
   .process-steps {
     grid-template-columns: 1fr 1fr;
   }
@@ -1251,6 +1255,9 @@ footer p {
     gap: 2rem;
   }
   .projects-grid {
+    grid-template-columns: 1fr;
+  }
+  .faq-list {
     grid-template-columns: 1fr;
   }
   .currently {
@@ -1273,4 +1280,54 @@ footer p {
   nav {
     padding: 1rem 1.5rem;
   }
+}
+
+/* ── Light mode global fixes ────────────────────────────────────────── */
+[data-theme="light"] .project-card {
+  background: #fff;
+  border-color: rgba(0, 0, 0, 0.1);
+  color: #111;
+}
+[data-theme="light"] .blog-card {
+  background: #fff;
+  border-color: rgba(0, 0, 0, 0.1);
+  color: #111;
+}
+[data-theme="light"] .faq-item {
+  border-color: rgba(0, 0, 0, 0.1);
+}
+[data-theme="light"] .faq-q {
+  color: #111;
+}
+[data-theme="light"] .tag {
+  background: rgba(0, 0, 0, 0.06);
+  color: #555;
+  border-color: rgba(0, 0, 0, 0.1);
+}
+[data-theme="light"] input,
+[data-theme="light"] select,
+[data-theme="light"] textarea {
+  background: #fff;
+  color: #111;
+  border-color: rgba(0, 0, 0, 0.15);
+}
+[data-theme="light"] input::placeholder,
+[data-theme="light"] textarea::placeholder {
+  color: #999;
+}
+[data-theme="light"] .cookie-bar {
+  background: #fff;
+  border-color: rgba(0, 0, 0, 0.1);
+  color: #111;
+}
+[data-theme="light"] .cookie-modal-content {
+  background: #fff;
+  color: #111;
+}
+[data-theme="light"] .service-card,
+[data-theme="light"] .testimonial-card,
+[data-theme="light"] .stack-item,
+[data-theme="light"] .process-step {
+  background: #fff;
+  border-color: rgba(0, 0, 0, 0.1);
 }

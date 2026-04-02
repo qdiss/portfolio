@@ -11,7 +11,7 @@
       content="Full-stack developer specialising in React, Next.js & Node. I build fast, clean web apps that ship — not just look good in Figma."
     />
     <meta name="author" content="Adis Klobodanovic" />
-    <link rel="canonical" href="https://adis.dev" />
+    <link rel="canonical" href="https://adiss.dev" />
 
     <!-- Open Graph -->
     <meta
@@ -23,8 +23,8 @@
       content="Full-stack developer. React, Next.js, Node. Building things people actually use."
     />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://adis.dev" />
-    <meta property="og:image" content="https://adis.dev/og-image.png" />
+    <meta property="og:url" content="https://adiss.dev" />
+    <meta property="og:image" content="https://adiss.dev/og-image.png" />
 
     <!-- Twitter card -->
     <meta name="twitter:card" content="summary_large_image" />
@@ -36,7 +36,7 @@
       name="twitter:description"
       content="Full-stack developer. React, Next.js, Node. Building things people actually use."
     />
-    <meta name="twitter:image" content="https://adis.dev/og-image.png" />
+    <meta name="twitter:image" content="https://adiss.dev/og-image.png" />
 
     <!-- Fonts -->
     <link
@@ -45,71 +45,18 @@
     />
 
     <!-- Plausible Analytics (privacy-friendly, no cookies) -->
-    <!-- Replace adis.dev with your actual domain after deploying -->
+    <!-- Replace adiss.dev with your actual domain after deploying -->
     <script
-      defer
-      data-domain="adis.dev"
-      src="https://plausible.io/js/script.js"
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"
     ></script>
     <script>
-      // Google Consent Mode V2 - Default denied
       window.dataLayer = window.dataLayer || [];
       function gtag() {
         dataLayer.push(arguments);
       }
-
-      gtag("consent", "default", {
-        ad_storage: "denied",
-        ad_user_data: "denied",
-        ad_personalization: "denied",
-        analytics_storage: "denied",
-        region: [
-          "AT",
-          "BE",
-          "BG",
-          "HR",
-          "CY",
-          "CZ",
-          "DK",
-          "EE",
-          "FI",
-          "FR",
-          "DE",
-          "GR",
-          "HU",
-          "IS",
-          "IE",
-          "IT",
-          "LV",
-          "LI",
-          "LT",
-          "LU",
-          "MT",
-          "NL",
-          "NO",
-          "PL",
-          "PT",
-          "RO",
-          "SK",
-          "SI",
-          "ES",
-          "SE",
-          "GB",
-          "CH",
-        ],
-      });
-
-      // Google Tag Manager
-      (function (w, d, s, l, i) {
-        w[l] = w[l] || [];
-        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
-        var f = d.getElementsByTagName(s)[0],
-          j = d.createElement(s),
-          dl = l != "dataLayer" ? "&l=" + l : "";
-        j.async = true;
-        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
-        f.parentNode.insertBefore(j, f);
-      })(window, document, "script", "dataLayer", "GTM-XXXXXXX"); // Zamijeni sa svojim GTM ID
+      gtag("js", new Date());
+      gtag("config", "G-XXXXXXXXXX");
     </script>
   </head>
   <body>

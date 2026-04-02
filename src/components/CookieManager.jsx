@@ -1,4 +1,3 @@
-// components/CookieManager.jsx
 import { useState, useEffect } from "react";
 import { useLang } from "../context/LangContext";
 
@@ -13,7 +12,6 @@ export default function CookieManager() {
   });
 
   useEffect(() => {
-    // Provjeri da li je korisnik već napravio izbor
     const hasConsent = localStorage.getItem("cookie_consent_given");
     const savedSettings = localStorage.getItem("cookie_settings");
 
@@ -24,19 +22,13 @@ export default function CookieManager() {
       applyConsentToServices(settings);
     } else if (hasConsent === "false") {
       setShowBanner(false);
-      applyConsentToServices({
-        analytics: false,
-        functional: false,
-        marketing: false,
-      });
+      applyConsentToServices({ analytics: false, functional: false, marketing: false });
     } else {
-      // Nema izbora - prikaži banner
       setShowBanner(true);
     }
   }, []);
 
   const applyConsentToServices = (consent) => {
-    // Google Consent Mode
     if (window.gtag) {
       window.gtag("consent", "update", {
         analytics_storage: consent.analytics ? "granted" : "denied",
@@ -45,37 +37,20 @@ export default function CookieManager() {
         ad_personalization: consent.marketing ? "granted" : "denied",
       });
     }
-
-    // Plausible Analytics
-    if (window.plausible && consent.analytics) {
-      // Plausible je već uključen, ne treba ništa raditi
-    }
   };
 
   const logConsentEvent = (consent) => {
-    const consentLog = {
-      timestamp: new Date().toISOString(),
-      consent: consent,
-      userAgent: navigator.userAgent,
-      url: window.location.href,
-    };
-
+    const consentLog = { timestamp: new Date().toISOString(), consent, userAgent: navigator.userAgent, url: window.location.href };
     const logs = JSON.parse(localStorage.getItem("consent_logs") || "[]");
     logs.push(consentLog);
     localStorage.setItem("consent_logs", JSON.stringify(logs.slice(-100)));
   };
 
   const handleAcceptAll = () => {
-    const newConsent = {
-      analytics: true,
-      functional: true,
-      marketing: true,
-    };
-
+    const newConsent = { analytics: true, functional: true, marketing: true };
     setCookieConsent(newConsent);
     localStorage.setItem("cookie_consent_given", "true");
     localStorage.setItem("cookie_settings", JSON.stringify(newConsent));
-
     setShowBanner(false);
     setShowSettings(false);
     applyConsentToServices(newConsent);
@@ -83,16 +58,10 @@ export default function CookieManager() {
   };
 
   const handleDeclineAll = () => {
-    const newConsent = {
-      analytics: false,
-      functional: false,
-      marketing: false,
-    };
-
+    const newConsent = { analytics: false, functional: false, marketing: false };
     setCookieConsent(newConsent);
     localStorage.setItem("cookie_consent_given", "true");
     localStorage.setItem("cookie_settings", JSON.stringify(newConsent));
-
     setShowBanner(false);
     setShowSettings(false);
     applyConsentToServices(newConsent);
@@ -102,55 +71,51 @@ export default function CookieManager() {
   const handleSavePreferences = () => {
     localStorage.setItem("cookie_consent_given", "true");
     localStorage.setItem("cookie_settings", JSON.stringify(cookieConsent));
-
     setShowSettings(false);
     setShowBanner(false);
     applyConsentToServices(cookieConsent);
     logConsentEvent(cookieConsent);
   };
 
+  // Reset: clear all cookie prefs and re-show the banner
+  const handleReset = () => {
+    localStorage.removeItem("cookie_consent_given");
+    localStorage.removeItem("cookie_settings");
+    localStorage.removeItem("consent_logs");
+    setCookieConsent({ analytics: false, functional: false, marketing: false });
+    setShowSettings(false);
+    setShowBanner(true);
+  };
+
+  // Expose reset via a custom event so other components can trigger it
+  useEffect(() => {
+    const handler = () => handleReset();
+    window.addEventListener("cookie:reset", handler);
+    return () => window.removeEventListener("cookie:reset", handler);
+  }, []);
+
   if (!showBanner && !showSettings) return null;
 
   return (
     <>
-      {/* Cookie Banner */}
       {showBanner && (
         <div className="cookie-bar">
           <p className="cookie-text">
             {t.cookie_text}{" "}
-            <a
-              href="#"
-              onClick={(e) => {
-                e.preventDefault();
-                setShowSettings(true);
-              }}
-            >
-              {t.cookie_link}
-            </a>
+            <a href="#" onClick={(e) => { e.preventDefault(); setShowSettings(true); }}>{t.cookie_link}</a>
           </p>
           <div className="cookie-btns">
-            <button className="cookie-accept" onClick={handleAcceptAll}>
-              {t.cookie_accept}
-            </button>
-            <button className="cookie-decline" onClick={handleDeclineAll}>
-              {t.cookie_decline}
-            </button>
+            <button className="cookie-accept" onClick={handleAcceptAll}>{t.cookie_accept}</button>
+            <button className="cookie-decline" onClick={handleDeclineAll}>{t.cookie_decline}</button>
           </div>
         </div>
       )}
 
-      {/* Cookie Settings Modal */}
       {showSettings && (
         <div className="cookie-modal" onClick={() => setShowSettings(false)}>
-          <div
-            className="cookie-modal-content"
-            onClick={(e) => e.stopPropagation()}
-          >
+          <div className="cookie-modal-content" onClick={(e) => e.stopPropagation()}>
             <h2>Cookie Preferences</h2>
-            <p>
-              Manage your cookie preferences below. Essential cookies cannot be
-              disabled as they ensure the website functions properly.
-            </p>
+            <p>Manage your cookie preferences below. Essential cookies cannot be disabled as they ensure the website functions properly.</p>
 
             <div className="cookie-categories">
               <div className="cookie-category">
@@ -158,48 +123,25 @@ export default function CookieManager() {
                   <h4>Essential Cookies</h4>
                   <span className="always-active">Always Active</span>
                 </div>
-                <p>
-                  Necessary for the website to function and cannot be switched
-                  off.
-                </p>
+                <p>Necessary for the website to function and cannot be switched off.</p>
               </div>
 
               <div className="cookie-category">
                 <div className="category-header">
                   <h4>Analytics Cookies</h4>
                   <label className="switch">
-                    <input
-                      type="checkbox"
-                      checked={cookieConsent.analytics}
-                      onChange={(e) =>
-                        setCookieConsent((prev) => ({
-                          ...prev,
-                          analytics: e.target.checked,
-                        }))
-                      }
-                    />
+                    <input type="checkbox" checked={cookieConsent.analytics} onChange={(e) => setCookieConsent((prev) => ({ ...prev, analytics: e.target.checked }))} />
                     <span className="slider"></span>
                   </label>
                 </div>
-                <p>
-                  Help us understand how visitors interact with our website.
-                </p>
+                <p>Help us understand how visitors interact with our website.</p>
               </div>
 
               <div className="cookie-category">
                 <div className="category-header">
                   <h4>Functional Cookies</h4>
                   <label className="switch">
-                    <input
-                      type="checkbox"
-                      checked={cookieConsent.functional}
-                      onChange={(e) =>
-                        setCookieConsent((prev) => ({
-                          ...prev,
-                          functional: e.target.checked,
-                        }))
-                      }
-                    />
+                    <input type="checkbox" checked={cookieConsent.functional} onChange={(e) => setCookieConsent((prev) => ({ ...prev, functional: e.target.checked }))} />
                     <span className="slider"></span>
                   </label>
                 </div>
@@ -210,16 +152,7 @@ export default function CookieManager() {
                 <div className="category-header">
                   <h4>Marketing Cookies</h4>
                   <label className="switch">
-                    <input
-                      type="checkbox"
-                      checked={cookieConsent.marketing}
-                      onChange={(e) =>
-                        setCookieConsent((prev) => ({
-                          ...prev,
-                          marketing: e.target.checked,
-                        }))
-                      }
-                    />
+                    <input type="checkbox" checked={cookieConsent.marketing} onChange={(e) => setCookieConsent((prev) => ({ ...prev, marketing: e.target.checked }))} />
                     <span className="slider"></span>
                   </label>
                 </div>
@@ -228,11 +161,16 @@ export default function CookieManager() {
             </div>
 
             <div className="cookie-modal-buttons">
-              <button onClick={handleAcceptAll} className="btn-accept">
-                Accept All
-              </button>
-              <button onClick={handleSavePreferences} className="btn-save">
-                Save Preferences
+              <button onClick={handleAcceptAll} className="btn-accept">Accept All</button>
+              <button onClick={handleSavePreferences} className="btn-save">Save Preferences</button>
+            </div>
+
+            <div style={{ marginTop: "1rem", textAlign: "center" }}>
+              <button
+                onClick={handleReset}
+                style={{ background: "none", border: "none", color: "var(--muted)", fontSize: "0.75rem", cursor: "pointer", textDecoration: "underline", padding: 0 }}
+              >
+                {t.cookie_reset || "Reset cookie preferences"}
               </button>
             </div>
           </div>

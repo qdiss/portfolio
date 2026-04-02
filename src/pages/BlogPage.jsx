@@ -1,10 +1,12 @@
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
-import { posts, formatDate } from "../content/posts/index.js";
-import { useTheme } from "../context/ThemeContext";
+import { formatDate, getAllPosts, findPost } from "../content/posts/index.js";
+import { useLang } from "../context/LangContext";
 import Nav from "../components/Nav.jsx";
 
 export default function BlogPage() {
+  const { t } = useLang();
+
   useEffect(() => {
     window.scrollTo(0, 0);
     document.title = "Blog — Adis Klobodanovic";
@@ -16,21 +18,23 @@ export default function BlogPage() {
         }),
       { threshold: 0.08 },
     );
-    const t = setTimeout(() => {
+    const timer = setTimeout(() => {
       document
         .querySelectorAll(".reveal")
         .forEach((el) => observer.observe(el));
     }, 50);
     return () => {
       observer.disconnect();
-      clearTimeout(t);
+      clearTimeout(timer);
     };
   }, []);
+
+  const allPosts = getAllPosts();
 
   return (
     <>
       <style>{`
-        .blog-page { max-width: 720px; margin: 0 auto; padding: 8rem 2.5rem 5rem; }
+        .blog-page { max-width: 900px; margin: 0 auto; padding: 8rem 2.5rem 5rem; }
         .post-card { display: block; padding: 2rem 0; border-bottom: 1px solid var(--border); text-decoration: none; color: inherit; transition: opacity 0.2s; }
         .post-card:first-of-type { border-top: 1px solid var(--border); }
         .post-card:hover .post-title { color: var(--accent); }
@@ -47,12 +51,12 @@ export default function BlogPage() {
       <Nav />
 
       <div className="blog-page">
-        <div className="section-label reveal">Writing</div>
+        <div className="section-label reveal">{t.blog_page_label}</div>
         <h1
           className="section-title reveal"
           style={{ fontSize: "clamp(2rem,4vw,3rem)", marginBottom: "0.5rem" }}
         >
-          From the blog
+          {t.blog_page_title}
         </h1>
         <p
           style={{
@@ -64,12 +68,11 @@ export default function BlogPage() {
           }}
           className="reveal"
         >
-          Things I figured out, wrote down, and decided were worth sharing. No
-          newsletter, no cadence — just posts when there's something to say.
+          {t.blog_page_sub}
         </p>
 
         <div>
-          {posts.map((post, i) => (
+          {allPosts.map((post, i) => (
             <Link
               key={post.slug}
               to={`/blog/${post.slug}`}
@@ -88,7 +91,7 @@ export default function BlogPage() {
               </div>
               <h2 className="post-title">{post.title}</h2>
               <p className="post-excerpt">{post.excerpt}</p>
-              <span className="post-read-link">Read post →</span>
+              <span className="post-read-link">{t.blog_read}</span>
             </Link>
           ))}
         </div>
@@ -119,7 +122,7 @@ export default function BlogPage() {
           adis<span style={{ color: "var(--accent)" }}>.</span>dev
         </Link>
         <Link to="/" style={{ color: "var(--muted)", textDecoration: "none" }}>
-          ← Back to portfolio
+          {t.blog_back}
         </Link>
       </div>
     </>
