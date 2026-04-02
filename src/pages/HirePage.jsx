@@ -6,14 +6,20 @@ import Nav from "../components/Nav";
 function ScrollProgress() {
   const [p, setP] = useState(0);
   useEffect(() => {
+    let rafId;
+    let current = 0;
     const fn = () => {
       const { scrollTop, scrollHeight, clientHeight } =
         document.documentElement;
       const total = scrollHeight - clientHeight;
-      setP(total > 0 ? (scrollTop / total) * 100 : 0);
+      const target = total > 0 ? (scrollTop / total) * 100 : 0;
+      // lerp — smooth follow
+      current += (target - current) * 0.12;
+      setP(current);
+      rafId = requestAnimationFrame(fn);
     };
-    window.addEventListener("scroll", fn, { passive: true });
-    return () => window.removeEventListener("scroll", fn);
+    rafId = requestAnimationFrame(fn);
+    return () => cancelAnimationFrame(rafId);
   }, []);
   return (
     <div
@@ -22,11 +28,13 @@ function ScrollProgress() {
         top: 0,
         left: 0,
         zIndex: 9999,
-        height: "3px",
+        height: "2px",
         width: `${p}%`,
         background: "var(--accent)",
-        transition: "width 0.1s linear",
         pointerEvents: "none",
+        boxShadow:
+          "0 0 10px rgba(200,240,96,0.6), 0 0 4px rgba(200,240,96,0.4)",
+        willChange: "width",
       }}
     />
   );
@@ -54,6 +62,7 @@ function useReveal() {
   }, []);
 }
 
+//TODO: Add this
 const EMAILJS_SERVICE_ID = "YOUR_SERVICE_ID";
 const EMAILJS_TEMPLATE_ID = "YOUR_TEMPLATE_ID";
 const EMAILJS_PUBLIC_KEY = "YOUR_PUBLIC_KEY";
@@ -370,6 +379,11 @@ export default function HirePage() {
           .hire-divider { margin: 0 1.5rem; }
           .step-row { grid-template-columns: 42px 1fr; }
         }
+          [data-theme="light"] .pkg-badge,
+          [data-theme="light"] button[type="submit"].btn-primary,
+          [data-theme="light"] a.btn-primary {
+            color: #ffffff !important;
+          }
       `}</style>
 
       <ScrollProgress />
@@ -384,7 +398,7 @@ export default function HirePage() {
           justifyContent: "center",
           padding: "8rem 2.5rem 4rem",
           position: "relative",
-          overflow: "hidden",
+          // overflow: "hidden",
           maxWidth: "900px",
           margin: "0 auto",
         }}

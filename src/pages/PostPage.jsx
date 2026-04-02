@@ -1,8 +1,17 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useMemo } from "react";
 import { useParams, Link, Navigate } from "react-router-dom";
 import { posts, getPost, formatDate } from "../content/posts/index.js";
 import { useLang } from "../context/LangContext";
 import Nav from "../components/Nav.jsx";
+
+function getAdminPost(slug) {
+  try {
+    const adminPosts = JSON.parse(localStorage.getItem("admin_posts") || "[]");
+    return adminPosts.find((p) => p.slug === slug) || null;
+  } catch {
+    return null;
+  }
+}
 
 function renderInline(text) {
   const parts = text.split(/(\*\*[^*]+\*\*|`[^`]+`)/);
@@ -189,7 +198,11 @@ function RelatedPosts({ currentSlug, t }) {
 export default function PostPage() {
   const { slug } = useParams();
   const { t } = useLang();
-  const post = findPost(slug);
+  const post = useMemo(() => {
+    const staticPost = getPost(slug);
+    if (staticPost) return staticPost;
+    return getAdminPost(slug);
+  }, [slug]);
   const [content, setContent] = useState(null);
   const [loading, setLoading] = useState(true);
 
@@ -204,6 +217,9 @@ export default function PostPage() {
         setLoading(false);
       });
     } else {
+      // Admin post — content stored directly in localStorage
+      const adminPost = getAdminPost(slug);
+      if (adminPost?.content) setContent(adminPost.content);
       setLoading(false);
     }
   }, [slug, post]);

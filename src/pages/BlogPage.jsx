@@ -1,11 +1,23 @@
-import { useEffect } from "react";
+import { useEffect, useMemo } from "react";
 import { Link } from "react-router-dom";
-import { formatDate, getAllPosts, findPost } from "../content/posts/index.js";
+import { posts, formatDate } from "../content/posts/index.js";
 import { useLang } from "../context/LangContext";
 import Nav from "../components/Nav.jsx";
 
+function getAllPosts() {
+  try {
+    const adminPosts = JSON.parse(localStorage.getItem("admin_posts") || "[]");
+    return [...adminPosts, ...posts].sort(
+      (a, b) => new Date(b.date) - new Date(a.date),
+    );
+  } catch {
+    return posts;
+  }
+}
+
 export default function BlogPage() {
   const { t } = useLang();
+  const allPosts = useMemo(() => getAllPosts(), []);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -28,8 +40,6 @@ export default function BlogPage() {
       clearTimeout(timer);
     };
   }, []);
-
-  const allPosts = getAllPosts();
 
   return (
     <>

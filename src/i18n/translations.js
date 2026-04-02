@@ -22,6 +22,7 @@ const translations = {
     curr_tz_label: "Timezone",
     curr_reply_label: "Replies within",
     curr_reply: "24 hours",
+    curr_next_slot_label: "Next slot",
     about_label: "About me",
     about_title: "I write code. <em>Not decks.</em>",
     about_p1:
@@ -159,16 +160,19 @@ const translations = {
     hire_tag: "Currently taking new projects",
     hire_h1_1: "Let's build",
     hire_h1_2: "something real.",
-    hire_intro: "This page is for people who want to understand how I work before reaching out. Scroll through, see if it fits. The form is at the bottom.",
+    hire_intro:
+      "This page is for people who want to understand how I work before reaching out. Scroll through, see if it fits. The form is at the bottom.",
     hire_skip: "Skip to form",
     hire_std_label: "Standard",
     hire_std_title_1: "What's included",
     hire_std_title_2: "in every project",
-    hire_std_sub: "Regardless of scope or price. These aren't upsells — they're the baseline.",
+    hire_std_sub:
+      "Regardless of scope or price. These aren't upsells — they're the baseline.",
     hire_pricing_label: "Pricing",
     hire_pricing_title_1: "Packages",
     hire_pricing_title_2: "& what they cost",
-    hire_pricing_sub: "Fixed-price, not hourly. You know the number before anything starts. Scope changes get a change order — no silent billing.",
+    hire_pricing_sub:
+      "Fixed-price, not hourly. You know the number before anything starts. Scope changes get a change order — no silent billing.",
     hire_work_label: "Work",
     hire_work_title_1: "Things I've",
     hire_work_title_2: "actually built",
@@ -177,37 +181,103 @@ const translations = {
     hire_proc_label: "Process",
     hire_proc_title_1: "How it actually",
     hire_proc_title_2: "works",
-    hire_proc_sub: "Seven steps. Each one is designed to remove a thing that makes working with developers annoying.",
+    hire_proc_sub:
+      "Seven steps. Each one is designed to remove a thing that makes working with developers annoying.",
     hire_exp_label: "Expectations",
     hire_exp_title_1: "What I need",
     hire_exp_title_2: "from you",
-    hire_exp_sub: "Projects go wrong on both sides. Here's what makes things go right on yours.",
+    hire_exp_sub:
+      "Projects go wrong on both sides. Here's what makes things go right on yours.",
     hire_limits_label: "Limits",
     hire_limits_title_1: "What I",
     hire_limits_title_2: "won't do",
-    hire_limits_sub: "Not a list of excuses — a list of things that reliably ruin projects. I've learned these the hard way so you don't have to.",
+    hire_limits_sub:
+      "Not a list of excuses — a list of things that reliably ruin projects. I've learned these the hard way so you don't have to.",
     hire_start_label: "Start",
     hire_start_title_1: "Ready to",
     hire_start_title_2: "get started?",
-    hire_start_sub: "Fill this in. I'll reply within 24 hours with either a time to talk or an honest \"not a fit\" if the project isn't right for me.",
+    hire_start_sub:
+      "Fill this in. I'll reply within 24 hours with either a time to talk or an honest \"not a fit\" if the project isn't right for me.",
     hire_prefer_email: "Prefer email?",
     hire_msg_received_title: "Message received.",
     hire_msg_received_sub: "I'll reply within 24 hours. Usually sooner.",
     hire_sending: "Sending...",
     hire_send: "Send message  ",
+    hire_pkg1_name: "Landing Page",
+    hire_pkg1_price: "from $600",
+    hire_pkg1_timeline: "1 – 2 weeks",
+    hire_pkg1_desc:
+      "Fast, focused, conversion-ready. One page that does one job well.",
+    hire_pkg2_name: "Web Application",
+    hire_pkg2_price: "from $3,000",
+    hire_pkg2_timeline: "4 – 8 weeks",
+    hire_pkg2_desc:
+      "SaaS, booking systems, dashboards, internal tools. Full stack end-to-end.",
+    hire_pkg2_tag: "Most booked",
+    hire_pkg3_name: "Business Website",
+    hire_pkg3_price: "from $1,200",
+    hire_pkg3_timeline: "2 – 3 weeks",
+    hire_pkg3_desc:
+      "Multi-page with structure, SEO, and something that makes your business look serious online.",
+    hire_step1_title: "You reach out",
+    hire_step1_body:
+      "Fill the form below or email me directly. Tell me roughly what you need — doesn't have to be a full brief. A paragraph is enough to start.",
+    hire_step2_title: "Discovery call",
+    hire_step2_body:
+      "15 – 30 minutes. Free. I ask questions, you talk through the project. No pitch, no deck. We figure out together if it's a fit.",
+    hire_step3_title: "Written proposal",
+    hire_step3_body:
+      "Scope, timeline, price — all in writing, before anything starts. You can say no. If the scope changes later, we discuss it before the price does.",
+    hire_step4_title: "Kickoff",
+    hire_step4_body:
+      "50% upfront, then work starts. You get a private preview link early — usually within the first few days. Real progress you can see, not status updates.",
+    hire_step5_title: "Build phase",
+    hire_step5_body:
+      "Weekly updates without you having to ask. Feedback rounds are structured, not open-ended. Each round has a clear scope to avoid endless iteration.",
+    hire_step6_title: "Launch",
+    hire_step6_body:
+      "I handle deployment. We test together. Once you're happy, remaining payment is due.",
+    hire_step7_title: "Handover",
+    hire_step7_body:
+      "You get everything: code, credentials, documentation. I don't retain access to anything. If you need ongoing help, we agree a rate upfront.",
+    hire_need1_icon: "📄",
+    hire_need1_title: "A clear brief",
+    hire_need1_body:
+      "What it does, who it's for, what success looks like. Doesn't need to be perfect — but the vaguer the brief, the wider the scope estimate.",
+    hire_need2_icon: "⚡",
+    hire_need2_title: "Fast feedback",
+    hire_need2_body:
+      "48h to respond to preview links and questions during the build. Projects stall when feedback takes a week. Your deadline is mine.",
+    hire_need3_icon: "🖊️",
+    hire_need3_title: "Content ready",
+    hire_need3_body:
+      "Text, logos, photos. If you don't have them, say so upfront — we can plan around it or add copywriting to scope.",
+    hire_need4_icon: "👤",
+    hire_need4_title: "One decision-maker",
+    hire_need4_body:
+      "One person who can approve things. Not a committee. Design-by-committee is where projects go to die and budgets go to grow.",
+    hire_wont1: "Hourly billing with no cap or scope",
+    hire_wont2: "Starting work without a signed brief",
+    hire_wont3: "Rush jobs that skip QA and testing",
+    hire_wont4: "Taking on more than I can deliver well",
+    hire_pkg_note:
+      "Every project gets a written quote. These are starting points, not ceilings or floors.",
     hire_name: "Your name",
     hire_email: "your@email.com",
     hire_budget: "Budget range",
-    hire_message: "Tell me about your project — what it does, who it's for, any deadline.",
+    hire_message:
+      "Tell me about your project — what it does, who it's for, any deadline.",
     hire_back: "Back to portfolio",
     // BlogPage
     blog_page_label: "Writing",
     blog_page_title: "From the blog",
-    blog_page_sub: "Things I figured out, wrote down, and decided were worth sharing. No newsletter, no cadence — just posts when there's something to say.",
+    blog_page_sub:
+      "Things I figured out, wrote down, and decided were worth sharing. No newsletter, no cadence — just posts when there's something to say.",
     blog_back: "Back to portfolio",
     // PostPage
     post_building: "Building something?",
-    post_building_sub: "If this was useful, you might like working together. I take on a few projects a month — mostly web apps, landing pages, and SaaS products.",
+    post_building_sub:
+      "If this was useful, you might like working together. I take on a few projects a month — mostly web apps, landing pages, and SaaS products.",
     post_hire_link: "See how to hire me",
     post_more: "More posts",
     post_back: "Back to blog",
@@ -252,6 +322,7 @@ const translations = {
     curr_tz_label: "Vremenska zona",
     curr_reply_label: "Odgovaram za",
     curr_reply: "24 sata",
+    curr_next_slot_label: "Sljedeći termin",
     about_label: "O meni",
     about_title: "Pišem kod. <em>Ne prezentacije.</em>",
     about_p1:
@@ -329,8 +400,7 @@ const translations = {
     proc_title: "Proces",
     proc_sub: "Četiri koraka. Ništa komplikovano.",
     proc1_title: "Discovery poziv",
-    proc1_desc:
-      "15–30 minuta. Besplatno. Bez pitcha.",
+    proc1_desc: "15–30 minuta. Besplatno. Bez pitcha.",
     proc2_title: "Prijedlog",
     proc2_desc:
       "Scope, rok, cijena — u pisanoj formi, prije nego što išta počne.",
@@ -338,13 +408,12 @@ const translations = {
     proc3_desc:
       "Redovni apdejtovi, live pregledi, runde povratnih informacija.",
     proc4_title: "Lansiranje",
-    proc4_desc:
-      "Deploy, testiranje, potpuni handover. Sve je tvoje.",
+    proc4_desc: "Deploy, testiranje, potpuni handover. Sve je tvoje.",
     faq_label: "Česta pitanja",
     faq_title: "FAQ",
     faq1_q: "Kako komuniciramo tokom projekta?",
     faq1_a:
-      "Email, Slack, WhatsApp — šta god ti odgovara. Šaljem apdejtove bez traženja, nikad nećeš čekati vijesti.",
+      "Email, Slack, WhatsApp — šta god ti odgovara. Šaljem apdejtove bez traženja.",
     faq2_q: "Radiš li s međunarodnim klijentima?",
     faq2_a: "Skoro isključivo. Većina klijenata mi je iz Europe i SAD-a.",
     faq3_q: "Koliko košta projekat?",
@@ -356,19 +425,19 @@ const translations = {
     faq5_a: "Da. Kada je projekat plaćen, sve je tvoje.",
     faq6_q: "Koliko dugo traje tipičan projekat?",
     faq6_a:
-      "Landing stranice: 1–2 sedmice. Poslovni sajtovi: 2–3 sedmice. Web aplikacije: 4–8 sedmica. Ovisi o obimu — dobijaš realan rok nakon discovery poziva.",
+      "Landing stranice: 1–2 sedmice. Poslovni sajtovi: 2–3 sedmice. Web aplikacije: 4–8 sedmica.",
     faq7_q: "Radiš li s netehničkim klijentima?",
     faq7_a:
       "Većina mojih klijenata nisu developeri. Tehničku stranu potpuno preuzimam i objašnjavam sve jasnim jezikom.",
     faq8_q: "Šta mi treba da bih počeo?",
     faq8_a:
-      "Gruba ideja šta gradiš, za koga je i otprilike koliko želiš potrošiti. To je dovoljno za discovery poziv.",
+      "Gruba ideja šta gradiš, za koga je i otprilike koliko želiš potrošiti.",
     faq9_q: "Radiš li i dizajn pored razvoja?",
     faq9_a:
       "Da — dizajn je dio gradnje, ne posebna faza. Radim u Figmi prvo za sve izvan jednostavnih stranica.",
     faq10_q: "Šta se dešava ako nešto prestane raditi nakon lansiranja?",
     faq10_a:
-      "Svaki projekat uključuje dvije sedmice post-launch podrške za bugove. Nakon toga dostupan sam za održavanje po dogovorenoj cijeni.",
+      "Svaki projekat uključuje dvije sedmice post-launch podrške za bugove.",
     cta_title: "Imaš projekat <em>na umu?</em>",
     cta_sub:
       "Pošalji mi poruku. Reci mi šta gradiš. Reći ću ti iskreno mogu li pomoći.",
@@ -384,42 +453,109 @@ const translations = {
     hire_tag: "Trenutno prihvatam nove projekte",
     hire_h1_1: "Hajde da izgradimo",
     hire_h1_2: "nešto pravo.",
-    hire_intro: "Ova stranica je za ljude koji žele razumjeti kako radim. Skrolaj, vidi odgovara li. Forma je na dnu.",
+    hire_intro:
+      "Ova stranica je za ljude koji žele razumjeti kako radim. Skrolaj, vidi odgovara li. Forma je na dnu.",
     hire_skip: "Preskoči na formu",
     hire_std_label: "Standard",
     hire_std_title_1: "Šta je uključeno",
     hire_std_title_2: "u svaki projekat",
-    hire_std_sub: "Bez obzira na obim ili cijenu. Ovo nisu dodaci — ovo je osnova.",
+    hire_std_sub:
+      "Bez obzira na obim ili cijenu. Ovo nisu dodaci — ovo je osnova.",
     hire_pricing_label: "Cijene",
     hire_pricing_title_1: "Paketi",
     hire_pricing_title_2: "i šta koštaju",
-    hire_pricing_sub: "Fiksna cijena, ne po satu. Znaš broj prije nego što išta počne.",
+    hire_pricing_sub:
+      "Fiksna cijena, ne po satu. Znaš broj prije nego što išta počne.",
     hire_work_label: "Radovi",
     hire_work_title_1: "Stvari koje sam",
     hire_work_title_2: "zapravo napravio",
-    hire_work_sub: "Ne sporedni projekti. Klijentski rad i isporučeni proizvodi.",
+    hire_work_sub:
+      "Ne sporedni projekti. Klijentski rad i isporučeni proizvodi.",
     hire_see_all: "Vidi sve projekte u portfoliju",
     hire_proc_label: "Proces",
     hire_proc_title_1: "Kako zapravo",
     hire_proc_title_2: "funkcioniše",
-    hire_proc_sub: "Sedam koraka. Svaki je osmišljen da ukloni nešto što rad s developerima čini iritantnim.",
+    hire_proc_sub:
+      "Sedam koraka. Svaki je osmišljen da ukloni nešto što rad s developerima čini iritantnim.",
     hire_exp_label: "Očekivanja",
     hire_exp_title_1: "Šta trebam",
     hire_exp_title_2: "od tebe",
-    hire_exp_sub: "Projekti propadaju s obje strane. Evo šta čini da tvoja strana ide kako treba.",
+    hire_exp_sub:
+      "Projekti propadaju s obje strane. Evo šta čini da tvoja strana ide kako treba.",
     hire_limits_label: "Granice",
     hire_limits_title_1: "Šta neću",
     hire_limits_title_2: "raditi",
-    hire_limits_sub: "Nije lista izgovora — lista stvari koje pouzdano uništavaju projekte.",
+    hire_limits_sub:
+      "Nije lista izgovora — lista stvari koje pouzdano uništavaju projekte.",
     hire_start_label: "Počni",
     hire_start_title_1: "Spreman za",
     hire_start_title_2: "početak?",
-    hire_start_sub: "Popuni ovo. Odgovorim za 24 sata — ili s terminom za razgovor, ili s iskrenim \"nije za mene\".",
+    hire_start_sub:
+      'Popuni ovo. Odgovorim za 24 sata — ili s terminom za razgovor, ili s iskrenim "nije za mene".',
     hire_prefer_email: "Preferiraš email?",
     hire_msg_received_title: "Poruka primljena.",
     hire_msg_received_sub: "Odgovorit ću za 24 sata. Obično i ranije.",
     hire_sending: "Šaljem...",
     hire_send: "Pošalji poruku  ",
+    hire_pkg1_name: "Landing Stranica",
+    hire_pkg1_price: "od $600",
+    hire_pkg1_timeline: "1 – 2 sedmice",
+    hire_pkg1_desc:
+      "Brzo, fokusirano, optimizirano za konverzije. Jedna stranica koja radi jedan posao dobro.",
+    hire_pkg2_name: "Web Aplikacija",
+    hire_pkg2_price: "od $3.000",
+    hire_pkg2_timeline: "4 – 8 sedmica",
+    hire_pkg2_desc:
+      "SaaS, sistemi za rezervacije, dashboardi, interni alati. Full stack od početka do kraja.",
+    hire_pkg2_tag: "Najtraženije",
+    hire_pkg3_name: "Poslovni Website",
+    hire_pkg3_price: "od $1.200",
+    hire_pkg3_timeline: "2 – 3 sedmice",
+    hire_pkg3_desc:
+      "Višestranični sajt sa strukturom, SEO-om i nečim što tvoj biznis čini ozbiljnim online.",
+    hire_step1_title: "Ti se javiš",
+    hire_step1_body:
+      "Popuni formu ili mi pošalji email direktno. Reci mi grubo šta trebaš — ne mora biti kompletan brief. Paragraf je dovoljan za početak.",
+    hire_step2_title: "Discovery call",
+    hire_step2_body:
+      "15 – 30 minuta. Besplatno. Postavljam pitanja, ti pričaš o projektu. Bez pitcha, bez prezentacije. Zajedno procjenjujemo odgovara li.",
+    hire_step3_title: "Pisani prijedlog",
+    hire_step3_body:
+      "Obim, vremenski okvir, cijena — sve pismeno, prije nego što išta počne. Možeš reći ne. Ako se obim promijeni kasnije, razgovaramo o tome prije cijene.",
+    hire_step4_title: "Kickoff",
+    hire_step4_body:
+      "50% avansa, pa počinjemo. Dobijaš privatni preview link rano — obično u prvim danima. Pravi napredak koji možeš vidjeti.",
+    hire_step5_title: "Faza izgradnje",
+    hire_step5_body:
+      "Sedmični update bez da moraš tražiti. Feedback runde su strukturisane, ne open-ended. Svaka runda ima jasan scope da se izbjegne beskrajna iteracija.",
+    hire_step6_title: "Lansiranje",
+    hire_step6_body:
+      "Ja vodim deployment. Testiramo zajedno. Kad si zadovoljan, preostala uplata se vrši.",
+    hire_step7_title: "Predaja",
+    hire_step7_body:
+      "Dobijaš sve: kod, kredencijale, dokumentaciju. Ja ne zadržavam pristup ničemu. Ako trebaš stalnu pomoć, dogovorimo cijenu unaprijed.",
+    hire_need1_icon: "📄",
+    hire_need1_title: "Jasan brief",
+    hire_need1_body:
+      "Šta radi, za koga je, kako izgleda uspjeh. Ne mora biti savršen — ali što je vagalniji brief, šira je procjena.",
+    hire_need2_icon: "⚡",
+    hire_need2_title: "Brz feedback",
+    hire_need2_body:
+      "48h da odgovoriš na preview linkove i pitanja tokom izgradnje. Projekti staju kad feedback čeka sedmicu.",
+    hire_need3_icon: "🖊️",
+    hire_need3_title: "Sadržaj spreman",
+    hire_need3_body:
+      "Tekstovi, logoi, fotografije. Ako ih nemaš, reci unaprijed — možemo planirati oko toga.",
+    hire_need4_icon: "👤",
+    hire_need4_title: "Jedan donosilac odluka",
+    hire_need4_body:
+      "Jedna osoba koja može odobravati stvari. Ne odbor. Dizajn po odboru ubija projekte i povećava budžete.",
+    hire_wont1: "Naplata po satu bez ograničenja ili obima",
+    hire_wont2: "Početak rada bez potpisanog briefa",
+    hire_wont3: "Hitni poslovi koji preskakuju QA i testiranje",
+    hire_wont4: "Preuzimanje više nego što mogu dobro isporučiti",
+    hire_pkg_note:
+      "Svaki projekat dobiva pisanu ponudu. Ovo su polazišne tačke, ne stropovi ni podovi.",
     hire_name: "Tvoje ime",
     hire_email: "tvoj@email.com",
     hire_budget: "Budžet",
@@ -427,10 +563,12 @@ const translations = {
     hire_back: "Nazad na portfolio",
     blog_page_label: "Pisanje",
     blog_page_title: "S bloga",
-    blog_page_sub: "Stvari koje sam shvatio, zapisao i odlučio da su vrijedne dijeljenja. Bez newslettera — samo postovi kad ima šta reći.",
+    blog_page_sub:
+      "Stvari koje sam shvatio, zapisao i odlučio da su vrijedne dijeljenja. Bez newslettera — samo postovi kad ima šta reći.",
     blog_back: "Nazad na portfolio",
     post_building: "Gradiš nešto?",
-    post_building_sub: "Ako ti je ovo koristilo, možda bi volio raditi zajedno. Prihvatam nekoliko projekata mjesečno.",
+    post_building_sub:
+      "Ako ti je ovo koristilo, možda bi volio raditi zajedno. Prihvatam nekoliko projekata mjesečno.",
     post_hire_link: "Pogledaj kako me angažovati",
     post_more: "Više postova",
     post_back: "Nazad na blog",
@@ -474,6 +612,7 @@ const translations = {
     curr_tz_label: "Zeitzone",
     curr_reply_label: "Antworte innerhalb",
     curr_reply: "24 Stunden",
+    curr_next_slot_label: "Nächster Slot",
     about_label: "Über mich",
     about_title: "Ich schreibe Code. <em>Keine Präsentationen.</em>",
     about_p1:
@@ -516,7 +655,8 @@ const translations = {
     p3_title: "Reise-App",
     p3_desc: "Zielsuche, Reiseplanung, Live-API-Daten.",
     p4_title: "Duolingo-Klon",
-    p4_desc: "Vollständiger Lernfluss, XP-System, Streaks, Fortschrittsverfolgung.",
+    p4_desc:
+      "Vollständiger Lernfluss, XP-System, Streaks, Fortschrittsverfolgung.",
     proj_view: "Projekt ansehen  ",
     proj_live: "Live ansehen  ",
     test_label: "Was Leute sagen",
@@ -532,13 +672,16 @@ const translations = {
     stack_sub: "Moderne Tools. Nichts Exotisches um des Exotischen willen.",
     blog_label: "Schreiben",
     blog_title: "Aus dem Blog",
-    blog_sub: "Dinge, die ich rausgefunden und für wert befunden habe, sie zu teilen.",
+    blog_sub:
+      "Dinge, die ich rausgefunden und für wert befunden habe, sie zu teilen.",
     b1_title: "Warum deine Landingpage langsam ist",
     b1_desc: "Nicht optimierte Bilder, zu viele Schriften, vergessene Skripte.",
     b2_title: "Was ich beim ersten Kundenprojekt gelernt habe",
-    b2_desc: "Der technische Teil war der einfache. Scope Creep — da gehen Projekte kaputt.",
+    b2_desc:
+      "Der technische Teil war der einfache. Scope Creep — da gehen Projekte kaputt.",
     b3_title: "Next.js App Router nach 6 Monaten",
-    b3_desc: "Es ist gut. Auch verwirrend in Punkten, die die Doku nicht erklärt.",
+    b3_desc:
+      "Es ist gut. Auch verwirrend in Punkten, die die Doku nicht erklärt.",
     blog_read: "Lesen  ",
     proc_label: "Wie es funktioniert",
     proc_title: "Der Prozess",
@@ -556,7 +699,8 @@ const translations = {
     faq1_q: "Wie kommunizieren wir während des Projekts?",
     faq1_a: "E-Mail, Slack, WhatsApp — was auch immer für dich funktioniert.",
     faq2_q: "Arbeitest du mit internationalen Kunden?",
-    faq2_a: "Fast ausschließlich. Die meisten meiner Kunden sind in Europa und den USA.",
+    faq2_a:
+      "Fast ausschließlich. Die meisten meiner Kunden sind in Europa und den USA.",
     faq3_q: "Was kostet ein Projekt?",
     faq3_a: "Landingpages ab $600, Websites ab $1.200, Web-Apps ab $3.000.",
     faq4_q: "Was, wenn ich nach dem Launch Änderungen brauche?",
@@ -564,21 +708,28 @@ const translations = {
     faq5_q: "Gehört mir der Code?",
     faq5_a: "Ja. Sobald das Projekt bezahlt ist, gehört alles dir.",
     faq6_q: "Wie lange dauert ein typisches Projekt?",
-    faq6_a: "Landingpages: 1–2 Wochen. Business-Websites: 2–3 Wochen. Web-Apps: 4–8 Wochen.",
+    faq6_a:
+      "Landingpages: 1–2 Wochen. Business-Websites: 2–3 Wochen. Web-Apps: 4–8 Wochen.",
     faq7_q: "Arbeitest du auch mit nicht-technischen Kunden?",
-    faq7_a: "Die meisten meiner Kunden sind keine Entwickler. Ich übernehme die technische Seite vollständig.",
+    faq7_a:
+      "Die meisten meiner Kunden sind keine Entwickler. Ich übernehme die technische Seite vollständig.",
     faq8_q: "Was brauche ich, um anzufangen?",
-    faq8_a: "Eine grobe Idee, was du baust, für wen und ungefähr was du ausgeben möchtest.",
+    faq8_a:
+      "Eine grobe Idee, was du baust, für wen und ungefähr was du ausgeben möchtest.",
     faq9_q: "Machst du auch Design?",
-    faq9_a: "Ja — Design ist Teil des Builds. Ich arbeite erst in Figma, damit du siehst, wie es aussieht.",
+    faq9_a:
+      "Ja — Design ist Teil des Builds. Ich arbeite erst in Figma, damit du siehst, wie es aussieht.",
     faq10_q: "Was passiert, wenn nach dem Launch etwas kaputt geht?",
-    faq10_a: "Jedes Projekt beinhaltet zwei Wochen Post-Launch-Support für Bugs.",
+    faq10_a:
+      "Jedes Projekt beinhaltet zwei Wochen Post-Launch-Support für Bugs.",
     cta_title: "Hast du ein Projekt <em>im Sinn?</em>",
-    cta_sub: "Schreib mir. Erzähl mir, was du baust. Ich sage dir ehrlich, ob ich helfen kann.",
+    cta_sub:
+      "Schreib mir. Erzähl mir, was du baust. Ich sage dir ehrlich, ob ich helfen kann.",
     cta_email: "E-Mail senden",
     cta_note: "Normalerweise innerhalb von 24 Stunden.",
     footer_email: "E-Mail",
-    cookie_text: "Wir verwenden Cookies, um zu verstehen, wie du diese Seite nutzt. Keine persönlichen Daten werden verkauft.",
+    cookie_text:
+      "Wir verwenden Cookies, um zu verstehen, wie du diese Seite nutzt. Keine persönlichen Daten werden verkauft.",
     cookie_link: "Mehr erfahren",
     cookie_accept: "Akzeptieren",
     cookie_decline: "Ablehnen",
@@ -586,16 +737,19 @@ const translations = {
     hire_tag: "Nehme aktuell neue Projekte an",
     hire_h1_1: "Lass uns",
     hire_h1_2: "etwas Echtes bauen.",
-    hire_intro: "Diese Seite ist für Menschen, die verstehen wollen, wie ich arbeite. Scroll durch, schau ob es passt.",
+    hire_intro:
+      "Diese Seite ist für Menschen, die verstehen wollen, wie ich arbeite. Scroll durch, schau ob es passt.",
     hire_skip: "Zur Kontaktform",
     hire_std_label: "Standard",
     hire_std_title_1: "Was in jedem",
     hire_std_title_2: "Projekt enthalten ist",
-    hire_std_sub: "Unabhängig von Umfang oder Preis. Keine Extras — das ist die Basis.",
+    hire_std_sub:
+      "Unabhängig von Umfang oder Preis. Keine Extras — das ist die Basis.",
     hire_pricing_label: "Preise",
     hire_pricing_title_1: "Pakete",
     hire_pricing_title_2: "& was sie kosten",
-    hire_pricing_sub: "Festpreis, nicht stundenweise. Du kennst die Zahl bevor etwas beginnt.",
+    hire_pricing_sub:
+      "Festpreis, nicht stundenweise. Du kennst die Zahl bevor etwas beginnt.",
     hire_work_label: "Arbeiten",
     hire_work_title_1: "Dinge, die ich",
     hire_work_title_2: "wirklich gebaut habe",
@@ -604,35 +758,100 @@ const translations = {
     hire_proc_label: "Prozess",
     hire_proc_title_1: "Wie es wirklich",
     hire_proc_title_2: "funktioniert",
-    hire_proc_sub: "Sieben Schritte. Jeder ist darauf ausgelegt, etwas Ärgerliches beim Arbeiten mit Entwicklern zu entfernen.",
+    hire_proc_sub:
+      "Sieben Schritte. Jeder ist darauf ausgelegt, etwas Ärgerliches beim Arbeiten mit Entwicklern zu entfernen.",
     hire_exp_label: "Erwartungen",
     hire_exp_title_1: "Was ich von",
     hire_exp_title_2: "dir brauche",
-    hire_exp_sub: "Projekte scheitern auf beiden Seiten. Hier ist, was es auf deiner Seite richtig macht.",
+    hire_exp_sub:
+      "Projekte scheitern auf beiden Seiten. Hier ist, was es auf deiner Seite richtig macht.",
     hire_limits_label: "Grenzen",
     hire_limits_title_1: "Was ich",
     hire_limits_title_2: "nicht tue",
-    hire_limits_sub: "Keine Ausreden — Dinge, die Projekte zuverlässig ruinieren.",
+    hire_limits_sub:
+      "Keine Ausreden — Dinge, die Projekte zuverlässig ruinieren.",
     hire_start_label: "Start",
     hire_start_title_1: "Bereit",
     hire_start_title_2: "loszulegen?",
     hire_start_sub: "Füll das aus. Ich antworte innerhalb von 24 Stunden.",
     hire_prefer_email: "Lieber E-Mail?",
     hire_msg_received_title: "Nachricht erhalten.",
-    hire_msg_received_sub: "Ich antworte innerhalb von 24 Stunden. Meistens früher.",
+    hire_msg_received_sub:
+      "Ich antworte innerhalb von 24 Stunden. Meistens früher.",
     hire_sending: "Wird gesendet...",
     hire_send: "Nachricht senden  ",
+    hire_pkg1_name: "Landingpage",
+    hire_pkg1_price: "ab $600",
+    hire_pkg1_timeline: "1 – 2 Wochen",
+    hire_pkg1_desc:
+      "Schnell, fokussiert, conversionoptimiert. Eine Seite, die eine Aufgabe gut erledigt.",
+    hire_pkg2_name: "Web-Applikation",
+    hire_pkg2_price: "ab $3.000",
+    hire_pkg2_timeline: "4 – 8 Wochen",
+    hire_pkg2_desc:
+      "SaaS, Buchungssysteme, Dashboards, interne Tools. Full Stack von Anfang bis Ende.",
+    hire_pkg2_tag: "Am häufigsten gebucht",
+    hire_pkg3_name: "Unternehmenswebsite",
+    hire_pkg3_price: "ab $1.200",
+    hire_pkg3_timeline: "2 – 3 Wochen",
+    hire_pkg3_desc:
+      "Mehrseiter mit Struktur, SEO und einem Auftritt, der dein Unternehmen seriös wirken lässt.",
+    hire_step1_title: "Du meldest dich",
+    hire_step1_body:
+      "Füll das Formular aus oder schreib mir direkt. Erzähl mir grob, was du brauchst — ein Absatz reicht.",
+    hire_step2_title: "Discovery-Gespräch",
+    hire_step2_body:
+      "15 – 30 Minuten. Kostenlos. Kein Pitch. Wir stellen fest, ob es passt.",
+    hire_step3_title: "Schriftliches Angebot",
+    hire_step3_body:
+      "Umfang, Zeitplan, Preis — alles schriftlich, bevor etwas beginnt. Du kannst ablehnen.",
+    hire_step4_title: "Kickoff",
+    hire_step4_body:
+      "50% Anzahlung, dann beginnt die Arbeit. Du bekommst früh einen privaten Vorschau-Link.",
+    hire_step5_title: "Entwicklungsphase",
+    hire_step5_body:
+      "Wöchentliche Updates ohne dass du fragen musst. Feedbackrunden sind strukturiert.",
+    hire_step6_title: "Launch",
+    hire_step6_body:
+      "Ich übernehme das Deployment. Wir testen gemeinsam. Wenn du zufrieden bist, wird der Rest bezahlt.",
+    hire_step7_title: "Übergabe",
+    hire_step7_body:
+      "Du bekommst alles: Code, Zugangsdaten, Dokumentation. Ich behalte keinen Zugang.",
+    hire_need1_icon: "📄",
+    hire_need1_title: "Ein klares Briefing",
+    hire_need1_body:
+      "Was es tut, für wen es ist, wie Erfolg aussieht. Muss nicht perfekt sein — aber je vager, desto breiter die Schätzung.",
+    hire_need2_icon: "⚡",
+    hire_need2_title: "Schnelles Feedback",
+    hire_need2_body:
+      "48h um auf Vorschau-Links und Fragen während des Builds zu antworten.",
+    hire_need3_icon: "🖊️",
+    hire_need3_title: "Inhalte bereit",
+    hire_need3_body:
+      "Texte, Logos, Fotos. Wenn du sie nicht hast, sag es im Voraus.",
+    hire_need4_icon: "👤",
+    hire_need4_title: "Ein Entscheidungsträger",
+    hire_need4_body: "Eine Person, die Dinge genehmigen kann. Kein Komitee.",
+    hire_wont1: "Stundenabrechnung ohne Deckel oder Umfang",
+    hire_wont2: "Beginn der Arbeit ohne unterzeichnetes Briefing",
+    hire_wont3: "Eilaufträge ohne QA und Tests",
+    hire_wont4: "Mehr übernehmen als ich gut liefern kann",
+    hire_pkg_note:
+      "Jedes Projekt erhält ein schriftliches Angebot. Das sind Ausgangspunkte, keine Obergrenzen.",
     hire_name: "Dein Name",
     hire_email: "deine@email.com",
     hire_budget: "Budgetrahmen",
-    hire_message: "Erzähl mir von deinem Projekt — was es tut, für wen es ist, gibt es eine Deadline.",
+    hire_message:
+      "Erzähl mir von deinem Projekt — was es tut, für wen es ist, gibt es eine Deadline.",
     hire_back: "Zurück zum Portfolio",
     blog_page_label: "Schreiben",
     blog_page_title: "Aus dem Blog",
-    blog_page_sub: "Dinge, die ich rausgefunden und für wert befunden habe zu teilen. Kein Newsletter — nur Posts, wenn es etwas zu sagen gibt.",
+    blog_page_sub:
+      "Dinge, die ich rausgefunden und für wert befunden habe zu teilen. Kein Newsletter — nur Posts, wenn es etwas zu sagen gibt.",
     blog_back: "Zurück zum Portfolio",
     post_building: "Baust du etwas?",
-    post_building_sub: "Wenn das hilfreich war, könnte dir die Zusammenarbeit gefallen. Ich nehme einige Projekte pro Monat an.",
+    post_building_sub:
+      "Wenn das hilfreich war, könnte dir die Zusammenarbeit gefallen. Ich nehme einige Projekte pro Monat an.",
     post_hire_link: "So kannst du mich buchen",
     post_more: "Mehr Posts",
     post_back: "Zurück zum Blog",
@@ -676,6 +895,7 @@ const translations = {
     curr_tz_label: "Fuseau horaire",
     curr_reply_label: "Répond sous",
     curr_reply: "24 heures",
+    curr_next_slot_label: "Prochain créneau",
     about_label: "À propos",
     about_title: "J'écris du code. <em>Pas des slides.</em>",
     about_p1:
@@ -697,31 +917,40 @@ const translations = {
     serv_title: "Services & tarifs",
     serv_sub: "Tu sais ce que tu paies avant que quoi que ce soit commence.",
     s1_title: "Pages d'atterrissage",
-    s1_desc: "Rapides et ciblées. Pour ceux qui ont besoin de quelque chose en ligne qui fonctionne vraiment.",
+    s1_desc:
+      "Rapides et ciblées. Pour ceux qui ont besoin de quelque chose en ligne qui fonctionne vraiment.",
     s2_title: "Sites d'entreprise",
-    s2_desc: "Sites multi-pages avec structure, SEO de base et apparence professionnelle.",
+    s2_desc:
+      "Sites multi-pages avec structure, SEO de base et apparence professionnelle.",
     s3_title: "Applications web",
-    s3_desc: "SaaS, tableaux de bord, systèmes de réservation, outils internes. Full stack.",
+    s3_desc:
+      "SaaS, tableaux de bord, systèmes de réservation, outils internes. Full stack.",
     price_onetime: "/ unique",
     price_project: "/ projet",
     work_label: "Travaux sélectionnés",
     work_title: "Ce que j'ai construit",
     work_sub: "Vrais projets, vraies contraintes, vraies dates de livraison.",
     p1_title: "MediBook — Prise de rendez-vous",
-    p1_desc: "Les patients appelaient pour prendre des rendez-vous. J'ai construit un système de réservation automatique.",
+    p1_desc:
+      "Les patients appelaient pour prendre des rendez-vous. J'ai construit un système de réservation automatique.",
     p2_title: "Dalmatinske Vizure",
-    p2_desc: "Client immobilier. Avait besoin d'un site aussi beau que les propriétés.",
+    p2_desc:
+      "Client immobilier. Avait besoin d'un site aussi beau que les propriétés.",
     p3_title: "App de voyage",
-    p3_desc: "Recherche de destinations, planification d'itinéraires, données API en direct.",
+    p3_desc:
+      "Recherche de destinations, planification d'itinéraires, données API en direct.",
     p4_title: "Clone Duolingo",
     p4_desc: "Flux de cours complet, système XP, séries, suivi des progrès.",
     proj_view: "Voir le projet  ",
     proj_live: "Voir en direct  ",
     test_label: "Ce que disent les gens",
     test_title: "Témoignages",
-    t1_text: "A construit notre site exactement comme nous l'imaginions, plus vite que prévu.",
-    t2_text: "Il a compris le produit, pas seulement le code. A posé les bonnes questions tôt.",
-    t3_text: "Code propre, à temps, livraison propre. Nous avons travaillé ensemble deux fois.",
+    t1_text:
+      "A construit notre site exactement comme nous l'imaginions, plus vite que prévu.",
+    t2_text:
+      "Il a compris le produit, pas seulement le code. A posé les bonnes questions tôt.",
+    t3_text:
+      "Code propre, à temps, livraison propre. Nous avons travaillé ensemble deux fois.",
     stack_label: "Stack technique",
     stack_title: "Avec quoi je travaille",
     stack_sub: "Outils modernes. Rien d'exotique pour le plaisir.",
@@ -731,9 +960,11 @@ const translations = {
     b1_title: "Pourquoi ta page d'atterrissage est lente",
     b1_desc: "Images non optimisées, trop de polices, scripts oubliés.",
     b2_title: "Ce que j'ai appris en construisant mon premier projet client",
-    b2_desc: "La partie technique était la partie facile. Le scope creep — c'est là que les projets s'effondrent.",
+    b2_desc:
+      "La partie technique était la partie facile. Le scope creep — c'est là que les projets s'effondrent.",
     b3_title: "Next.js App Router après 6 mois",
-    b3_desc: "C'est bien. C'est aussi déroutant d'une façon que la doc n'explique pas complètement.",
+    b3_desc:
+      "C'est bien. C'est aussi déroutant d'une façon que la doc n'explique pas complètement.",
     blog_read: "Lire  ",
     proc_label: "Comment ça marche",
     proc_title: "Le processus",
@@ -741,9 +972,11 @@ const translations = {
     proc1_title: "Appel de découverte",
     proc1_desc: "15–30 minutes. Gratuit. Pas de pitch.",
     proc2_title: "Proposition",
-    proc2_desc: "Périmètre, calendrier, prix — par écrit, avant que quoi que ce soit commence.",
+    proc2_desc:
+      "Périmètre, calendrier, prix — par écrit, avant que quoi que ce soit commence.",
     proc3_title: "Construction",
-    proc3_desc: "Mises à jour régulières, aperçus en direct, tours de feedback.",
+    proc3_desc:
+      "Mises à jour régulières, aperçus en direct, tours de feedback.",
     proc4_title: "Lancement",
     proc4_desc: "Déploiement, tests, livraison complète. Tout t'appartient.",
     faq_label: "Questions fréquentes",
@@ -751,29 +984,37 @@ const translations = {
     faq1_q: "Comment communiquons-nous pendant le projet ?",
     faq1_a: "Email, Slack, WhatsApp — ce qui te convient.",
     faq2_q: "Travailles-tu avec des clients internationaux ?",
-    faq2_a: "Presque exclusivement. La plupart de mes clients sont en Europe et aux États-Unis.",
+    faq2_a:
+      "Presque exclusivement. La plupart de mes clients sont en Europe et aux États-Unis.",
     faq3_q: "Combien coûte un projet ?",
-    faq3_a: "Pages d'atterrissage à partir de $600, sites à partir de $1 200, apps web à partir de $3 000.",
+    faq3_a:
+      "Pages d'atterrissage à partir de $600, sites à partir de $1 200, apps web à partir de $3 000.",
     faq4_q: "Et si j'ai besoin de changements après le lancement ?",
     faq4_a: "Chaque projet inclut une fenêtre de révision après livraison.",
     faq5_q: "Le code m'appartient-il ?",
     faq5_a: "Oui. Une fois le projet payé, tout t'appartient.",
     faq6_q: "Combien de temps dure un projet typique ?",
-    faq6_a: "Pages d'atterrissage : 1–2 semaines. Sites d'entreprise : 2–3 semaines. Apps web : 4–8 semaines.",
+    faq6_a:
+      "Pages d'atterrissage : 1–2 semaines. Sites d'entreprise : 2–3 semaines. Apps web : 4–8 semaines.",
     faq7_q: "Travailles-tu avec des clients non techniques ?",
-    faq7_a: "La plupart de mes clients ne sont pas développeurs. Je m'occupe entièrement du côté technique.",
+    faq7_a:
+      "La plupart de mes clients ne sont pas développeurs. Je m'occupe entièrement du côté technique.",
     faq8_q: "De quoi ai-je besoin pour commencer ?",
-    faq8_a: "Une idée approximative de ce que tu construis, pour qui c'est et combien tu veux dépenser.",
+    faq8_a:
+      "Une idée approximative de ce que tu construis, pour qui c'est et combien tu veux dépenser.",
     faq9_q: "Fais-tu aussi du design ?",
-    faq9_a: "Oui — le design fait partie de la construction. Je travaille d'abord sur Figma.",
+    faq9_a:
+      "Oui — le design fait partie de la construction. Je travaille d'abord sur Figma.",
     faq10_q: "Que se passe-t-il si quelque chose se casse après le lancement ?",
-    faq10_a: "Chaque projet inclut deux semaines de support post-lancement pour les bugs.",
+    faq10_a:
+      "Chaque projet inclut deux semaines de support post-lancement pour les bugs.",
     cta_title: "Tu as un projet <em>en tête ?</em>",
     cta_sub: "Envoie-moi un message. Dis-moi ce que tu construis.",
     cta_email: "M'envoyer un email",
     cta_note: "Généralement sous 24 heures. Pas de réponses automatiques.",
     footer_email: "Email",
-    cookie_text: "Nous utilisons des cookies pour comprendre comment tu utilises ce site. Aucune donnée personnelle n'est vendue.",
+    cookie_text:
+      "Nous utilisons des cookies pour comprendre comment tu utilises ce site. Aucune donnée personnelle n'est vendue.",
     cookie_link: "En savoir plus",
     cookie_accept: "Accepter",
     cookie_decline: "Refuser",
@@ -781,25 +1022,30 @@ const translations = {
     hire_tag: "Accepte actuellement de nouveaux projets",
     hire_h1_1: "Construisons",
     hire_h1_2: "quelque chose de réel.",
-    hire_intro: "Cette page est pour ceux qui veulent comprendre comment je travaille avant de me contacter.",
+    hire_intro:
+      "Cette page est pour ceux qui veulent comprendre comment je travaille avant de me contacter.",
     hire_skip: "Aller au formulaire",
     hire_std_label: "Standard",
     hire_std_title_1: "Ce qui est inclus",
     hire_std_title_2: "dans chaque projet",
-    hire_std_sub: "Quelle que soit la taille ou le prix. Ce ne sont pas des extras — c'est la base.",
+    hire_std_sub:
+      "Quelle que soit la taille ou le prix. Ce ne sont pas des extras — c'est la base.",
     hire_pricing_label: "Tarifs",
     hire_pricing_title_1: "Forfaits",
     hire_pricing_title_2: "& ce qu'ils coûtent",
-    hire_pricing_sub: "Prix fixe, pas horaire. Tu connais le montant avant que quoi que ce soit commence.",
+    hire_pricing_sub:
+      "Prix fixe, pas horaire. Tu connais le montant avant que quoi que ce soit commence.",
     hire_work_label: "Travaux",
     hire_work_title_1: "Des choses que j'ai",
     hire_work_title_2: "vraiment construites",
-    hire_work_sub: "Pas des projets personnels. Du travail client et des produits livrés.",
+    hire_work_sub:
+      "Pas des projets personnels. Du travail client et des produits livrés.",
     hire_see_all: "Voir tous les projets dans le portfolio",
     hire_proc_label: "Processus",
     hire_proc_title_1: "Comment ça",
     hire_proc_title_2: "fonctionne vraiment",
-    hire_proc_sub: "Sept étapes. Chacune est conçue pour éliminer quelque chose d'agaçant.",
+    hire_proc_sub:
+      "Sept étapes. Chacune est conçue pour éliminer quelque chose d'agaçant.",
     hire_exp_label: "Attentes",
     hire_exp_title_1: "Ce dont j'ai",
     hire_exp_title_2: "besoin de toi",
@@ -807,27 +1053,91 @@ const translations = {
     hire_limits_label: "Limites",
     hire_limits_title_1: "Ce que je",
     hire_limits_title_2: "ne ferai pas",
-    hire_limits_sub: "Pas une liste d'excuses — une liste de choses qui ruinent les projets.",
+    hire_limits_sub:
+      "Pas une liste d'excuses — une liste de choses qui ruinent les projets.",
     hire_start_label: "Démarrer",
     hire_start_title_1: "Prêt à",
     hire_start_title_2: "commencer ?",
     hire_start_sub: "Remplis ceci. Je répondrai dans les 24 heures.",
     hire_prefer_email: "Tu préfères l'email ?",
     hire_msg_received_title: "Message reçu.",
-    hire_msg_received_sub: "Je répondrai dans les 24 heures. Généralement plus tôt.",
+    hire_msg_received_sub:
+      "Je répondrai dans les 24 heures. Généralement plus tôt.",
     hire_sending: "Envoi en cours...",
     hire_send: "Envoyer le message  ",
+    hire_pkg1_name: "Page d'atterrissage",
+    hire_pkg1_price: "à partir de $600",
+    hire_pkg1_timeline: "1 – 2 semaines",
+    hire_pkg1_desc:
+      "Rapide, ciblée, optimisée pour les conversions. Une page qui fait un travail bien.",
+    hire_pkg2_name: "Application web",
+    hire_pkg2_price: "à partir de $3 000",
+    hire_pkg2_timeline: "4 – 8 semaines",
+    hire_pkg2_desc:
+      "SaaS, systèmes de réservation, tableaux de bord, outils internes. Full stack de bout en bout.",
+    hire_pkg2_tag: "Le plus demandé",
+    hire_pkg3_name: "Site d'entreprise",
+    hire_pkg3_price: "à partir de $1 200",
+    hire_pkg3_timeline: "2 – 3 semaines",
+    hire_pkg3_desc:
+      "Multi-pages avec structure, SEO et quelque chose qui rend ton entreprise sérieuse en ligne.",
+    hire_step1_title: "Tu me contactes",
+    hire_step1_body:
+      "Remplis le formulaire ou envoie-moi un email directement. Un paragraphe suffit pour commencer.",
+    hire_step2_title: "Appel de découverte",
+    hire_step2_body:
+      "15 – 30 minutes. Gratuit. Pas de pitch. On détermine ensemble si c'est un bon fit.",
+    hire_step3_title: "Proposition écrite",
+    hire_step3_body:
+      "Périmètre, calendrier, prix — tout par écrit, avant que quoi que ce soit commence.",
+    hire_step4_title: "Démarrage",
+    hire_step4_body:
+      "50% d'avance, puis le travail commence. Tu obtiens un lien de prévisualisation privé tôt.",
+    hire_step5_title: "Phase de construction",
+    hire_step5_body:
+      "Mises à jour hebdomadaires sans que tu aies à demander. Tours de feedback structurés.",
+    hire_step6_title: "Lancement",
+    hire_step6_body:
+      "Je gère le déploiement. Nous testons ensemble. Une fois satisfait, le reste est payé.",
+    hire_step7_title: "Livraison",
+    hire_step7_body:
+      "Tu reçois tout : code, identifiants, documentation. Je ne conserve aucun accès.",
+    hire_need1_icon: "📄",
+    hire_need1_title: "Un brief clair",
+    hire_need1_body:
+      "Ce que ça fait, pour qui, à quoi ressemble le succès. N'a pas besoin d'être parfait.",
+    hire_need2_icon: "⚡",
+    hire_need2_title: "Feedback rapide",
+    hire_need2_body:
+      "48h pour répondre aux liens de prévisualisation et questions pendant la construction.",
+    hire_need3_icon: "🖊️",
+    hire_need3_title: "Contenu prêt",
+    hire_need3_body:
+      "Textes, logos, photos. Si tu ne les as pas, dis-le à l'avance.",
+    hire_need4_icon: "👤",
+    hire_need4_title: "Un décideur",
+    hire_need4_body:
+      "Une personne qui peut approuver les choses. Pas un comité.",
+    hire_wont1: "Facturation horaire sans plafond ni périmètre",
+    hire_wont2: "Commencer sans brief signé",
+    hire_wont3: "Urgences qui sautent le QA et les tests",
+    hire_wont4: "Prendre plus que ce que je peux bien livrer",
+    hire_pkg_note:
+      "Chaque projet reçoit un devis écrit. Ce sont des points de départ, pas des plafonds.",
     hire_name: "Ton nom",
     hire_email: "ton@email.com",
     hire_budget: "Fourchette de budget",
-    hire_message: "Parle-moi de ton projet — ce qu'il fait, pour qui il est, y a-t-il une deadline.",
+    hire_message:
+      "Parle-moi de ton projet — ce qu'il fait, pour qui il est, y a-t-il une deadline.",
     hire_back: "Retour au portfolio",
     blog_page_label: "Écriture",
     blog_page_title: "Du blog",
-    blog_page_sub: "Des choses que j'ai comprises et décidé de partager. Pas de newsletter — juste des posts quand j'ai quelque chose à dire.",
+    blog_page_sub:
+      "Des choses que j'ai comprises et décidé de partager. Pas de newsletter — juste des posts quand j'ai quelque chose à dire.",
     blog_back: "Retour au portfolio",
     post_building: "Tu construis quelque chose ?",
-    post_building_sub: "Si c'était utile, tu pourrais aimer travailler ensemble. Je prends quelques projets par mois.",
+    post_building_sub:
+      "Si c'était utile, tu pourrais aimer travailler ensemble. Je prends quelques projets par mois.",
     post_hire_link: "Comment m'engager",
     post_more: "Plus de posts",
     post_back: "Retour au blog",
@@ -857,8 +1167,10 @@ const translations = {
     nav_cta: "Laten we praten  ",
     hero_tag: "Beschikbaar voor nieuwe projecten",
     hero_h1: "Ik bouw web-apps <em>die echt werken.</em>",
-    hero_sub: "Full-stack ontwikkelaar. React, Next.js, Node. Ik bouw dingen die mensen echt gebruiken.",
-    hero_human: "Geen bureau, geen team. Één ontwikkelaar. Je praat rechtstreeks met mij.",
+    hero_sub:
+      "Full-stack ontwikkelaar. React, Next.js, Node. Ik bouw dingen die mensen echt gebruiken.",
+    hero_human:
+      "Geen bureau, geen team. Één ontwikkelaar. Je praat rechtstreeks met mij.",
     hero_cta1: "Mijn werk bekijken",
     hero_cta2: "Contact opnemen",
     hero_scroll: "Scrollen",
@@ -869,25 +1181,33 @@ const translations = {
     curr_tz_label: "Tijdzone",
     curr_reply_label: "Reageert binnen",
     curr_reply: "24 uur",
+    curr_next_slot_label: "Volgende slot",
     about_label: "Over mij",
     about_title: "Ik schrijf code. <em>Geen presentaties.</em>",
-    about_p1: "Ik begon dingen te bouwen op het web uit nieuwsgierigheid — bleef omdat ik het leuk vond iets te zien werken.",
-    about_p2: "Wanneer je mij inhuurt, krijg je <strong>mij</strong>. Geen projectmanager. Ik schrijf de code, beantwoord berichten.",
-    about_p3: "Ik geef om dingen die gemakkelijk worden overgeslagen: paginasnelheid, schone overdracht, mobiel.",
+    about_p1:
+      "Ik begon dingen te bouwen op het web uit nieuwsgierigheid — bleef omdat ik het leuk vond iets te zien werken.",
+    about_p2:
+      "Wanneer je mij inhuurt, krijg je <strong>mij</strong>. Geen projectmanager. Ik schrijf de code, beantwoord berichten.",
+    about_p3:
+      "Ik geef om dingen die gemakkelijk worden overgeslagen: paginasnelheid, schone overdracht, mobiel.",
     about_cta: "Werk met mij",
     stat_years: "Jaren ervaring",
     stat_projects: "Geleverde projecten",
     about_enjoy_label: "Wat ik echt leuk vind",
-    about_enjoy: "Het moment waarop de stukken passen. Snelle UI, schone API-respons, geen bugs op mobiel.",
+    about_enjoy:
+      "Het moment waarop de stukken passen. Snelle UI, schone API-respons, geen bugs op mobiel.",
     about_outside_label: "Buiten code",
-    about_outside: "Nieuwsgierig naar design, performance. Verken edge computing en AI-tools.",
+    about_outside:
+      "Nieuwsgierig naar design, performance. Verken edge computing en AI-tools.",
     serv_label: "Wat ik aanbied",
     serv_title: "Diensten & prijzen",
     serv_sub: "Je weet wat je betaalt voordat iets begint.",
     s1_title: "Landingspagina's",
-    s1_desc: "Snel en gefocust. Voor mensen die iets online nodig hebben dat echt werkt.",
+    s1_desc:
+      "Snel en gefocust. Voor mensen die iets online nodig hebben dat echt werkt.",
     s2_title: "Bedrijfswebsites",
-    s2_desc: "Meerzijdige websites met structuur, SEO-basis en professionele uitstraling.",
+    s2_desc:
+      "Meerzijdige websites met structuur, SEO-basis en professionele uitstraling.",
     s3_title: "Webapplicaties",
     s3_desc: "SaaS, dashboards, boekingssystemen, interne tools. Full stack.",
     price_onetime: "/ eenmalig",
@@ -896,7 +1216,8 @@ const translations = {
     work_title: "Dingen die ik heb gebouwd",
     work_sub: "Echte projecten, echte beperkingen, echte leveringsdata.",
     p1_title: "MediBook — Afspraken boeken",
-    p1_desc: "Patiënten belden om afspraken te maken. Ik bouwde een zelfboekingssysteem.",
+    p1_desc:
+      "Patiënten belden om afspraken te maken. Ik bouwde een zelfboekingssysteem.",
     p2_title: "Dalmatinske Vizure",
     p2_desc: "Vastgoedklant. Zo mooi als de eigendommen zelf.",
     p3_title: "Reis App",
@@ -907,21 +1228,28 @@ const translations = {
     proj_live: "Live bekijken  ",
     test_label: "Wat mensen zeggen",
     test_title: "Referenties",
-    t1_text: "Heeft onze site precies zo gebouwd als we hadden voorgesteld, sneller dan verwacht.",
-    t2_text: "Hij begreep het product, niet alleen de code. Stelde vroeg de juiste vragen.",
-    t3_text: "Schone code, op tijd, nette overdracht. We hebben twee keer samengewerkt.",
+    t1_text:
+      "Heeft onze site precies zo gebouwd als we hadden voorgesteld, sneller dan verwacht.",
+    t2_text:
+      "Hij begreep het product, niet alleen de code. Stelde vroeg de juiste vragen.",
+    t3_text:
+      "Schone code, op tijd, nette overdracht. We hebben twee keer samengewerkt.",
     stack_label: "Tech stack",
     stack_title: "Waarmee ik werk",
     stack_sub: "Moderne tools. Niets exotisch om het exotische.",
     blog_label: "Schrijven",
     blog_title: "Van de blog",
-    blog_sub: "Dingen die ik heb uitgevogeld en de moeite waard vond om te delen.",
+    blog_sub:
+      "Dingen die ik heb uitgevogeld en de moeite waard vond om te delen.",
     b1_title: "Waarom je landing page traag is",
-    b1_desc: "Niet-geoptimaliseerde afbeeldingen, te veel lettertypen, vergeten scripts.",
+    b1_desc:
+      "Niet-geoptimaliseerde afbeeldingen, te veel lettertypen, vergeten scripts.",
     b2_title: "Wat ik leerde bij het eerste klantproject",
-    b2_desc: "Het technische deel was het gemakkelijke deel. Scope creep — daar gaan projecten mis.",
+    b2_desc:
+      "Het technische deel was het gemakkelijke deel. Scope creep — daar gaan projecten mis.",
     b3_title: "Next.js App Router na 6 maanden",
-    b3_desc: "Het is goed. Het is ook verwarrend op manieren die de documentatie niet volledig uitlegt.",
+    b3_desc:
+      "Het is goed. Het is ook verwarrend op manieren die de documentatie niet volledig uitlegt.",
     blog_read: "Lezen  ",
     proc_label: "Hoe het werkt",
     proc_title: "Het proces",
@@ -929,7 +1257,8 @@ const translations = {
     proc1_title: "Ontdekkingsgesprek",
     proc1_desc: "15–30 minuten. Gratis. Geen pitch.",
     proc2_title: "Voorstel",
-    proc2_desc: "Scope, tijdlijn, prijs — schriftelijk, voordat er iets begint.",
+    proc2_desc:
+      "Scope, tijdlijn, prijs — schriftelijk, voordat er iets begint.",
     proc3_title: "Bouwen",
     proc3_desc: "Regelmatige updates, live previews, feedbackrondes.",
     proc4_title: "Launch",
@@ -941,27 +1270,33 @@ const translations = {
     faq2_q: "Werk je met internationale klanten?",
     faq2_a: "Bijna uitsluitend. De meeste klanten zijn in Europa en de VS.",
     faq3_q: "Hoeveel kost een project?",
-    faq3_a: "Landing pages vanaf $600, websites vanaf $1.200, web-apps vanaf $3.000.",
+    faq3_a:
+      "Landing pages vanaf $600, websites vanaf $1.200, web-apps vanaf $3.000.",
     faq4_q: "Wat als ik na de launch wijzigingen nodig heb?",
     faq4_a: "Elk project bevat een revisievenster na levering.",
     faq5_q: "Is de code van mij?",
     faq5_a: "Ja. Zodra het project betaald is, is alles van jou.",
     faq6_q: "Hoe lang duurt een typisch project?",
-    faq6_a: "Landing pages: 1–2 weken. Bedrijfswebsites: 2–3 weken. Web-apps: 4–8 weken.",
+    faq6_a:
+      "Landing pages: 1–2 weken. Bedrijfswebsites: 2–3 weken. Web-apps: 4–8 weken.",
     faq7_q: "Werk je ook met niet-technische klanten?",
-    faq7_a: "De meeste van mijn klanten zijn geen ontwikkelaars. Ik neem de technische kant volledig over.",
+    faq7_a:
+      "De meeste van mijn klanten zijn geen ontwikkelaars. Ik neem de technische kant volledig over.",
     faq8_q: "Wat heb ik nodig om te beginnen?",
-    faq8_a: "Een globaal idee van wat je bouwt, voor wie en hoeveel je wilt uitgeven.",
+    faq8_a:
+      "Een globaal idee van wat je bouwt, voor wie en hoeveel je wilt uitgeven.",
     faq9_q: "Doe je ook design?",
     faq9_a: "Ja — design is onderdeel van de bouw. Ik werk eerst in Figma.",
     faq10_q: "Wat gebeurt er als er iets kapot gaat na de launch?",
-    faq10_a: "Elk project bevat twee weken post-launch ondersteuning voor bugs.",
+    faq10_a:
+      "Elk project bevat twee weken post-launch ondersteuning voor bugs.",
     cta_title: "Heb je een project <em>in gedachten?</em>",
     cta_sub: "Stuur me een bericht. Vertel me wat je bouwt.",
     cta_email: "Stuur me een e-mail",
     cta_note: "Meestal binnen 24 uur. Geen automatische antwoorden.",
     footer_email: "E-mail",
-    cookie_text: "We gebruiken cookies om te begrijpen hoe je deze site gebruikt. Er worden geen persoonlijke gegevens verkocht.",
+    cookie_text:
+      "We gebruiken cookies om te begrijpen hoe je deze site gebruikt. Er worden geen persoonlijke gegevens verkocht.",
     cookie_link: "Meer informatie",
     cookie_accept: "Accepteren",
     cookie_decline: "Weigeren",
@@ -969,7 +1304,8 @@ const translations = {
     hire_tag: "Accepteert momenteel nieuwe projecten",
     hire_h1_1: "Laten we",
     hire_h1_2: "iets echts bouwen.",
-    hire_intro: "Deze pagina is voor mensen die willen begrijpen hoe ik werk voordat ze contact opnemen.",
+    hire_intro:
+      "Deze pagina is voor mensen die willen begrijpen hoe ik werk voordat ze contact opnemen.",
     hire_skip: "Naar formulier",
     hire_std_label: "Standaard",
     hire_std_title_1: "Wat is inbegrepen",
@@ -978,7 +1314,8 @@ const translations = {
     hire_pricing_label: "Prijzen",
     hire_pricing_title_1: "Pakketten",
     hire_pricing_title_2: "& wat ze kosten",
-    hire_pricing_sub: "Vaste prijs, niet per uur. Je kent het bedrag voordat iets begint.",
+    hire_pricing_sub:
+      "Vaste prijs, niet per uur. Je kent het bedrag voordat iets begint.",
     hire_work_label: "Werk",
     hire_work_title_1: "Dingen die ik",
     hire_work_title_2: "echt heb gebouwd",
@@ -987,7 +1324,8 @@ const translations = {
     hire_proc_label: "Proces",
     hire_proc_title_1: "Hoe het",
     hire_proc_title_2: "echt werkt",
-    hire_proc_sub: "Zeven stappen. Elk is ontworpen om iets vervelends te verwijderen.",
+    hire_proc_sub:
+      "Zeven stappen. Elk is ontworpen om iets vervelends te verwijderen.",
     hire_exp_label: "Verwachtingen",
     hire_exp_title_1: "Wat ik van",
     hire_exp_title_2: "jou nodig heb",
@@ -995,7 +1333,8 @@ const translations = {
     hire_limits_label: "Grenzen",
     hire_limits_title_1: "Wat ik",
     hire_limits_title_2: "niet doe",
-    hire_limits_sub: "Geen excuses — dingen die projecten betrouwbaar ruïneren.",
+    hire_limits_sub:
+      "Geen excuses — dingen die projecten betrouwbaar ruïneren.",
     hire_start_label: "Start",
     hire_start_title_1: "Klaar om",
     hire_start_title_2: "te beginnen?",
@@ -1005,17 +1344,78 @@ const translations = {
     hire_msg_received_sub: "Ik reageer binnen 24 uur. Meestal eerder.",
     hire_sending: "Verzenden...",
     hire_send: "Bericht versturen  ",
+    hire_pkg1_name: "Landingspagina",
+    hire_pkg1_price: "vanaf $600",
+    hire_pkg1_timeline: "1 – 2 weken",
+    hire_pkg1_desc:
+      "Snel, gefocust, conversiegericht. Eén pagina die één taak goed uitvoert.",
+    hire_pkg2_name: "Webapplicatie",
+    hire_pkg2_price: "vanaf $3.000",
+    hire_pkg2_timeline: "4 – 8 weken",
+    hire_pkg2_desc:
+      "SaaS, boekingssystemen, dashboards, interne tools. Full stack van begin tot eind.",
+    hire_pkg2_tag: "Meest geboekt",
+    hire_pkg3_name: "Bedrijfswebsite",
+    hire_pkg3_price: "vanaf $1.200",
+    hire_pkg3_timeline: "2 – 3 weken",
+    hire_pkg3_desc:
+      "Meerzijdig met structuur, SEO en iets waardoor je bedrijf er serieus uitziet online.",
+    hire_step1_title: "Jij neemt contact op",
+    hire_step1_body:
+      "Vul het formulier in of mail me direct. Vertel me ruwweg wat je nodig hebt — een alinea is genoeg.",
+    hire_step2_title: "Ontdekkingsgesprek",
+    hire_step2_body:
+      "15 – 30 minuten. Gratis. Geen pitch. We bepalen samen of het een match is.",
+    hire_step3_title: "Schriftelijk voorstel",
+    hire_step3_body:
+      "Scope, tijdlijn, prijs — alles schriftelijk, voordat iets begint.",
+    hire_step4_title: "Kickoff",
+    hire_step4_body:
+      "50% vooraf, dan begint het werk. Je krijgt vroeg een privé preview-link.",
+    hire_step5_title: "Bouwfase",
+    hire_step5_body:
+      "Wekelijkse updates zonder dat je hoeft te vragen. Feedbackrondes zijn gestructureerd.",
+    hire_step6_title: "Launch",
+    hire_step6_body:
+      "Ik handel de deployment af. We testen samen. Als je tevreden bent, wordt de rest betaald.",
+    hire_step7_title: "Overdracht",
+    hire_step7_body:
+      "Je krijgt alles: code, inloggegevens, documentatie. Ik behoud geen toegang.",
+    hire_need1_icon: "📄",
+    hire_need1_title: "Een duidelijke briefing",
+    hire_need1_body:
+      "Wat het doet, voor wie, hoe succes eruitziet. Hoeft niet perfect te zijn.",
+    hire_need2_icon: "⚡",
+    hire_need2_title: "Snel feedback",
+    hire_need2_body:
+      "48u om te reageren op preview-links en vragen tijdens de bouw.",
+    hire_need3_icon: "🖊️",
+    hire_need3_title: "Content klaar",
+    hire_need3_body:
+      "Teksten, logo's, foto's. Als je ze niet hebt, zeg het van tevoren.",
+    hire_need4_icon: "👤",
+    hire_need4_title: "Één beslisser",
+    hire_need4_body: "Één persoon die dingen kan goedkeuren. Geen comité.",
+    hire_wont1: "Uurtarief zonder plafond of scope",
+    hire_wont2: "Beginnen zonder ondertekende briefing",
+    hire_wont3: "Spoedopdrachten die QA en tests overslaan",
+    hire_wont4: "Meer aannemen dan ik goed kan leveren",
+    hire_pkg_note:
+      "Elk project krijgt een schriftelijke offerte. Dit zijn startpunten, geen plafonds.",
     hire_name: "Jouw naam",
     hire_email: "jouw@email.com",
     hire_budget: "Budgetbereik",
-    hire_message: "Vertel me over je project — wat het doet, voor wie het is, is er een deadline.",
+    hire_message:
+      "Vertel me over je project — wat het doet, voor wie het is, is er een deadline.",
     hire_back: "Terug naar portfolio",
     blog_page_label: "Schrijven",
     blog_page_title: "Van de blog",
-    blog_page_sub: "Dingen die ik heb uitgevogeld en besloten te delen. Geen nieuwsbrief — alleen posts als er iets te zeggen is.",
+    blog_page_sub:
+      "Dingen die ik heb uitgevogeld en besloten te delen. Geen nieuwsbrief — alleen posts als er iets te zeggen is.",
     blog_back: "Terug naar portfolio",
     post_building: "Bouw je iets?",
-    post_building_sub: "Als dit nuttig was, vind je samenwerken misschien leuk. Ik neem een paar projecten per maand aan.",
+    post_building_sub:
+      "Als dit nuttig was, vind je samenwerken misschien leuk. Ik neem een paar projecten per maand aan.",
     post_hire_link: "Hoe je me kunt inhuren",
     post_more: "Meer posts",
     post_back: "Terug naar blog",
@@ -1045,8 +1445,10 @@ const translations = {
     nav_cta: "Låt oss prata  ",
     hero_tag: "Tillgänglig för nya projekt",
     hero_h1: "Bygger webbappar <em>som faktiskt fungerar.</em>",
-    hero_sub: "Full-stack-utvecklare. React, Next.js, Node. Jag bygger saker som folk faktiskt använder.",
-    hero_human: "Ingen byrå, inget team. En utvecklare. Du pratar direkt med mig.",
+    hero_sub:
+      "Full-stack-utvecklare. React, Next.js, Node. Jag bygger saker som folk faktiskt använder.",
+    hero_human:
+      "Ingen byrå, inget team. En utvecklare. Du pratar direkt med mig.",
     hero_cta1: "Se mina arbeten",
     hero_cta2: "Kontakta mig",
     hero_scroll: "Scrolla",
@@ -1057,25 +1459,33 @@ const translations = {
     curr_tz_label: "Tidszon",
     curr_reply_label: "Svarar inom",
     curr_reply: "24 timmar",
+    curr_next_slot_label: "Nästa slot",
     about_label: "Om mig",
     about_title: "Jag skriver kod. <em>Inte presentationer.</em>",
-    about_p1: "Jag började bygga saker på webben av nyfikenhet — stannade kvar för att jag gillade att se något fungera.",
-    about_p2: "När du anlitar mig får du <strong>mig</strong>. Ingen projektledare. Jag skriver koden, svarar på meddelanden.",
-    about_p3: "Jag bryr mig om saker som är lätta att hoppa över: laddningstider, ren överlämning, mobil.",
+    about_p1:
+      "Jag började bygga saker på webben av nyfikenhet — stannade kvar för att jag gillade att se något fungera.",
+    about_p2:
+      "När du anlitar mig får du <strong>mig</strong>. Ingen projektledare. Jag skriver koden, svarar på meddelanden.",
+    about_p3:
+      "Jag bryr mig om saker som är lätta att hoppa över: laddningstider, ren överlämning, mobil.",
     about_cta: "Arbeta med mig",
     stat_years: "År av byggande",
     stat_projects: "Levererade projekt",
     about_enjoy_label: "Vad jag faktiskt gillar",
-    about_enjoy: "Stunden när bitarna passar. Snabb UI, ren API-respons, inga buggar på mobil.",
+    about_enjoy:
+      "Stunden när bitarna passar. Snabb UI, ren API-respons, inga buggar på mobil.",
     about_outside_label: "Utanför koden",
-    about_outside: "Nyfiken på design, prestanda. Utforskar edge computing och AI-verktyg.",
+    about_outside:
+      "Nyfiken på design, prestanda. Utforskar edge computing och AI-verktyg.",
     serv_label: "Vad jag erbjuder",
     serv_title: "Tjänster & priser",
     serv_sub: "Du vet vad du betalar innan något börjar.",
     s1_title: "Landningssidor",
-    s1_desc: "Snabba och fokuserade. För dem som behöver något online som faktiskt fungerar.",
+    s1_desc:
+      "Snabba och fokuserade. För dem som behöver något online som faktiskt fungerar.",
     s2_title: "Företagswebbplatser",
-    s2_desc: "Flersidiga webbplatser med proper struktur, SEO-grunder och ett professionellt utseende.",
+    s2_desc:
+      "Flersidiga webbplatser med proper struktur, SEO-grunder och ett professionellt utseende.",
     s3_title: "Webbapplikationer",
     s3_desc: "SaaS, dashboards, bokningssystem, interna verktyg. Full stack.",
     price_onetime: "/ engångspris",
@@ -1084,9 +1494,11 @@ const translations = {
     work_title: "Saker jag har byggt",
     work_sub: "Riktiga projekt, riktiga begränsningar, riktiga leveransdatum.",
     p1_title: "MediBook — Tidsbokning",
-    p1_desc: "Patienter ringde för att boka tider. Jag byggde ett självbokningssystem.",
+    p1_desc:
+      "Patienter ringde för att boka tider. Jag byggde ett självbokningssystem.",
     p2_title: "Dalmatinske Vizure",
-    p2_desc: "Fastighetskund. Behövde en webbplats lika snygg som fastigheterna.",
+    p2_desc:
+      "Fastighetskund. Behövde en webbplats lika snygg som fastigheterna.",
     p3_title: "Reseapp",
     p3_desc: "Destinationssökning, reseplaning, live API-data.",
     p4_title: "Duolingo-klon",
@@ -1095,9 +1507,12 @@ const translations = {
     proj_live: "Se live  ",
     test_label: "Vad folk säger",
     test_title: "Omdömen",
-    t1_text: "Byggde vår webbplats precis som vi föreställde oss, snabbare än förväntat.",
-    t2_text: "Han förstod produkten, inte bara koden. Ställde rätt frågor tidigt.",
-    t3_text: "Ren kod, i tid, ren överlämning. Vi har arbetat tillsammans två gånger.",
+    t1_text:
+      "Byggde vår webbplats precis som vi föreställde oss, snabbare än förväntat.",
+    t2_text:
+      "Han förstod produkten, inte bara koden. Ställde rätt frågor tidigt.",
+    t3_text:
+      "Ren kod, i tid, ren överlämning. Vi har arbetat tillsammans två gånger.",
     stack_label: "Teknikstack",
     stack_title: "Vad jag arbetar med",
     stack_sub: "Moderna verktyg. Inget exotiskt för sakens skull.",
@@ -1107,9 +1522,11 @@ const translations = {
     b1_title: "Varför din landningssida är långsam",
     b1_desc: "Ej optimerade bilder, för många typsnitt, third-party-skript.",
     b2_title: "Vad jag lärde mig av att bygga mitt första kundprojekt",
-    b2_desc: "Den tekniska delen var den lätta. Scope creep — det är där projekt faller isär.",
+    b2_desc:
+      "Den tekniska delen var den lätta. Scope creep — det är där projekt faller isär.",
     b3_title: "Next.js App Router efter 6 månader",
-    b3_desc: "Det är bra. Det är också förvirrande på sätt som dokumentationen inte förklarar helt.",
+    b3_desc:
+      "Det är bra. Det är också förvirrande på sätt som dokumentationen inte förklarar helt.",
     blog_read: "Läs  ",
     proc_label: "Hur det fungerar",
     proc_title: "Processen",
@@ -1119,9 +1536,11 @@ const translations = {
     proc2_title: "Förslag",
     proc2_desc: "Omfattning, tidslinje, pris — skriftligt, innan något börjar.",
     proc3_title: "Bygga",
-    proc3_desc: "Regelbundna uppdateringar, live-förhandsvisningar, feedbackrundor.",
+    proc3_desc:
+      "Regelbundna uppdateringar, live-förhandsvisningar, feedbackrundor.",
     proc4_title: "Lansering",
-    proc4_desc: "Driftsättning, testning, fullständig överlämning. Allt är ditt.",
+    proc4_desc:
+      "Driftsättning, testning, fullständig överlämning. Allt är ditt.",
     faq_label: "Vanliga frågor",
     faq_title: "FAQ",
     faq1_q: "Hur kommunicerar vi under projektet?",
@@ -1129,27 +1548,33 @@ const translations = {
     faq2_q: "Arbetar du med internationella kunder?",
     faq2_a: "Nästan uteslutande. De flesta av mina kunder är i Europa och USA.",
     faq3_q: "Hur mycket kostar ett projekt?",
-    faq3_a: "Landningssidor från $600, webbplatser från $1 200, webbappar från $3 000.",
+    faq3_a:
+      "Landningssidor från $600, webbplatser från $1 200, webbappar från $3 000.",
     faq4_q: "Vad händer om jag behöver ändringar efter lanseringen?",
     faq4_a: "Varje projekt inkluderar ett revisionsfönster efter leverans.",
     faq5_q: "Äger jag koden?",
     faq5_a: "Ja. När projektet är betalat är allt ditt.",
     faq6_q: "Hur lång tid tar ett typiskt projekt?",
-    faq6_a: "Landningssidor: 1–2 veckor. Företagswebbplatser: 2–3 veckor. Webbappar: 4–8 veckor.",
+    faq6_a:
+      "Landningssidor: 1–2 veckor. Företagswebbplatser: 2–3 veckor. Webbappar: 4–8 veckor.",
     faq7_q: "Arbetar du med icke-tekniska kunder?",
-    faq7_a: "De flesta av mina kunder är inte utvecklare. Jag hanterar den tekniska sidan helt.",
+    faq7_a:
+      "De flesta av mina kunder är inte utvecklare. Jag hanterar den tekniska sidan helt.",
     faq8_q: "Vad behöver jag för att komma igång?",
-    faq8_a: "En grov idé om vad du bygger, för vem det är och ungefär vad du vill spendera.",
+    faq8_a:
+      "En grov idé om vad du bygger, för vem det är och ungefär vad du vill spendera.",
     faq9_q: "Gör du även design?",
     faq9_a: "Ja — design är en del av bygget. Jag arbetar i Figma först.",
     faq10_q: "Vad händer om något går sönder efter lanseringen?",
-    faq10_a: "Varje projekt inkluderar två veckors support efter lansering för buggar.",
+    faq10_a:
+      "Varje projekt inkluderar två veckors support efter lansering för buggar.",
     cta_title: "Har du ett projekt <em>i tankarna?</em>",
     cta_sub: "Skicka ett meddelande. Berätta vad du bygger.",
     cta_email: "Skicka mig ett e-postmeddelande",
     cta_note: "Vanligtvis inom 24 timmar. Inga automatiserade svar.",
     footer_email: "E-post",
-    cookie_text: "Vi använder cookies för att förstå hur du använder den här webbplatsen. Inga personuppgifter säljs.",
+    cookie_text:
+      "Vi använder cookies för att förstå hur du använder den här webbplatsen. Inga personuppgifter säljs.",
     cookie_link: "Läs mer",
     cookie_accept: "Acceptera",
     cookie_decline: "Avböj",
@@ -1157,16 +1582,19 @@ const translations = {
     hire_tag: "Tar för närvarande emot nya projekt",
     hire_h1_1: "Låt oss bygga",
     hire_h1_2: "något riktigt.",
-    hire_intro: "Den här sidan är för dig som vill förstå hur jag arbetar innan du hör av dig.",
+    hire_intro:
+      "Den här sidan är för dig som vill förstå hur jag arbetar innan du hör av dig.",
     hire_skip: "Hoppa till formuläret",
     hire_std_label: "Standard",
     hire_std_title_1: "Vad som ingår",
     hire_std_title_2: "i varje projekt",
-    hire_std_sub: "Oavsett omfattning eller pris. Det här är inte tillägg — det är grunden.",
+    hire_std_sub:
+      "Oavsett omfattning eller pris. Det här är inte tillägg — det är grunden.",
     hire_pricing_label: "Priser",
     hire_pricing_title_1: "Paket",
     hire_pricing_title_2: "& vad de kostar",
-    hire_pricing_sub: "Fast pris, inte per timme. Du vet numret innan något börjar.",
+    hire_pricing_sub:
+      "Fast pris, inte per timme. Du vet numret innan något börjar.",
     hire_work_label: "Arbeten",
     hire_work_title_1: "Saker jag",
     hire_work_title_2: "faktiskt har byggt",
@@ -1175,7 +1603,8 @@ const translations = {
     hire_proc_label: "Process",
     hire_proc_title_1: "Hur det",
     hire_proc_title_2: "faktiskt fungerar",
-    hire_proc_sub: "Sju steg. Vart och ett är utformat för att ta bort något irriterande.",
+    hire_proc_sub:
+      "Sju steg. Vart och ett är utformat för att ta bort något irriterande.",
     hire_exp_label: "Förväntningar",
     hire_exp_title_1: "Vad jag",
     hire_exp_title_2: "behöver från dig",
@@ -1183,7 +1612,8 @@ const translations = {
     hire_limits_label: "Gränser",
     hire_limits_title_1: "Vad jag",
     hire_limits_title_2: "inte gör",
-    hire_limits_sub: "Inga ursäkter — saker som tillförlitligt förstör projekt.",
+    hire_limits_sub:
+      "Inga ursäkter — saker som tillförlitligt förstör projekt.",
     hire_start_label: "Start",
     hire_start_title_1: "Redo att",
     hire_start_title_2: "komma igång?",
@@ -1193,17 +1623,78 @@ const translations = {
     hire_msg_received_sub: "Jag svarar inom 24 timmar. Vanligtvis snabbare.",
     hire_sending: "Skickar...",
     hire_send: "Skicka meddelande  ",
+    hire_pkg1_name: "Landningssida",
+    hire_pkg1_price: "från $600",
+    hire_pkg1_timeline: "1 – 2 veckor",
+    hire_pkg1_desc:
+      "Snabb, fokuserad, konverteringsoptimerad. En sida som gör ett jobb bra.",
+    hire_pkg2_name: "Webbapplikation",
+    hire_pkg2_price: "från $3 000",
+    hire_pkg2_timeline: "4 – 8 veckor",
+    hire_pkg2_desc:
+      "SaaS, bokningssystem, dashboards, interna verktyg. Full stack från start till mål.",
+    hire_pkg2_tag: "Mest bokad",
+    hire_pkg3_name: "Företagswebbplats",
+    hire_pkg3_price: "från $1 200",
+    hire_pkg3_timeline: "2 – 3 veckor",
+    hire_pkg3_desc:
+      "Flersidigt med struktur, SEO och något som gör ditt företag seriöst online.",
+    hire_step1_title: "Du hör av dig",
+    hire_step1_body:
+      "Fyll i formuläret eller maila mig direkt. Berätta grovt vad du behöver — ett stycke räcker.",
+    hire_step2_title: "Upptäcktssamtal",
+    hire_step2_body:
+      "15 – 30 minuter. Gratis. Ingen pitch. Vi tar reda på om det passar.",
+    hire_step3_title: "Skriftligt förslag",
+    hire_step3_body:
+      "Omfattning, tidslinje, pris — allt skriftligt, innan något börjar.",
+    hire_step4_title: "Kickoff",
+    hire_step4_body:
+      "50% i förskott, sedan börjar arbetet. Du får en privat förhandsvisningslänk tidigt.",
+    hire_step5_title: "Byggfas",
+    hire_step5_body:
+      "Veckovisa uppdateringar utan att du behöver fråga. Feedbackrundor är strukturerade.",
+    hire_step6_title: "Lansering",
+    hire_step6_body:
+      "Jag hanterar driftsättningen. Vi testar tillsammans. När du är nöjd betalas resten.",
+    hire_step7_title: "Överlämning",
+    hire_step7_body:
+      "Du får allt: kod, inloggningsuppgifter, dokumentation. Jag behåller ingen åtkomst.",
+    hire_need1_icon: "📄",
+    hire_need1_title: "En tydlig briefing",
+    hire_need1_body:
+      "Vad det gör, för vem, hur framgång ser ut. Behöver inte vara perfekt.",
+    hire_need2_icon: "⚡",
+    hire_need2_title: "Snabb feedback",
+    hire_need2_body:
+      "48h att svara på förhandsvisningslänkar och frågor under bygget.",
+    hire_need3_icon: "🖊️",
+    hire_need3_title: "Innehåll klart",
+    hire_need3_body:
+      "Texter, logotyper, foton. Om du inte har dem, säg det i förväg.",
+    hire_need4_icon: "👤",
+    hire_need4_title: "En beslutsfattare",
+    hire_need4_body: "En person som kan godkänna saker. Inte en kommitté.",
+    hire_wont1: "Timdebitering utan tak eller scope",
+    hire_wont2: "Börja arbeta utan signerad briefing",
+    hire_wont3: "Brådskande jobb som hoppar över QA och tester",
+    hire_wont4: "Ta på sig mer än jag kan leverera bra",
+    hire_pkg_note:
+      "Varje projekt får en skriftlig offert. Det här är utgångspunkter, inte tak.",
     hire_name: "Ditt namn",
     hire_email: "din@email.com",
     hire_budget: "Budgetintervall",
-    hire_message: "Berätta om ditt projekt — vad det gör, för vem det är, finns det en deadline.",
+    hire_message:
+      "Berätta om ditt projekt — vad det gör, för vem det är, finns det en deadline.",
     hire_back: "Tillbaka till portföljen",
     blog_page_label: "Skrivande",
     blog_page_title: "Från bloggen",
-    blog_page_sub: "Saker jag har listat ut och bestämt mig för att dela. Inget nyhetsbrev — bara inlägg när det finns något att säga.",
+    blog_page_sub:
+      "Saker jag har listat ut och bestämt mig för att dela. Inget nyhetsbrev — bara inlägg när det finns något att säga.",
     blog_back: "Tillbaka till portföljen",
     post_building: "Bygger du något?",
-    post_building_sub: "Om detta var användbart kanske du gillar att samarbeta. Jag tar emot några projekt per månad.",
+    post_building_sub:
+      "Om detta var användbart kanske du gillar att samarbeta. Jag tar emot några projekt per månad.",
     post_hire_link: "Hur du anlitar mig",
     post_more: "Fler inlägg",
     post_back: "Tillbaka till bloggen",

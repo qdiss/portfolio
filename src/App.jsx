@@ -22,6 +22,9 @@ import AdminPage from "./pages/AdminPage";
 import CookieManager from "./components/CookieManager";
 import AdminGuard from "./pages/AdminGuard";
 import ProjectDetailPage from "./pages/ProjectDetailPage";
+import NotFoundPage from "./pages/NotFoundPage";
+import ProjectsListingPage from "./pages/ProjectsListingPage";
+import UsesPage from "./pages/UsesPage";
 
 function Divider() {
   return <div className="divider" />;
@@ -117,14 +120,20 @@ function LoadingScreen({ onDone }) {
 function ScrollProgress() {
   const [p, setP] = useState(0);
   useEffect(() => {
+    let rafId;
+    let current = 0;
     const fn = () => {
       const { scrollTop, scrollHeight, clientHeight } =
         document.documentElement;
       const total = scrollHeight - clientHeight;
-      setP(total > 0 ? (scrollTop / total) * 100 : 0);
+      const target = total > 0 ? (scrollTop / total) * 100 : 0;
+      // lerp — smooth follow
+      current += (target - current) * 0.12;
+      setP(current);
+      rafId = requestAnimationFrame(fn);
     };
-    window.addEventListener("scroll", fn, { passive: true });
-    return () => window.removeEventListener("scroll", fn);
+    rafId = requestAnimationFrame(fn);
+    return () => cancelAnimationFrame(rafId);
   }, []);
   return (
     <div
@@ -133,11 +142,13 @@ function ScrollProgress() {
         top: 0,
         left: 0,
         zIndex: 9999,
-        height: "3px",
+        height: "2px",
         width: `${p}%`,
         background: "var(--accent)",
-        transition: "width 0.1s linear",
         pointerEvents: "none",
+        boxShadow:
+          "0 0 10px rgba(200,240,96,0.6), 0 0 4px rgba(200,240,96,0.4)",
+        willChange: "width",
       }}
     />
   );
@@ -273,6 +284,11 @@ export default function App() {
                 <Route path="/hire" element={<HirePage />} />
                 <Route path="/blog" element={<BlogPage />} />
                 <Route path="/blog/:slug" element={<PostPage />} />
+                <Route path="/uses" element={<UsesPage />} />
+                <Route
+                  path="/contents/projects"
+                  element={<ProjectsListingPage />}
+                />
                 <Route
                   path="/contents/projects/:slug"
                   element={<ProjectDetailPage />}
@@ -285,6 +301,7 @@ export default function App() {
                     </AdminGuard>
                   }
                 />
+                <Route path="*" element={<NotFoundPage />} />
               </Routes>
             </LangProvider>
           </ThemeProvider>
