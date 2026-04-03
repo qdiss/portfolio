@@ -27,6 +27,7 @@ const NAV_LINKS = [
   { section: "work", labelKey: "nav_work" },
   { section: "blog", labelKey: "nav_blog", isRoute: true, to: "/blog" },
   { section: "contact", labelKey: "nav_contact" },
+  { section: "uses", labelKey: "nav_uses", isRoute: true, to: "/uses" },
 ];
 
 export default function Nav() {

@@ -3,57 +3,125 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Adis Klobodanovic — Full-Stack Developer</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>
+      Adis Klobodanovic — Full-Stack Developer | React, Next.js, Node
+    </title>
 
-    <!-- SEO -->
+    <!-- Primary SEO -->
     <meta
       name="description"
-      content="Full-stack developer specialising in React, Next.js & Node. I build fast, clean web apps that ship — not just look good in Figma."
+      content="Full-stack developer specialising in React, Next.js & Node.js. I build fast, clean web apps, SaaS products and landing pages that ship — available for new projects."
     />
     <meta name="author" content="Adis Klobodanovic" />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#c8f060" />
     <link rel="canonical" href="https://adiss.dev" />
 
-    <!-- Open Graph -->
+    <!-- Keywords -->
+    <meta
+      name="keywords"
+      content="full-stack developer, React developer, Next.js developer, Node.js, web app development, SaaS, landing page, freelance developer, Adis Klobodanovic"
+    />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://adiss.dev" />
     <meta
       property="og:title"
       content="Adis Klobodanovic — Full-Stack Developer"
     />
     <meta
       property="og:description"
-      content="Full-stack developer. React, Next.js, Node. Building things people actually use."
+      content="Full-stack developer. React, Next.js, Node.js. Building fast web apps and SaaS products that actually ship."
     />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://adiss.dev" />
     <meta property="og:image" content="https://adiss.dev/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:site_name" content="adiss.dev" />
+    <meta property="og:locale" content="en_US" />
 
-    <!-- Twitter card -->
+    <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@adisklobodanovic" />
     <meta
       name="twitter:title"
       content="Adis Klobodanovic — Full-Stack Developer"
     />
     <meta
       name="twitter:description"
-      content="Full-stack developer. React, Next.js, Node. Building things people actually use."
+      content="Full-stack developer. React, Next.js, Node.js. Building fast web apps and SaaS products that actually ship."
     />
     <meta name="twitter:image" content="https://adiss.dev/og-image.png" />
-    <meta
-      property="og:title"
-      content="Adis Klobodanovic — Full-Stack Developer"
-    />
-    <meta property="og:description" content="..." />
-    <meta property="og:image" content="/og-image.png" />
-    <meta property="og:type" content="website" />
-    <meta name="twitter:card" content="summary_large_image" />
 
-    <!-- Fonts -->
+    <!-- Structured Data: Person -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Adis Klobodanovic",
+        "url": "https://adiss.dev",
+        "email": "adis.klobodanovic@gmail.com",
+        "jobTitle": "Full-Stack Developer",
+        "description": "Full-stack developer specialising in React, Next.js and Node.js. Building fast web apps, SaaS products and landing pages.",
+        "knowsAbout": [
+          "React",
+          "Next.js",
+          "Node.js",
+          "TypeScript",
+          "PostgreSQL",
+          "Tailwind CSS"
+        ],
+        "sameAs": [
+          "https://linkedin.com/in/adis-klobodanovic",
+          "https://github.com/adisklobodanovic"
+        ]
+      }
+    </script>
+
+    <!-- Structured Data: WebSite -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Adis Klobodanovic — Full-Stack Developer",
+        "url": "https://adiss.dev",
+        "description": "Portfolio and hire page for Adis Klobodanovic, full-stack developer.",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://adiss.dev/?s={search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
+      }
+    </script>
+
+    <!-- Structured Data: Professional Service -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        "name": "adiss.dev",
+        "url": "https://adiss.dev",
+        "description": "Full-stack web development services — React, Next.js, Node.js. Landing pages, business websites, and web applications.",
+        "priceRange": "$600 – $8000+",
+        "serviceType": [
+          "Web Development",
+          "Full-Stack Development",
+          "SaaS Development"
+        ],
+        "areaServed": "Worldwide"
+      }
+    </script>
+
+    <!-- Fonts: preconnect first for performance, then stylesheet -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap"
       rel="stylesheet"
     />
 
-    <!-- Plausible Analytics (privacy-friendly, no cookies) -->
-    <!-- Replace adiss.dev with your actual domain after deploying -->
+    <!-- Google Analytics -->
     <script
       async
       src="https://www.googletagmanager.com/gtag/js?id=G-6SR2FJDFZC"

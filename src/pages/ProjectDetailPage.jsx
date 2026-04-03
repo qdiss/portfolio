@@ -1,6 +1,8 @@
 import { useParams, Link } from "react-router-dom";
 import Nav from "../components/Nav";
 import { useEffect } from "react";
+import { useLang } from "../context/LangContext";
+import { useSEO } from "../hooks/useSEO";
 
 const PROJECT_DATA = {
   medibook: {
@@ -101,7 +103,18 @@ const PROJECT_DATA = {
 
 export default function ProjectDetailPage() {
   const { slug } = useParams();
+  const { t } = useLang();
   const project = PROJECT_DATA[slug];
+
+  useSEO({
+    title: project
+      ? `${project.title} — Adis Klobodanovic`
+      : "Project not found — Adis Klobodanovic",
+    description: project?.problem || "",
+    canonical: project
+      ? `https://adiss.dev/contents/projects/${slug}`
+      : undefined,
+  });
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -401,7 +414,7 @@ export default function ProjectDetailPage() {
           <div className="pd-hero-noise" />
           <div className="pd-hero-content">
             <Link to="/contents/projects" className="pd-back reveal">
-              ← All projects
+              {t.proj_back_all || "← All projects"}
             </Link>
             <div className="pd-tags-row reveal">
               <span className="pd-year">{project.year}</span>
@@ -436,18 +449,24 @@ export default function ProjectDetailPage() {
               {/* Main content */}
               <div className="pd-main">
                 <div className="pd-block reveal">
-                  <div className="pd-block-label">The Problem</div>
-                  <h2>What needed solving</h2>
+                  <div className="pd-block-label">
+                    {t.proj_problem_label || "The Problem"}
+                  </div>
+                  <h2>{t.proj_problem_h2 || "What needed solving"}</h2>
                   <p>{project.problem}</p>
                 </div>
                 <div className="pd-block reveal">
-                  <div className="pd-block-label">The Solution</div>
-                  <h2>What I built</h2>
+                  <div className="pd-block-label">
+                    {t.proj_solution_label || "The Solution"}
+                  </div>
+                  <h2>{t.proj_solution_h2 || "What I built"}</h2>
                   <p>{project.solution}</p>
                 </div>
                 <div className="pd-block reveal">
-                  <div className="pd-block-label">How It Was Built</div>
-                  <h2>Technical approach</h2>
+                  <div className="pd-block-label">
+                    {t.proj_how_label || "How It Was Built"}
+                  </div>
+                  <h2>{t.proj_how_h2 || "Technical approach"}</h2>
                   <p>{project.how}</p>
                 </div>
               </div>
@@ -460,15 +479,17 @@ export default function ProjectDetailPage() {
                   rel="noreferrer"
                   className="pd-live-btn"
                 >
-                  View live project
+                  {t.proj_view_live || "View live project"}
                   <span>↗</span>
                 </a>
                 <Link to="/contents/projects" className="pd-back-link">
-                  ← Back to all projects
+                  {t.proj_back_all || "← Back to all projects"}
                 </Link>
 
                 <div className="pd-aside-card" style={{ marginTop: "1.25rem" }}>
-                  <div className="pd-aside-card-title">Tech Stack</div>
+                  <div className="pd-aside-card-title">
+                    {t.proj_tech_stack || "Tech Stack"}
+                  </div>
                   <div className="pd-stack-chips">
                     {project.stack.map((s) => (
                       <span key={s} className="pd-chip">
@@ -479,7 +500,9 @@ export default function ProjectDetailPage() {
                 </div>
 
                 <div className="pd-aside-card">
-                  <div className="pd-aside-card-title">Tags</div>
+                  <div className="pd-aside-card-title">
+                    {t.proj_tags || "Tags"}
+                  </div>
                   <div className="pd-stack-chips">
                     {project.tags.map((tag) => (
                       <span key={tag} className="tag">
@@ -500,7 +523,7 @@ export default function ProjectDetailPage() {
                     className="pd-aside-card-title"
                     style={{ color: "var(--accent)" }}
                   >
-                    Want something like this?
+                    {t.proj_want_cta_title || "Want something like this?"}
                   </div>
                   <p
                     style={{
@@ -511,8 +534,8 @@ export default function ProjectDetailPage() {
                       marginBottom: "1rem",
                     }}
                   >
-                    I build projects like this for clients. Let's talk about
-                    what you need.
+                    {t.proj_want_cta_body ||
+                      "I build projects like this for clients. Let's talk about what you need."}
                   </p>
                   <Link
                     to="/hire"
@@ -526,7 +549,7 @@ export default function ProjectDetailPage() {
                       textDecoration: "none",
                     }}
                   >
-                    Start a project ↗
+                    {t.proj_want_cta_link || "Start a project ↗"}
                   </Link>
                 </div>
               </div>

@@ -1,6 +1,8 @@
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import Nav from "../components/Nav";
+import { useLang } from "../context/LangContext";
+import { useSEO } from "../hooks/useSEO";
 
 const USES_DATA = [
   {
@@ -118,6 +120,15 @@ const USES_DATA = [
 ];
 
 export default function UsesPage() {
+  const { t } = useLang();
+
+  useSEO({
+    title: "Uses — Tools & Stack | Adis Klobodanovic",
+    description:
+      "The tools, hardware, and software I use every day as a full-stack developer — editor, stack, design, productivity, and deployment.",
+    canonical: "https://adiss.dev/uses",
+  });
+
   useEffect(() => {
     window.scrollTo(0, 0);
     document.title = "Uses — Adis Klobodanovic";
@@ -236,15 +247,15 @@ export default function UsesPage() {
 
       <div className="uses-page">
         <div className="uses-hero reveal">
-          <div className="section-label">Setup</div>
+          <div className="section-label">{t.uses_label || "Setup"}</div>
           <h1 className="section-title">
-            What I use
+            {t.uses_title || "What I use"}
             <br />
-            <em>day to day.</em>
+            <em>{t.uses_sub || "day to day."}</em>
           </h1>
           <p className="uses-intro">
-            Tools, hardware, and software I actually use. Updated when something
-            changes. Inspired by{" "}
+            {t.uses_intro ||
+              "Tools, hardware, and software I actually use. Updated when something changes."}{" "}
             <a
               href="https://uses.tech"
               target="_blank"
@@ -278,7 +289,9 @@ export default function UsesPage() {
         ))}
 
         <div className="uses-footer reveal">
-          <span className="uses-footer-text">Last updated April 2026</span>
+          <span className="uses-footer-text">
+            {t.uses_footer_text || "Last updated April 2026"}
+          </span>
           <Link
             to="/"
             style={{
@@ -287,7 +300,7 @@ export default function UsesPage() {
               textDecoration: "none",
             }}
           >
-            ← Back to home
+            {t.uses_back || "← Back to home"}
           </Link>
         </div>
       </div>

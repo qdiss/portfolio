@@ -2,6 +2,13 @@ import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { useLang } from "../context/LangContext";
 import Nav from "../components/Nav";
+import {
+  EMAILJS_PUBLIC_KEY,
+  EMAILJS_SERVICE_ID,
+  EMAILJS_TEMPLATE_ID,
+  EMAILJS_READY,
+} from "../config/emailjs";
+import { useSEO } from "../hooks/useSEO";
 
 function ScrollProgress() {
   const [p, setP] = useState(0);
@@ -62,10 +69,7 @@ function useReveal() {
   }, []);
 }
 
-//TODO: Add this
-const EMAILJS_SERVICE_ID = "YOUR_SERVICE_ID";
-const EMAILJS_TEMPLATE_ID = "YOUR_TEMPLATE_ID";
-const EMAILJS_PUBLIC_KEY = "YOUR_PUBLIC_KEY";
+//
 const BUDGETS = ["< $1k", "$1k – $3k", "$3k – $8k", "$8k+", "Not sure yet"];
 
 const inputStyle = {
@@ -93,7 +97,7 @@ function ContactForm({ t }) {
     setError("");
     const data = Object.fromEntries(new FormData(formRef.current));
     try {
-      if (EMAILJS_SERVICE_ID !== "YOUR_SERVICE_ID") {
+      if (EMAILJS_READY) {
         const { default: emailjs } = await import("@emailjs/browser");
         await emailjs.sendForm(
           EMAILJS_SERVICE_ID,
@@ -204,122 +208,7 @@ function ContactForm({ t }) {
   );
 }
 
-const PACKAGES = [
-  {
-    name: "Landing Page",
-    price: "from $600",
-    timeline: "1 – 2 weeks",
-    popular: false,
-    desc: "Fast, focused, conversion-ready. One page that does one job well.",
-    includes: [
-      "Custom design",
-      "Mobile-first",
-      "Contact form",
-      "Basic SEO",
-      "1 revision round",
-    ],
-    tag: null,
-  },
-  {
-    name: "Web Application",
-    price: "from $3,000",
-    timeline: "4 – 8 weeks",
-    popular: true,
-    desc: "SaaS, booking systems, dashboards, internal tools. Full stack end-to-end.",
-    includes: [
-      "Auth + database",
-      "Admin panel",
-      "API integration",
-      "Testing",
-      "2 revision rounds",
-      "Full handover docs",
-    ],
-    tag: "Most booked",
-  },
-  {
-    name: "Business Website",
-    price: "from $1,200",
-    timeline: "2 – 3 weeks",
-    popular: false,
-    desc: "Multi-page with structure, SEO, and something that makes your business look serious online.",
-    includes: [
-      "Up to 6 pages",
-      "Blog (optional)",
-      "SEO basics",
-      "Google Analytics",
-      "2 revision rounds",
-    ],
-    tag: null,
-  },
-];
-
-const STEPS = [
-  {
-    n: "01",
-    title: "You reach out",
-    body: "Fill the form below or email me directly. Tell me roughly what you need — doesn't have to be a full brief. A paragraph is enough to start.",
-  },
-  {
-    n: "02",
-    title: "Discovery call",
-    body: "15 – 30 minutes. Free. I ask questions, you talk through the project. No pitch, no deck. We figure out together if it's a fit.",
-  },
-  {
-    n: "03",
-    title: "Written proposal",
-    body: "Scope, timeline, price — all in writing, before anything starts. You can say no. If the scope changes later, we discuss it before the price does.",
-  },
-  {
-    n: "04",
-    title: "Kickoff",
-    body: "50% upfront, then work starts. You get a private preview link early — usually within the first few days. Real progress you can see, not status updates.",
-  },
-  {
-    n: "05",
-    title: "Build phase",
-    body: "Weekly updates without you having to ask. Feedback rounds are structured, not open-ended. Each round has a clear scope to avoid endless iteration.",
-  },
-  {
-    n: "06",
-    title: "Launch",
-    body: "I handle deployment. We test together. Once you're happy, remaining payment is due.",
-  },
-  {
-    n: "07",
-    title: "Handover",
-    body: "You get everything: code, credentials, documentation. I don't retain access to anything. If you need ongoing help, we agree a rate upfront.",
-  },
-];
-
-const NEED_FROM_YOU = [
-  {
-    icon: "📄",
-    title: "A clear brief",
-    body: "What it does, who it's for, what success looks like. Doesn't need to be perfect — but the vaguer the brief, the wider the scope estimate.",
-  },
-  {
-    icon: "⚡",
-    title: "Fast feedback",
-    body: "48h to respond to preview links and questions during the build. Projects stall when feedback takes a week. Your deadline is mine.",
-  },
-  {
-    icon: "🖊️",
-    title: "Content ready",
-    body: "Text, logos, photos. If you don't have them, say so upfront — we can plan around it or add copywriting to scope.",
-  },
-  {
-    icon: "👤",
-    title: "One decision-maker",
-    body: "One person who can approve things. Not a committee. Design-by-committee is where projects go to die and budgets go to grow.",
-  },
-];
-
-const WONT_DO = [
-  "Hourly billing with no cap or scope",
-  "Starting work without a signed brief",
-  "Rush jobs that skip QA and testing",
-  "Taking on more than I can deliver well",
-];
+// Data arrays are now built dynamically inside HirePage from translations (see below)
 
 export default function HirePage() {
   const { t } = useLang();
@@ -327,8 +216,131 @@ export default function HirePage() {
 
   useEffect(() => {
     window.scrollTo(0, 0);
-    document.title = "Start a project — Adis Klobodanovic";
   }, []);
+
+  useSEO({
+    title: "Start a Project — Adis Klobodanovic | Full-Stack Developer",
+    description:
+      "Ready to build something? Fixed-price web development — landing pages from $600, web apps from $3,000. Fast turnaround, full ownership.",
+    canonical: "https://adiss.dev/hire",
+  });
+
+  const PACKAGES = [
+    {
+      name: t.hire_pkg1_name,
+      price: t.hire_pkg1_price,
+      timeline: t.hire_pkg1_timeline,
+      popular: false,
+      desc: t.hire_pkg1_desc,
+      includes: [
+        t.hire_pkg1_inc1 || "Custom design",
+        t.hire_pkg1_inc2 || "Mobile-first",
+        t.hire_pkg1_inc3 || "Contact form",
+        t.hire_pkg1_inc4 || "Basic SEO",
+        t.hire_pkg1_inc5 || "1 revision round",
+      ],
+      tag: null,
+    },
+    {
+      name: t.hire_pkg2_name,
+      price: t.hire_pkg2_price,
+      timeline: t.hire_pkg2_timeline,
+      popular: true,
+      desc: t.hire_pkg2_desc,
+      includes: [
+        t.hire_pkg2_inc1 || "Auth + database",
+        t.hire_pkg2_inc2 || "Admin panel",
+        t.hire_pkg2_inc3 || "API integration",
+        t.hire_pkg2_inc4 || "Testing",
+        t.hire_pkg2_inc5 || "2 revision rounds",
+        t.hire_pkg2_inc6 || "Full handover docs",
+      ],
+      tag: t.hire_pkg2_tag,
+    },
+    {
+      name: t.hire_pkg3_name,
+      price: t.hire_pkg3_price,
+      timeline: t.hire_pkg3_timeline,
+      popular: false,
+      desc: t.hire_pkg3_desc,
+      includes: [
+        t.hire_pkg3_inc1 || "Up to 6 pages",
+        t.hire_pkg3_inc2 || "Blog (optional)",
+        t.hire_pkg3_inc3 || "SEO basics",
+        t.hire_pkg3_inc4 || "Google Analytics",
+        t.hire_pkg3_inc5 || "2 revision rounds",
+      ],
+      tag: null,
+    },
+  ];
+
+  const STEPS = [
+    { n: "01", title: t.hire_step1_title, body: t.hire_step1_body },
+    { n: "02", title: t.hire_step2_title, body: t.hire_step2_body },
+    { n: "03", title: t.hire_step3_title, body: t.hire_step3_body },
+    { n: "04", title: t.hire_step4_title, body: t.hire_step4_body },
+    { n: "05", title: t.hire_step5_title, body: t.hire_step5_body },
+    { n: "06", title: t.hire_step6_title, body: t.hire_step6_body },
+    { n: "07", title: t.hire_step7_title, body: t.hire_step7_body },
+  ];
+
+  const NEED_FROM_YOU = [
+    {
+      icon: t.hire_need1_icon,
+      title: t.hire_need1_title,
+      body: t.hire_need1_body,
+    },
+    {
+      icon: t.hire_need2_icon,
+      title: t.hire_need2_title,
+      body: t.hire_need2_body,
+    },
+    {
+      icon: t.hire_need3_icon,
+      title: t.hire_need3_title,
+      body: t.hire_need3_body,
+    },
+    {
+      icon: t.hire_need4_icon,
+      title: t.hire_need4_title,
+      body: t.hire_need4_body,
+    },
+  ];
+
+  const WONT_DO = [t.hire_wont1, t.hire_wont2, t.hire_wont3, t.hire_wont4];
+
+  const STD_INCLUDES = [
+    [
+      t.hire_std1_title || "Direct access",
+      t.hire_std1_body ||
+        "You talk to me. Not an account manager, not a junior. I answer messages myself.",
+    ],
+    [
+      t.hire_std2_title || "Written scope",
+      t.hire_std2_body ||
+        "Scope, price, and timeline agreed in writing before anything starts. No surprises.",
+    ],
+    [
+      t.hire_std3_title || "Live preview link",
+      t.hire_std3_body ||
+        "You see the project early. Real progress you can click through, not status updates.",
+    ],
+    [
+      t.hire_std4_title || "Feedback rounds",
+      t.hire_std4_body ||
+        "Structured review rounds so feedback stays focused and iteration doesn't go in circles.",
+    ],
+    [
+      t.hire_std5_title || "Full ownership",
+      t.hire_std5_body ||
+        "Code, domain, accounts — all yours after handover. I retain nothing.",
+    ],
+    [
+      t.hire_std6_title || "Post-launch window",
+      t.hire_std6_body ||
+        "2 weeks of included fixes after delivery. Real bugs, not scope creep.",
+    ],
+  ];
 
   return (
     <>
@@ -481,32 +493,7 @@ export default function HirePage() {
           }}
           className="reveal"
         >
-          {[
-            [
-              "Direct access",
-              "You talk to me. Not an account manager, not a junior. I answer messages myself.",
-            ],
-            [
-              "Written scope",
-              "Scope, price, and timeline agreed in writing before anything starts. No surprises.",
-            ],
-            [
-              "Live preview link",
-              "You see the project early. Real progress you can click through, not status updates.",
-            ],
-            [
-              "Feedback rounds",
-              "Structured review rounds so feedback stays focused and iteration doesn't go in circles.",
-            ],
-            [
-              "Full ownership",
-              "Code, domain, accounts — all yours after handover. I retain nothing.",
-            ],
-            [
-              "Post-launch window",
-              "2 weeks of included fixes after delivery. Real bugs, not scope creep.",
-            ],
-          ].map(([title, body]) => (
+          {STD_INCLUDES.map(([title, body]) => (
             <div
               key={title}
               style={{
@@ -601,8 +588,7 @@ export default function HirePage() {
             fontWeight: 300,
           }}
         >
-          Every project gets a written quote. These are starting points, not
-          ceilings or floors.
+          {t.hire_pkg_note}
         </p>
       </div>
 

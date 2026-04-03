@@ -1,9 +1,15 @@
 import { useLang } from "../context/LangContext";
 import { useState, useRef } from "react";
+import {
+  EMAILJS_PUBLIC_KEY,
+  EMAILJS_SERVICE_ID,
+  EMAILJS_TEMPLATE_ID,
+  EMAILJS_READY,
+} from "../config/emailjs";
 
 // ─── Toast ───────────────────────────────────────────────────────────────────
-function Toast({ msg, type, onClose }) {
-  if (!msg) return null;
+function Toast({ title, sub, type, onClose }) {
+  if (!title) return null;
   return (
     <div
       style={{
@@ -12,29 +18,35 @@ function Toast({ msg, type, onClose }) {
         right: "2rem",
         zIndex: 9999,
         background: type === "success" ? "var(--accent)" : "#e74c3c",
-        color: "#fff",
+        color: type === "success" ? "#0a0a0a" : "#fff",
         borderRadius: "10px",
         padding: "0.85rem 1.4rem",
-        fontSize: "0.9rem",
-        fontWeight: 500,
         boxShadow: "0 8px 32px rgba(0,0,0,0.25)",
         display: "flex",
-        alignItems: "center",
+        alignItems: "flex-start",
         gap: "0.7rem",
         animation: "slideInToast 0.3s ease",
       }}
     >
-      <span>{type === "success" ? "✓" : "✕"}</span>
-      {msg}
+      <span style={{ marginTop: "1px" }}>{type === "success" ? "✓" : "✕"}</span>
+      <div style={{ display: "flex", flexDirection: "column", gap: "2px" }}>
+        <span style={{ fontSize: "0.9rem", fontWeight: 600 }}>{title}</span>
+        {sub && (
+          <span style={{ fontSize: "0.8rem", opacity: 0.75, fontWeight: 400 }}>
+            {sub}
+          </span>
+        )}
+      </div>
       <button
         onClick={onClose}
         style={{
           background: "none",
           border: "none",
-          color: "#fff",
+          color: "inherit",
           cursor: "pointer",
           marginLeft: "0.5rem",
           fontSize: "1rem",
+          opacity: 0.7,
         }}
       >
         ×
@@ -44,11 +56,6 @@ function Toast({ msg, type, onClose }) {
 }
 
 // ─── Contact Form ─────────────────────────────────────────────────────────────
-// To activate EmailJS: replace YOUR_SERVICE_ID, YOUR_TEMPLATE_ID, YOUR_PUBLIC_KEY
-// with values from https://dashboard.emailjs.com/
-const EMAILJS_SERVICE_ID = "YOUR_SERVICE_ID";
-const EMAILJS_TEMPLATE_ID = "YOUR_TEMPLATE_ID";
-const EMAILJS_PUBLIC_KEY = "YOUR_PUBLIC_KEY";
 
 const BUDGETS = ["< $1k", "$1k – $3k", "$3k – $8k", "$8k+", "Not sure yet"];
 
@@ -58,9 +65,9 @@ export default function CTA() {
   const [sending, setSending] = useState(false);
   const [toast, setToast] = useState({ msg: "", type: "success" });
 
-  const showToast = (msg, type = "success") => {
-    setToast({ msg, type });
-    setTimeout(() => setToast({ msg: "", type: "success" }), 5000);
+  const showToast = (title, sub = "", type = "success") => {
+    setToast({ title, sub, type });
+    setTimeout(() => setToast({ title: "", sub: "", type: "success" }), 5000);
   };
 
   const handleSubmit = async (e) => {
@@ -71,7 +78,7 @@ export default function CTA() {
 
     try {
       // If EmailJS keys are configured, use the API
-      if (EMAILJS_SERVICE_ID !== "YOUR_SERVICE_ID") {
+      if (EMAILJS_READY) {
         const { default: emailjs } = await import("@emailjs/browser");
         await emailjs.sendForm(
           EMAILJS_SERVICE_ID,
@@ -79,7 +86,7 @@ export default function CTA() {
           formRef.current,
           EMAILJS_PUBLIC_KEY,
         );
-        showToast("Message sent ✓ I'll reply within 24h.");
+        showToast("Message sent ✓", "I'll reply within 24h.");
       } else {
         // Fallback: open mailto pre-filled
         const subject = encodeURIComponent(`Project inquiry from ${data.name}`);
@@ -91,7 +98,7 @@ export default function CTA() {
       }
       formRef.current.reset();
     } catch (err) {
-      showToast("Something went wrong. Try emailing directly.", "error");
+      showToast("Something went wrong.", "Try emailing directly.", "error");
     } finally {
       setSending(false);
     }
@@ -140,17 +147,22 @@ export default function CTA() {
           className="contact-form reveal"
         >
           <div className="contact-row">
-            <input name="name" type="text" placeholder="Your name" required />
+            <input
+              name="name"
+              type="text"
+              placeholder={t.hire_name || "Your name"}
+              required
+            />
             <input
               name="from_email"
               type="email"
-              placeholder="your@email.com"
+              placeholder={t.hire_email || "your@email.com"}
               required
             />
           </div>
           <select name="budget" required defaultValue="">
             <option value="" disabled>
-              Budget range
+              {t.hire_budget || "Budget range"}
             </option>
             {BUDGETS.map((b) => (
               <option key={b} value={b}>
@@ -160,11 +172,13 @@ export default function CTA() {
           </select>
           <textarea
             name="message"
-            placeholder="Tell me about your project..."
+            placeholder={t.hire_message || "Tell me about your project..."}
             required
           />
           <button type="submit" className="btn-primary" disabled={sending}>
-            {sending ? "Sending..." : "Send message"}
+            {sending
+              ? t.hire_sending || "Sending..."
+              : t.hire_send || "Send message  →"}
           </button>
           <div className="form-divider">or</div>
           <a
@@ -184,9 +198,10 @@ export default function CTA() {
       </section>
 
       <Toast
-        msg={toast.msg}
+        title={toast.title}
+        sub={toast.sub}
         type={toast.type}
-        onClose={() => setToast({ msg: "" })}
+        onClose={() => setToast({ title: "" })}
       />
     </>
   );

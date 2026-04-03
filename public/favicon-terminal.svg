@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <style>
+    .bg  { fill: #0a0a0a; }
+    .let { fill: #f0ede8; }
+    .cur { fill: #c8f060; }
+
+    @media (prefers-color-scheme: light) {
+      .bg  { fill: #ffffff; }
+      .let { fill: #1a1816; }
+      .cur { fill: #4d6900; }
+    }
+  </style>
+
+  <rect width="64" height="64" rx="12" class="bg"/>
+  <text x="24" y="46" font-family="'Courier New', Courier, monospace" font-size="30" font-weight="700" class="let" text-anchor="middle">a</text>
+  <rect x="36" y="20" width="10" height="20" rx="2" class="cur"/>
+</svg>
