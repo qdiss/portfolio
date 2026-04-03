@@ -6,7 +6,6 @@ import { LangProvider } from "./context/LangContext";
 import Nav from "./components/Nav";
 import Hero from "./components/Hero";
 
-// lazy sekcije (ispod folda)
 const Currently = lazy(() => import("./components/Currently"));
 const About = lazy(() => import("./components/About"));
 const Services = lazy(() => import("./components/Services"));
@@ -19,7 +18,6 @@ const FAQ = lazy(() => import("./components/FAQ"));
 const CTA = lazy(() => import("./components/CTA"));
 const Footer = lazy(() => import("./components/Footer"));
 
-// pages
 const HirePage = lazy(() => import("./pages/HirePage"));
 const BlogPage = lazy(() => import("./pages/BlogPage"));
 const PostPage = lazy(() => import("./pages/PostPage"));
@@ -30,7 +28,6 @@ const AdminPage = lazy(() => import("./pages/AdminPage"));
 const AdminGuard = lazy(() => import("./pages/AdminGuard"));
 const NotFoundPage = lazy(() => import("./pages/NotFoundPage"));
 
-// defer heavy stuff
 const CustomCursor = lazy(() => import("./components/CustomCursor"));
 const CookieManager = lazy(() => import("./components/CookieManager"));
 
@@ -38,40 +35,52 @@ function Divider() {
   return <div className="divider" />;
 }
 
-// mount kad uđe u viewport
-function LazySection({ children }) {
-  const [visible, setVisible] = useState(false);
-  const ref = (el) => {
-    if (!el || visible) return;
-    const obs = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setVisible(true);
-          obs.disconnect();
-        }
-      },
-      { rootMargin: "200px" },
-    );
-    obs.observe(el);
-  };
-
-  return <div ref={ref}>{visible ? children : null}</div>;
-}
-
 function HashScroller() {
   const location = useLocation();
-
   useEffect(() => {
     if (location.hash) {
       const id = location.hash.replace("#", "");
       const el = document.getElementById(id);
       if (el) {
-        setTimeout(() => {
-          el.scrollIntoView({ behavior: "smooth" });
-        }, 60);
+        setTimeout(() => el.scrollIntoView({ behavior: "smooth" }), 60);
       }
     }
   }, [location]);
+  return null;
+}
+
+function GlobalReveal() {
+  useEffect(() => {
+    const initReveal = () => {
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("visible");
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.05, rootMargin: "0px 0px -40px 0px" },
+      );
+
+      document.querySelectorAll(".reveal.visible").forEach((el) => {
+        el.classList.remove("visible");
+      });
+
+      document.querySelectorAll(".reveal").forEach((el) => {
+        const rect = el.getBoundingClientRect();
+        if (rect.top < window.innerHeight && rect.bottom > 0) {
+          el.classList.add("visible");
+        } else {
+          observer.observe(el);
+        }
+      });
+    };
+
+    const timer = setTimeout(initReveal, 300);
+    return () => clearTimeout(timer);
+  }, []);
 
   return null;
 }
@@ -79,88 +88,75 @@ function HashScroller() {
 function PortfolioContent() {
   const [enableExtras, setEnableExtras] = useState(false);
 
-  // defer non-critical (cursor, cookies)
   useEffect(() => {
-    const t = setTimeout(() => setEnableExtras(true), 2000);
-    return () => clearTimeout(t);
+    setEnableExtras(true);
   }, []);
 
   return (
     <>
       <Nav />
-
-      {/* HERO = instant render */}
       <Hero />
 
-      <Suspense fallback={null}>
-        <LazySection>
-          <Currently />
-        </LazySection>
+      <Suspense fallback={<div style={{ height: 200, background: "#111" }} />}>
+        <Currently />
+      </Suspense>
+      <Divider />
 
-        <Divider />
+      <Suspense fallback={<div style={{ height: 200, background: "#111" }} />}>
+        <About />
+      </Suspense>
+      <Divider />
 
-        <LazySection>
-          <About />
-        </LazySection>
+      <Suspense fallback={<div style={{ height: 200, background: "#111" }} />}>
+        <Services />
+      </Suspense>
+      <Divider />
 
-        <Divider />
+      <Suspense fallback={<div style={{ height: 300, background: "#111" }} />}>
+        <Projects />
+      </Suspense>
+      <Divider />
 
-        <LazySection>
-          <Services />
-        </LazySection>
+      <Suspense fallback={<div style={{ height: 300, background: "#111" }} />}>
+        <Testimonials />
+      </Suspense>
+      <Divider />
 
-        <Divider />
+      <Suspense fallback={<div style={{ height: 300, background: "#111" }} />}>
+        <Stack />
+      </Suspense>
+      <Divider />
 
-        <LazySection>
-          <Projects />
-        </LazySection>
+      <Suspense fallback={<div style={{ height: 300, background: "#111" }} />}>
+        <Blog />
+      </Suspense>
+      <Divider />
 
-        <Divider />
+      <Suspense fallback={<div style={{ height: 300, background: "#111" }} />}>
+        <Process />
+      </Suspense>
+      <Divider />
 
-        <LazySection>
-          <Testimonials />
-        </LazySection>
+      <Suspense fallback={<div style={{ height: 300, background: "#111" }} />}>
+        <FAQ />
+      </Suspense>
+      <Divider />
 
-        <Divider />
+      <Suspense fallback={<div style={{ height: 300, background: "#111" }} />}>
+        <CTA />
+      </Suspense>
+      <Divider />
 
-        <LazySection>
-          <Stack />
-        </LazySection>
-
-        <Divider />
-
-        <LazySection>
-          <Blog />
-        </LazySection>
-
-        <Divider />
-
-        <LazySection>
-          <Process />
-        </LazySection>
-
-        <Divider />
-
-        <LazySection>
-          <FAQ />
-        </LazySection>
-
-        <Divider />
-
-        <LazySection>
-          <CTA />
-        </LazySection>
-
-        <LazySection>
-          <Footer />
-        </LazySection>
+      <Suspense fallback={<div style={{ height: 200, background: "#111" }} />}>
+        <Footer />
       </Suspense>
 
-      {/* defer after load */}
-      <Suspense fallback={null}>
-        {enableExtras && <CustomCursor />}
-        {enableExtras && <CookieManager />}
-      </Suspense>
+      {enableExtras && (
+        <Suspense fallback={null}>
+          <CustomCursor />
+          <CookieManager />
+        </Suspense>
+      )}
     </>
   );
 }
@@ -170,10 +166,14 @@ export default function App() {
     <BrowserRouter>
       <ThemeProvider>
         <LangProvider>
+          <GlobalReveal />
           <HashScroller />
-
           <main>
-            <Suspense fallback={<div style={{ minHeight: "100vh" }} />}>
+            <Suspense
+              fallback={
+                <div style={{ minHeight: "100vh", background: "#000" }} />
+              }
+            >
               <Routes>
                 <Route path="/" element={<PortfolioContent />} />
                 <Route path="/hire" element={<HirePage />} />

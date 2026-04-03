@@ -4,6 +4,7 @@ export default function CustomCursor() {
   const dot = useRef(null);
 
   useEffect(() => {
+    // Touch devices skip
     if (window.matchMedia("(pointer: coarse)").matches) return;
 
     const onMove = (e) => {
@@ -22,6 +23,11 @@ export default function CustomCursor() {
       if (!dot.current) return;
       dot.current.style.background = "var(--accent)";
       dot.current.style.border = "none";
+      // Reset scale - bitno!
+      dot.current.style.transform = dot.current.style.transform.replace(
+        " scale(2.5)",
+        "",
+      );
     };
 
     window.addEventListener("mousemove", onMove);
@@ -43,11 +49,13 @@ export default function CustomCursor() {
     };
   }, []);
 
+  // Touch devices return null
   if (
     typeof window !== "undefined" &&
     window.matchMedia("(pointer: coarse)").matches
-  )
+  ) {
     return null;
+  }
 
   return (
     <div
@@ -63,6 +71,7 @@ export default function CustomCursor() {
         pointerEvents: "none",
         zIndex: 99999,
         willChange: "transform",
+        transition: "transform 0.1s ease", // smooth
       }}
     />
   );
