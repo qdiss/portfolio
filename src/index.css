@@ -1,3 +1,108 @@
+/* Text selection */
+::selection {
+  background: var(--accent);
+  color: #0a0a0a;
+}
+::-moz-selection {
+  background: var(--accent);
+  color: #0a0a0a;
+}
+
+/* Custom cursor */
+*,
+*::before,
+*::after {
+  cursor: none !important;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border2);
+  border-radius: 100px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--muted2);
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--border2) transparent;
+}
+
+.cursor-dot {
+  width: 8px;
+  height: 8px;
+  background: var(--accent);
+  border-radius: 50%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 99999;
+  transform: translate(-50%, -50%);
+  transition:
+    transform 0.1s,
+    width 0.2s,
+    height 0.2s,
+    opacity 0.2s;
+}
+
+.cursor-ring {
+  width: 36px;
+  height: 36px;
+  border: 1.5px solid var(--accent);
+  border-radius: 50%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 99998;
+  transform: translate(-50%, -50%);
+  transition:
+    transform 0.12s ease-out,
+    width 0.2s,
+    height 0.2s,
+    opacity 0.2s;
+  opacity: 0.6;
+}
+
+.cursor-dot.hovering {
+  width: 12px;
+  height: 12px;
+}
+
+.cursor-ring.hovering {
+  width: 56px;
+  height: 56px;
+  opacity: 0.3;
+}
+
+/* Accessibility — main landmark fix */
+#root > div {
+  display: contents;
+}
+
+/* Visibility animation fix za nav */
+.mob-lang-btn {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s;
+}
+.mob-lang-btn.visible,
+.mob-overlay.open .mob-lang-btn {
+  opacity: 1;
+  pointer-events: all;
+}
+
 *,
 *::before,
 *::after {
@@ -993,7 +1098,7 @@ section {
   line-height: 1;
   margin-bottom: 0.85rem;
 }
-.process-step h4 {
+.process-step h3 {
   font-family: var(--font-display);
   font-size: 0.95rem;
   font-weight: 600;

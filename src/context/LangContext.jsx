@@ -1,36 +1,50 @@
-import { createContext, useContext, useState } from 'react'
-import translations from '../i18n/translations.js'
+import { createContext, useContext, useState, useEffect } from "react";
 
-const LangContext = createContext()
+const LangContext = createContext();
+
+const loadLang = (lang) => import(`../i18n/${lang}.js`).then((m) => m.default);
 
 export function LangProvider({ children }) {
   const [lang, setLangState] = useState(() => {
     try {
-      const saved = localStorage.getItem('lang')
-      return saved && translations[saved] ? saved : 'en'
-    } catch { return 'en' }
-  })
-  const [fading, setFading] = useState(false)
+      const saved = localStorage.getItem("lang");
+      return saved && ["en", "bs", "de", "fr", "nl", "sv"].includes(saved)
+        ? saved
+        : "en";
+    } catch {
+      return "en";
+    }
+  });
+  const [t, setT] = useState(null);
+  const [fading, setFading] = useState(false);
+
+  useEffect(() => {
+    loadLang(lang).then(setT);
+  }, [lang]);
 
   const setLang = (l) => {
-    if (l === lang) return
-    setFading(true)
-    setTimeout(() => {
-      setLangState(l)
-      try { localStorage.setItem('lang', l) } catch {}
-      setTimeout(() => setFading(false), 50)
-    }, 180)
-  }
+    if (l === lang) return;
+    setFading(true);
+    loadLang(l).then((translations) => {
+      setLangState(l);
+      setT(translations);
+      try {
+        localStorage.setItem("lang", l);
+      } catch {}
+      setTimeout(() => setFading(false), 50);
+    });
+    setTimeout(() => setFading(true), 180);
+  };
 
-  const t = translations[lang]
+  if (!t) return null; // ili loading spinner
 
   return (
     <LangContext.Provider value={{ lang, setLang, t, fading }}>
       {children}
     </LangContext.Provider>
-  )
+  );
 }
 
 export function useLang() {
-  return useContext(LangContext)
+  return useContext(LangContext);
 }
