@@ -1,28 +1,30 @@
-import { useEffect, useMemo } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { posts, formatDate } from "../content/posts/index.js";
 import { useLang } from "../context/LangContext";
+import { supabase } from "../lib/supabase";
 import Nav from "../components/Nav.jsx";
 
-function getAllPosts() {
-  try {
-    const adminPosts = JSON.parse(localStorage.getItem("admin_posts") || "[]");
-    return [...adminPosts, ...posts].sort(
-      (a, b) => new Date(b.date) - new Date(a.date),
-    );
-  } catch {
-    return posts;
-  }
+function formatDate(dateStr) {
+  return new Date(dateStr).toLocaleDateString("en-GB", {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  });
 }
 
 export default function BlogPage() {
   const { t } = useLang();
-  const allPosts = useMemo(() => getAllPosts(), []);
+  const [posts, setPosts] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     window.scrollTo(0, 0);
     document.title = "Blog — Adis Klobodanovic";
+    fetchPosts();
+  }, []);
 
+  useEffect(() => {
+    if (loading) return;
     const observer = new IntersectionObserver(
       (entries) =>
         entries.forEach((e) => {
@@ -30,28 +32,35 @@ export default function BlogPage() {
         }),
       { threshold: 0.08 },
     );
-    const timer = setTimeout(() => {
+    setTimeout(() => {
       document
         .querySelectorAll(".reveal")
         .forEach((el) => observer.observe(el));
     }, 50);
-    return () => {
-      observer.disconnect();
-      clearTimeout(timer);
-    };
-  }, []);
+    return () => observer.disconnect();
+  }, [loading]);
+
+  async function fetchPosts() {
+    const { data } = await supabase
+      .from("posts")
+      .select("slug, title, excerpt, date, read_time, tags")
+      .eq("published", true)
+      .order("date", { ascending: false });
+    setPosts(data || []);
+    setLoading(false);
+  }
 
   return (
     <>
       <style>{`
         .blog-page { max-width: 900px; margin: 0 auto; padding: 8rem 2.5rem 5rem; }
-        .post-card { display: block; padding: 2rem 0; border-bottom: 1px solid var(--border); text-decoration: none; color: inherit; transition: opacity 0.2s; }
+        .post-card { display: block; padding: 2rem 0; border-bottom: 1px solid var(--border); text-decoration: none; color: inherit; }
         .post-card:first-of-type { border-top: 1px solid var(--border); }
         .post-card:hover .post-title { color: var(--accent); }
         .post-meta { display: flex; align-items: center; gap: 1rem; margin-bottom: 0.75rem; flex-wrap: wrap; }
         .post-date { font-size: 0.78rem; color: var(--muted); font-weight: 300; }
         .post-read-time { font-size: 0.78rem; color: var(--muted2); }
-        .post-tags { display: flex; gap: 0.4rem; }
+        .post-tags { display: flex; gap: 0.4rem; flex-wrap: wrap; }
         .post-title { font-family: var(--font-display); font-size: 1.25rem; font-weight: 700; letter-spacing: -0.025em; line-height: 1.25; margin-bottom: 0.6rem; transition: color 0.2s; }
         .post-excerpt { color: var(--muted); font-size: 0.9rem; font-weight: 300; line-height: 1.75; }
         .post-read-link { display: inline-flex; align-items: center; gap: 0.3rem; margin-top: 0.85rem; font-size: 0.8rem; color: var(--accent); font-weight: 500; }
@@ -81,30 +90,42 @@ export default function BlogPage() {
           {t.blog_page_sub}
         </p>
 
-        <div>
-          {allPosts.map((post, i) => (
-            <Link
-              key={post.slug}
-              to={`/blog/${post.slug}`}
-              className={`post-card reveal reveal-delay-${(i % 3) + 1}`}
-            >
-              <div className="post-meta">
-                <span className="post-date">{formatDate(post.date)}</span>
-                <span className="post-read-time">{post.readTime}</span>
-                <div className="post-tags">
-                  {post.tags.map((tag) => (
-                    <span key={tag} className="tag">
-                      {tag}
-                    </span>
-                  ))}
+        {loading ? (
+          <p
+            style={{
+              color: "var(--muted)",
+              padding: "4rem 0",
+              textAlign: "center",
+            }}
+          >
+            Loading...
+          </p>
+        ) : (
+          <div>
+            {posts.map((post, i) => (
+              <Link
+                key={post.slug}
+                to={`/blog/${post.slug}`}
+                className={`post-card reveal reveal-delay-${(i % 3) + 1}`}
+              >
+                <div className="post-meta">
+                  <span className="post-date">{formatDate(post.date)}</span>
+                  <span className="post-read-time">{post.read_time}</span>
+                  <div className="post-tags">
+                    {(post.tags || []).map((tag) => (
+                      <span key={tag} className="tag">
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
                 </div>
-              </div>
-              <h2 className="post-title">{post.title}</h2>
-              <p className="post-excerpt">{post.excerpt}</p>
-              <span className="post-read-link">{t.blog_read}</span>
-            </Link>
-          ))}
-        </div>
+                <h2 className="post-title">{post.title}</h2>
+                <p className="post-excerpt">{post.excerpt}</p>
+                <span className="post-read-link">{t.blog_read} →</span>
+              </Link>
+            ))}
+          </div>
+        )}
       </div>
 
       <div
@@ -129,7 +150,7 @@ export default function BlogPage() {
             textDecoration: "none",
           }}
         >
-          adis<span style={{ color: "var(--accent)" }}>.</span>dev
+          adiss<span style={{ color: "var(--accent)" }}>.</span>dev
         </Link>
         <Link to="/" style={{ color: "var(--muted)", textDecoration: "none" }}>
           {t.blog_back}

@@ -50,6 +50,8 @@ function HashScroller() {
 }
 
 function GlobalReveal() {
+  const location = useLocation();
+
   useEffect(() => {
     const initReveal = () => {
       const observer = new IntersectionObserver(
@@ -80,7 +82,7 @@ function GlobalReveal() {
 
     const timer = setTimeout(initReveal, 300);
     return () => clearTimeout(timer);
-  }, []);
+  }, [location.pathname]); // ← ovo je ključna promjena
 
   return null;
 }
@@ -150,14 +152,19 @@ function PortfolioContent() {
       <Suspense fallback={<div style={{ height: 200, background: "#111" }} />}>
         <Footer />
       </Suspense>
-
-      {enableExtras && (
-        <Suspense fallback={null}>
-          <CustomCursor />
-          <CookieManager />
-        </Suspense>
-      )}
     </>
+  );
+}
+
+function GlobalExtras() {
+  const [ready, setReady] = useState(false);
+  useEffect(() => setReady(true), []);
+  if (!ready) return null;
+  return (
+    <Suspense fallback={null}>
+      <CustomCursor />
+      <CookieManager />
+    </Suspense>
   );
 }
 
@@ -168,6 +175,7 @@ export default function App() {
         <LangProvider>
           <GlobalReveal />
           <HashScroller />
+          <GlobalExtras />
           <main>
             <Suspense
               fallback={

@@ -1,9 +1,30 @@
+import { useState, useEffect } from "react";
 import { useLang } from "../context/LangContext";
 import { Link } from "react-router-dom";
-import { posts, formatDate } from "../content/posts/index.js";
+import { supabase } from "../lib/supabase";
+
+function formatDate(dateStr) {
+  return new Date(dateStr).toLocaleDateString("en-GB", {
+    year: "numeric",
+    month: "short",
+    day: "numeric",
+  });
+}
 
 export default function Blog() {
   const { t } = useLang();
+  const [posts, setPosts] = useState([]);
+
+  useEffect(() => {
+    supabase
+      .from("posts")
+      .select("slug, title, excerpt, date, read_time, tags")
+      .eq("published", true)
+      .order("date", { ascending: false })
+      .limit(3)
+      .then(({ data }) => setPosts(data || []));
+  }, []);
+
   return (
     <section id="blog" style={{ background: "var(--bg2)" }}>
       <div className="section-label reveal">{t.blog_label}</div>
@@ -22,7 +43,7 @@ export default function Blog() {
             }}
           >
             <div className="blog-date">
-              {formatDate(post.date)} · {post.readTime}
+              {formatDate(post.date)} · {post.read_time}
             </div>
             <h3>{post.title}</h3>
             <p>{post.excerpt}</p>

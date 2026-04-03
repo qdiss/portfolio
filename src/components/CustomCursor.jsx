@@ -1,61 +1,66 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 export default function CustomCursor() {
   const dot = useRef(null);
+  const [visible, setVisible] = useState(false);
 
   useEffect(() => {
-    // Touch devices skip
+    // Skip touch devices
     if (window.matchMedia("(pointer: coarse)").matches) return;
 
+    let x = 0,
+      y = 0;
+
     const onMove = (e) => {
+      x = e.clientX;
+      y = e.clientY;
       if (!dot.current) return;
-      dot.current.style.transform = `translate(${e.clientX}px, ${e.clientY}px) translate(-50%, -50%)`;
+      dot.current.style.transform = `translate(${x}px, ${y}px) translate(-50%, -50%)`;
+      if (!visible) setVisible(true);
     };
 
     const onEnter = () => {
       if (!dot.current) return;
-      dot.current.style.transform += " scale(2.5)";
+      dot.current.style.width = "32px";
+      dot.current.style.height = "32px";
       dot.current.style.background = "transparent";
       dot.current.style.border = "1.5px solid var(--accent)";
     };
 
     const onLeave = () => {
       if (!dot.current) return;
+      dot.current.style.width = "8px";
+      dot.current.style.height = "8px";
       dot.current.style.background = "var(--accent)";
       dot.current.style.border = "none";
-      // Reset scale - bitno!
-      dot.current.style.transform = dot.current.style.transform.replace(
-        " scale(2.5)",
-        "",
-      );
     };
 
     window.addEventListener("mousemove", onMove);
 
-    const targets = document.querySelectorAll(
-      "a, button, [role='button'], input, textarea, select, label",
-    );
-    targets.forEach((el) => {
-      el.addEventListener("mouseenter", onEnter);
-      el.addEventListener("mouseleave", onLeave);
+    // Use event delegation instead of attaching to each element
+    document.addEventListener("mouseover", (e) => {
+      if (
+        e.target.closest(
+          "a, button, [role='button'], input, textarea, select, label",
+        )
+      ) {
+        onEnter();
+      }
+    });
+    document.addEventListener("mouseout", (e) => {
+      if (
+        e.target.closest(
+          "a, button, [role='button'], input, textarea, select, label",
+        )
+      ) {
+        onLeave();
+      }
     });
 
     return () => {
       window.removeEventListener("mousemove", onMove);
-      targets.forEach((el) => {
-        el.removeEventListener("mouseenter", onEnter);
-        el.removeEventListener("mouseleave", onLeave);
-      });
     };
   }, []);
-
-  // Touch devices return null
-  if (
-    typeof window !== "undefined" &&
-    window.matchMedia("(pointer: coarse)").matches
-  ) {
-    return null;
-  }
 
   return (
     <div
@@ -71,7 +76,13 @@ export default function CustomCursor() {
         pointerEvents: "none",
         zIndex: 99999,
         willChange: "transform",
-        transition: "transform 0.1s ease", // smooth
+        transition:
+          "width 0.15s ease, height 0.15s ease, background 0.15s ease",
+        display:
+          typeof window !== "undefined" &&
+          window.matchMedia("(pointer: coarse)").matches
+            ? "none"
+            : "block",
       }}
     />
   );

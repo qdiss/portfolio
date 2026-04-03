@@ -279,6 +279,7 @@ export default function Nav() {
         .mob-overlay.open .mob-link:nth-child(3) { opacity:1; transform:none; transition-delay: 0.22s; }
         .mob-overlay.open .mob-link:nth-child(4) { opacity:1; transform:none; transition-delay: 0.28s; }
         .mob-overlay.open .mob-link:nth-child(5) { opacity:1; transform:none; transition-delay: 0.34s; }
+        .mob-overlay.open .mob-link:nth-child(6) { opacity:1; transform:none; transition-delay: 0.40s; }
         .mob-link:hover { color: var(--accent); }
         .mob-link.mob-active { color: var(--accent); }
 
@@ -508,30 +509,6 @@ export default function Nav() {
         </div>
 
         <div className="mob-bottom">
-          <div className="mob-bottom-langs">
-            {LANGS.map((l) => (
-              <button
-                key={l.code}
-                className={`mob-lang-btn${lang === l.code ? " active" : ""}`}
-                onClick={() => {
-                  setLang(l.code);
-                  closeMenu();
-                }}
-              >
-                <img
-                  src={FLAG_IMGS[l.code]}
-                  alt={l.label}
-                  style={{
-                    width: 14,
-                    height: 10,
-                    objectFit: "cover",
-                    borderRadius: 1,
-                  }}
-                />
-                {l.code}
-              </button>
-            ))}
-          </div>
           <div
             style={{
               display: "flex",
@@ -540,9 +517,9 @@ export default function Nav() {
               flexWrap: "wrap",
             }}
           >
-            <button className="mob-theme-btn" onClick={toggleTheme}>
+            {/* <button className="mob-theme-btn" onClick={toggleTheme}>
               {isDark ? "☀️" : "🌙"} {isDark ? "Light" : "Dark"}
-            </button>
+            </button> */}
             <Link to="/hire" className="mob-hire-btn" onClick={closeMenu}>
               Start a project ↗
             </Link>

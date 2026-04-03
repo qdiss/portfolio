@@ -11,6 +11,8 @@
   "dependencies": {
     "@emailjs/browser": "^4.3.3",
     "@kriegcc/react-cookie-consent": "^0.1.1-test",
+    "@supabase/supabase-js": "^2.101.1",
+    "marked": "^17.0.5",
     "react": "^18.3.1",
     "react-cookie-consent": "^10.0.1",
     "react-dom": "^18.3.1",
