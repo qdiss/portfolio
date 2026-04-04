@@ -339,6 +339,43 @@ const de = {
   admin_read_time: "Lesezeit (z.B. 5 min read)",
   admin_back: "← Zurück zur Seite",
   admin_confirm_delete: "Diesen Post löschen?",
+
+  uses_cat_editor: "Editor & Terminal",
+  uses_cat_stack: "Stack",
+  uses_cat_design: "Design",
+  uses_cat_productivity: "Produktivität",
+  uses_cat_infra: "Deployment & Infra",
+  uses_cat_hardware: "Hardware",
+
+  uses_vscode_desc:
+    "Täglicher Begleiter für die meisten Projekte. Leicht, schnell, endlos erweiterbar.",
+  uses_webstorm_desc:
+    "Tiefe IDE-Funktionen für komplexe Refactors und größere Codebasen.",
+  uses_nextjs_desc: "Standardwahl für alles, was der Nutzer sieht.",
+  uses_react_desc: "Komponentenmodell für komplexe UIs.",
+  uses_typescript_desc: "Unverzichtbar bei allem außer Wochenendprojekten.",
+  uses_javascript_desc: "Immer noch das Fundament von allem.",
+  uses_tailwind_desc: "Schnellster Weg von Design zu Code.",
+  uses_shadcn_desc:
+    "Zugängliche, ungestylte Komponenten, die mir wirklich gehören.",
+  uses_drizzle_desc: "Type-sicheres ORM ohne Overhead.",
+  uses_prisma_desc: "Wenn ich ein schwereres Schema brauche.",
+  uses_supabase_desc: "Backend-as-a-Service für schnellere MVPs.",
+  uses_hono_desc: "Leichter API-Server. Ersetzt Express.",
+  uses_node_desc: "Solider Fallback, wenn ich volle Kontrolle brauche.",
+  uses_clerk_desc: "Auth in Minuten gelöst, nicht in Tagen.",
+  uses_figma_desc:
+    "Wireframes, Design-Tokens, Komponentenspezifikationen — alles an einem Ort.",
+  uses_notion_desc: "Projektnotizen, Kundendokumente und Content-Planung.",
+  uses_arc_desc:
+    "Bereiche für Arbeit und Privates — hat mein Surfen verändert.",
+  uses_vercel_desc: "Zero-Config-Deploys für das Next.js-Ökosystem.",
+  uses_cloudflare_desc: "DNS, CDN und Edge Worker. Schnell und günstig.",
+  uses_macbook_desc:
+    "Geht überallhin mit mir. Leise, Akku hält den ganzen Tag.",
+  uses_asus_desc: "Zweitgerät, wenn ich Windows oder ein Ersatz-Setup brauche.",
+  uses_pc_desc:
+    "Schreibtisch-Arbeitstier für schwere Builds und Gaming nach der Arbeit.",
 };
 
 export default de;

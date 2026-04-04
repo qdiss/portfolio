@@ -341,6 +341,47 @@ const fr = {
   admin_read_time: "Temps de lecture (ex. 5 min read)",
   admin_back: "← Retour au site",
   admin_confirm_delete: "Supprimer ce post ?",
+
+  uses_cat_editor: "Éditeur & Terminal",
+  uses_cat_stack: "Stack",
+  uses_cat_design: "Design",
+  uses_cat_productivity: "Productivité",
+  uses_cat_infra: "Déploiement & Infra",
+  uses_cat_hardware: "Matériel",
+
+  uses_vscode_desc:
+    "Outil quotidien pour la plupart des projets. Léger, rapide, extensible à l'infini.",
+  uses_webstorm_desc:
+    "Fonctionnalités IDE avancées pour les refactorisations complexes et grandes bases de code.",
+  uses_nextjs_desc: "Choix par défaut pour tout ce qui est côté client.",
+  uses_react_desc: "Modèle de composants pour les interfaces complexes.",
+  uses_typescript_desc: "Indispensable au-delà d'un projet de week-end.",
+  uses_javascript_desc: "Toujours la colonne vertébrale de tout.",
+  uses_tailwind_desc: "Chemin le plus rapide du design au code.",
+  uses_shadcn_desc:
+    "Composants accessibles et non stylisés que je possède vraiment.",
+  uses_drizzle_desc: "ORM type-safe sans la surcharge.",
+  uses_prisma_desc: "Quand j'ai besoin d'un schéma plus lourd.",
+  uses_supabase_desc: "Backend-as-a-service pour des MVPs plus rapides.",
+  uses_hono_desc: "Serveur API léger. Remplace Express.",
+  uses_node_desc: "Valeur sûre quand j'ai besoin de contrôle total.",
+  uses_clerk_desc: "Auth résolu en minutes, pas en jours.",
+  uses_figma_desc:
+    "Wireframes, tokens de design, specs de composants — tout au même endroit.",
+  uses_notion_desc:
+    "Notes de projet, docs clients et planification de contenu.",
+  uses_arc_desc:
+    "Espaces pour le travail et le personnel — a changé ma façon de naviguer.",
+  uses_vercel_desc:
+    "Déploiements sans configuration pour l'écosystème Next.js.",
+  uses_cloudflare_desc:
+    "DNS, CDN et workers en périphérie. Rapide et économique.",
+  uses_macbook_desc:
+    "M'accompagne partout. Silencieux, batterie toute la journée.",
+  uses_asus_desc:
+    "Deuxième machine quand j'ai besoin de Windows ou d'un setup de secours.",
+  uses_pc_desc:
+    "Cheval de bataille pour les builds lourds et le gaming après le travail.",
 };
 
 export default fr;

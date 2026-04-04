@@ -352,6 +352,39 @@ const en = {
   admin_read_time: "Read time (e.g. 5 min read)",
   admin_back: "← Back to site",
   admin_confirm_delete: "Delete this post?",
+
+  uses_cat_editor: "Editor & Terminal",
+  uses_cat_stack: "Stack",
+  uses_cat_design: "Design",
+  uses_cat_productivity: "Productivity",
+  uses_cat_infra: "Deployment & Infra",
+  uses_cat_hardware: "Hardware",
+
+  uses_vscode_desc:
+    "Daily driver for most projects. Lightweight, fast, endlessly extensible.",
+  uses_webstorm_desc:
+    "Deep IDE features for complex refactors and larger codebases.",
+  uses_nextjs_desc: "Default choice for anything client-facing.",
+  uses_react_desc: "Component model for complex UIs.",
+  uses_typescript_desc: "Non-negotiable beyond a weekend project.",
+  uses_javascript_desc: "Still the backbone of everything.",
+  uses_tailwind_desc: "Fastest path from design to code.",
+  uses_shadcn_desc: "Accessible, unstyled components I actually own.",
+  uses_drizzle_desc: "Type-safe ORM without the overhead.",
+  uses_prisma_desc: "When I need a heavier schema.",
+  uses_supabase_desc: "Backend-as-a-service for faster MVPs.",
+  uses_hono_desc: "Lightweight API server. Replaces Express.",
+  uses_node_desc: "Solid fallback when I need full control.",
+  uses_clerk_desc: "Auth solved in minutes, not days.",
+  uses_figma_desc:
+    "Wireframes, design tokens, component specs. All in one place.",
+  uses_notion_desc: "Project notes, client docs, and content planning.",
+  uses_arc_desc: "Spaces for work vs. personal — changed how I browse.",
+  uses_vercel_desc: "Zero-config deploys for the Next.js ecosystem.",
+  uses_cloudflare_desc: "DNS, CDN, and edge workers. Fast and cheap.",
+  uses_macbook_desc: "Goes everywhere with me. Silent, all-day battery.",
+  uses_asus_desc: "Second machine when I need Windows or a spare setup.",
+  uses_pc_desc: "Desk workhorse for heavy builds and gaming after hours.",
 };
 
 export default en;

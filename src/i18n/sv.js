@@ -333,6 +333,43 @@ const sv = {
   admin_read_time: "Lästid (t.ex. 5 min read)",
   admin_back: "← Tillbaka till sidan",
   admin_confirm_delete: "Radera det här inlägget?",
+
+  uses_cat_editor: "Editor & Terminal",
+  uses_cat_stack: "Stack",
+  uses_cat_design: "Design",
+  uses_cat_productivity: "Produktivitet",
+  uses_cat_infra: "Driftsättning & Infra",
+  uses_cat_hardware: "Hårdvara",
+
+  uses_vscode_desc:
+    "Dagligt verktyg för de flesta projekt. Lätt, snabbt, oändligt utbyggbart.",
+  uses_webstorm_desc:
+    "Djupa IDE-funktioner för komplexa refaktoreringar och större kodbaser.",
+  uses_nextjs_desc: "Standardval för allt som är klientvändat.",
+  uses_react_desc: "Komponentmodell för komplexa gränssnitt.",
+  uses_typescript_desc: "Inte förhandlingsbart utanför helgprojekt.",
+  uses_javascript_desc: "Fortfarande ryggraden i allt.",
+  uses_tailwind_desc: "Snabbaste vägen från design till kod.",
+  uses_shadcn_desc: "Tillgängliga, ostylede komponenter som jag faktiskt äger.",
+  uses_drizzle_desc: "Typsäker ORM utan overhead.",
+  uses_prisma_desc: "När jag behöver ett tyngre schema.",
+  uses_supabase_desc: "Backend-as-a-service för snabbare MVP:er.",
+  uses_hono_desc: "Lätt API-server. Ersätter Express.",
+  uses_node_desc: "Solid reservlösning när jag behöver full kontroll.",
+  uses_clerk_desc: "Auth löst på minuter, inte dagar.",
+  uses_figma_desc:
+    "Wireframes, design-tokens, komponentspecifikationer — allt på ett ställe.",
+  uses_notion_desc: "Projektanteckningar, kunddokument och innehållsplanering.",
+  uses_arc_desc:
+    "Utrymmen för arbete och privatliv — förändrade hur jag surfar.",
+  uses_vercel_desc: "Zero-config-driftsättning för Next.js-ekosystemet.",
+  uses_cloudflare_desc: "DNS, CDN och edge workers. Snabbt och billigt.",
+  uses_macbook_desc:
+    "Följer med mig överallt. Tyst, batteriet håller hela dagen.",
+  uses_asus_desc:
+    "Andra maskinen när jag behöver Windows eller en reservuppställning.",
+  uses_pc_desc:
+    "Skrivbordsarbetshäst för tunga byggen och gaming efter jobbet.",
 };
 
 export default sv;

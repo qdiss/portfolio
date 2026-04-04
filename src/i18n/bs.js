@@ -345,6 +345,41 @@ const bs = {
   admin_read_time: "Vrijeme čitanja (npr. 5 min read)",
   admin_back: "← Nazad na sajt",
   admin_confirm_delete: "Obrisati ovaj post?",
+
+  uses_cat_editor: "Editor i Terminal",
+  uses_cat_stack: "Stack",
+  uses_cat_design: "Dizajn",
+  uses_cat_productivity: "Produktivnost",
+  uses_cat_infra: "Deploy i Infrastruktura",
+  uses_cat_hardware: "Hardver",
+
+  uses_vscode_desc:
+    "Svakodnevni alat za većinu projekata. Lagan, brz, beskonačno proširiv.",
+  uses_webstorm_desc:
+    "Duboke IDE funkcije za kompleksne refaktore i veće codebaze.",
+  uses_nextjs_desc: "Podrazumijevani izbor za sve što je okrenuto korisniku.",
+  uses_react_desc: "Komponentni model za kompleksne UI-je.",
+  uses_typescript_desc: "Obavezno na svemu izvan vikend projekta.",
+  uses_javascript_desc: "I dalje temelj svega.",
+  uses_tailwind_desc: "Najbrži put od dizajna do koda.",
+  uses_shadcn_desc: "Dostupne, neoblikovane komponente koje zaista posjedujem.",
+  uses_drizzle_desc: "Type-safe ORM bez nepotrebne složenosti.",
+  uses_prisma_desc: "Kada trebam teži schema setup.",
+  uses_supabase_desc: "Backend-as-a-service za brže MVP-ove.",
+  uses_hono_desc: "Lagani API server. Zamjena za Express.",
+  uses_node_desc: "Solidan izbor kada trebam punu kontrolu.",
+  uses_clerk_desc: "Auth riješen za minute, ne za dane.",
+  uses_figma_desc:
+    "Wireframes, design tokeni, specifikacije komponenti — sve na jednom mjestu.",
+  uses_notion_desc:
+    "Bilješke o projektima, dokumenti za klijente i planiranje sadržaja.",
+  uses_arc_desc:
+    "Prostori za posao i privatno — promijenio način na koji pretražujem.",
+  uses_vercel_desc: "Deploy bez konfiguracije za Next.js ekosistem.",
+  uses_cloudflare_desc: "DNS, CDN i edge workeri. Brzo i jeftino.",
+  uses_macbook_desc: "Ide sa mnom svuda. Tih, baterija traje cijeli dan.",
+  uses_asus_desc: "Drugi uređaj kada trebam Windows ili rezervnu mašinu.",
+  uses_pc_desc: "Radna stanica za teže buildove i gaming poslije posla.",
 };
 
 export default bs;

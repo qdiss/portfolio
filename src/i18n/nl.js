@@ -332,6 +332,42 @@ const nl = {
   admin_read_time: "Leestijd (bijv. 5 min read)",
   admin_back: "← Terug naar site",
   admin_confirm_delete: "Deze post verwijderen?",
+
+  uses_cat_editor: "Editor & Terminal",
+  uses_cat_stack: "Stack",
+  uses_cat_design: "Design",
+  uses_cat_productivity: "Productiviteit",
+  uses_cat_infra: "Deployment & Infra",
+  uses_cat_hardware: "Hardware",
+
+  uses_vscode_desc:
+    "Dagelijkse tool voor de meeste projecten. Licht, snel, eindeloos uitbreidbaar.",
+  uses_webstorm_desc:
+    "Diepe IDE-functies voor complexe refactors en grotere codebases.",
+  uses_nextjs_desc: "Standaardkeuze voor alles wat de gebruiker ziet.",
+  uses_react_desc: "Componentmodel voor complexe UI's.",
+  uses_typescript_desc: "Onmisbaar bij alles buiten een weekendproject.",
+  uses_javascript_desc: "Nog steeds de ruggengraat van alles.",
+  uses_tailwind_desc: "Snelste weg van ontwerp naar code.",
+  uses_shadcn_desc: "Toegankelijke, ongestylde componenten die ik echt bezit.",
+  uses_drizzle_desc: "Type-veilige ORM zonder overhead.",
+  uses_prisma_desc: "Als ik een zwaarder schema nodig heb.",
+  uses_supabase_desc: "Backend-as-a-service voor snellere MVPs.",
+  uses_hono_desc: "Lichte API-server. Vervangt Express.",
+  uses_node_desc: "Solide keuze als ik volledige controle nodig heb.",
+  uses_clerk_desc: "Auth in minuten opgelost, niet in dagen.",
+  uses_figma_desc:
+    "Wireframes, design tokens, componentspecificaties — alles op één plek.",
+  uses_notion_desc: "Projectnotities, klantdocumenten en contentplanning.",
+  uses_arc_desc:
+    "Ruimtes voor werk en privé — heeft mijn manier van browsen veranderd.",
+  uses_vercel_desc: "Zero-config deploys voor het Next.js-ecosysteem.",
+  uses_cloudflare_desc: "DNS, CDN en edge workers. Snel en goedkoop.",
+  uses_macbook_desc:
+    "Gaat overal mee naartoe. Stil, batterij gaat de hele dag mee.",
+  uses_asus_desc:
+    "Tweede machine als ik Windows of een reserveopstelling nodig heb.",
+  uses_pc_desc: "Bureauwerkezel voor zware builds en gamen na het werk.",
 };
 
 export default nl;
