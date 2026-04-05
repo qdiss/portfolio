@@ -4,6 +4,8 @@ import { useEffect } from "react";
 import { useLang } from "../context/LangContext";
 import { useSEO } from "../hooks/useSEO";
 
+const SS = (slug) => `/projects/${slug}.png`;
+
 const PROJECT_DATA = {
   medibook: {
     title: "MediBook",
@@ -52,6 +54,26 @@ const PROJECT_DATA = {
       "Deployed in 3 weeks",
     ],
   },
+  korijen: {
+    title: "KORIJEN Leather",
+    emoji: "⌚",
+    tags: ["HTML/CSS", "JavaScript", "Landing Page"],
+    liveUrl: "https://korijen-landing-page.vercel.app/",
+    year: "2025",
+    gradient: "linear-gradient(135deg, #1a0f08 0%, #3a1e0e 50%, #8b5c35 100%)",
+    problem:
+      "A Sarajevo leather atelier needed a premium landing page that matched the quality of their handmade watch straps — most templates felt too generic.",
+    solution:
+      "Designed and built a fully custom single-page site: hero, product collection, materials, process timeline, reviews, and contact — all from scratch.",
+    stack: ["HTML5", "CSS3", "Vanilla JS", "Google Fonts", "SVG", "Vercel"],
+    how: "No frameworks — pure HTML/CSS/JS. Scroll animations via IntersectionObserver, animated SVG strap illustrations, interactive colour swatches that update the product preview in real time, and a fixed parallax ticker.",
+    results: [
+      "Premium brand aesthetic",
+      "Interactive colour swatches",
+      "Scroll-reveal animations",
+      "Mobile responsive",
+    ],
+  },
   "travel-app": {
     title: "Travel App",
     emoji: "✈️",
@@ -97,6 +119,26 @@ const PROJECT_DATA = {
       "Stripe subscription",
       "XP + streak system",
       "Lesson progression",
+    ],
+  },
+  "instagram-clone": {
+    title: "Instagram Clone",
+    emoji: "📸",
+    tags: ["React", "CSS", "Social app"],
+    liveUrl: "https://instagram-frontend-lime.vercel.app/",
+    year: "2024",
+    gradient: "linear-gradient(135deg, #833ab4 0%, #c13584 50%, #fcb045 100%)",
+    problem:
+      "Wanted to reverse-engineer how a social feed, stories, and engagement mechanics work at the component level.",
+    solution:
+      "A pixel-faithful Instagram frontend clone with story bubbles, feed posts, likes, comments, and profile navigation.",
+    stack: ["React", "CSS Modules", "Vercel"],
+    how: "Component-driven architecture with separate Feed, Stories, Post, and Profile components. Shared state for likes, follows, and active user context.",
+    results: [
+      "Story bubble UI",
+      "Like & comment flow",
+      "Profile navigation",
+      "Responsive layout",
     ],
   },
 };
@@ -188,17 +230,33 @@ export default function ProjectDetailPage() {
           position: absolute;
           inset: 0;
           z-index: 0;
-          opacity: 0.35;
+        }
+        .pd-hero-screenshot {
+          position: absolute;
+          inset: 0;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: top;
+          opacity: 0.18;
+          filter: saturate(0.7) blur(1px);
+          z-index: 1;
+        }
+        .pd-hero-gradient {
+          position: absolute;
+          inset: 0;
+          z-index: 2;
+          opacity: 0.7;
         }
         .pd-hero-noise {
           position: absolute;
           inset: 0;
-          z-index: 1;
-          background: linear-gradient(to bottom, transparent 40%, var(--bg) 100%);
+          z-index: 3;
+          background: linear-gradient(to bottom, transparent 30%, var(--bg) 100%);
         }
         .pd-hero-content {
           position: relative;
-          z-index: 2;
+          z-index: 4;
           max-width: 1100px;
           width: 100%;
           margin: 0 auto;
@@ -253,6 +311,43 @@ export default function ProjectDetailPage() {
           margin: 0 auto;
         }
 
+        /* ── SCREENSHOT PREVIEW ── */
+        .pd-preview {
+          margin: 3rem 0 0;
+          border-radius: 12px;
+          overflow: hidden;
+          border: 1px solid var(--border);
+          box-shadow: 0 20px 60px rgba(0,0,0,0.25);
+          position: relative;
+        }
+        .pd-preview-bar {
+          background: var(--bg2);
+          border-bottom: 1px solid var(--border);
+          padding: 0.65rem 1rem;
+          display: flex;
+          align-items: center;
+          gap: 0.5rem;
+        }
+        .pd-preview-dot {
+          width: 10px;
+          height: 10px;
+          border-radius: 50%;
+        }
+        .pd-preview-url {
+          flex: 1;
+          text-align: center;
+          font-size: 0.72rem;
+          color: var(--muted2);
+          font-family: monospace;
+        }
+        .pd-preview img {
+          width: 100%;
+          display: block;
+          aspect-ratio: 16 / 9;
+          object-fit: cover;
+          object-position: top;
+        }
+
         /* ── QUICK STATS ROW ── */
         .pd-stats {
           display: grid;
@@ -292,8 +387,6 @@ export default function ProjectDetailPage() {
           gap: 4rem;
           align-items: start;
         }
-        .pd-main {}
-        .pd-aside {}
 
         /* ── SECTION BLOCKS ── */
         .pd-block {
@@ -389,6 +482,7 @@ export default function ProjectDetailPage() {
         [data-theme="light"] .pd-stat { background: #fff; }
         [data-theme="light"] .pd-chip { background: rgba(0,0,0,0.04); border-color: rgba(0,0,0,0.1); }
         [data-theme="light"] .pd-live-btn { color: #fff; }
+        [data-theme="light"] .pd-preview { box-shadow: 0 8px 30px rgba(0,0,0,0.1); }
 
         @media (max-width: 900px) {
           .pd-hero { padding: 7rem 1.5rem 2.5rem; }
@@ -409,6 +503,16 @@ export default function ProjectDetailPage() {
         <div className="pd-hero">
           <div
             className="pd-hero-bg"
+            style={{ background: project.gradient }}
+          />
+          <img
+            className="pd-hero-screenshot"
+            src={SS(project.slug)}
+            alt=""
+            aria-hidden="true"
+          />
+          <div
+            className="pd-hero-gradient"
             style={{ background: project.gradient }}
           />
           <div className="pd-hero-noise" />
@@ -434,6 +538,30 @@ export default function ProjectDetailPage() {
         {/* ── Body ── */}
         <div className="pd-body">
           <div className="pd-inner">
+            {/* Browser-frame screenshot preview */}
+            <div className="pd-preview reveal">
+              <div className="pd-preview-bar">
+                <div
+                  className="pd-preview-dot"
+                  style={{ background: "#ff5f57" }}
+                />
+                <div
+                  className="pd-preview-dot"
+                  style={{ background: "#ffbd2e" }}
+                />
+                <div
+                  className="pd-preview-dot"
+                  style={{ background: "#28c840" }}
+                />
+                <span className="pd-preview-url">{project.liveUrl}</span>
+              </div>
+              <img
+                src={SS(project.liveUrl)}
+                alt={`${project.title} live preview`}
+                loading="lazy"
+              />
+            </div>
+
             {/* Quick results row */}
             <div className="pd-stats reveal">
               {project.results.map((r) => (
