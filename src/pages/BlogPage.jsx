@@ -97,7 +97,7 @@ export default function BlogPage() {
   }
 
   return (
-    <>
+    <div style={{ display: "flex", flexDirection: "column", minHeight: "100vh" }}>
       <style>{`
         .blog-page { max-width: 900px; margin: 0 auto; padding: 8rem 2.5rem 5rem; }
         .post-card { display: block; padding: 2rem 0; border-bottom: 1px solid var(--border); text-decoration: none; color: inherit; }
@@ -115,7 +115,7 @@ export default function BlogPage() {
 
       <Nav />
 
-      <div className="blog-page">
+      <div className="blog-page" style={{ flex: 1 }}>
         <div className="section-label reveal">{t.blog_page_label}</div>
         <h1
           className="section-title reveal"
@@ -202,6 +202,6 @@ export default function BlogPage() {
           {t.blog_back}
         </Link>
       </div>
-    </>
+    </div>
   );
 }

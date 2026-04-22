@@ -1,7 +1,7 @@
 import { useLang } from "../context/LangContext";
 import { useNavigate } from "react-router-dom";
 
-const SS = (url) => `https://image.thum.io/get/width/1200/crop/800/${url}`;
+const SS = (slug) => `/projects/${slug}.png`;
 
 const PROJECTS = [
   {
@@ -83,7 +83,7 @@ function ProjectCard({ proj, t }) {
       <div className="project-img-wrap">
         <img
           className="project-screenshot"
-          src={SS(proj.href)}
+          src={SS(proj.slug)}
           alt={`${t[proj.titleKey] || proj.emoji} screenshot`}
           loading="lazy"
           onError={(e) => {

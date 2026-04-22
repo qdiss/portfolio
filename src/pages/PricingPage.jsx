@@ -239,8 +239,8 @@ const PACKAGES = [
     nameKey: "pkg_starter_name",
     descKey: "pkg_starter_desc",
     price: "150 KM",
-    priceNote: "jednokratno",
-    timeline: "5 dana",
+    priceNoteKey: "price_onetime",
+    timelineKey: "pkg_starter_timeline",
     highlight: false,
     features: [
       { key: "pkg_starter_f1", free: false },
@@ -258,8 +258,8 @@ const PACKAGES = [
     nameKey: "pkg_business_name",
     descKey: "pkg_business_desc",
     price: "350 KM",
-    priceNote: "jednokratno",
-    timeline: "7 dana",
+    priceNoteKey: "price_onetime",
+    timelineKey: "pkg_business_timeline",
     highlight: true,
     badge: "pkg_badge_popular",
     features: [
@@ -282,8 +282,8 @@ const PACKAGES = [
     nameKey: "pkg_premium_name",
     descKey: "pkg_premium_desc",
     price: "600 KM",
-    priceNote: "jednokratno",
-    timeline: "10 dana",
+    priceNoteKey: "price_onetime",
+    timelineKey: "pkg_premium_timeline",
     highlight: false,
     features: [
       { key: "pkg_premium_f1", free: false },
@@ -308,91 +308,91 @@ const ADDONS = [
     nameKey: "addon_googlebiz_name",
     descKey: "addon_googlebiz_desc",
     price: 60,
-    per: "jednokratno",
+    perKey: "price_onetime",
   },
   {
     icon: "mail",
     nameKey: "addon_emailsig_name",
     descKey: "addon_emailsig_desc",
     price: 40,
-    per: "jednokratno",
+    perKey: "price_onetime",
   },
   {
     icon: "palette",
     nameKey: "addon_logo_name",
     descKey: "addon_logo_desc",
     price: 80,
-    per: "jednokratno",
+    perKey: "price_onetime",
   },
   {
     icon: "smartphone",
     nameKey: "addon_social_name",
     descKey: "addon_social_desc",
     price: 50,
-    per: "jednokratno",
+    perKey: "price_onetime",
   },
   {
     icon: "calendar",
     nameKey: "addon_booking_name",
     descKey: "addon_booking_desc",
     price: 70,
-    per: "jednokratno",
+    perKey: "price_onetime",
   },
   {
     icon: "translate",
     nameKey: "addon_translation_name",
     descKey: "addon_translation_desc",
     price: 60,
-    per: "jednokratno",
+    perKey: "price_onetime",
   },
   {
     icon: "pencil",
     nameKey: "addon_copy_name",
     descKey: "addon_copy_desc",
     price: 70,
-    per: "po stranici",
+    perKey: "price_per_page",
   },
   {
     icon: "image",
     nameKey: "addon_gallery_name",
     descKey: "addon_gallery_desc",
     price: 40,
-    per: "jednokratno",
+    perKey: "price_onetime",
   },
   {
     icon: "star",
     nameKey: "addon_reviews_name",
     descKey: "addon_reviews_desc",
     price: 35,
-    per: "jednokratno",
+    perKey: "price_onetime",
   },
   {
     icon: "qr",
     nameKey: "addon_qr_name",
     descKey: "addon_qr_desc",
     price: 15,
-    per: "jednokratno",
+    perKey: "price_onetime",
   },
   {
     icon: "barChart",
     nameKey: "addon_analytics_name",
     descKey: "addon_analytics_desc",
     price: 30,
-    per: "jednokratno",
+    perKey: "price_onetime",
   },
   {
     icon: "utensils",
     nameKey: "addon_menu_name",
     descKey: "addon_menu_desc",
     price: 55,
-    per: "jednokratno",
+    perKey: "price_onetime",
   },
   {
     icon: "lock",
     nameKey: "addon_ssl_name",
     descKey: "addon_ssl_desc",
     price: 20,
-    per: "godišnje",
+    perKey: "price_yearly",
     clientPays: true,
   },
   {
@@ -400,7 +400,7 @@ const ADDONS = [
     nameKey: "addon_domain_name",
     descKey: "addon_domain_desc",
     price: 30,
-    per: "godišnje",
+    perKey: "price_yearly",
     clientPays: true,
   },
   {
@@ -408,7 +408,7 @@ const ADDONS = [
     nameKey: "addon_hosting_name",
     descKey: "addon_hosting_desc",
     price: 50,
-    per: "godišnje",
+    perKey: "price_yearly",
     clientPays: true,
   },
   {
@@ -416,7 +416,7 @@ const ADDONS = [
     nameKey: "addon_proemail_name",
     descKey: "addon_proemail_desc",
     price: 25,
-    per: "godišnje",
+    perKey: "price_yearly",
     clientPays: true,
   },
 ];
@@ -584,7 +584,7 @@ function PackageModal({ pkg, onClose, t }) {
                 {pkg.price}
               </div>
               <div style={{ color: "var(--muted)", fontSize: "0.78rem" }}>
-                {pkg.priceNote}
+                {t[pkg.priceNoteKey] || pkg.priceNoteKey}
               </div>
             </div>
             <div
@@ -621,7 +621,7 @@ function PackageModal({ pkg, onClose, t }) {
                   <circle cx="12" cy="12" r="10" />
                   <polyline points="12 6 12 12 16 14" />
                 </svg>
-                {pkg.timeline}
+                {t[pkg.timelineKey] || pkg.timelineKey}
               </span>
             </div>
           </div>
@@ -1118,13 +1118,18 @@ export default function PricingPage() {
                 tabIndex={0}
                 onKeyDown={(e) => e.key === "Enter" && setSelectedPkg(pkg)}
               >
-                {pkg.badge && <div className="pkg-badge">{pkg.badge}</div>}
+                {pkg.badge && <div className="pkg-badge">{t[pkg.badge] || pkg.badge}</div>}
                 <div className="pkg-icon">{ICONS[pkg.icon]}</div>
                 <div className="pkg-name">{t[pkg.nameKey] || pkg.nameKey}</div>
                 <p className="pkg-desc">{t[pkg.descKey] || pkg.descKey}</p>
-                <div className="pkg-timeline">⏱ {pkg.timeline}</div>
+                <div className="pkg-timeline">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ flexShrink: 0 }}>
+                    <circle cx="12" cy="12" r="10" /><polyline points="12 6 12 12 16 14" />
+                  </svg>
+                  {t[pkg.timelineKey] || pkg.timelineKey}
+                </div>
                 <div className="pkg-price">{pkg.price}</div>
-                <div className="pkg-price-note">{pkg.priceNote}</div>
+                <div className="pkg-price-note">{t[pkg.priceNoteKey] || pkg.priceNoteKey}</div>
                 <ul className="pkg-features">
                   {pkg.features.slice(0, 5).map((f, j) => (
                     <li key={j}>
@@ -1242,7 +1247,7 @@ export default function PricingPage() {
                 </div>
                 <div className="addon-price">
                   {`${addon.price} KM`}
-                  <span className="addon-per">{addon.per}</span>
+                  <span className="addon-per">{t[addon.perKey] || addon.perKey}</span>
                   {addon.clientPays && (
                     <span className="addon-badge">
                       {t.addon_client_pays || "Klijent plaća godišnje"}

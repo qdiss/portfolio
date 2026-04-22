@@ -8,7 +8,7 @@ const bs = {
   hero_tag: "Dostupan za nove projekte",
   hero_h1: "Gradim web aplikacije <em>koje zapravo rade.</em>",
   hero_sub:
-    "Full-stack developer. React, Next.js, Node. Gradim stvari koje ljudi zapravo koriste — ne samo stvari koje izgledaju dobro u Figmi.",
+    "Full-stack developer. React, Next.js, Node. Gradim stvari koje ljudi zapravo koriste, ne samo stvari koje izgledaju dobro u Figmi.",
   hero_human:
     "Nije agencija, nije tim. Jedan developer. Razgovaraćeš direktno sa mnom, od prve poruke do posljednjeg commita.",
   hero_cta1: "Pogledaj radove",
@@ -25,7 +25,7 @@ const bs = {
   about_label: "O meni",
   about_title: "Pišem kod. <em>Ne prezentacije.</em>",
   about_p1:
-    "Počeo sam graditi stvari na webu iz znatiželje — ostao jer mi se svidjelo vidjeti nešto što radilo a nije postojalo dan prije.",
+    "Počeo sam graditi stvari na webu iz znatiželje, ostao jer mi se svidjelo vidjeti nešto što radilo a nije postojalo dan prije.",
   about_p2:
     "Kada me angažuješ, dobijaš <strong>mene</strong>. Ne project managera koji delegira junioru. Ja pišem kod, odgovaram na poruke, dolazim na pozive.",
   about_p3:
@@ -56,7 +56,7 @@ const bs = {
   work_label: "Odabrani radovi",
   work_title: "Stvari koje sam napravio",
   work_sub: "Pravi projekti, pravi rokovi, pravo isporučivanje.",
-  p1_title: "MediBook — Zakazivanje termina",
+  p1_title: "MediBook: Zakazivanje termina",
   p1_desc:
     "Pacijenti su zvali da zakažu termine. Napravio sam sistem za samo-zakazivanje s dostupnošću u realnom vremenu.",
   p2_title: "Dalmatinske Vizure",
@@ -90,7 +90,7 @@ const bs = {
     "Neoptimizovane slike, previše fontova, zaboravljeni skriptovi trećih strana.",
   b2_title: "Šta sam naučio gradnjom prvog klijentskog projekta",
   b2_desc:
-    "Tehnički dio je bio lak. Scope creep — tu se projekti zapravo raspadaju.",
+    "Tehnički dio je bio lak. Scope creep, tu se projekti zapravo raspadaju.",
   b3_title: "Next.js App Router nakon 6 mjeseci",
   b3_desc:
     "Dobar je. Ali i zbunjujuć na načine koje dokumentacija ne objašnjava potpuno.",
@@ -102,7 +102,7 @@ const bs = {
   proc1_desc: "15–30 minuta. Besplatno. Bez pitcha.",
   proc2_title: "Prijedlog",
   proc2_desc:
-    "Scope, rok, cijena — u pisanoj formi, prije nego što išta počne.",
+    "Scope, rok, cijena, u pisanoj formi, prije nego što išta počne.",
   proc3_title: "Gradnja",
   proc3_desc: "Redovni apdejtovi, live pregledi, runde povratnih informacija.",
   proc4_title: "Lansiranje",
@@ -111,7 +111,7 @@ const bs = {
   faq_title: "FAQ",
   faq1_q: "Kako komuniciramo tokom projekta?",
   faq1_a:
-    "Email, Slack, WhatsApp — šta god ti odgovara. Šaljem apdejtove bez traženja.",
+    "Email, Slack, WhatsApp, šta god ti odgovara. Šaljem apdejtove bez traženja.",
   faq2_q: "Radiš li s međunarodnim klijentima?",
   faq2_a: "Skoro isključivo. Većina klijenata mi je iz Europe i SAD-a.",
   faq3_q: "Koliko košta projekat?",
@@ -132,7 +132,7 @@ const bs = {
     "Gruba ideja šta gradiš, za koga je i otprilike koliko želiš potrošiti.",
   faq9_q: "Radiš li i dizajn pored razvoja?",
   faq9_a:
-    "Da — dizajn je dio gradnje, ne posebna faza. Radim u Figmi prvo za sve izvan jednostavnih stranica.",
+    "Da, dizajn je dio gradnje, ne posebna faza. Radim u Figmi prvo za sve izvan jednostavnih stranica.",
   faq10_q: "Šta se dešava ako nešto prestane raditi nakon lansiranja?",
   faq10_a:
     "Svaki projekat uključuje dvije sedmice post-launch podrške za bugove.",
@@ -158,7 +158,7 @@ const bs = {
   hire_std_title_1: "Šta je uključeno",
   hire_std_title_2: "u svaki projekat",
   hire_std_sub:
-    "Bez obzira na obim ili cijenu. Ovo nisu dodaci — ovo je osnova.",
+    "Bez obzira na obim ili cijenu. Ovo nisu dodaci, ovo je osnova.",
   hire_pricing_label: "Cijene",
   hire_pricing_title_1: "Paketi",
   hire_pricing_title_2: "i šta koštaju",
@@ -183,12 +183,12 @@ const bs = {
   hire_limits_title_1: "Šta neću",
   hire_limits_title_2: "raditi",
   hire_limits_sub:
-    "Nije lista izgovora — lista stvari koje pouzdano uništavaju projekte.",
+    "Nije lista izgovora, nego lista stvari koje pouzdano uništavaju projekte.",
   hire_start_label: "Počni",
   hire_start_title_1: "Spreman za",
   hire_start_title_2: "početak?",
   hire_start_sub:
-    'Popuni ovo. Odgovorim za 24 sata — ili s terminom za razgovor, ili s iskrenim "nije za mene".',
+    'Popuni ovo. Odgovorim za 24 sata, ili s terminom za razgovor, ili s iskrenim "nije za mene".',
   hire_prefer_email: "Preferiraš email?",
   hire_msg_received_title: "Poruka primljena.",
   hire_msg_received_sub: "Odgovorit ću za 24 sata. Obično i ranije.",
@@ -212,16 +212,16 @@ const bs = {
     "Višestranični sajt sa strukturom, SEO-om i nečim što tvoj biznis čini ozbiljnim online.",
   hire_step1_title: "Ti se javiš",
   hire_step1_body:
-    "Popuni formu ili mi pošalji email direktno. Reci mi grubo šta trebaš — ne mora biti kompletan brief. Paragraf je dovoljan za početak.",
+    "Popuni formu ili mi pošalji email direktno. Reci mi grubo šta trebaš, ne mora biti kompletan brief. Paragraf je dovoljan za početak.",
   hire_step2_title: "Discovery call",
   hire_step2_body:
     "15 – 30 minuta. Besplatno. Postavljam pitanja, ti pričaš o projektu. Bez pitcha, bez prezentacije. Zajedno procjenjujemo odgovara li.",
   hire_step3_title: "Pisani prijedlog",
   hire_step3_body:
-    "Obim, vremenski okvir, cijena — sve pismeno, prije nego što išta počne. Možeš reći ne. Ako se obim promijeni kasnije, razgovaramo o tome prije cijene.",
+    "Obim, vremenski okvir, cijena, sve pismeno, prije nego što išta počne. Možeš reći ne. Ako se obim promijeni kasnije, razgovaramo o tome prije cijene.",
   hire_step4_title: "Kickoff",
   hire_step4_body:
-    "50% avansa, pa počinjemo. Dobijaš privatni preview link rano — obično u prvim danima. Pravi napredak koji možeš vidjeti.",
+    "50% avansa, pa počinjemo. Dobijaš privatni preview link rano, obično u prvim danima. Pravi napredak koji možeš vidjeti.",
   hire_step5_title: "Faza izgradnje",
   hire_step5_body:
     "Sedmični update bez da moraš tražiti. Feedback runde su strukturisane, ne open-ended. Svaka runda ima jasan scope da se izbjegne beskrajna iteracija.",
@@ -233,13 +233,13 @@ const bs = {
     "Dobijaš sve: kod, kredencijale, dokumentaciju. Ja ne zadržavam pristup ničemu. Ako trebaš stalnu pomoć, dogovorimo cijenu unaprijed.",
   hire_need1_title: "Jasan brief",
   hire_need1_body:
-    "Šta radi, za koga je, kako izgleda uspjeh. Ne mora biti savršen — ali što je vagalniji brief, šira je procjena.",
+    "Šta radi, za koga je, kako izgleda uspjeh. Ne mora biti savršen, ali što je vagalniji brief, šira je procjena.",
   hire_need2_title: "Brz feedback",
   hire_need2_body:
     "48h da odgovoriš na preview linkove i pitanja tokom izgradnje. Projekti staju kad feedback čeka sedmicu.",
   hire_need3_title: "Sadržaj spreman",
   hire_need3_body:
-    "Tekstovi, logoi, fotografije. Ako ih nemaš, reci unaprijed — možemo planirati oko toga.",
+    "Tekstovi, logoi, fotografije. Ako ih nemaš, reci unaprijed, možemo planirati oko toga.",
   hire_need4_title: "Jedan donosilac odluka",
   hire_need4_body:
     "Jedna osoba koja može odobravati stvari. Ne odbor. Dizajn po odboru ubija projekte i povećava budžete.",
@@ -252,7 +252,7 @@ const bs = {
   hire_name: "Tvoje ime",
   hire_email: "tvoj@email.com",
   hire_budget: "Budžet",
-  hire_message: "Reci mi o projektu — šta radi, za koga je, postoji li rok.",
+  hire_message: "Reci mi o projektu, šta radi, za koga je, postoji li rok.",
   hire_std1_title: "Direktan pristup",
   hire_std1_body:
     "Razgovaraš direktno sa mnom. Ne s account managerom. Odgovaram na poruke lično.",
@@ -267,7 +267,7 @@ const bs = {
     "Strukturisane runde pregleda kako bi feedback ostao fokusiran.",
   hire_std5_title: "Potpuno vlasništvo",
   hire_std5_body:
-    "Kod, domena, nalozi — sve tvoje nakon predaje. Ja ne zadržavam ništa.",
+    "Kod, domena, nalozi, sve tvoje nakon predaje. Ja ne zadržavam ništa.",
   hire_std6_title: "Post-launch prozor",
   hire_std6_body:
     "2 sedmice uključenih popravki nakon isporuke. Pravi bugovi, ne scope creep.",
@@ -355,14 +355,14 @@ const bs = {
   // Pricing
   pkg_popular_badge: "Najpopularnije",
   pkg_note_click:
-    "Klikni na paket da popuniš formu s tom ponudom — ili posjeti cjenovnik za sve detalje.",
+    "Klikni na paket da popuniš formu s tom ponudom, ili posjeti cjenovnik za sve detalje.",
   // Error boundary
   error_boundary_msg: "Nešto je pošlo naopako.",
   error_boundary_link: "Nazad na početak",
   blog_page_label: "Pisanje",
   blog_page_title: "S bloga",
   blog_page_sub:
-    "Stvari koje sam shvatio, zapisao i odlučio da su vrijedne dijeljenja. Bez newslettera — samo postovi kad ima šta reći.",
+    "Stvari koje sam shvatio, zapisao i odlučio da su vrijedne dijeljenja. Bez newslettera, samo postovi kad ima šta reći.",
   blog_back: "Nazad na portfolio",
   post_building: "Gradiš nešto?",
   post_building_sub:
@@ -411,11 +411,11 @@ const bs = {
   uses_node_desc: "Solidan izbor kada trebam punu kontrolu.",
   uses_clerk_desc: "Auth riješen za minute, ne za dane.",
   uses_figma_desc:
-    "Wireframes, design tokeni, specifikacije komponenti — sve na jednom mjestu.",
+    "Wireframes, design tokeni, specifikacije komponenti, sve na jednom mjestu.",
   uses_notion_desc:
     "Bilješke o projektima, dokumenti za klijente i planiranje sadržaja.",
   uses_arc_desc:
-    "Prostori za posao i privatno — promijenio način na koji pretražujem.",
+    "Prostori za posao i privatno, promijenio način na koji pretražujem.",
   uses_vercel_desc: "Deploy bez konfiguracije za Next.js ekosistem.",
   uses_cloudflare_desc: "DNS, CDN i edge workeri. Brzo i jeftino.",
   uses_macbook_desc: "Ide sa mnom svuda. Tih, baterija traje cijeli dan.",
@@ -429,6 +429,7 @@ const bs = {
   pricing_h1_2: "i cijene.",
   pricing_sub:
     "Fiksna cijena, ne po satu. Znaš broj prije nego što išta počne.",
+  pricing_click_package: "Klikni na paket",
   pricing_hint: "da vidiš detaljan breakdown",
   pricing_pkgs_label: "Paketi",
   pricing_pkgs_title: "Šta sve uključuje svaki paket",
@@ -445,7 +446,7 @@ const bs = {
   pv_label: "Cijene",
   pv_title: "Paketi i cijene",
   pv_sub:
-    "Klikni na paket da popuniš formu s tom ponudom — ili posjeti cjenovnik za sve detalje.",
+    "Klikni na paket da popuniš formu s tom ponudom, ili posjeti cjenovnik za sve detalje.",
   pv_see_all: "Vidi sve detalje i dodatke",
   pkg_includes: "Uključeno",
   pkg_more: "više stavki",
@@ -533,21 +534,26 @@ const bs = {
   referral_title_1: "Preporuči nekoga.",
   referral_title_2: "Oboje dobijete popust.",
   referral_sub:
-    "Ako preporučiš nekoga ko naruči projekat, ti dobijaš 10% popusta na sljedeći projekat — a tvoj prijatelj dobija 10% off od starta.",
+    "Ako preporučiš nekoga ko naruči projekat, ti dobijaš 10% popusta na sljedeći projekat, a tvoj prijatelj dobija 10% off od starta.",
   ref_step1_title: "Ti preporučiš",
-  ref_step1_body: "Pošalji email ili poruku — nije potrebna formalna prijava.",
+  ref_step1_body: "Pošalji email ili poruku, nije potrebna formalna prijava.",
   ref_step2_title: "Oni naruče",
   ref_step2_body:
-    "Tvoj prijatelj pomene tvoje ime — odmah dobija popust od 10%.",
+    "Tvoj prijatelj pomene tvoje ime , odmah dobija popust od 10%.",
   ref_step3_title: "Ti dobijaš popust",
-  ref_step3_body: "Na tvoj sljedeći projekat — automatski, bez papirologije.",
+  ref_step3_body: "Na tvoj sljedeći projekat, automatski, bez papirologije.",
   referral_example:
-    "Preporučiš Business paket (350 KM). Prijatelj plaća 315 KM. Tvoj sljedeći projekat je 10% jeftiniji — automatski.",
+    "Preporučiš Business paket (350 KM). Prijatelj plaća 315 KM. Tvoj sljedeći projekat je 10% jeftiniji , automatski.",
   footer_github: "GitHub",
   footer_linkedin: "LinkedIn",
   footer_start_project: "Pokrenite projekat",
   blog_all_posts: "Svi postovi",
   serv_get_started: "Počnite",
+  pkg_starter_timeline: "5 dana",
+  pkg_business_timeline: "7 dana",
+  pkg_premium_timeline: "10 dana",
+  price_per_page: "/ po stranici",
+  price_yearly: "/ godišnje",
   pkg_badge_popular: "Najpopularnije",
   curr_tz_sub: "Pogodan za EU i US East",
   curr_next_slot_value: "Juli 2026",

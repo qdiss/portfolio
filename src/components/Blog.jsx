@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { useLang } from "../context/LangContext";
 import { Link } from "react-router-dom";
 import { supabase } from "../lib/supabase";
+import { posts as localPosts } from "../content/posts/index";
 
 function formatDate(dateStr) {
   return new Date(dateStr).toLocaleDateString("en-GB", {
@@ -22,7 +23,7 @@ export default function Blog() {
       .eq("published", true)
       .order("date", { ascending: false })
       .limit(3)
-      .then(({ data }) => setPosts(data || []));
+      .then(({ data }) => setPosts(data?.length ? data : localPosts));
   }, []);
 
   return (

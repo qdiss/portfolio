@@ -92,6 +92,7 @@ import Hero from "./components/Hero";
 const Currently = lazy(() => import("./components/Currently"));
 const About = lazy(() => import("./components/About"));
 const Services = lazy(() => import("./components/Services"));
+const PricingPreview = lazy(() => import("./components/PricingPreview"));
 const Projects = lazy(() => import("./components/Projects"));
 const Testimonials = lazy(() => import("./components/Testimonials"));
 const Stack = lazy(() => import("./components/Stack"));

@@ -140,7 +140,14 @@ export default function AdminGuard({ children }) {
 
         {sent ? (
           <div style={{ textAlign: "center" }}>
-            <div style={{ fontSize: "2rem", marginBottom: "1rem", display: "flex", justifyContent: "center" }}>
+            <div
+              style={{
+                fontSize: "2rem",
+                marginBottom: "1rem",
+                display: "flex",
+                justifyContent: "center",
+              }}
+            >
               <MailIcon size={28} />
             </div>
             <p
@@ -190,7 +197,7 @@ export default function AdminGuard({ children }) {
                 setEmail(e.target.value);
                 setError("");
               }}
-              placeholder="tvoj@email.com"
+              placeholder={t.admin_email_placeholder || "your@email.com"}
               autoFocus
               style={{
                 width: "100%",
@@ -234,7 +241,9 @@ export default function AdminGuard({ children }) {
                 opacity: sending ? 0.7 : 1,
               }}
             >
-              {sending ? "Slanje..." : "Pošalji magic link →"}
+              {sending
+                ? t.admin_sending || "Sending..."
+                : t.admin_send_link || "Send magic link →"}
             </button>
           </form>
         )}
