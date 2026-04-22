@@ -1,7 +1,90 @@
-import { lazy, Suspense, useEffect, useState } from "react";
+import { lazy, Suspense, useEffect, useState, Component } from "react";
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import { ThemeProvider } from "./context/ThemeContext";
-import { LangProvider } from "./context/LangContext";
+import { LangProvider, useLang } from "./context/LangContext";
+import { usePageReveal } from "./hooks/useReveal";
+
+class ErrorBoundaryInner extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  static getDerivedStateFromError() {
+    return { hasError: true };
+  }
+  render() {
+    if (this.state.hasError) {
+      const { msg, link } = this.props;
+      return (
+        <div
+          style={{
+            minHeight: "100vh",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            flexDirection: "column",
+            gap: "1rem",
+            background: "var(--bg, #0a0a0a)",
+            color: "var(--text, #f0f0f0)",
+          }}
+        >
+          <div style={{ fontSize: "2rem" }}>⚠</div>
+          <p
+            style={{
+              fontFamily: "sans-serif",
+              fontSize: "0.9rem",
+              opacity: 0.6,
+            }}
+          >
+            {msg}{" "}
+            <a href="/" style={{ color: "var(--accent, #c8f060)" }}>
+              {link}
+            </a>
+          </p>
+        </div>
+      );
+    }
+    return this.props.children;
+  }
+}
+
+function ErrorBoundary({ children }) {
+  const { t } = useLang();
+  return (
+    <ErrorBoundaryInner
+      msg={t.error_boundary_msg || "Something went wrong."}
+      link={t.error_boundary_link || "Back to home"}
+    >
+      {children}
+    </ErrorBoundaryInner>
+  );
+}
+
+function PageLoader() {
+  return (
+    <div
+      style={{
+        minHeight: "100vh",
+        background: "var(--bg, #0a0a0a)",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+      }}
+    >
+      <div
+        style={{
+          width: 32,
+          height: 32,
+          border: "2px solid rgba(200,240,96,0.2)",
+          borderTop: "2px solid #c8f060",
+          borderRadius: "50%",
+          animation: "spin 0.7s linear infinite",
+        }}
+      />
+      <style>{`@keyframes spin{to{transform:rotate(360deg)}}`}</style>
+    </div>
+  );
+}
 
 import Nav from "./components/Nav";
 import Hero from "./components/Hero";
@@ -27,9 +110,9 @@ const ProjectDetailPage = lazy(() => import("./pages/ProjectDetailPage"));
 const AdminPage = lazy(() => import("./pages/AdminPage"));
 const AdminGuard = lazy(() => import("./pages/AdminGuard"));
 const NotFoundPage = lazy(() => import("./pages/NotFoundPage"));
+const PricingPage = lazy(() => import("./pages/PricingPage"));
 
-const CustomCursor = lazy(() => import("./components/CustomCursor"));
-const CookieManager = lazy(() => import("./components/CookieManager"));
+const CursorWrapper = lazy(() => import("./components/CursorWrapper"));
 
 function Divider() {
   return <div className="divider" />;
@@ -51,39 +134,7 @@ function HashScroller() {
 
 function GlobalReveal() {
   const location = useLocation();
-
-  useEffect(() => {
-    const initReveal = () => {
-      const observer = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add("visible");
-              observer.unobserve(entry.target);
-            }
-          });
-        },
-        { threshold: 0.05, rootMargin: "0px 0px -40px 0px" },
-      );
-
-      document.querySelectorAll(".reveal.visible").forEach((el) => {
-        el.classList.remove("visible");
-      });
-
-      document.querySelectorAll(".reveal").forEach((el) => {
-        const rect = el.getBoundingClientRect();
-        if (rect.top < window.innerHeight && rect.bottom > 0) {
-          el.classList.add("visible");
-        } else {
-          observer.observe(el);
-        }
-      });
-    };
-
-    const timer = setTimeout(initReveal, 300);
-    return () => clearTimeout(timer);
-  }, [location.pathname]); // ← ovo je ključna promjena
-
+  usePageReveal(location.pathname);
   return null;
 }
 
@@ -99,57 +150,101 @@ function PortfolioContent() {
       <Nav />
       <Hero />
 
-      <Suspense fallback={<div style={{ height: 200, background: "#111" }} />}>
+      <Suspense
+        fallback={
+          <div style={{ height: 200, background: "var(--bg, #0a0a0a)" }} />
+        }
+      >
         <Currently />
       </Suspense>
       <Divider />
 
-      <Suspense fallback={<div style={{ height: 200, background: "#111" }} />}>
+      <Suspense
+        fallback={
+          <div style={{ height: 200, background: "var(--bg, #0a0a0a)" }} />
+        }
+      >
         <About />
       </Suspense>
       <Divider />
 
-      <Suspense fallback={<div style={{ height: 200, background: "#111" }} />}>
+      <Suspense
+        fallback={
+          <div style={{ height: 200, background: "var(--bg, #0a0a0a)" }} />
+        }
+      >
         <Services />
       </Suspense>
       <Divider />
 
-      <Suspense fallback={<div style={{ height: 300, background: "#111" }} />}>
+      <Suspense
+        fallback={
+          <div style={{ height: 300, background: "var(--bg, #0a0a0a)" }} />
+        }
+      >
         <Projects />
       </Suspense>
       <Divider />
 
-      <Suspense fallback={<div style={{ height: 300, background: "#111" }} />}>
+      <Suspense
+        fallback={
+          <div style={{ height: 300, background: "var(--bg, #0a0a0a)" }} />
+        }
+      >
         <Testimonials />
       </Suspense>
       <Divider />
 
-      <Suspense fallback={<div style={{ height: 300, background: "#111" }} />}>
+      <Suspense
+        fallback={
+          <div style={{ height: 300, background: "var(--bg, #0a0a0a)" }} />
+        }
+      >
         <Stack />
       </Suspense>
       <Divider />
 
-      <Suspense fallback={<div style={{ height: 300, background: "#111" }} />}>
+      <Suspense
+        fallback={
+          <div style={{ height: 300, background: "var(--bg, #0a0a0a)" }} />
+        }
+      >
         <Blog />
       </Suspense>
       <Divider />
 
-      <Suspense fallback={<div style={{ height: 300, background: "#111" }} />}>
+      <Suspense
+        fallback={
+          <div style={{ height: 300, background: "var(--bg, #0a0a0a)" }} />
+        }
+      >
         <Process />
       </Suspense>
       <Divider />
 
-      <Suspense fallback={<div style={{ height: 300, background: "#111" }} />}>
+      <Suspense
+        fallback={
+          <div style={{ height: 300, background: "var(--bg, #0a0a0a)" }} />
+        }
+      >
         <FAQ />
       </Suspense>
       <Divider />
 
-      <Suspense fallback={<div style={{ height: 300, background: "#111" }} />}>
+      <Suspense
+        fallback={
+          <div style={{ height: 300, background: "var(--bg, #0a0a0a)" }} />
+        }
+      >
         <CTA />
       </Suspense>
       <Divider />
 
-      <Suspense fallback={<div style={{ height: 200, background: "#111" }} />}>
+      <Suspense
+        fallback={
+          <div style={{ height: 200, background: "var(--bg, #0a0a0a)" }} />
+        }
+      >
         <Footer />
       </Suspense>
     </>
@@ -162,8 +257,7 @@ function GlobalExtras() {
   if (!ready) return null;
   return (
     <Suspense fallback={null}>
-      <CustomCursor />
-      <CookieManager />
+      <CursorWrapper />
     </Suspense>
   );
 }
@@ -177,36 +271,35 @@ export default function App() {
           <HashScroller />
           <GlobalExtras />
           <main>
-            <Suspense
-              fallback={
-                <div style={{ minHeight: "100vh", background: "#000" }} />
-              }
-            >
-              <Routes>
-                <Route path="/" element={<PortfolioContent />} />
-                <Route path="/hire" element={<HirePage />} />
-                <Route path="/blog" element={<BlogPage />} />
-                <Route path="/blog/:slug" element={<PostPage />} />
-                <Route path="/uses" element={<UsesPage />} />
-                <Route
-                  path="/contents/projects"
-                  element={<ProjectsListingPage />}
-                />
-                <Route
-                  path="/contents/projects/:slug"
-                  element={<ProjectDetailPage />}
-                />
-                <Route
-                  path="/admin"
-                  element={
-                    <AdminGuard>
-                      <AdminPage />
-                    </AdminGuard>
-                  }
-                />
-                <Route path="*" element={<NotFoundPage />} />
-              </Routes>
-            </Suspense>
+            <ErrorBoundary>
+              <Suspense fallback={<PageLoader />}>
+                <Routes>
+                  <Route path="/" element={<PortfolioContent />} />
+                  <Route path="/hire" element={<HirePage />} />
+                  <Route path="/pricing" element={<PricingPage />} />
+                  <Route path="/blog" element={<BlogPage />} />
+                  <Route path="/blog/:slug" element={<PostPage />} />
+                  <Route path="/uses" element={<UsesPage />} />
+                  <Route
+                    path="/contents/projects"
+                    element={<ProjectsListingPage />}
+                  />
+                  <Route
+                    path="/contents/projects/:slug"
+                    element={<ProjectDetailPage />}
+                  />
+                  <Route
+                    path="/admin"
+                    element={
+                      <AdminGuard>
+                        <AdminPage />
+                      </AdminGuard>
+                    }
+                  />
+                  <Route path="*" element={<NotFoundPage />} />
+                </Routes>
+              </Suspense>
+            </ErrorBoundary>
           </main>
         </LangProvider>
       </ThemeProvider>

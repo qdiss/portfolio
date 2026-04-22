@@ -1,14 +1,17 @@
 import { useEffect, useState } from "react";
 import { supabase } from "../lib/supabase";
+import { useLang } from "../context/LangContext";
+import { MailIcon } from "../components/Icons";
 
 export default function AdminGuard({ children }) {
+  const { t } = useLang();
   const [session, setSession] = useState(undefined); // undefined = loading
   const [email, setEmail] = useState("");
   const [sent, setSent] = useState(false);
   const [error, setError] = useState("");
   const [sending, setSending] = useState(false);
 
-  const ALLOWED_EMAIL = "adisklobodanovic@gmail.com"; // ← tvoj email
+  const ALLOWED_EMAIL = import.meta.env.VITE_ADMIN_ALLOWED_EMAIL || "";
 
   useEffect(() => {
     // Provjeri trenutnu sesiju
@@ -29,7 +32,7 @@ export default function AdminGuard({ children }) {
   const handleLogin = async (e) => {
     e.preventDefault();
     if (email !== ALLOWED_EMAIL) {
-      setError("Nije dozvoljen pristup.");
+      setError(t.admin_access_denied || "Access denied.");
       return;
     }
     setSending(true);
@@ -63,7 +66,7 @@ export default function AdminGuard({ children }) {
           color: "var(--muted)",
         }}
       >
-        Loading...
+        {t.admin_loading || "Loading..."}
       </div>
     );
 
@@ -80,7 +83,7 @@ export default function AdminGuard({ children }) {
         }}
       >
         <div style={{ textAlign: "center", color: "var(--muted)" }}>
-          <p>Access denied.</p>
+          <p>{t.admin_access_denied || "Access denied."}</p>
           <button
             onClick={handleLogout}
             style={{
@@ -92,7 +95,7 @@ export default function AdminGuard({ children }) {
               fontFamily: "inherit",
             }}
           >
-            Sign out
+            {t.admin_sign_out || "Sign out"}
           </button>
         </div>
       </div>
@@ -137,7 +140,9 @@ export default function AdminGuard({ children }) {
 
         {sent ? (
           <div style={{ textAlign: "center" }}>
-            <div style={{ fontSize: "2rem", marginBottom: "1rem" }}>📬</div>
+            <div style={{ fontSize: "2rem", marginBottom: "1rem", display: "flex", justifyContent: "center" }}>
+              <MailIcon size={28} />
+            </div>
             <p
               style={{
                 color: "var(--text)",
@@ -145,7 +150,7 @@ export default function AdminGuard({ children }) {
                 marginBottom: "0.5rem",
               }}
             >
-              Provjeri email
+              {t.admin_check_email || "Check your email"}
             </p>
             <p
               style={{
@@ -154,7 +159,7 @@ export default function AdminGuard({ children }) {
                 lineHeight: 1.6,
               }}
             >
-              Poslali smo magic link na
+              {t.admin_magic_link_sent || "We've sent a magic link to"}
               <br />
               <strong style={{ color: "var(--accent)" }}>{email}</strong>
             </p>
@@ -173,7 +178,7 @@ export default function AdminGuard({ children }) {
                 fontSize: "0.82rem",
               }}
             >
-              Pokušaj ponovo
+              {t.admin_try_again || "Try again"}
             </button>
           </div>
         ) : (

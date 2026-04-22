@@ -115,8 +115,8 @@
   --bg2: #111111;
   --bg3: #1a1a1a;
   --text: #f0ede8;
-  --muted: #7a7672;
-  --muted2: #3f3d3b;
+  --muted: #9e9a96;
+  --muted2: #6a6663;
   --accent: #c8f060;
   --border: rgba(255, 255, 255, 0.06);
   --border2: rgba(255, 255, 255, 0.12);
@@ -129,8 +129,8 @@
   --bg2: #ede9e3;
   --bg3: #e4e0d8;
   --text: #1a1816;
-  --muted: #7a7672;
-  --muted2: #b5b0aa;
+  --muted: #5c5956;
+  --muted2: #8a8480;
   --accent: #4d6900;
   --border: rgba(0, 0, 0, 0.07);
   --border2: rgba(0, 0, 0, 0.14);
@@ -145,9 +145,13 @@ body {
   font-size: 16px;
   line-height: 1.6;
   overflow-x: hidden;
+}
+body.theme-transition,
+body.theme-transition * {
   transition:
     background 0.3s,
-    color 0.3s;
+    color 0.3s,
+    border-color 0.3s !important;
 }
 
 /* REVEAL ANIMATIONS */

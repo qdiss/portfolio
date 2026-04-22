@@ -151,7 +151,7 @@ export default function ProjectsListingPage() {
               <a
                 href={project.liveUrl}
                 target="_blank"
-                rel="noreferrer"
+                rel="noopener noreferrer"
                 className="project-row-live"
                 onClick={(e) => e.stopPropagation()}
               >

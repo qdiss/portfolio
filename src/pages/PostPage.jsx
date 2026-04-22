@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams, Link, useNavigate } from "react-router-dom";
 import { useLang } from "../context/LangContext";
+import { useSEO } from "../hooks/useSEO";
 import { supabase } from "../lib/supabase";
 import Nav from "../components/Nav.jsx";
 
@@ -67,7 +68,7 @@ function renderInline(text, keyPrefix = "") {
           key={k}
           href={p.href}
           target="_blank"
-          rel="noreferrer"
+          rel="noopener noreferrer"
           style={{
             color: "var(--accent)",
             textDecoration: "underline",
@@ -180,7 +181,7 @@ function renderContent(raw) {
         }
         if (t.startsWith("# ")) {
           elements.push(
-            <h1
+            <h2
               key={k}
               style={{
                 fontFamily: "var(--font-display)",
@@ -191,14 +192,14 @@ function renderContent(raw) {
                 lineHeight: 1.2,
               }}
             >
-              {renderInline(t.slice(2), `h1-${k}`)}
-            </h1>,
+              {renderInline(t.slice(2), `h2-${k}`)}
+            </h2>,
           );
           return;
         }
         if (t.startsWith("## ")) {
           elements.push(
-            <h2
+            <h3
               key={k}
               style={{
                 fontFamily: "var(--font-display)",
@@ -211,14 +212,14 @@ function renderContent(raw) {
                 paddingBottom: "0.5rem",
               }}
             >
-              {renderInline(t.slice(3), `h2-${k}`)}
-            </h2>,
+              {renderInline(t.slice(3), `h3-${k}`)}
+            </h3>,
           );
           return;
         }
         if (t.startsWith("### ")) {
           elements.push(
-            <h3
+            <h4
               key={k}
               style={{
                 fontFamily: "var(--font-display)",
@@ -229,8 +230,8 @@ function renderContent(raw) {
                 lineHeight: 1.3,
               }}
             >
-              {renderInline(t.slice(4), `h3-${k}`)}
-            </h3>,
+              {renderInline(t.slice(4), `h4-${k}`)}
+            </h4>,
           );
           return;
         }
@@ -430,6 +431,93 @@ export default function PostPage() {
   const [allPosts, setAllPosts] = useState([]);
   const [loading, setLoading] = useState(true);
 
+  // ── SEO via hook (updates whenever post changes) ───────────────────
+  useSEO(
+    post
+      ? {
+          title: `${post.title} — Adis Klobodanovic`,
+          description: post.excerpt || "",
+          canonical: `https://adiss.dev/blog/${post.slug}`,
+          ogType: "article",
+          ogImage: post.og_image || "https://adiss.dev/og-image.png",
+          ogImageAlt: post.title,
+          articleDate: post.date,
+          articleModified: post.updated_at || post.date,
+          articleTags: post.tags || [],
+          jsonLdId: "post-jsonld",
+          jsonLd: {
+            "@context": "https://schema.org",
+            "@type": "BlogPosting",
+            "@id": `https://adiss.dev/blog/${post.slug}#article`,
+            headline: post.title,
+            name: post.title,
+            description: post.excerpt,
+            datePublished: post.date,
+            dateModified: post.updated_at || post.date,
+            url: `https://adiss.dev/blog/${post.slug}`,
+            image: post.og_image || "https://adiss.dev/og-image.png",
+            inLanguage: "en-US",
+            keywords: (post.tags || []).join(", "),
+            wordCount: post.content
+              ? post.content.split(/\s+/).length
+              : undefined,
+            timeRequired: post.read_time || undefined,
+            author: {
+              "@type": "Person",
+              "@id": "https://adiss.dev/#person",
+              name: "Adis Klobodanovic",
+              url: "https://adiss.dev",
+            },
+            publisher: {
+              "@type": "Person",
+              "@id": "https://adiss.dev/#person",
+              name: "Adis Klobodanovic",
+              url: "https://adiss.dev",
+            },
+            mainEntityOfPage: {
+              "@type": "WebPage",
+              "@id": `https://adiss.dev/blog/${post.slug}`,
+            },
+            isPartOf: {
+              "@type": "Blog",
+              "@id": "https://adiss.dev/blog#blog",
+              name: "Adis Klobodanovic — Blog",
+              url: "https://adiss.dev/blog",
+            },
+          },
+          breadcrumb: {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              {
+                "@type": "ListItem",
+                position: 1,
+                name: "Home",
+                item: "https://adiss.dev",
+              },
+              {
+                "@type": "ListItem",
+                position: 2,
+                name: "Blog",
+                item: "https://adiss.dev/blog",
+              },
+              {
+                "@type": "ListItem",
+                position: 3,
+                name: post.title,
+                item: `https://adiss.dev/blog/${post.slug}`,
+              },
+            ],
+          },
+        }
+      : {
+          title: "Blog — Adis Klobodanovic",
+          description:
+            "Articles on React, Next.js, Node.js and web development.",
+          canonical: "https://adiss.dev/blog",
+        },
+  );
+
   useEffect(() => {
     window.scrollTo(0, 0);
     fetchPost();
@@ -452,79 +540,6 @@ export default function PostPage() {
 
     setPost(data);
     setLoading(false);
-
-    // ── SEO meta tags ─────────────────────────────────────────────────
-    const url = `https://adiss.dev/blog/${data.slug}`;
-    const description = data.excerpt || "";
-    const image = "https://adiss.dev/og-image.png"; // možeš napraviti per-post OG image kasnije
-
-    document.title = `${data.title} — Adis Klobodanovic`;
-
-    // Basic
-    setMeta("description", description);
-    setMeta("author", "Adis Klobodanovic");
-    setMeta("robots", "index, follow");
-
-    // Open Graph
-    setMeta("og:type", "article", true);
-    setMeta("og:url", url, true);
-    setMeta("og:title", data.title, true);
-    setMeta("og:description", description, true);
-    setMeta("og:image", image, true);
-    setMeta("og:site_name", "adiss.dev", true);
-
-    // Twitter
-    setMeta("twitter:card", "summary_large_image");
-    setMeta("twitter:title", data.title);
-    setMeta("twitter:description", description);
-    setMeta("twitter:image", image);
-
-    // Article specific
-    setMeta("article:published_time", data.date, true);
-    setMeta("article:author", "Adis Klobodanovic", true);
-    if (data.tags?.length) {
-      setMeta("article:tag", data.tags.join(", "), true);
-    }
-
-    // Canonical link
-    let canonical = document.querySelector('link[rel="canonical"]');
-    if (!canonical) {
-      canonical = document.createElement("link");
-      canonical.setAttribute("rel", "canonical");
-      document.head.appendChild(canonical);
-    }
-    canonical.setAttribute("href", url);
-
-    // JSON-LD structured data za Google
-    let jsonLd = document.getElementById("post-jsonld");
-    if (!jsonLd) {
-      jsonLd = document.createElement("script");
-      jsonLd.id = "post-jsonld";
-      jsonLd.type = "application/ld+json";
-      document.head.appendChild(jsonLd);
-    }
-    jsonLd.textContent = JSON.stringify({
-      "@context": "https://schema.org",
-      "@type": "BlogPosting",
-      headline: data.title,
-      description: data.excerpt,
-      datePublished: data.date,
-      dateModified: data.updated_at || data.date,
-      author: {
-        "@type": "Person",
-        name: "Adis Klobodanovic",
-        url: "https://adiss.dev",
-      },
-      publisher: {
-        "@type": "Person",
-        name: "Adis Klobodanovic",
-        url: "https://adiss.dev",
-      },
-      url,
-      image,
-      keywords: (data.tags || []).join(", "),
-      mainEntityOfPage: { "@type": "WebPage", "@id": url },
-    });
   }
 
   async function fetchAllPosts() {

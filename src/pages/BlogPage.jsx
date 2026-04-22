@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useLang } from "../context/LangContext";
+import { useSEO } from "../hooks/useSEO";
 import { supabase } from "../lib/supabase";
 import Nav from "../components/Nav.jsx";
 
@@ -17,9 +18,54 @@ export default function BlogPage() {
   const [posts, setPosts] = useState([]);
   const [loading, setLoading] = useState(true);
 
+  useSEO({
+    title: "Blog — Adis Klobodanovic | Web Development Articles",
+    description:
+      "Articles on React, Next.js, Node.js, web performance, and freelance development. Real-world experience, no fluff.",
+    canonical: "https://adiss.dev/blog",
+    ogType: "website",
+    jsonLd: {
+      "@context": "https://schema.org",
+      "@type": "Blog",
+      "@id": "https://adiss.dev/blog#blog",
+      name: "Adis Klobodanovic — Blog",
+      url: "https://adiss.dev/blog",
+      description:
+        "Articles on React, Next.js, Node.js, web performance, and freelance development.",
+      author: {
+        "@type": "Person",
+        name: "Adis Klobodanovic",
+        url: "https://adiss.dev",
+      },
+      publisher: {
+        "@type": "Person",
+        name: "Adis Klobodanovic",
+        url: "https://adiss.dev",
+      },
+      inLanguage: "en-US",
+    },
+    breadcrumb: {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: 1,
+          name: "Home",
+          item: "https://adiss.dev",
+        },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: "Blog",
+          item: "https://adiss.dev/blog",
+        },
+      ],
+    },
+  });
+
   useEffect(() => {
     window.scrollTo(0, 0);
-    document.title = "Blog — Adis Klobodanovic";
     fetchPosts();
   }, []);
 

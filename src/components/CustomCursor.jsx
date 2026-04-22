@@ -38,7 +38,7 @@ export default function CustomCursor() {
     window.addEventListener("mousemove", onMove);
 
     // Use event delegation instead of attaching to each element
-    document.addEventListener("mouseover", (e) => {
+    const onMouseOver = (e) => {
       if (
         e.target.closest(
           "a, button, [role='button'], input, textarea, select, label",
@@ -46,8 +46,8 @@ export default function CustomCursor() {
       ) {
         onEnter();
       }
-    });
-    document.addEventListener("mouseout", (e) => {
+    };
+    const onMouseOut = (e) => {
       if (
         e.target.closest(
           "a, button, [role='button'], input, textarea, select, label",
@@ -55,10 +55,14 @@ export default function CustomCursor() {
       ) {
         onLeave();
       }
-    });
+    };
+    document.addEventListener("mouseover", onMouseOver);
+    document.addEventListener("mouseout", onMouseOut);
 
     return () => {
       window.removeEventListener("mousemove", onMove);
+      document.removeEventListener("mouseover", onMouseOver);
+      document.removeEventListener("mouseout", onMouseOut);
     };
   }, []);
 

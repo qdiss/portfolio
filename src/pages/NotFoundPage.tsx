@@ -1,14 +1,16 @@
 import { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import Nav from "../components/Nav";
+import { useLang } from "../context/LangContext";
 
 export default function NotFoundPage() {
+  const { t } = useLang();
   const navigate = useNavigate();
   const [countdown, setCountdown] = useState(10);
 
   useEffect(() => {
     window.scrollTo(0, 0);
-    document.title = "404 — Page Not Found · adiss.dev";
+    document.title = `404 — ${t.nf_title || "Page not found"} · adiss.dev`;
 
     const interval = setInterval(() => {
       setCountdown((prev) => {
@@ -22,7 +24,7 @@ export default function NotFoundPage() {
     }, 1000);
 
     return () => clearInterval(interval);
-  }, [navigate]);
+  }, [navigate, t.nf_title]);
 
   return (
     <>
@@ -150,48 +152,48 @@ export default function NotFoundPage() {
         <div className="nf-inner">
           <div className="nf-label">
             <span className="pulse-dot" style={{ width: 6, height: 6 }} />
-            Error
+            {t.nf_error_label || "Error"}
           </div>
 
           <div className="nf-code">
             4<span>0</span>4
           </div>
 
-          <h1 className="nf-title">Page not found</h1>
+          <h1 className="nf-title">{t.nf_title || "Page not found"}</h1>
 
           <p className="nf-sub">
-            Looks like this page doesn't exist — or it moved.
+            {t.nf_sub_1 || "Looks like this page doesn't exist — or it moved."}
             <br />
-            Let's get you back somewhere useful.
+            {t.nf_sub_2 || "Let's get you back somewhere useful."}
           </p>
 
           <div className="nf-actions">
             <Link to="/" className="btn-primary">
-              ← Back to home
+              ← {t.nf_back_home || "Back to home"}
             </Link>
             <Link to="/hire" className="btn-secondary">
-              Start a project
+              {t.nf_start_project || "Start a project"}
             </Link>
           </div>
 
           <div className="nf-countdown">
-            <span>Redirecting to home in</span>
+            <span>{t.nf_redirect_prefix || "Redirecting to home in"}</span>
             <span className="nf-countdown-num">{countdown}</span>
-            <span>seconds...</span>
+            <span>{t.nf_redirect_suffix || "seconds..."}</span>
           </div>
 
           <div className="nf-links">
             <Link to="/#work" className="nf-link">
-              ↗ Projects
+              ↗ {t.nav_work || "Projects"}
             </Link>
             <Link to="/blog" className="nf-link">
-              ↗ Blog
+              ↗ {t.nav_blog || "Blog"}
             </Link>
             <Link to="/#about" className="nf-link">
-              ↗ About
+              ↗ {t.nav_about || "About"}
             </Link>
             <Link to="/#contact" className="nf-link">
-              ↗ Contact
+              ↗ {t.nav_contact || "Contact"}
             </Link>
           </div>
         </div>

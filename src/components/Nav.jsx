@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import { useTheme } from "../context/ThemeContext";
 import { useLang } from "../context/LangContext";
+import { SunIcon, MoonIcon, XIcon, CheckIcon, ArrowUpRightIcon } from "./Icons";
 
 const FLAG_IMGS = {
   en: "https://flagcdn.com/gb.svg",
@@ -24,6 +25,12 @@ const LANGS = [
 const NAV_LINKS = [
   { section: "about", labelKey: "nav_about" },
   { section: "services", labelKey: "nav_services" },
+  {
+    section: "pricing",
+    labelKey: "nav_pricing",
+    isRoute: true,
+    to: "/pricing",
+  },
   { section: "work", labelKey: "nav_work" },
   { section: "blog", labelKey: "nav_blog", isRoute: true, to: "/blog" },
   { section: "contact", labelKey: "nav_contact" },
@@ -280,6 +287,7 @@ export default function Nav() {
         .mob-overlay.open .mob-link:nth-child(4) { opacity:1; transform:none; transition-delay: 0.28s; }
         .mob-overlay.open .mob-link:nth-child(5) { opacity:1; transform:none; transition-delay: 0.34s; }
         .mob-overlay.open .mob-link:nth-child(6) { opacity:1; transform:none; transition-delay: 0.40s; }
+        .mob-overlay.open .mob-link:nth-child(7) { opacity:1; transform:none; transition-delay: 0.46s; }
         .mob-link:hover { color: var(--accent); }
         .mob-link.mob-active { color: var(--accent); }
 
@@ -441,7 +449,9 @@ export default function Nav() {
                     />
                     <span className="lang-option-label">{l.label}</span>
                     {lang === l.code && (
-                      <span className="lang-option-check">✓</span>
+                      <span className="lang-option-check">
+                        <CheckIcon size={12} />
+                      </span>
                     )}
                   </button>
                 ))}
@@ -454,7 +464,7 @@ export default function Nav() {
             onClick={toggleTheme}
             aria-label="Toggle theme"
           >
-            {isDark ? "☀️" : "🌙"}
+            {isDark ? <SunIcon size={16} /> : <MoonIcon size={16} />}
           </button>
 
           <Link to="/hire" className="nav-cta">
@@ -477,6 +487,7 @@ export default function Nav() {
       <div
         className={`mob-overlay${menuOpen ? " open" : ""}`}
         aria-hidden={!menuOpen}
+        inert={!menuOpen ? "" : undefined}
       >
         <div className="mob-glow" />
 
@@ -489,7 +500,7 @@ export default function Nav() {
             onClick={closeMenu}
             aria-label="Close menu"
           >
-            ✕
+            <XIcon size={16} />
           </button>
         </div>
 
@@ -521,7 +532,8 @@ export default function Nav() {
               {isDark ? "☀️" : "🌙"} {isDark ? "Light" : "Dark"}
             </button> */}
             <Link to="/hire" className="mob-hire-btn" onClick={closeMenu}>
-              Start a project ↗
+              {t.mob_hire_btn || t.nav_cta}
+              <ArrowUpRightIcon size={14} />
             </Link>
           </div>
         </div>

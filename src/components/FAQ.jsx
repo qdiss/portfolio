@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { useLang } from '../context/LangContext'
+import { PlusIcon } from './Icons'
 
 function FaqItem({ question, answer }) {
   const [open, setOpen] = useState(false)
@@ -7,7 +8,7 @@ function FaqItem({ question, answer }) {
     <div className={`faq-item${open ? ' open' : ''}`}>
       <button className="faq-q" onClick={() => setOpen(o => !o)}>
         <span>{question}</span>
-        <em className="faq-icon">+</em>
+        <em className="faq-icon"><PlusIcon size={14} /></em>
       </button>
       <div className="faq-a">
         <p>{answer}</p>
@@ -35,8 +36,8 @@ export default function FAQ() {
       <div className="section-label reveal">{t.faq_label}</div>
       <h2 className="section-title reveal">{t.faq_title}</h2>
       <div className="faq-list reveal">
-        {items.map((item, i) => (
-          <FaqItem key={i} question={item.q} answer={item.a} />
+        {items.map((item) => (
+          <FaqItem key={item.q} question={item.q} answer={item.a} />
         ))}
       </div>
     </section>

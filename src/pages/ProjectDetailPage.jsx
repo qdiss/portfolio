@@ -604,7 +604,7 @@ export default function ProjectDetailPage() {
                 <a
                   href={project.liveUrl}
                   target="_blank"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   className="pd-live-btn"
                 >
                   {t.proj_view_live || "View live project"}

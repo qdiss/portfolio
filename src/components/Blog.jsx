@@ -57,7 +57,7 @@ export default function Blog() {
           className="btn-secondary"
           style={{ fontSize: "0.85rem" }}
         >
-          All posts
+          {t.blog_all_posts}
         </Link>
       </div>
     </section>

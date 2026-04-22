@@ -44,7 +44,7 @@ export default function About() {
           <p dangerouslySetInnerHTML={{ __html: t.about_p2 }} />
           <p dangerouslySetInnerHTML={{ __html: t.about_p3 }} />
           <div style={{ marginTop: '2rem' }}>
-            <a href="contact" className="btn-primary">{t.about_cta}</a>
+            <a href="#contact" className="btn-primary">{t.about_cta}</a>
           </div>
         </div>
         <div className="about-aside reveal reveal-delay-2">

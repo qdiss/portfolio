@@ -1,7 +1,6 @@
 import { useLang } from "../context/LangContext";
 import { useState, useEffect } from "react";
-
-const NEXT_AVAILABLE = "July 2026";
+import { CalendarIcon } from "./Icons";
 
 function LiveClock() {
   const [time, setTime] = useState("");
@@ -161,7 +160,9 @@ export default function Currently() {
             <span className="ci-value">
               <LiveClock />
             </span>
-            <span className="ci-sub">EU &amp; US East friendly</span>
+            <span className="ci-sub">
+              {t.curr_tz_sub}
+            </span>
           </div>
           <div className="ci">
             <span className="ci-label">{t.curr_reply_label}</span>
@@ -171,7 +172,10 @@ export default function Currently() {
             <span className="ci-label">
               {t.curr_next_slot_label || "Next slot"}
             </span>
-            <span className="ci-badge">📅 {NEXT_AVAILABLE}</span>
+            <span className="ci-badge">
+              <CalendarIcon size={12} />
+              {t.curr_next_slot_value}
+            </span>
           </div>
         </div>
       </div>

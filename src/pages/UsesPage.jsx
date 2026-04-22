@@ -3,12 +3,20 @@ import { Link } from "react-router-dom";
 import Nav from "../components/Nav";
 import { useLang } from "../context/LangContext";
 import { useSEO } from "../hooks/useSEO";
+import {
+  MenuSquareIcon,
+  ZapIcon,
+  PaletteIcon,
+  FileIcon,
+  RocketIcon,
+  ServerIcon,
+} from "../components/Icons";
 
 const USES_DATA = [
   {
     index: "01",
     categoryKey: "uses_cat_editor",
-    icon: "💻",
+    icon: MenuSquareIcon,
     items: [
       { name: "VS Code", descKey: "uses_vscode_desc" },
       { name: "WebStorm", descKey: "uses_webstorm_desc" },
@@ -17,7 +25,7 @@ const USES_DATA = [
   {
     index: "02",
     categoryKey: "uses_cat_stack",
-    icon: "⚙️",
+    icon: ZapIcon,
     wide: true,
     items: [
       { name: "Next.js", descKey: "uses_nextjs_desc" },
@@ -37,13 +45,13 @@ const USES_DATA = [
   {
     index: "03",
     categoryKey: "uses_cat_design",
-    icon: "🎨",
+    icon: PaletteIcon,
     items: [{ name: "Figma", descKey: "uses_figma_desc" }],
   },
   {
     index: "04",
     categoryKey: "uses_cat_productivity",
-    icon: "🗂️",
+    icon: FileIcon,
     items: [
       { name: "Notion", descKey: "uses_notion_desc" },
       { name: "Arc Browser", descKey: "uses_arc_desc" },
@@ -52,7 +60,7 @@ const USES_DATA = [
   {
     index: "05",
     categoryKey: "uses_cat_infra",
-    icon: "🚀",
+    icon: RocketIcon,
     items: [
       { name: "Vercel", descKey: "uses_vercel_desc" },
       { name: "Cloudflare", descKey: "uses_cloudflare_desc" },
@@ -61,7 +69,7 @@ const USES_DATA = [
   {
     index: "06",
     categoryKey: "uses_cat_hardware",
-    icon: "🖥️",
+    icon: ServerIcon,
     items: [
       { name: "MacBook", descKey: "uses_macbook_desc" },
       { name: "Asus Laptop", descKey: "uses_asus_desc" },
@@ -370,7 +378,7 @@ export default function UsesPage() {
             {t.uses_intro ||
               "Tools, hardware, and software I actually reach for — no filler."}{" "}
             Listed on{" "}
-            <a href="https://uses.tech" target="_blank" rel="noreferrer">
+            <a href="https://uses.tech" target="_blank" rel="noopener noreferrer">
               uses.tech
             </a>
             .
@@ -381,14 +389,16 @@ export default function UsesPage() {
         <div className="uses-sections">
           {USES_DATA.map((section, si) => (
             <div
-              key={section.category}
+              key={section.categoryKey}
               className={`uses-section reveal reveal-delay-${(si % 5) + 1}`}
             >
               {/* Left: label */}
               <div className="uses-section-meta">
                 <span className="uses-section-num">{section.index}</span>
                 <span className="uses-section-label">
-                  <span className="uses-section-icon">{section.icon}</span>
+                  <span className="uses-section-icon">
+                    <section.icon size={14} />
+                  </span>
                   {t[section.categoryKey]}
                 </span>
               </div>

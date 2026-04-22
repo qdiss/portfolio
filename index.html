@@ -1,49 +1,92 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" prefix="og: https://ogp.me/ns#">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <title>
-      Adis Klobodanovic — Full-Stack Developer | React, Next.js, Node
-    </title>
 
-    <!-- Primary SEO -->
+    <!-- PRIMARY SEO -->
+    <title>
+      Adis Klobodanovic — Full-Stack Developer | React, Next.js, Node.js
+    </title>
     <meta
       name="description"
-      content="Full-stack developer specialising in React, Next.js & Node.js. I build fast, clean web apps, SaaS products and landing pages that ship — available for new projects."
+      content="Full-stack developer specialising in React, Next.js &amp; Node.js. I build fast, clean web apps, SaaS products and landing pages that ship on time — available for new projects worldwide."
     />
+    <!-- FAVICON — both SVGs contain CSS @media(prefers-color-scheme) internally -->
+    <!-- Browsers pick the last matching <link rel="icon"> so light goes first -->
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="/favicon.svg"
+      media="(prefers-color-scheme: light)"
+    />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="/favicon-terminal.svg"
+      media="(prefers-color-scheme: dark)"
+    />
+    <!-- Fallback for browsers that ignore media on rel=icon (reads first match) -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon.svg" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta
+      name="apple-mobile-web-app-status-bar-style"
+      content="black-translucent"
+    />
+    <meta name="apple-mobile-web-app-title" content="adiss.dev" />
     <meta name="author" content="Adis Klobodanovic" />
-    <meta name="robots" content="index, follow" />
+    <meta
+      name="robots"
+      content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+    />
+    <meta
+      name="googlebot"
+      content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+    />
     <meta name="theme-color" content="#c8f060" />
+    <meta name="color-scheme" content="dark light" />
     <link rel="canonical" href="https://adiss.dev" />
-
-    <!-- Keywords -->
+    <meta name="geo.region" content="BA" />
+    <meta name="geo.placename" content="Bosnia and Herzegovina" />
+    <meta name="language" content="English" />
     <meta
       name="keywords"
-      content="full-stack developer, React developer, Next.js developer, Node.js, web app development, SaaS, landing page, freelance developer, Adis Klobodanovic"
+      content="full-stack developer, React developer, Next.js developer, Node.js developer, web app development, SaaS development, freelance developer, landing page developer, Adis Klobodanovic, adiss.dev, Bosnia developer"
     />
 
-    <!-- Open Graph / Facebook -->
+    <!-- OPEN GRAPH -->
     <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="adiss.dev" />
     <meta property="og:url" content="https://adiss.dev" />
+    <meta property="og:locale" content="en_US" />
     <meta
       property="og:title"
       content="Adis Klobodanovic — Full-Stack Developer"
     />
     <meta
       property="og:description"
-      content="Full-stack developer. React, Next.js, Node.js. Building fast web apps and SaaS products that actually ship."
+      content="Full-stack developer. React, Next.js, Node.js. Building fast web apps and SaaS products that actually ship — available for projects worldwide."
     />
     <meta property="og:image" content="https://adiss.dev/og-image.png" />
+    <meta
+      property="og:image:secure_url"
+      content="https://adiss.dev/og-image.png"
+    />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta property="og:site_name" content="adiss.dev" />
-    <meta property="og:locale" content="en_US" />
+    <meta property="og:image:type" content="image/png" />
+    <meta
+      property="og:image:alt"
+      content="Adis Klobodanovic — Full-Stack Developer portfolio preview"
+    />
+    <meta property="profile:first_name" content="Adis" />
+    <meta property="profile:last_name" content="Klobodanovic" />
 
-    <!-- Twitter Card -->
+    <!-- TWITTER CARD -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@adisklobodanovic" />
+    <meta name="twitter:creator" content="@adisklobodanovic" />
     <meta
       name="twitter:title"
       content="Adis Klobodanovic — Full-Stack Developer"
@@ -53,74 +96,38 @@
       content="Full-stack developer. React, Next.js, Node.js. Building fast web apps and SaaS products that actually ship."
     />
     <meta name="twitter:image" content="https://adiss.dev/og-image.png" />
+    <meta
+      name="twitter:image:alt"
+      content="Adis Klobodanovic — Full-Stack Developer"
+    />
 
-    <!-- Structured Data: Person -->
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Adis Klobodanovic",
-        "url": "https://adiss.dev",
-        "email": "adis.klobodanovic@gmail.com",
-        "jobTitle": "Full-Stack Developer",
-        "description": "Full-stack developer specialising in React, Next.js and Node.js. Building fast web apps, SaaS products and landing pages.",
-        "knowsAbout": [
-          "React",
-          "Next.js",
-          "Node.js",
-          "TypeScript",
-          "PostgreSQL",
-          "Tailwind CSS"
-        ],
-        "sameAs": [
-          "https://linkedin.com/in/adis-klobodanovic",
-          "https://github.com/adisklobodanovic"
-        ]
-      }
-    </script>
+    <!-- SECURITY -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+    <meta
+      http-equiv="Referrer-Policy"
+      content="strict-origin-when-cross-origin"
+    />
+    <meta http-equiv="X-DNS-Prefetch-Control" content="on" />
+    <!-- CSP is set via Vercel response headers (vercel.json) to avoid meta/header conflicts -->
 
-    <!-- Structured Data: WebSite -->
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "WebSite",
-        "name": "Adis Klobodanovic — Full-Stack Developer",
-        "url": "https://adiss.dev",
-        "description": "Portfolio and hire page for Adis Klobodanovic, full-stack developer.",
-        "potentialAction": {
-          "@type": "SearchAction",
-          "target": "https://adiss.dev/?s={search_term_string}",
-          "query-input": "required name=search_term_string"
-        }
-      }
-    </script>
-
-    <!-- Structured Data: Professional Service -->
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "ProfessionalService",
-        "name": "adiss.dev",
-        "url": "https://adiss.dev",
-        "description": "Full-stack web development services — React, Next.js, Node.js. Landing pages, business websites, and web applications.",
-        "priceRange": "$600 – $8000+",
-        "serviceType": [
-          "Web Development",
-          "Full-Stack Development",
-          "SaaS Development"
-        ],
-        "areaServed": "Worldwide"
-      }
-    </script>
-
-    <!-- Fonts: preconnect first for performance, then stylesheet -->
+    <!-- PERFORMANCE -->
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+    <link rel="dns-prefetch" href="https://flagcdn.com" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://flagcdn.com" crossorigin />
+
+    <!-- FONTS non-blocking -->
     <link
       href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap"
       rel="stylesheet"
       media="print"
-      onload="this.media = 'all'"
+      onload="
+        this.media = 'all';
+        this.onload = null;
+      "
     />
     <noscript>
       <link
@@ -129,7 +136,193 @@
       />
     </noscript>
 
-    <!-- Google Analytics -->
+    <!-- SCHEMA: Person -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "@id": "https://adiss.dev/#person",
+        "name": "Adis Klobodanovic",
+        "url": "https://adiss.dev",
+        "email": "adis.klobodanovic@gmail.com",
+        "jobTitle": "Full-Stack Developer",
+        "description": "Full-stack developer specialising in React, Next.js and Node.js. Building fast web apps, SaaS products and landing pages for clients worldwide.",
+        "image": "https://adiss.dev/og-image.svg",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "adiss.dev",
+          "url": "https://adiss.dev"
+        },
+        "knowsAbout": [
+          "React",
+          "Next.js",
+          "Node.js",
+          "TypeScript",
+          "PostgreSQL",
+          "Supabase",
+          "Tailwind CSS",
+          "Full-Stack Web Development",
+          "SaaS Development",
+          "Landing Pages"
+        ],
+        "knowsLanguage": ["English", "Bosnian"],
+        "nationality": "BA",
+        "sameAs": [
+          "https://linkedin.com/in/adis-klobodanovic",
+          "https://github.com/adisklobodanovic"
+        ]
+      }
+    </script>
+
+    <!-- SCHEMA: WebSite + Sitelinks Search -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "@id": "https://adiss.dev/#website",
+        "name": "Adis Klobodanovic — Full-Stack Developer",
+        "url": "https://adiss.dev",
+        "description": "Portfolio and hire page for Adis Klobodanovic, full-stack developer specialising in React, Next.js and Node.js.",
+        "author": { "@id": "https://adiss.dev/#person" },
+        "inLanguage": "en-US",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": {
+            "@type": "EntryPoint",
+            "urlTemplate": "https://adiss.dev/blog?q={search_term_string}"
+          },
+          "query-input": "required name=search_term_string"
+        }
+      }
+    </script>
+
+    <!-- SCHEMA: ProfessionalService with offer catalog -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        "@id": "https://adiss.dev/#service",
+        "name": "adiss.dev — Web Development Services",
+        "url": "https://adiss.dev",
+        "description": "Full-stack web development services — React, Next.js, Node.js. Landing pages, business websites, and SaaS web applications built and shipped on time.",
+        "provider": { "@id": "https://adiss.dev/#person" },
+        "priceRange": "150 KM – 600 KM+",
+        "currenciesAccepted": "BAM, EUR, USD",
+        "paymentAccepted": "Bank Transfer, PayPal",
+        "serviceType": [
+          "Web Development",
+          "Full-Stack Development",
+          "SaaS Development",
+          "Landing Page Development",
+          "React Development",
+          "Next.js Development"
+        ],
+        "areaServed": { "@type": "AdministrativeArea", "name": "Worldwide" },
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Web Development Packages",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "name": "Starter Package",
+              "description": "Single-page website with contact form, Google Maps, mobile-responsive. Delivered in 5 days.",
+              "price": "150",
+              "priceCurrency": "BAM"
+            },
+            {
+              "@type": "Offer",
+              "name": "Business Package",
+              "description": "Multi-page website with SEO, analytics, social media kit, email signature. Delivered in 7 days.",
+              "price": "350",
+              "priceCurrency": "BAM"
+            },
+            {
+              "@type": "Offer",
+              "name": "Premium Package",
+              "description": "Full business website with custom design, blog/news section, booking system. Delivered in 14 days.",
+              "price": "600",
+              "priceCurrency": "BAM"
+            }
+          ]
+        }
+      }
+    </script>
+
+    <!-- SCHEMA: FAQPage (enables rich results in Google) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How much does a website cost?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Packages start at 150 KM for a Starter single-page site, 350 KM for a Business multi-page site, and 600 KM for a full Premium website. Every project gets a written quote before anything starts."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How long does it take to build a website?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The Starter package is delivered in 5 days, Business in 7 days, and Premium in 14 days. Timelines are fixed in writing before the project starts."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do I own the code after the project?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Once the project is paid in full, all code, assets, and access credentials are transferred to you. You own everything outright."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can you work with clients outside Bosnia?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, all projects are done remotely. I work with clients worldwide. Communication is handled via email, Slack, or WhatsApp — whatever works for you."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What technologies do you use?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "I primarily build with React, Next.js, Node.js, TypeScript, and Supabase/PostgreSQL. For styling I use Tailwind CSS or plain CSS. Stack is always chosen to fit the project, not the other way around."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How do we communicate during the project?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Email, Slack, WhatsApp — whatever works for you. I send progress updates proactively, share preview links early, and respond to messages quickly. You always know the status."
+            }
+          }
+        ]
+      }
+    </script>
+
+    <!-- SCHEMA: BreadcrumbList -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://adiss.dev"
+          }
+        ]
+      }
+    </script>
+
+    <!-- GOOGLE ANALYTICS -->
     <script
       async
       src="https://www.googletagmanager.com/gtag/js?id=G-6SR2FJDFZC"
@@ -140,7 +333,10 @@
         dataLayer.push(arguments);
       }
       gtag("js", new Date());
-      gtag("config", "G-6SR2FJDFZC");
+      gtag("config", "G-6SR2FJDFZC", {
+        page_path: window.location.pathname,
+        anonymize_ip: true,
+      });
     </script>
   </head>
   <body>

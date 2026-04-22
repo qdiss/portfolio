@@ -20,7 +20,11 @@ export function ThemeProvider({ children }) {
     updateFavicon(isDark); // ← već imaš ovo
   }, [isDark]);
 
-  const toggleTheme = () => setIsDark((prev) => !prev);
+  const toggleTheme = () => {
+    document.body.classList.add("theme-transition");
+    setIsDark((prev) => !prev);
+    setTimeout(() => document.body.classList.remove("theme-transition"), 350);
+  };
 
   return (
     <ThemeContext.Provider value={{ isDark, toggleTheme }}>

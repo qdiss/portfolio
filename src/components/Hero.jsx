@@ -33,7 +33,7 @@ export default function Hero() {
             transition: "border-color 0.2s",
           }}
         >
-          Start a project
+          {t.hero_start_project || "Start a project"}
         </Link>
       </div>
       <div className="hero-scroll">
