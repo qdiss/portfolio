@@ -82,9 +82,9 @@ export default function UsesPage() {
   const { t } = useLang();
 
   useSEO({
-    title: "Uses — Tools & Stack | Adis Klobodanovic",
+    title: t.uses_seo_title || "Uses — Tools & Stack | Adis Klobodanović",
     description:
-      "The tools, hardware, and software I use every day as a full-stack developer.",
+      t.uses_seo_desc || "The tools, hardware, and software I use every day as a full-stack developer.",
     canonical: "https://adiss.dev/uses",
   });
 

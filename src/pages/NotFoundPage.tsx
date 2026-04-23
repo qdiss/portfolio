@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import Nav from "../components/Nav";
+import { useSEO } from "../hooks/useSEO";
 import { useLang } from "../context/LangContext";
 
 export default function NotFoundPage() {
@@ -8,9 +9,14 @@ export default function NotFoundPage() {
   const navigate = useNavigate();
   const [countdown, setCountdown] = useState(10);
 
+  useSEO({
+    title: `404 — ${t.nf_title || "Page not found"} · adiss.dev`,
+    description: t.nf_sub_1 || "The page you are looking for doesn't exist or has moved.",
+    canonical: "https://adiss.dev/404",
+  });
+
   useEffect(() => {
     window.scrollTo(0, 0);
-    document.title = `404 — ${t.nf_title || "Page not found"} · adiss.dev`;
 
     const interval = setInterval(() => {
       setCountdown((prev) => {

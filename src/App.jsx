@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import { ThemeProvider } from "./context/ThemeContext";
 import { LangProvider, useLang } from "./context/LangContext";
 import { usePageReveal } from "./hooks/useReveal";
+import { useSEO } from "./hooks/useSEO";
 
 class ErrorBoundaryInner extends Component {
   constructor(props) {
@@ -139,6 +140,33 @@ function GlobalReveal() {
   return null;
 }
 
+
+// ─── HOME PAGE SEO ────────────────────────────────────────────────────────────
+function HomePageSEO() {
+  const { t, lang } = useLang();
+  useSEO({
+    title: t.home_page_title || "Adis Klobodanović — Full-Stack Developer | React, Next.js, Node.js",
+    description: t.home_page_desc ||
+      "Full-stack developer specialising in React, Next.js & Node.js. I build fast, clean web apps, SaaS products and landing pages that ship on time — available for new projects worldwide.",
+    canonical: "https://adiss.dev",
+    ogType: "website",
+    jsonLd: {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "@id": "https://adiss.dev/#person",
+      name: "Adis Klobodanovic",
+      url: "https://adiss.dev",
+      jobTitle: "Full-Stack Developer",
+      image: "https://adiss.dev/og-image.svg",
+      sameAs: [
+        "https://linkedin.com/in/adis-klobodanovic",
+        "https://github.com/adisklobodanovic",
+      ],
+    },
+  });
+  return null;
+}
+
 function PortfolioContent() {
   const [enableExtras, setEnableExtras] = useState(false);
 
@@ -148,6 +176,7 @@ function PortfolioContent() {
 
   return (
     <>
+      <HomePageSEO />
       <Nav />
       <Hero />
 
@@ -177,6 +206,15 @@ function PortfolioContent() {
         <Services />
       </Suspense>
       <Divider />
+
+      {/* <Suspense
+        fallback={
+          <div style={{ height: 200, background: "var(--bg, #0a0a0a)" }} />
+        }
+      >
+        <PricingPreview />
+      </Suspense>
+      <Divider /> */}
 
       <Suspense
         fallback={

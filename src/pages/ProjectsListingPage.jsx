@@ -69,9 +69,9 @@ export default function ProjectsListingPage() {
   const { t } = useLang();
 
   useSEO({
-    title: "Projects — Adis Klobodanovic | Full-Stack Developer",
+    title: t.projects_seo_title || "Projects — Adis Klobodanović | Full-Stack Developer",
     description:
-      "Full-stack web projects — booking platforms, real estate sites, SaaS apps, and more. React, Next.js, Node.js.",
+      t.projects_seo_desc || "Full-stack web projects — booking platforms, real estate sites, SaaS apps, and more.",
     canonical: "https://adiss.dev/contents/projects",
   });
 

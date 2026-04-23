@@ -336,11 +336,11 @@ const en = {
   hire_back: "Back to portfolio",
   // Form package selector
   form_pkg_starter: "Starter",
-  form_pkg_starter_price: "150 KM",
+  form_pkg_starter_price: "$99",
   form_pkg_business: "Business",
-  form_pkg_business_price: "350 KM",
+  form_pkg_business_price: "$199",
   form_pkg_premium: "Premium",
-  form_pkg_premium_price: "600 KM",
+  form_pkg_premium_price: "$349",
   form_pkg_custom: "Custom / On request",
   form_pkg_placeholder: "Select a package",
   form_or: "or",
@@ -564,6 +564,31 @@ const en = {
   ref_step3_body: "On your next project — automatically, no paperwork.",
   referral_example:
     "You refer the Business package (350 KM). Friend pays 315 KM. Your next project is 10% cheaper — automatically.",
+  // ─── PACKAGE PRICES (i18n) ────────────────────────────────────────────────
+  pkg_starter_price: "$99",
+  pkg_business_price: "$199",
+  pkg_premium_price: "$349",
+  // ─── 404 PAGE ─────────────────────────────────────────────────────────────
+  nf_error_label: "Error",
+  nf_title: "Page not found",
+  nf_sub_1: "Looks like this page doesn't exist — or it moved.",
+  nf_sub_2: "Let's get you back somewhere useful.",
+  nf_back_home: "Back to home",
+  nf_start_project: "Start a project",
+  nf_redirect_prefix: "Redirecting to home in",
+  nf_redirect_suffix: "seconds...",
+  example_label: "Example",
+  // ─── HOME PAGE SEO ────────────────────────────────────────────────────────
+  home_page_title: "Adis Klobodanović — Full-Stack Developer | React, Next.js, Node.js",
+  home_page_desc: "Full-stack developer specialising in React, Next.js & Node.js. I build fast, clean web apps, SaaS products and landing pages that ship on time — available for new projects worldwide.",
+  // ─── PAGE SEO TITLES ─────────────────────────────────────────────────────
+  blog_seo_title: "Blog — Adis Klobodanović | Web Development Articles",
+  blog_seo_desc: "Articles on React, Next.js, Node.js, web performance, and freelance development. Real-world experience, no fluff.",
+  uses_seo_title: "Uses — Tools & Stack | Adis Klobodanović",
+  uses_seo_desc: "The tools, hardware, and software I use every day as a full-stack developer.",
+  hire_seo_title: "Start a Project — Adis Klobodanović | Full-Stack Developer",
+  hire_seo_desc: "Ready to build something? Fixed-price web development — from $99 for a landing page. Fast turnaround, full ownership.",
+  projects_seo_title: "Projects — Adis Klobodanović | Full-Stack Developer",
+  projects_seo_desc: "Full-stack web projects — booking platforms, real estate sites, SaaS apps, and more.",
 };
-
 export default en;

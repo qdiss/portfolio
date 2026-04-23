@@ -669,9 +669,9 @@ export default function HirePage() {
   }, []);
 
   useSEO({
-    title: "Start a Project — Adis Klobodanovic | Full-Stack Developer",
+    title: t.hire_seo_title || "Start a Project — Adis Klobodanović | Full-Stack Developer",
     description:
-      "Ready to build something? Fixed-price web development — landing pages from $600, web apps from $3,000. Fast turnaround, full ownership.",
+      t.hire_seo_desc || "Ready to build something? Fixed-price web development — landing pages from $600, web apps from $3,000. Fast turnaround, full ownership.",
     canonical: "https://adiss.dev/hire",
     breadcrumb: {
       "@context": "https://schema.org",

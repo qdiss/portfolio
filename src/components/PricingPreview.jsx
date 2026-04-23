@@ -1,34 +1,15 @@
 import { useNavigate } from "react-router-dom";
 import { useLang } from "../context/LangContext";
 import { ZapIcon, GlobeIcon, RocketIcon, ArrowUpRightIcon } from "./Icons";
+import { PACKAGES as PKG_CONFIG } from "../config/packages";
 
-const PREVIEW_PKGS = [
-  {
-    id: "starter",
-    icon: ZapIcon,
-    nameKey: "pkg_starter_name",
-    descKey: "pkg_starter_short",
-    price: "150 KM",
-    highlight: false,
-  },
-  {
-    id: "business",
-    icon: GlobeIcon,
-    nameKey: "pkg_business_name",
-    descKey: "pkg_business_short",
-    price: "350 KM",
-    highlight: true,
-    badge: "pkg_badge_popular",
-  },
-  {
-    id: "premium",
-    icon: RocketIcon,
-    nameKey: "pkg_premium_name",
-    descKey: "pkg_premium_short",
-    price: "600 KM",
-    highlight: false,
-  },
-];
+const PKG_ICON_MAP = { zap: ZapIcon, globe: GlobeIcon, rocket: RocketIcon };
+
+const PREVIEW_PKGS = PKG_CONFIG.map((p) => ({
+  ...p,
+  icon: PKG_ICON_MAP[p.icon],
+  descKey: p.shortKey,
+}));
 
 export default function PricingPreview() {
   const { t } = useLang();
@@ -155,7 +136,7 @@ export default function PricingPreview() {
             <div className="pv-name">{t[pkg.nameKey] || pkg.nameKey}</div>
             <p className="pv-desc">{t[pkg.descKey] || pkg.descKey}</p>
             <div className="pv-footer">
-              <div className="pv-price">{pkg.price}</div>
+              <div className="pv-price">{t[pkg.priceKey] || pkg.priceKey}</div>
               <div className="pv-arrow">
                 <ArrowUpRightIcon size={14} />
               </div>

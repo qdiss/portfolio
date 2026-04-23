@@ -34,6 +34,8 @@ export function useSEO({
 }) {
   useEffect(() => {
     const pageLang = document.documentElement.lang || "en";
+    // Keep <html lang> in sync so each page/route is correctly labelled
+    if (pageLang) document.documentElement.lang = pageLang;
     // ── Title ─────────────────────────────────────────────────────────
     if (title) document.title = title;
 

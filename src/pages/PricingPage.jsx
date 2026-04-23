@@ -3,6 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { useLang } from "../context/LangContext";
 import Nav from "../components/Nav";
 import { useSEO } from "../hooks/useSEO";
+import { PACKAGES, ADDONS, formatAddonPrice } from "../config/packages";
 import { usePageReveal } from "../hooks/useReveal";
 
 // ─── SVG ICONS ───────────────────────────────────────────────────────────────
@@ -231,195 +232,6 @@ const ICONS = {
   ),
 };
 
-// ─── PACKAGES DATA ───────────────────────────────────────────────────────────
-const PACKAGES = [
-  {
-    id: "starter",
-    icon: "zap",
-    nameKey: "pkg_starter_name",
-    descKey: "pkg_starter_desc",
-    price: "150 KM",
-    priceNoteKey: "price_onetime",
-    timelineKey: "pkg_starter_timeline",
-    highlight: false,
-    features: [
-      { key: "pkg_starter_f1", free: false },
-      { key: "pkg_starter_f2", free: true },
-      { key: "pkg_starter_f3", free: true },
-      { key: "pkg_starter_f4", free: false },
-      { key: "pkg_starter_f5", free: false },
-      { key: "pkg_starter_f6", free: false },
-    ],
-    ctaKey: "pkg_cta_start",
-  },
-  {
-    id: "business",
-    icon: "globe",
-    nameKey: "pkg_business_name",
-    descKey: "pkg_business_desc",
-    price: "350 KM",
-    priceNoteKey: "price_onetime",
-    timelineKey: "pkg_business_timeline",
-    highlight: true,
-    badge: "pkg_badge_popular",
-    features: [
-      { key: "pkg_business_f1", free: false },
-      { key: "pkg_business_f2", free: true },
-      { key: "pkg_business_f3", free: true },
-      { key: "pkg_business_f4", free: false },
-      { key: "pkg_business_f5", free: false },
-      { key: "pkg_business_f6", free: false },
-      { key: "pkg_business_f7", free: false },
-      { key: "pkg_business_f8", free: false },
-      { key: "pkg_business_f9", free: false },
-      { key: "pkg_business_f10", free: false },
-    ],
-    ctaKey: "pkg_cta_start",
-  },
-  {
-    id: "premium",
-    icon: "rocket",
-    nameKey: "pkg_premium_name",
-    descKey: "pkg_premium_desc",
-    price: "600 KM",
-    priceNoteKey: "price_onetime",
-    timelineKey: "pkg_premium_timeline",
-    highlight: false,
-    features: [
-      { key: "pkg_premium_f1", free: false },
-      { key: "pkg_premium_f2", free: false },
-      { key: "pkg_premium_f3", free: false },
-      { key: "pkg_premium_f4", free: false },
-      { key: "pkg_premium_f5", free: false },
-      { key: "pkg_premium_f6", free: false },
-      { key: "pkg_premium_f7", free: false },
-      { key: "pkg_premium_f8", free: false },
-      { key: "pkg_premium_f9", free: false },
-      { key: "pkg_premium_f10", free: false },
-      { key: "pkg_premium_f11", free: false },
-    ],
-    ctaKey: "pkg_cta_start",
-  },
-];
-
-const ADDONS = [
-  {
-    icon: "mapPin",
-    nameKey: "addon_googlebiz_name",
-    descKey: "addon_googlebiz_desc",
-    price: 60,
-    perKey: "price_onetime",
-  },
-  {
-    icon: "mail",
-    nameKey: "addon_emailsig_name",
-    descKey: "addon_emailsig_desc",
-    price: 40,
-    perKey: "price_onetime",
-  },
-  {
-    icon: "palette",
-    nameKey: "addon_logo_name",
-    descKey: "addon_logo_desc",
-    price: 80,
-    perKey: "price_onetime",
-  },
-  {
-    icon: "smartphone",
-    nameKey: "addon_social_name",
-    descKey: "addon_social_desc",
-    price: 50,
-    perKey: "price_onetime",
-  },
-  {
-    icon: "calendar",
-    nameKey: "addon_booking_name",
-    descKey: "addon_booking_desc",
-    price: 70,
-    perKey: "price_onetime",
-  },
-  {
-    icon: "translate",
-    nameKey: "addon_translation_name",
-    descKey: "addon_translation_desc",
-    price: 60,
-    perKey: "price_onetime",
-  },
-  {
-    icon: "pencil",
-    nameKey: "addon_copy_name",
-    descKey: "addon_copy_desc",
-    price: 70,
-    perKey: "price_per_page",
-  },
-  {
-    icon: "image",
-    nameKey: "addon_gallery_name",
-    descKey: "addon_gallery_desc",
-    price: 40,
-    perKey: "price_onetime",
-  },
-  {
-    icon: "star",
-    nameKey: "addon_reviews_name",
-    descKey: "addon_reviews_desc",
-    price: 35,
-    perKey: "price_onetime",
-  },
-  {
-    icon: "qr",
-    nameKey: "addon_qr_name",
-    descKey: "addon_qr_desc",
-    price: 15,
-    perKey: "price_onetime",
-  },
-  {
-    icon: "barChart",
-    nameKey: "addon_analytics_name",
-    descKey: "addon_analytics_desc",
-    price: 30,
-    perKey: "price_onetime",
-  },
-  {
-    icon: "utensils",
-    nameKey: "addon_menu_name",
-    descKey: "addon_menu_desc",
-    price: 55,
-    perKey: "price_onetime",
-  },
-  {
-    icon: "lock",
-    nameKey: "addon_ssl_name",
-    descKey: "addon_ssl_desc",
-    price: 20,
-    perKey: "price_yearly",
-    clientPays: true,
-  },
-  {
-    icon: "globe",
-    nameKey: "addon_domain_name",
-    descKey: "addon_domain_desc",
-    price: 30,
-    perKey: "price_yearly",
-    clientPays: true,
-  },
-  {
-    icon: "monitor",
-    nameKey: "addon_hosting_name",
-    descKey: "addon_hosting_desc",
-    price: 50,
-    perKey: "price_yearly",
-    clientPays: true,
-  },
-  {
-    icon: "atSign",
-    nameKey: "addon_proemail_name",
-    descKey: "addon_proemail_desc",
-    price: 25,
-    perKey: "price_yearly",
-    clientPays: true,
-  },
-];
 
 // ─── MODAL ────────────────────────────────────────────────────────────────────
 function PackageModal({ pkg, onClose, t }) {
@@ -581,7 +393,7 @@ function PackageModal({ pkg, onClose, t }) {
                   marginBottom: "0.2rem",
                 }}
               >
-                {pkg.price}
+                {t[pkg.priceKey] || pkg.priceKey}
               </div>
               <div style={{ color: "var(--muted)", fontSize: "0.78rem" }}>
                 {t[pkg.priceNoteKey] || pkg.priceNoteKey}
@@ -1128,7 +940,7 @@ export default function PricingPage() {
                   </svg>
                   {t[pkg.timelineKey] || pkg.timelineKey}
                 </div>
-                <div className="pkg-price">{pkg.price}</div>
+                <div className="pkg-price">{t[pkg.priceKey] || pkg.priceKey}</div>
                 <div className="pkg-price-note">{t[pkg.priceNoteKey] || pkg.priceNoteKey}</div>
                 <ul className="pkg-features">
                   {pkg.features.slice(0, 5).map((f, j) => (
@@ -1246,7 +1058,7 @@ export default function PricingPage() {
                   </div>
                 </div>
                 <div className="addon-price">
-                  {`${addon.price} KM`}
+                  {formatAddonPrice(addon.priceKM, lang)}
                   <span className="addon-per">{t[addon.perKey] || addon.perKey}</span>
                   {addon.clientPays && (
                     <span className="addon-badge">

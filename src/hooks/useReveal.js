@@ -66,7 +66,6 @@ export function usePageReveal(triggerKey = "default") {
     );
 
     const init = () => {
-      // Remove visible from all, then re-check in batch
       Array.from(document.querySelectorAll(".reveal.visible")).forEach((el) =>
         el.classList.remove("visible"),
       );
@@ -81,9 +80,39 @@ export function usePageReveal(triggerKey = "default") {
       );
     };
 
-    const timer = setTimeout(init, 120);
+    // First pass — catches elements already in DOM
+    const t1 = setTimeout(init, 120);
+
+    // Second pass — catches lazy-loaded components that rendered after first pass
+    const t2 = setTimeout(() => {
+      const unobserved = Array.from(
+        document.querySelectorAll(".reveal:not(.visible)"),
+      );
+      if (unobserved.length === 0) return;
+      checkInViewBatch(
+        unobserved,
+        (el) => el.classList.add("visible"),
+        (el) => observer.observe(el),
+      );
+    }, 600);
+
+    // Third pass — for very slow connections / heavy components
+    const t3 = setTimeout(() => {
+      const unobserved = Array.from(
+        document.querySelectorAll(".reveal:not(.visible)"),
+      );
+      if (unobserved.length === 0) return;
+      checkInViewBatch(
+        unobserved,
+        (el) => el.classList.add("visible"),
+        (el) => observer.observe(el),
+      );
+    }, 1500);
+
     return () => {
-      clearTimeout(timer);
+      clearTimeout(t1);
+      clearTimeout(t2);
+      clearTimeout(t3);
       observer.disconnect();
     };
   }, [triggerKey]);

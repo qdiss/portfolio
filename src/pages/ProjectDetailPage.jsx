@@ -507,7 +507,7 @@ export default function ProjectDetailPage() {
           />
           <img
             className="pd-hero-screenshot"
-            src={SS(project.slug)}
+            src={SS(slug)}
             alt=""
             aria-hidden="true"
           />
@@ -556,7 +556,7 @@ export default function ProjectDetailPage() {
                 <span className="pd-preview-url">{project.liveUrl}</span>
               </div>
               <img
-                src={SS(project.liveUrl)}
+                src={SS(slug)}
                 alt={`${project.title} live preview`}
                 loading="lazy"
               />

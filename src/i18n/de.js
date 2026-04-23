@@ -396,7 +396,7 @@ const de = {
     "Klick auf ein Paket für die genaue Aufschlüsselung Punkt für Punkt.",
   pricing_page_title: "Preisliste",
   pricing_page_desc:
-    "Web-Entwicklungspakete. Starter ab 150 KM, Business ab 350 KM, Premium ab 600 KM.",
+    "Paketpreise für Webseiten. Starter ab 100 €, Business ab 200 €, Premium ab 325 €.",
   pricing_cta_title: "Bereit loszulegen?",
   pricing_cta_title2: "Lass uns reden.",
   pricing_cta_sub:
@@ -518,7 +518,7 @@ const de = {
   ref_step3_title: "Du bekommst Rabatt",
   ref_step3_body: "Auf dein nächstes Projekt — automatisch, kein Papierkram.",
   referral_example:
-    "Du empfiehlst das Business-Paket (350 KM). Freund zahlt 315 KM. Dein nächstes Projekt ist 10% günstiger — automatisch.",
+    "Du empfiehlst das Business-Paket (400 KM / 200 €). Freund zahlt 180 €. Dein nächstes Projekt ist 10% günstiger — automatisch.",
   footer_github: "GitHub",
   footer_linkedin: "LinkedIn",
   footer_start_project: "Projekt starten",
@@ -533,11 +533,11 @@ const de = {
   curr_tz_sub: "EU & US East kompatibel",
   curr_next_slot_value: "Juli 2026",
   form_pkg_starter: "Starter",
-  form_pkg_starter_price: "150 KM",
+  form_pkg_starter_price: "100 €",
   form_pkg_business: "Business",
-  form_pkg_business_price: "350 KM",
+  form_pkg_business_price: "200 €",
   form_pkg_premium: "Premium",
-  form_pkg_premium_price: "600 KM",
+  form_pkg_premium_price: "325 €",
   form_pkg_custom: "Individuell / Auf Anfrage",
   form_pkg_placeholder: "Paket auswählen",
   form_or: "oder",
@@ -578,5 +578,31 @@ const de = {
   admin_check_email: "Prüfe deine E-Mail",
   admin_magic_link_sent: "Wir haben einen Magic-Link gesendet an",
   admin_try_again: "Erneut versuchen",
+  // ─── PACKAGE PRICES (i18n) ────────────────────────────────────────────────
+  pkg_starter_price: "100 €",
+  pkg_business_price: "200 €",
+  pkg_premium_price: "325 €",
+  // ─── 404 PAGE ─────────────────────────────────────────────────────────────
+  nf_error_label: "Fehler",
+  nf_title: "Seite nicht gefunden",
+  nf_sub_1: "Es scheint, diese Seite existiert nicht — oder sie wurde verschoben.",
+  nf_sub_2: "Lass uns dich woanders hinbringen.",
+  nf_back_home: "Zurück zur Startseite",
+  nf_start_project: "Projekt starten",
+  nf_redirect_prefix: "Weiterleitung zur Startseite in",
+  nf_redirect_suffix: "Sekunden...",
+  example_label: "Beispiel",
+  // ─── HOME PAGE SEO ────────────────────────────────────────────────────────
+  home_page_title: "Adis Klobodanović — Full-Stack Developer | React, Next.js, Node.js",
+  home_page_desc: "Full-Stack-Entwickler spezialisiert auf React, Next.js und Node.js. Ich baue schnelle Web-Apps und SaaS-Produkte, die termingerecht ausgeliefert werden.",
+  // ─── PAGE SEO TITLES ─────────────────────────────────────────────────────
+  blog_seo_title: "Blog — Adis Klobodanović | Web-Entwicklung",
+  blog_seo_desc: "Artikel über React, Next.js, Node.js und Webentwicklung. Echte Erfahrungen, kein Fluff.",
+  uses_seo_title: "Werkzeuge — Stack & Setup | Adis Klobodanović",
+  uses_seo_desc: "Die Tools, Hardware und Software, die ich täglich als Full-Stack-Entwickler nutze.",
+  hire_seo_title: "Projekt starten — Adis Klobodanović | Full-Stack Entwickler",
+  hire_seo_desc: "Bereit etwas zu bauen? Festpreise — ab 100 € für eine Landing Page. Schnelle Lieferung, vollständiges Eigentum.",
+  projects_seo_title: "Projekte — Adis Klobodanović | Full-Stack Entwickler",
+  projects_seo_desc: "Full-Stack-Webprojekte — Buchungsplattformen, Immobilien-Sites, SaaS-Apps und mehr.",
 };
 export default de;

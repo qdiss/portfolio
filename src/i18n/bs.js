@@ -316,11 +316,11 @@ const bs = {
   hire_back: "Nazad na portfolio",
   // Form package selector
   form_pkg_starter: "Starter",
-  form_pkg_starter_price: "150 KM",
+  form_pkg_starter_price: "200 KM",
   form_pkg_business: "Business",
-  form_pkg_business_price: "350 KM",
+  form_pkg_business_price: "400 KM",
   form_pkg_premium: "Premium",
-  form_pkg_premium_price: "600 KM",
+  form_pkg_premium_price: "650 KM",
   form_pkg_custom: "Custom / Po dogovoru",
   form_pkg_placeholder: "Odaberi paket",
   form_or: "ili",
@@ -437,7 +437,7 @@ const bs = {
     "Klikni na paket da vidiš tačan breakdown stavku po stavku.",
   pricing_page_title: "Cjenovnik",
   pricing_page_desc:
-    "Paketi i cijene za web stranice. Starter od 150 KM, Business od 350 KM, Premium od 600 KM.",
+    "Paketi i cijene za web stranice. Starter od 200 KM, Business od 400 KM, Premium od 650 KM.",
   pricing_cta_title: "Spreman za početi?",
   pricing_cta_title2: "Razgovarajmo.",
   pricing_cta_sub: "Popuni kratku formu. Odgovorim za 24 sata.",
@@ -543,7 +543,7 @@ const bs = {
   ref_step3_title: "Ti dobijaš popust",
   ref_step3_body: "Na tvoj sljedeći projekat, automatski, bez papirologije.",
   referral_example:
-    "Preporučiš Business paket (350 KM). Prijatelj plaća 315 KM. Tvoj sljedeći projekat je 10% jeftiniji , automatski.",
+    "Preporučiš Business paket (400 KM). Prijatelj plaća 360 KM. Tvoj sljedeći projekat je 10% jeftiniji — automatski.",
   footer_github: "GitHub",
   footer_linkedin: "LinkedIn",
   footer_start_project: "Pokrenite projekat",
@@ -563,5 +563,31 @@ const bs = {
   admin_check_email: "Provjeri svoju email",
   admin_magic_link_sent: "Poslali smo magic link na",
   admin_try_again: "Pokušaj ponovo",
+  // ─── PACKAGE PRICES (i18n) ────────────────────────────────────────────────
+  pkg_starter_price: "200 KM",
+  pkg_business_price: "400 KM",
+  pkg_premium_price: "650 KM",
+  // ─── 404 PAGE ─────────────────────────────────────────────────────────────
+  nf_error_label: "Greška",
+  nf_title: "Stranica nije pronađena",
+  nf_sub_1: "Izgleda da ova stranica ne postoji — ili se preselila.",
+  nf_sub_2: "Hajde da te vratimo negdje korisno.",
+  nf_back_home: "Nazad na početnu",
+  nf_start_project: "Počni projekat",
+  nf_redirect_prefix: "Preusmjeravam na početnu za",
+  nf_redirect_suffix: "sekundi...",
+  example_label: "Primjer",
+  // ─── HOME PAGE SEO ────────────────────────────────────────────────────────
+  home_page_title: "Adis Klobodanović — Full-Stack Developer | React, Next.js, Node.js",
+  home_page_desc: "Full-stack developer specijaliziran za React, Next.js i Node.js. Gradim brze web aplikacije i SaaS proizvode koji se zaista isporučuju — dostupan za nove projekte.",
+  // ─── PAGE SEO TITLES ─────────────────────────────────────────────────────
+  blog_seo_title: "Blog — Adis Klobodanović | Web Development",
+  blog_seo_desc: "Članci o React-u, Next.js-u, Node.js-u i freelance razvoju. Stvarno iskustvo, bez fluffa.",
+  uses_seo_title: "Oprema — Alati i Stack | Adis Klobodanović",
+  uses_seo_desc: "Alati, hardver i softver koje svakodnevno koristim kao full-stack developer.",
+  hire_seo_title: "Počni projekat — Adis Klobodanović | Full-Stack Developer",
+  hire_seo_desc: "Spreman da gradiš nešto? Fiksne cijene — od 200 KM za landing stranicu. Brza isporuka, potpuno vlasništvo.",
+  projects_seo_title: "Projekti — Adis Klobodanović | Full-Stack Developer",
+  projects_seo_desc: "Full-stack web projekti — booking platforme, sajtovi za nekretnine, SaaS aplikacije i više.",
 };
 export default bs;

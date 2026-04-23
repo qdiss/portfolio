@@ -19,9 +19,9 @@ export default function BlogPage() {
   const [loading, setLoading] = useState(true);
 
   useSEO({
-    title: "Blog — Adis Klobodanovic | Web Development Articles",
+    title: t.blog_seo_title || "Blog — Adis Klobodanović | Web Development Articles",
     description:
-      "Articles on React, Next.js, Node.js, web performance, and freelance development. Real-world experience, no fluff.",
+      t.blog_seo_desc || "Articles on React, Next.js, Node.js, web performance, and freelance development. Real-world experience, no fluff.",
     canonical: "https://adiss.dev/blog",
     ogType: "website",
     jsonLd: {

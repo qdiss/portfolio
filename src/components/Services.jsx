@@ -1,33 +1,17 @@
 import { useNavigate } from "react-router-dom";
 import { useLang } from "../context/LangContext";
 import { ZapIcon, GlobeIcon, RocketIcon, ArrowUpRightIcon } from "./Icons";
+import { PACKAGES as PKG_CONFIG } from "../config/packages";
 
-const PACKAGES = [
-  {
-    id: "starter",
-    icon: ZapIcon,
-    nameKey: "pkg_starter_name",
-    descKey: "pkg_starter_short",
-    price: "150 KM",
-    highlight: false,
-  },
-  {
-    id: "business",
-    icon: GlobeIcon,
-    nameKey: "pkg_business_name",
-    descKey: "pkg_business_short",
-    price: "350 KM",
-    highlight: true,
-  },
-  {
-    id: "premium",
-    icon: RocketIcon,
-    nameKey: "pkg_premium_name",
-    descKey: "pkg_premium_short",
-    price: "600 KM",
-    highlight: false,
-  },
-];
+// Map icon key -> component
+const PKG_ICON_MAP = { zap: ZapIcon, globe: GlobeIcon, rocket: RocketIcon };
+
+// Reshape config for this component (uses shortKey + icon component)
+const PACKAGES = PKG_CONFIG.map((p) => ({
+  ...p,
+  icon: PKG_ICON_MAP[p.icon],
+  descKey: p.shortKey,
+}));
 
 export default function Services() {
   const { t } = useLang();
@@ -321,7 +305,7 @@ export default function Services() {
             </div>
             <div className="svc-footer">
               <div className="svc-price-stack">
-                <div className="svc-package-price">{pkg.price}</div>
+                <div className="svc-package-price">{t[pkg.priceKey] || pkg.priceKey}</div>
                 <div className="svc-price-note">
                   {t.serv_get_started}
                 </div>
