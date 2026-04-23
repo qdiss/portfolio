@@ -89,6 +89,7 @@ function PageLoader() {
 
 import Nav from "./components/Nav";
 import Hero from "./components/Hero";
+import CookieManager from "./components/CookieManager";
 
 const Currently = lazy(() => import("./components/Currently"));
 const About = lazy(() => import("./components/About"));
@@ -309,6 +310,7 @@ export default function App() {
           <GlobalReveal />
           <HashScroller />
           <GlobalExtras />
+          <CookieManager />
           <main>
             <ErrorBoundary>
               <Suspense fallback={<PageLoader />}>

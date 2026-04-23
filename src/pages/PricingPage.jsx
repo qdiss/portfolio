@@ -451,7 +451,7 @@ function PackageModal({ pkg, onClose, t }) {
               marginBottom: "0.85rem",
             }}
           >
-            {t.pkg_includes || "Uključeno"}
+            {t.pkg_includes || "Included"}
           </div>
           <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
             {pkg.features.map((f, idx) => (
@@ -516,7 +516,7 @@ function PackageModal({ pkg, onClose, t }) {
                         verticalAlign: "middle",
                       }}
                     >
-                      GRATIS
+                      {t.free_badge || "FREE"}
                     </span>
                   )}
                 </span>
@@ -569,7 +569,7 @@ function PackageModal({ pkg, onClose, t }) {
               fontWeight: 300,
             }}
           >
-            {t.pkg_note_short || "Fiksna cijena · Pisana ponuda"}
+            {t.pkg_note_short || "Fixed price · Written quote"}
           </p>
         </div>
       </div>
@@ -963,7 +963,7 @@ export default function PricingPage() {
                               verticalAlign: "middle",
                             }}
                           >
-                            GRATIS
+                            {t.free_badge || "FREE"}
                           </span>
                         )}
                       </span>

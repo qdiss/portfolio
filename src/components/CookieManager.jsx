@@ -99,7 +99,7 @@ export default function CookieManager() {
   return (
     <>
       {showBanner && (
-        <div className="cookie-bar">
+        <div className="cookie-bar" style={{ position: "fixed", bottom: "1.5rem", left: "50%", transform: "translateX(-50%)", zIndex: 9998, maxWidth: "560px", width: "calc(100% - 3rem)" }}>
           <p className="cookie-text">
             {t.cookie_text}{" "}
             <a href="#" onClick={(e) => { e.preventDefault(); setShowSettings(true); }}>{t.cookie_link}</a>

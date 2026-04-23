@@ -123,7 +123,6 @@ export default function Projects() {
       <style>{`
         .project-img-wrap {
           position: relative;
-          aspect-ratio: 16 / 10;
           overflow: hidden;
           background: var(--bg2, #111);
           border-bottom: 1px solid var(--border, rgba(255,255,255,0.08));

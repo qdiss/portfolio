@@ -343,7 +343,7 @@ export default function ProjectDetailPage() {
         .pd-preview img {
           width: 100%;
           display: block;
-          aspect-ratio: 16 / 9;
+          // aspect-ratio: 16 / 9;
           object-fit: cover;
           object-position: top;
         }

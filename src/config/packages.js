@@ -11,20 +11,33 @@
  */
 
 // ─── CURRENCY HELPER ─────────────────────────────────────────────────────────
-const EUR_LANGS = ["de", "fr", "nl", "sv"];
+const EUR_LANGS = ["de", "fr", "nl"];
+const SEK_LANGS = ["sv"];
+const USD_LANGS = ["en"];
 
 /**
  * Returns a formatted addon price string based on the current language.
- * KM-zone languages (bs, en) show "X KM", EUR-zone show "X €".
+ *   bs     → "X KM"
+ *   en     → "$X"    (1 KM ≈ 0.5 USD)
+ *   de/fr/nl → "X €" (1 KM ≈ 0.5 €)
+ *   sv     → "X kr"  (1 KM ≈ 5.5 SEK — rounded to clean numbers)
  *
  * @param {number} priceKM  — base price in BAM (KM)
  * @param {string} lang     — current lang code from useLang()
  * @returns {string}
  */
 export function formatAddonPrice(priceKM, lang) {
+  if (USD_LANGS.includes(lang)) {
+    const usd = Math.round(priceKM * 0.5);
+    return `$${usd}`;
+  }
   if (EUR_LANGS.includes(lang)) {
     const eur = Math.round(priceKM * 0.5);
     return `${eur} €`;
+  }
+  if (SEK_LANGS.includes(lang)) {
+    const sek = Math.round(priceKM * 5.5);
+    return `${sek} kr`;
   }
   return `${priceKM} KM`;
 }
@@ -228,5 +241,146 @@ export const ADDONS = [
     priceKM: 25,
     perKey: "price_yearly",
     clientPays: true,
+  },
+  // ─── NEW ADDONS ──────────────────────────────────────────────────────────
+  {
+    icon: "messageCircle",
+    nameKey: "addon_chatwidget_name",
+    descKey: "addon_chatwidget_desc",
+    priceKM: 25,
+    perKey: "price_onetime",
+  },
+  {
+    icon: "helpCircle",
+    nameKey: "addon_faqsection_name",
+    descKey: "addon_faqsection_desc",
+    priceKM: 40,
+    perKey: "price_onetime",
+  },
+  {
+    icon: "timer",
+    nameKey: "addon_countdown_name",
+    descKey: "addon_countdown_desc",
+    priceKM: 30,
+    perKey: "price_onetime",
+  },
+  {
+    icon: "cookie",
+    nameKey: "addon_cookiebanner_name",
+    descKey: "addon_cookiebanner_desc",
+    priceKM: 35,
+    perKey: "price_onetime",
+  },
+  {
+    icon: "zap",
+    nameKey: "addon_speedopt_name",
+    descKey: "addon_speedopt_desc",
+    priceKM: 60,
+    perKey: "price_onetime",
+  },
+  {
+    icon: "moon",
+    nameKey: "addon_darkmode_name",
+    descKey: "addon_darkmode_desc",
+    priceKM: 40,
+    perKey: "price_onetime",
+  },
+  {
+    icon: "video",
+    nameKey: "addon_video_name",
+    descKey: "addon_video_desc",
+    priceKM: 35,
+    perKey: "price_onetime",
+  },
+  {
+    icon: "sliders",
+    nameKey: "addon_slider_name",
+    descKey: "addon_slider_desc",
+    priceKM: 35,
+    perKey: "price_onetime",
+  },
+  {
+    icon: "mail",
+    nameKey: "addon_newsletter_name",
+    descKey: "addon_newsletter_desc",
+    priceKM: 45,
+    perKey: "price_onetime",
+  },
+  {
+    icon: "fileText",
+    nameKey: "addon_pdf_name",
+    descKey: "addon_pdf_desc",
+    priceKM: 40,
+    perKey: "price_onetime",
+  },
+  {
+    icon: "layoutGrid",
+    nameKey: "addon_pricingtable_name",
+    descKey: "addon_pricingtable_desc",
+    priceKM: 45,
+    perKey: "price_onetime",
+  },
+  {
+    icon: "bookOpen",
+    nameKey: "addon_blog_name",
+    descKey: "addon_blog_desc",
+    priceKM: 80,
+    perKey: "price_onetime",
+  },
+  {
+    icon: "briefcase",
+    nameKey: "addon_careers_name",
+    descKey: "addon_careers_desc",
+    priceKM: 50,
+    perKey: "price_onetime",
+  },
+  {
+    icon: "formInput",
+    nameKey: "addon_formsadv_name",
+    descKey: "addon_formsadv_desc",
+    priceKM: 55,
+    perKey: "price_onetime",
+  },
+  {
+    icon: "mapPin",
+    nameKey: "addon_mapsadv_name",
+    descKey: "addon_mapsadv_desc",
+    priceKM: 50,
+    perKey: "price_onetime",
+  },
+  {
+    icon: "megaphone",
+    nameKey: "addon_promobar_name",
+    descKey: "addon_promobar_desc",
+    priceKM: 25,
+    perKey: "price_onetime",
+  },
+  {
+    icon: "sitemap",
+    nameKey: "addon_sitemap_name",
+    descKey: "addon_sitemap_desc",
+    priceKM: 30,
+    perKey: "price_onetime",
+  },
+  {
+    icon: "wrench",
+    nameKey: "addon_maintenance_name",
+    descKey: "addon_maintenance_desc",
+    priceKM: 40,
+    perKey: "price_yearly",
+  },
+  {
+    icon: "hardDrive",
+    nameKey: "addon_backup_name",
+    descKey: "addon_backup_desc",
+    priceKM: 30,
+    perKey: "price_yearly",
+  },
+  {
+    icon: "languages",
+    nameKey: "addon_multisite_name",
+    descKey: "addon_multisite_desc",
+    priceKM: 80,
+    perKey: "price_onetime",
   },
 ];

@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { Link, useSearchParams } from "react-router-dom";
 import { useLang } from "../context/LangContext";
+import { formatAddonPrice } from "../config/packages";
 import Nav from "../components/Nav";
 import {
   EMAILJS_PUBLIC_KEY,
@@ -83,19 +84,19 @@ function buildPaketOptions(t) {
     {
       id: "starter",
       label: t.form_pkg_starter || "Starter",
-      price: 150,
+      price: 200,
       Icon: ZapIcon,
     },
     {
       id: "business",
       label: t.form_pkg_business || "Business",
-      price: 350,
+      price: 400,
       Icon: GlobeIcon,
     },
     {
       id: "premium",
       label: t.form_pkg_premium || "Premium",
-      price: 600,
+      price: 650,
       Icon: RocketIcon,
     },
     {
@@ -220,9 +221,150 @@ const ADDON_OPTIONS = [
     price: 25,
     perKey: "addon_per_yearly",
   },
+  // ─── NEW ADDONS ───────────────────────────────────────────────────────────
+  {
+    id: "chatwidget",
+    Icon: MailIcon,
+    labelKey: "addon_chatwidget_name",
+    price: 25,
+    perKey: "addon_per_onetime",
+  },
+  {
+    id: "faqsection",
+    Icon: FileIcon,
+    labelKey: "addon_faqsection_name",
+    price: 40,
+    perKey: "addon_per_onetime",
+  },
+  {
+    id: "countdown",
+    Icon: ClockIcon,
+    labelKey: "addon_countdown_name",
+    price: 30,
+    perKey: "addon_per_onetime",
+  },
+  {
+    id: "cookiebanner",
+    Icon: ShieldIcon,
+    labelKey: "addon_cookiebanner_name",
+    price: 35,
+    perKey: "addon_per_onetime",
+  },
+  {
+    id: "speedopt",
+    Icon: ZapIcon,
+    labelKey: "addon_speedopt_name",
+    price: 60,
+    perKey: "addon_per_onetime",
+  },
+  {
+    id: "darkmode",
+    Icon: UserIcon,
+    labelKey: "addon_darkmode_name",
+    price: 40,
+    perKey: "addon_per_onetime",
+  },
+  {
+    id: "video",
+    Icon: ImageIcon,
+    labelKey: "addon_video_name",
+    price: 35,
+    perKey: "addon_per_onetime",
+  },
+  {
+    id: "slider",
+    Icon: LayersIcon,
+    labelKey: "addon_slider_name",
+    price: 35,
+    perKey: "addon_per_onetime",
+  },
+  {
+    id: "newsletter",
+    Icon: MailIcon,
+    labelKey: "addon_newsletter_name",
+    price: 45,
+    perKey: "addon_per_onetime",
+  },
+  {
+    id: "pdf",
+    Icon: FileIcon,
+    labelKey: "addon_pdf_name",
+    price: 40,
+    perKey: "addon_per_onetime",
+  },
+  {
+    id: "pricingtable",
+    Icon: BarChartIcon,
+    labelKey: "addon_pricingtable_name",
+    price: 45,
+    perKey: "addon_per_onetime",
+  },
+  {
+    id: "blog",
+    Icon: PenIcon,
+    labelKey: "addon_blog_name",
+    price: 80,
+    perKey: "addon_per_onetime",
+  },
+  {
+    id: "careers",
+    Icon: RocketIcon,
+    labelKey: "addon_careers_name",
+    price: 50,
+    perKey: "addon_per_onetime",
+  },
+  {
+    id: "formsadv",
+    Icon: SendIcon,
+    labelKey: "addon_formsadv_name",
+    price: 55,
+    perKey: "addon_per_onetime",
+  },
+  {
+    id: "mapsadv",
+    Icon: MapPinIcon,
+    labelKey: "addon_mapsadv_name",
+    price: 50,
+    perKey: "addon_per_onetime",
+  },
+  {
+    id: "promobar",
+    Icon: GlobeIcon,
+    labelKey: "addon_promobar_name",
+    price: 25,
+    perKey: "addon_per_onetime",
+  },
+  {
+    id: "sitemap",
+    Icon: LinkIcon,
+    labelKey: "addon_sitemap_name",
+    price: 30,
+    perKey: "addon_per_onetime",
+  },
+  {
+    id: "maintenance",
+    Icon: ZapIcon,
+    labelKey: "addon_maintenance_name",
+    price: 40,
+    perKey: "addon_per_yearly",
+  },
+  {
+    id: "backup",
+    Icon: ServerIcon,
+    labelKey: "addon_backup_name",
+    price: 30,
+    perKey: "addon_per_yearly",
+  },
+  {
+    id: "multisite",
+    Icon: LanguagesIcon,
+    labelKey: "addon_multisite_name",
+    price: 80,
+    perKey: "addon_per_onetime",
+  },
 ];
 
-function AddonAccordion({ selectedAddons, setSelectedAddons, t }) {
+function AddonAccordion({ selectedAddons, setSelectedAddons, t, lang }) {
   const [open, setOpen] = useState(false);
 
   const GROUPS = [
@@ -320,7 +462,7 @@ function AddonAccordion({ selectedAddons, setSelectedAddons, t }) {
                         <span
                           style={{ fontSize: "0.69rem", color: "var(--muted)" }}
                         >
-                          +{price} KM
+                          +{formatAddonPrice(price, lang)}
                         </span>
                       </span>
                       {checked && (
@@ -340,7 +482,7 @@ function AddonAccordion({ selectedAddons, setSelectedAddons, t }) {
   );
 }
 
-function ContactForm({ t, preselectedPaket }) {
+function ContactForm({ t, lang, preselectedPaket }) {
   const PAKET_OPTIONS = buildPaketOptions(t);
   const formRef = useRef(null);
   const [sending, setSending] = useState(false);
@@ -366,7 +508,7 @@ function ContactForm({ t, preselectedPaket }) {
     const paketObj = PAKET_OPTIONS.find((p) => p.id === data.paket);
     const paketLabel = paketObj
       ? paketObj.price
-        ? `${paketObj.label} (${paketObj.price} KM)`
+        ? `${paketObj.label} (${formatAddonPrice(paketObj.price, lang)})`
         : paketObj.label
       : data.paket;
     // Inject readable paket into hidden field for emailjs
@@ -392,7 +534,7 @@ function ContactForm({ t, preselectedPaket }) {
         .map((id) => {
           const addon = ADDON_OPTIONS.find((a) => a.id === id);
           return addon
-            ? `${t[addon.labelKey] || addon.labelKey} (${addon.price} KM)`
+            ? `${t[addon.labelKey] || addon.labelKey} (${formatAddonPrice(addon.price, lang)})`
             : "";
         })
         .filter(Boolean)
@@ -407,7 +549,7 @@ function ContactForm({ t, preselectedPaket }) {
         totalHidden.name = "total_display";
         formRef.current.appendChild(totalHidden);
       }
-      totalHidden.value = `${totalPrice} KM`;
+      totalHidden.value = formatAddonPrice(totalPrice, lang);
     }
     try {
       if (EMAILJS_READY) {
@@ -589,7 +731,7 @@ function ContactForm({ t, preselectedPaket }) {
                   </span>
                   <span className="hire-pkg-pill-label">{label}</span>
                   {price > 0 && (
-                    <span className="hire-pkg-pill-price">{price} KM</span>
+                    <span className="hire-pkg-pill-price">{formatAddonPrice(price, lang)}</span>
                   )}
                   {isSel && (
                     <span className="hire-pkg-pill-check">
@@ -602,17 +744,14 @@ function ContactForm({ t, preselectedPaket }) {
           </div>
           <input type="hidden" name="paket" value={selectedPaket} readOnly />
         </div>
-        <AddonAccordion
-          selectedAddons={selectedAddons}
-          setSelectedAddons={setSelectedAddons}
-          t={t}
+        <AddonAccordion selectedAddons={selectedAddons} setSelectedAddons={setSelectedAddons} t={t} lang={lang}
         />
         <div className="hire-total-bar">
           <span style={{ color: "var(--muted)" }}>
             {t.hire_total_label || "Total estimate"}
           </span>
           <strong style={{ color: "var(--text)", fontSize: "0.95rem" }}>
-            {totalPrice > 0 ? `${totalPrice} KM` : "—"}
+            {totalPrice > 0 ? `${formatAddonPrice(totalPrice, lang)}` : "—"}
           </strong>
         </div>
         <textarea
@@ -659,7 +798,7 @@ function ContactForm({ t, preselectedPaket }) {
 // Data arrays are now built dynamically inside HirePage from translations (see below)
 
 export default function HirePage() {
-  const { t } = useLang();
+  const { t, lang } = useLang();
   const [searchParams] = useSearchParams();
   const preselectedPaket = searchParams.get("paket") || "";
   usePageReveal("hire-page");
@@ -696,7 +835,7 @@ export default function HirePage() {
   const PACKAGES = [
     {
       name: t.pkg_starter_name || "Starter",
-      price: "150 KM",
+      price: t.pkg_starter_price || "200 KM",
       timeline: t.pkg_starter_timeline || "5 dana",
       popular: false,
       desc: t.pkg_starter_short || t.hire_pkg1_desc,
@@ -712,7 +851,7 @@ export default function HirePage() {
     },
     {
       name: t.pkg_business_name || "Business",
-      price: "350 KM",
+      price: t.pkg_business_price || "400 KM",
       timeline: t.pkg_business_timeline || "7 dana",
       popular: true,
       desc: t.pkg_business_short || t.hire_pkg2_desc,
@@ -732,7 +871,7 @@ export default function HirePage() {
     },
     {
       name: t.pkg_premium_name || "Premium",
-      price: "600 KM",
+      price: t.pkg_premium_price || "650 KM",
       timeline: t.pkg_premium_timeline || "10 dana",
       popular: false,
       desc: t.pkg_premium_short || t.hire_pkg3_desc,
@@ -830,10 +969,11 @@ export default function HirePage() {
   ];
 
   return (
-    <>
+    <div className="hire-page-root">
       <style>{`
         .hire-section { padding: 5rem 2.5rem; max-width: 900px; margin: 0 auto; }
         .hire-section-wide { padding: 5rem 2.5rem; max-width: 1100px; margin: 0 auto; }
+        .hire-page-root { overflow-x: hidden; }
         .hire-divider { height: 1px; background: var(--border); margin: 0 2.5rem; }
         .pkg-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.25rem; margin-top: 2.5rem; }
         .pkg-card { background: var(--bg2); border: 1px solid var(--border); border-radius: 20px; padding: 2rem; position: relative; transition: border-color 0.2s, transform 0.2s; }
@@ -899,6 +1039,7 @@ export default function HirePage() {
           padding: "8rem 2.5rem 4rem",
           position: "relative",
           // overflow: "hidden",
+          overflow: "hidden",
           maxWidth: "900px",
           margin: "0 auto",
         }}
@@ -1325,7 +1466,7 @@ export default function HirePage() {
           {t.hire_start_sub}
         </p>
         <div className="hire-form-wrap reveal">
-          <ContactForm t={t} preselectedPaket={preselectedPaket} />
+          <ContactForm t={t} lang={lang} preselectedPaket={preselectedPaket} />
         </div>
         <p
           style={{
@@ -1376,6 +1517,6 @@ export default function HirePage() {
           {t.hire_back}
         </Link>
       </div>
-    </>
+    </div>
   );
 }
