@@ -12,7 +12,7 @@ function formatDate(dateStr) {
   });
 }
 
-// Normalize post — Supabase uses read_time, local uses readTime
+// Normalize post - Supabase uses read_time, local uses readTime
 function normalizePost(post) {
   return {
     ...post,

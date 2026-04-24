@@ -1,5 +1,5 @@
 /**
- * Icons — centralised SVG icon library.
+ * Icons - centralised SVG icon library.
  * All icons are 24×24 viewBox, stroke-based (Lucide-style).
  * Usage: <CheckIcon size={16} style={{ color: "var(--accent)" }} />
  */

@@ -70,7 +70,7 @@ export default function AdminGuard({ children }) {
       </div>
     );
 
-  // Ulogovan ali nije tvoj email — ne bi se trebalo desiti zbog RLS, ali kao extra zaštita
+  // Ulogovan ali nije tvoj email - ne bi se trebalo desiti zbog RLS, ali kao extra zaštita
   if (session && session.user.email !== ALLOWED_EMAIL) {
     return (
       <div

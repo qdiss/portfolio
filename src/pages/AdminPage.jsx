@@ -125,8 +125,17 @@ export default function AdminPage() {
 
   const handleDelete = async (id) => {
     if (!window.confirm("Delete this post?")) return;
-    await supabase.from("posts").delete().eq("id", id);
-    fetchPosts();
+
+    const { error } = await supabase.from("posts").delete().eq("id", id);
+
+    if (error) {
+      console.error("DELETE ERROR:", error);
+      alert(error.message);
+      return;
+    }
+
+    await fetchPosts();
+
     if (editing === id) setEditing(null);
   };
 
@@ -222,13 +231,91 @@ export default function AdminPage() {
         .tab-bar { display: flex; gap: 0; border-bottom: 1px solid var(--border); margin-bottom: 0; }
         .tab-btn { background: none; border: none; border-bottom: 2px solid transparent; padding: 0.65rem 1.25rem; color: var(--muted); cursor: pointer; font-family: inherit; font-size: 0.85rem; font-weight: 500; margin-bottom: -1px; transition: color 0.2s, border-color 0.2s; }
         .tab-btn.active { color: var(--accent); border-bottom-color: var(--accent); }
-        .published-badge { display: inline-flex; align-items: center; gap: 4px; font-size: 0.7rem; padding: 2px 8px; border-radius: 20px; font-weight: 500; }
+        .published-badge { display: inline-flex; align-items: center; gap: 4px; font-size: 0.7rem; padding: 2px 8px; border-radius: 20px; font-weight: 500; text-transform: capitalize; }
         .published-badge.live { background: rgba(200,240,96,0.1); color: var(--accent); border: 1px solid rgba(200,240,96,0.25); }
         .published-badge.draft { background: rgba(255,255,255,0.04); color: var(--muted); border: 1px solid var(--border); }
         [data-theme="light"] .form-wrap { background: #fff; }
         [data-theme="light"] .preview-wrap { background: #f8f8f6; }
         [data-theme="light"] .md-ref { background: rgba(77,105,0,0.04); border-color: rgba(77,105,0,0.15); }
-        @media(max-width: 600px) { .form-row { grid-template-columns: 1fr; } .admin-wrap { padding: 5rem 1.25rem 3rem; } .md-ref-grid { grid-template-columns: 1fr 1fr; } }
+        @media(max-width: 600px) {
+  .admin-wrap {
+    padding: 5rem 1rem 2rem;
+  }
+
+  .admin-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .admin-title {
+    font-size: 1.4rem;
+  }
+
+  /* 🔥 POST ROW → vertikalni layout */
+  .post-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+
+  .post-row-actions {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .post-row-actions button {
+    flex: 1;
+    text-align: center;
+    padding: 0.5rem;
+  }
+
+  /* 🔥 metadata wrap */
+  .post-row-meta {
+    font-size: 0.75rem;
+    line-height: 1.4;
+  }
+
+  /* 🔥 excerpt neka diše */
+  .post-row-info div:last-child {
+    white-space: normal !important;
+  }
+
+  /* 🔥 FORM */
+  .form-wrap {
+    padding: 1.25rem;
+    border-radius: 14px;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  /* 🔥 textarea kontrola */
+  textarea {
+    min-height: 250px !important;
+  }
+
+  /* 🔥 tab buttons */
+  .tab-btn {
+    flex: 1;
+    text-align: center;
+  }
+
+  /* 🔥 markdown ref */
+  .md-ref-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* 🔥 preview padding */
+  .preview-wrap {
+    padding: 1.25rem;
+  }
+
+  /* 🔥 top bar */
+  div[style*="position: fixed"] {
+    padding: 0.75rem 1rem !important;
+  }
+}
       `}</style>
 
       {/* Top bar */}

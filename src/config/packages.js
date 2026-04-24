@@ -1,5 +1,5 @@
 /**
- * packages.js — Centralized package & addon config.
+ * packages.js - Centralized package & addon config.
  *
  * Prices are stored as i18n keys (pkg_starter_price, etc.) so each language
  * can display the correct currency string (KM / $ / €).
@@ -20,10 +20,10 @@ const USD_LANGS = ["en"];
  *   bs     → "X KM"
  *   en     → "$X"    (1 KM ≈ 0.5 USD)
  *   de/fr/nl → "X €" (1 KM ≈ 0.5 €)
- *   sv     → "X kr"  (1 KM ≈ 5.5 SEK — rounded to clean numbers)
+ *   sv     → "X kr"  (1 KM ≈ 5.5 SEK - rounded to clean numbers)
  *
- * @param {number} priceKM  — base price in BAM (KM)
- * @param {string} lang     — current lang code from useLang()
+ * @param {number} priceKM  - base price in BAM (KM)
+ * @param {string} lang     - current lang code from useLang()
  * @returns {string}
  */
 export function formatAddonPrice(priceKM, lang) {
@@ -54,7 +54,7 @@ export const PACKAGES = [
     nameKey: "pkg_starter_name",
     descKey: "pkg_starter_desc",
     shortKey: "pkg_starter_short",
-    priceKey: "pkg_starter_price",    // resolved per language
+    priceKey: "pkg_starter_price", // resolved per language
     priceNoteKey: "price_onetime",
     timelineKey: "pkg_starter_timeline",
     highlight: false,

@@ -28,7 +28,7 @@ const TESTIMONIALS = [
   },
 ];
 
-// Avatar colours — rotate through these
+// Avatar colours - rotate through these
 const AVATAR_COLORS = [
   { bg: "rgba(200,240,96,0.12)", color: "var(--accent)" },
   { bg: "rgba(96,180,240,0.1)", color: "#60b4f0" },

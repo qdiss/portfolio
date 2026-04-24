@@ -51,7 +51,7 @@ function ScrollProgress() {
         document.documentElement;
       const total = scrollHeight - clientHeight;
       const target = total > 0 ? (scrollTop / total) * 100 : 0;
-      // lerp — smooth follow
+      // lerp - smooth follow
       current += (target - current) * 0.12;
       setP(current);
       rafId = requestAnimationFrame(fn);
@@ -731,7 +731,9 @@ function ContactForm({ t, lang, preselectedPaket }) {
                   </span>
                   <span className="hire-pkg-pill-label">{label}</span>
                   {price > 0 && (
-                    <span className="hire-pkg-pill-price">{formatAddonPrice(price, lang)}</span>
+                    <span className="hire-pkg-pill-price">
+                      {formatAddonPrice(price, lang)}
+                    </span>
                   )}
                   {isSel && (
                     <span className="hire-pkg-pill-check">
@@ -744,7 +746,11 @@ function ContactForm({ t, lang, preselectedPaket }) {
           </div>
           <input type="hidden" name="paket" value={selectedPaket} readOnly />
         </div>
-        <AddonAccordion selectedAddons={selectedAddons} setSelectedAddons={setSelectedAddons} t={t} lang={lang}
+        <AddonAccordion
+          selectedAddons={selectedAddons}
+          setSelectedAddons={setSelectedAddons}
+          t={t}
+          lang={lang}
         />
         <div className="hire-total-bar">
           <span style={{ color: "var(--muted)" }}>
@@ -808,9 +814,12 @@ export default function HirePage() {
   }, []);
 
   useSEO({
-    title: t.hire_seo_title || "Start a Project — Adis Klobodanović | Full-Stack Developer",
+    title:
+      t.hire_seo_title ||
+      "Start a Project — Adis Klobodanović | Full-Stack Developer",
     description:
-      t.hire_seo_desc || "Ready to build something? Fixed-price web development — landing pages from $600, web apps from $3,000. Fast turnaround, full ownership.",
+      t.hire_seo_desc ||
+      "Ready to build something? Fixed-price web development — landing pages from $600, web apps from $3,000. Fast turnaround, full ownership.",
     canonical: "https://adiss.dev/hire",
     breadcrumb: {
       "@context": "https://schema.org",

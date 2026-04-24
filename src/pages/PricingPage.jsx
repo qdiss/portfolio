@@ -230,8 +230,209 @@ const ICONS = {
       }
     />
   ),
+  messageCircle: (
+    <SvgIcon
+      path={
+        <>
+          <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+        </>
+      }
+    />
+  ),
+  helpCircle: (
+    <SvgIcon
+      path={
+        <>
+          <circle cx="12" cy="12" r="10" />
+          <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3" />
+          <line x1="12" y1="17" x2="12.01" y2="17" />
+        </>
+      }
+    />
+  ),
+  timer: (
+    <SvgIcon
+      path={
+        <>
+          <line x1="10" y1="2" x2="14" y2="2" />
+          <line x1="12" y1="14" x2="12" y2="8" />
+          <path d="M4.93 4.93l1.41 1.41" />
+          <path d="M17.66 6.34l1.41-1.41" />
+          <circle cx="12" cy="14" r="8" />
+        </>
+      }
+    />
+  ),
+  cookie: (
+    <SvgIcon
+      path={
+        <>
+          <path d="M12 2a10 10 0 1 0 10 10 4 4 0 0 1-5-5 4 4 0 0 1-5-5" />
+          <path d="M8.5 8.5v.01" />
+          <path d="M16 15.5v.01" />
+          <path d="M12 12v.01" />
+          <path d="M11 17v.01" />
+          <path d="M7 14v.01" />
+        </>
+      }
+    />
+  ),
+  moon: (
+    <SvgIcon
+      path={
+        <>
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+        </>
+      }
+    />
+  ),
+  video: (
+    <SvgIcon
+      path={
+        <>
+          <polygon points="23 7 16 12 23 17 23 7" />
+          <rect x="1" y="5" width="15" height="14" rx="2" ry="2" />
+        </>
+      }
+    />
+  ),
+  sliders: (
+    <SvgIcon
+      path={
+        <>
+          <line x1="4" y1="21" x2="4" y2="14" />
+          <line x1="4" y1="10" x2="4" y2="3" />
+          <line x1="12" y1="21" x2="12" y2="12" />
+          <line x1="12" y1="8" x2="12" y2="3" />
+          <line x1="20" y1="21" x2="20" y2="16" />
+          <line x1="20" y1="12" x2="20" y2="3" />
+          <line x1="1" y1="14" x2="7" y2="14" />
+          <line x1="9" y1="8" x2="15" y2="8" />
+          <line x1="17" y1="16" x2="23" y2="16" />
+        </>
+      }
+    />
+  ),
+  fileText: (
+    <SvgIcon
+      path={
+        <>
+          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+          <polyline points="14 2 14 8 20 8" />
+          <line x1="16" y1="13" x2="8" y2="13" />
+          <line x1="16" y1="17" x2="8" y2="17" />
+          <polyline points="10 9 9 9 8 9" />
+        </>
+      }
+    />
+  ),
+  layoutGrid: (
+    <SvgIcon
+      path={
+        <>
+          <rect x="3" y="3" width="7" height="7" />
+          <rect x="14" y="3" width="7" height="7" />
+          <rect x="14" y="14" width="7" height="7" />
+          <rect x="3" y="14" width="7" height="7" />
+        </>
+      }
+    />
+  ),
+  bookOpen: (
+    <SvgIcon
+      path={
+        <>
+          <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
+          <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
+        </>
+      }
+    />
+  ),
+  briefcase: (
+    <SvgIcon
+      path={
+        <>
+          <rect x="2" y="7" width="20" height="14" rx="2" ry="2" />
+          <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
+        </>
+      }
+    />
+  ),
+  formInput: (
+    <SvgIcon
+      path={
+        <>
+          <rect x="2" y="6" width="20" height="12" rx="2" />
+          <path d="M12 12h.01" />
+          <path d="M17 12h.01" />
+          <path d="M7 12h.01" />
+        </>
+      }
+    />
+  ),
+  megaphone: (
+    <SvgIcon
+      path={
+        <>
+          <path d="m3 11 19-9-9 19-2-8-8-2z" />
+        </>
+      }
+    />
+  ),
+  sitemap: (
+    <SvgIcon
+      path={
+        <>
+          <rect x="8" y="2" width="8" height="4" rx="1" />
+          <rect x="2" y="16" width="5" height="4" rx="1" />
+          <rect x="9.5" y="16" width="5" height="4" rx="1" />
+          <rect x="17" y="16" width="5" height="4" rx="1" />
+          <line x1="12" y1="6" x2="12" y2="10" />
+          <line x1="4.5" y1="16" x2="4.5" y2="13" />
+          <line x1="12" y1="16" x2="12" y2="13" />
+          <line x1="19.5" y1="16" x2="19.5" y2="13" />
+          <line x1="4.5" y1="13" x2="19.5" y2="13" />
+          <line x1="12" y1="10" x2="12" y2="13" />
+        </>
+      }
+    />
+  ),
+  wrench: (
+    <SvgIcon
+      path={
+        <>
+          <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" />
+        </>
+      }
+    />
+  ),
+  hardDrive: (
+    <SvgIcon
+      path={
+        <>
+          <line x1="22" y1="12" x2="2" y2="12" />
+          <path d="M5.45 5.11 2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z" />
+          <line x1="6" y1="16" x2="6.01" y2="16" />
+          <line x1="10" y1="16" x2="10.01" y2="16" />
+        </>
+      }
+    />
+  ),
+  languages: (
+    <SvgIcon
+      path={
+        <>
+          <path d="m5 8 6 6" />
+          <path d="m4 14 6-6 2-3" />
+          <path d="M2 5h12" />
+          <path d="M7 2h1" />
+          <path d="m22 22-5-10-5 10" />
+          <path d="M14 18h6" />
+        </>
+      }
+    />
+  ),
 };
-
 
 // ─── MODAL ────────────────────────────────────────────────────────────────────
 function PackageModal({ pkg, onClose, t }) {
@@ -930,18 +1131,35 @@ export default function PricingPage() {
                 tabIndex={0}
                 onKeyDown={(e) => e.key === "Enter" && setSelectedPkg(pkg)}
               >
-                {pkg.badge && <div className="pkg-badge">{t[pkg.badge] || pkg.badge}</div>}
+                {pkg.badge && (
+                  <div className="pkg-badge">{t[pkg.badge] || pkg.badge}</div>
+                )}
                 <div className="pkg-icon">{ICONS[pkg.icon]}</div>
                 <div className="pkg-name">{t[pkg.nameKey] || pkg.nameKey}</div>
                 <p className="pkg-desc">{t[pkg.descKey] || pkg.descKey}</p>
                 <div className="pkg-timeline">
-                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ flexShrink: 0 }}>
-                    <circle cx="12" cy="12" r="10" /><polyline points="12 6 12 12 16 14" />
+                  <svg
+                    width="13"
+                    height="13"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    style={{ flexShrink: 0 }}
+                  >
+                    <circle cx="12" cy="12" r="10" />
+                    <polyline points="12 6 12 12 16 14" />
                   </svg>
                   {t[pkg.timelineKey] || pkg.timelineKey}
                 </div>
-                <div className="pkg-price">{t[pkg.priceKey] || pkg.priceKey}</div>
-                <div className="pkg-price-note">{t[pkg.priceNoteKey] || pkg.priceNoteKey}</div>
+                <div className="pkg-price">
+                  {t[pkg.priceKey] || pkg.priceKey}
+                </div>
+                <div className="pkg-price-note">
+                  {t[pkg.priceNoteKey] || pkg.priceNoteKey}
+                </div>
                 <ul className="pkg-features">
                   {pkg.features.slice(0, 5).map((f, j) => (
                     <li key={j}>
@@ -1059,7 +1277,9 @@ export default function PricingPage() {
                 </div>
                 <div className="addon-price">
                   {formatAddonPrice(addon.priceKM, lang)}
-                  <span className="addon-per">{t[addon.perKey] || addon.perKey}</span>
+                  <span className="addon-per">
+                    {t[addon.perKey] || addon.perKey}
+                  </span>
                   {addon.clientPays && (
                     <span className="addon-badge">
                       {t.addon_client_pays || "Klijent plaća godišnje"}

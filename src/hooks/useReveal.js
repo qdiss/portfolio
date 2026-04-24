@@ -80,10 +80,10 @@ export function usePageReveal(triggerKey = "default") {
       );
     };
 
-    // First pass — catches elements already in DOM
+    // First pass - catches elements already in DOM
     const t1 = setTimeout(init, 120);
 
-    // Second pass — catches lazy-loaded components that rendered after first pass
+    // Second pass - catches lazy-loaded components that rendered after first pass
     const t2 = setTimeout(() => {
       const unobserved = Array.from(
         document.querySelectorAll(".reveal:not(.visible)"),
@@ -96,7 +96,7 @@ export function usePageReveal(triggerKey = "default") {
       );
     }, 600);
 
-    // Third pass — for very slow connections / heavy components
+    // Third pass - for very slow connections / heavy components
     const t3 = setTimeout(() => {
       const unobserved = Array.from(
         document.querySelectorAll(".reveal:not(.visible)"),

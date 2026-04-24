@@ -86,7 +86,7 @@
   opacity: 0.3;
 }
 
-/* Accessibility — main landmark fix */
+/* Accessibility - main landmark fix */
 #root > div {
   display: contents;
 }
@@ -367,7 +367,7 @@ nav {
 .mobile-menu a.nav-active {
   color: var(--accent);
 }
-/* Mobile lang picker — scroll instead of wrap */
+/* Mobile lang picker - scroll instead of wrap */
 .mobile-menu > div:last-child {
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
@@ -397,7 +397,7 @@ nav {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 8rem 2.5rem 4rem;
+  padding: 6rem 2.5rem 4rem; /* ← odkomentiraj ovo */
   position: relative;
   overflow: hidden;
 }
@@ -1627,7 +1627,7 @@ footer p {
   --accent: #4d6900;
 }
 
-/* ── Green buttons — white text in light mode ──────────────────────── */
+/* ── Green buttons - white text in light mode ──────────────────────── */
 [data-theme="light"] .btn-primary,
 [data-theme="light"] .nav-cta,
 [data-theme="light"] .btn-save-main,
