@@ -506,29 +506,37 @@ const de = {
   addon_proemail_desc: "info@ihrunternehmen.de etc.",
   // ─── NEUE ZUSATZLEISTUNGEN ────────────────────────────────────────────────
   addon_chatwidget_name: "WhatsApp / Live-Chat-Button",
-  addon_chatwidget_desc: "Schwebender Chat-Button verknüpft mit WhatsApp oder Messenger.",
+  addon_chatwidget_desc:
+    "Schwebender Chat-Button verknüpft mit WhatsApp oder Messenger.",
   addon_faqsection_name: "FAQ-Bereich",
   addon_faqsection_desc: "Accordion-FAQ-Bereich mit Ihren häufigsten Fragen.",
   addon_countdown_name: "Countdown-Timer",
-  addon_countdown_desc: "Launch-Countdown oder zeitlich begrenztes Angebot auf jeder Seite.",
+  addon_countdown_desc:
+    "Launch-Countdown oder zeitlich begrenztes Angebot auf jeder Seite.",
   addon_cookiebanner_name: "Cookie-Banner (DSGVO)",
-  addon_cookiebanner_desc: "DSGVO-konformes Cookie-Zustimmungsbanner mit Einstellungen.",
+  addon_cookiebanner_desc:
+    "DSGVO-konformes Cookie-Zustimmungsbanner mit Einstellungen.",
   addon_speedopt_name: "Performance-Optimierung",
-  addon_speedopt_desc: "Bildkomprimierung, Lazy Loading und Core Web Vitals Verbesserungen.",
+  addon_speedopt_desc:
+    "Bildkomprimierung, Lazy Loading und Core Web Vitals Verbesserungen.",
   addon_darkmode_name: "Dunkel- / Hell-Modus",
   addon_darkmode_desc: "Umschalter, der die Präferenz des Besuchers speichert.",
   addon_video_name: "Promo-Video / Hintergrundvideo",
-  addon_video_desc: "Eingebettetes oder Hintergrundvideo (YouTube, Vimeo oder Upload).",
+  addon_video_desc:
+    "Eingebettetes oder Hintergrundvideo (YouTube, Vimeo oder Upload).",
   addon_slider_name: "Bilder- / Testimonial-Slider",
   addon_slider_desc: "Flüssiges Karussell für Fotos oder Referenzen.",
   addon_newsletter_name: "Newsletter-Anmeldung",
-  addon_newsletter_desc: "E-Mail-Formular verbunden mit Mailchimp, ConvertKit o. Ä.",
+  addon_newsletter_desc:
+    "E-Mail-Formular verbunden mit Mailchimp, ConvertKit o. Ä.",
   addon_pdf_name: "PDF-Broschüre zum Download",
-  addon_pdf_desc: "Herunterladbares PDF-Menü, Katalog oder Broschüre auf Ihrer Seite.",
+  addon_pdf_desc:
+    "Herunterladbares PDF-Menü, Katalog oder Broschüre auf Ihrer Seite.",
   addon_pricingtable_name: "Preistabelle",
   addon_pricingtable_desc: "Übersichtliche Preiskarten mit Funktionsvergleich.",
   addon_blog_name: "Blog / Neuigkeiten",
-  addon_blog_desc: "Vollständiges Blog-Setup mit CMS zum selbst Veröffentlichen.",
+  addon_blog_desc:
+    "Vollständiges Blog-Setup mit CMS zum selbst Veröffentlichen.",
   addon_careers_name: "Karriere- / Stellenangebote-Seite",
   addon_careers_desc: "Seite mit offenen Stellen und Bewerbungsformular.",
   addon_formsadv_name: "Mehrstufiges / erweitertes Formular",
@@ -536,15 +544,19 @@ const de = {
   addon_mapsadv_name: "Interaktive Karte mit Pins",
   addon_mapsadv_desc: "Google Maps mit Marken-Pins und Info-Fenstern.",
   addon_promobar_name: "Ankündigung / Promo-Leiste",
-  addon_promobar_desc: "Obere Leiste für Aktionen, Ankündigungen oder Hinweise.",
+  addon_promobar_desc:
+    "Obere Leiste für Aktionen, Ankündigungen oder Hinweise.",
   addon_sitemap_name: "XML-Sitemap + strukturierte Daten",
   addon_sitemap_desc: "SEO-Sitemap und Schema-Markup für bessere Indexierung.",
   addon_maintenance_name: "Monatliche Wartung (1h)",
-  addon_maintenance_desc: "Eine Stunde Updates, Korrekturen oder Inhaltsänderungen pro Monat.",
+  addon_maintenance_desc:
+    "Eine Stunde Updates, Korrekturen oder Inhaltsänderungen pro Monat.",
   addon_backup_name: "Automatische Backups",
-  addon_backup_desc: "Wöchentliche automatische Sicherung mit Ein-Klick-Wiederherstellung.",
+  addon_backup_desc:
+    "Wöchentliche automatische Sicherung mit Ein-Klick-Wiederherstellung.",
   addon_multisite_name: "Mehrsprachig / Mehrregional",
-  addon_multisite_desc: "Vollständiges mehrsprachiges Setup — separate Seiten pro Sprache.",
+  addon_multisite_desc:
+    "Vollständiges mehrsprachiges Setup — separate Seiten pro Sprache.",
   referral_title_1: "Empfehle jemanden.",
   referral_title_2: "Ihr bekommt beide Rabatt.",
   referral_sub:
@@ -587,7 +599,7 @@ const de = {
     "Ich antworte innerhalb von 24h. Keine automatischen Antworten.",
   toast_opening: "E-Mail-Programm wird geöffnet...",
   toast_error_title: "Etwas ist schiefgelaufen.",
-  toast_error_sub: "Schreib mir direkt an adis.klobodanovic@gmail.com",
+  toast_error_sub: "Schreib mir direkt an info@adiss.dev",
   cookie_modal_title: "Cookie-Einstellungen",
   cookie_modal_sub:
     "Verwalte deine Cookie-Einstellungen unten. Essentielle Cookies können nicht deaktiviert werden, da sie den Betrieb der Website sicherstellen.",
@@ -625,7 +637,8 @@ const de = {
   // ─── 404 PAGE ─────────────────────────────────────────────────────────────
   nf_error_label: "Fehler",
   nf_title: "Seite nicht gefunden",
-  nf_sub_1: "Es scheint, diese Seite existiert nicht — oder sie wurde verschoben.",
+  nf_sub_1:
+    "Es scheint, diese Seite existiert nicht — oder sie wurde verschoben.",
   nf_sub_2: "Lass uns dich woanders hinbringen.",
   nf_back_home: "Zurück zur Startseite",
   nf_start_project: "Projekt starten",
@@ -633,17 +646,23 @@ const de = {
   nf_redirect_suffix: "Sekunden...",
   example_label: "Beispiel",
   // ─── HOME PAGE SEO ────────────────────────────────────────────────────────
-  home_page_title: "Adis Klobodanović — Full-Stack Developer | React, Next.js, Node.js",
-  home_page_desc: "Full-Stack-Entwickler spezialisiert auf React, Next.js und Node.js. Ich baue schnelle Web-Apps und SaaS-Produkte, die termingerecht ausgeliefert werden.",
+  home_page_title:
+    "Adis Klobodanović — Full-Stack Developer | React, Next.js, Node.js",
+  home_page_desc:
+    "Full-Stack-Entwickler spezialisiert auf React, Next.js und Node.js. Ich baue schnelle Web-Apps und SaaS-Produkte, die termingerecht ausgeliefert werden.",
   // ─── PAGE SEO TITLES ─────────────────────────────────────────────────────
   blog_seo_title: "Blog — Adis Klobodanović | Web-Entwicklung",
-  blog_seo_desc: "Artikel über React, Next.js, Node.js und Webentwicklung. Echte Erfahrungen, kein Fluff.",
+  blog_seo_desc:
+    "Artikel über React, Next.js, Node.js und Webentwicklung. Echte Erfahrungen, kein Fluff.",
   uses_seo_title: "Werkzeuge — Stack & Setup | Adis Klobodanović",
-  uses_seo_desc: "Die Tools, Hardware und Software, die ich täglich als Full-Stack-Entwickler nutze.",
+  uses_seo_desc:
+    "Die Tools, Hardware und Software, die ich täglich als Full-Stack-Entwickler nutze.",
   hire_seo_title: "Projekt starten — Adis Klobodanović | Full-Stack Entwickler",
-  hire_seo_desc: "Bereit etwas zu bauen? Festpreise — ab 100 € für eine Landing Page. Schnelle Lieferung, vollständiges Eigentum.",
+  hire_seo_desc:
+    "Bereit etwas zu bauen? Festpreise — ab 100 € für eine Landing Page. Schnelle Lieferung, vollständiges Eigentum.",
   projects_seo_title: "Projekte — Adis Klobodanović | Full-Stack Entwickler",
-  projects_seo_desc: "Full-Stack-Webprojekte — Buchungsplattformen, Immobilien-Sites, SaaS-Apps und mehr.",
+  projects_seo_desc:
+    "Full-Stack-Webprojekte — Buchungsplattformen, Immobilien-Sites, SaaS-Apps und mehr.",
   // ─── ADDON/FORM TRANSLATIONS ──────────────────────────────────────────────
   addon_client_pays: "Klient zahlt jährlich",
   hire_addons_optional: "(optional)",

@@ -350,7 +350,7 @@ const en = {
   toast_sent_sub: "I'll reply within 24h. No automated replies.",
   toast_opening: "Opening your mail client...",
   toast_error_title: "Something went wrong.",
-  toast_error_sub: "Email me directly at adis.klobodanovic@gmail.com",
+  toast_error_sub: "Email me directly at info@adiss.dev",
   // Cookie modal
   cookie_modal_title: "Cookie Preferences",
   cookie_modal_sub:
@@ -553,29 +553,36 @@ const en = {
   addon_proemail_desc: "info@yourbusiness.com etc.",
   // ─── NEW ADDONS ──────────────────────────────────────────────────────────
   addon_chatwidget_name: "WhatsApp / live chat button",
-  addon_chatwidget_desc: "Floating chat button linked to WhatsApp or Messenger.",
+  addon_chatwidget_desc:
+    "Floating chat button linked to WhatsApp or Messenger.",
   addon_faqsection_name: "FAQ section",
-  addon_faqsection_desc: "Accordion FAQ section with your most common questions.",
+  addon_faqsection_desc:
+    "Accordion FAQ section with your most common questions.",
   addon_countdown_name: "Countdown timer",
   addon_countdown_desc: "Launch countdown or limited-offer timer on any page.",
   addon_cookiebanner_name: "Cookie banner (GDPR)",
-  addon_cookiebanner_desc: "GDPR-compliant cookie consent banner with preferences.",
+  addon_cookiebanner_desc:
+    "GDPR-compliant cookie consent banner with preferences.",
   addon_speedopt_name: "Performance optimization",
-  addon_speedopt_desc: "Image compression, lazy loading, and Core Web Vitals fixes.",
+  addon_speedopt_desc:
+    "Image compression, lazy loading, and Core Web Vitals fixes.",
   addon_darkmode_name: "Dark / light mode toggle",
   addon_darkmode_desc: "Toggle switch that remembers the visitor's preference.",
   addon_video_name: "Promo video / background video",
-  addon_video_desc: "Embedded or background video section (YouTube, Vimeo, or upload).",
+  addon_video_desc:
+    "Embedded or background video section (YouTube, Vimeo, or upload).",
   addon_slider_name: "Image / testimonial slider",
   addon_slider_desc: "Smooth swipeable carousel for photos or testimonials.",
   addon_newsletter_name: "Newsletter signup",
-  addon_newsletter_desc: "Email capture form connected to Mailchimp, ConvertKit, or similar.",
+  addon_newsletter_desc:
+    "Email capture form connected to Mailchimp, ConvertKit, or similar.",
   addon_pdf_name: "PDF brochure download",
   addon_pdf_desc: "Downloadable PDF menu, catalog, or brochure on your site.",
   addon_pricingtable_name: "Pricing table section",
   addon_pricingtable_desc: "Clean pricing cards with feature comparison.",
   addon_blog_name: "Blog / news section",
-  addon_blog_desc: "Full blog setup with CMS so you can publish posts yourself.",
+  addon_blog_desc:
+    "Full blog setup with CMS so you can publish posts yourself.",
   addon_careers_name: "Careers / job openings page",
   addon_careers_desc: "Jobs page listing open positions with application form.",
   addon_formsadv_name: "Multi-step / advanced form",
@@ -585,13 +592,16 @@ const en = {
   addon_promobar_name: "Announcement / promo bar",
   addon_promobar_desc: "Top banner for promotions, announcements, or alerts.",
   addon_sitemap_name: "XML sitemap + structured data",
-  addon_sitemap_desc: "SEO-ready sitemap and schema markup for better indexing.",
+  addon_sitemap_desc:
+    "SEO-ready sitemap and schema markup for better indexing.",
   addon_maintenance_name: "Monthly maintenance (1h)",
-  addon_maintenance_desc: "One hour of updates, fixes, or content changes per month.",
+  addon_maintenance_desc:
+    "One hour of updates, fixes, or content changes per month.",
   addon_backup_name: "Automated backups",
   addon_backup_desc: "Weekly automated backups with one-click restore.",
   addon_multisite_name: "Multilingual / multi-region",
-  addon_multisite_desc: "Full multilingual setup — separate pages per language.",
+  addon_multisite_desc:
+    "Full multilingual setup — separate pages per language.",
   referral_title_1: "Refer someone.",
   referral_title_2: "You both get a discount.",
   referral_sub:
@@ -620,17 +630,23 @@ const en = {
   nf_redirect_suffix: "seconds...",
   example_label: "Example",
   // ─── HOME PAGE SEO ────────────────────────────────────────────────────────
-  home_page_title: "Adis Klobodanović — Full-Stack Developer | React, Next.js, Node.js",
-  home_page_desc: "Full-stack developer specialising in React, Next.js & Node.js. I build fast, clean web apps, SaaS products and landing pages that ship on time — available for new projects worldwide.",
+  home_page_title:
+    "Adis Klobodanović — Full-Stack Developer | React, Next.js, Node.js",
+  home_page_desc:
+    "Full-stack developer specialising in React, Next.js & Node.js. I build fast, clean web apps, SaaS products and landing pages that ship on time — available for new projects worldwide.",
   // ─── PAGE SEO TITLES ─────────────────────────────────────────────────────
   blog_seo_title: "Blog — Adis Klobodanović | Web Development Articles",
-  blog_seo_desc: "Articles on React, Next.js, Node.js, web performance, and freelance development. Real-world experience, no fluff.",
+  blog_seo_desc:
+    "Articles on React, Next.js, Node.js, web performance, and freelance development. Real-world experience, no fluff.",
   uses_seo_title: "Uses — Tools & Stack | Adis Klobodanović",
-  uses_seo_desc: "The tools, hardware, and software I use every day as a full-stack developer.",
+  uses_seo_desc:
+    "The tools, hardware, and software I use every day as a full-stack developer.",
   hire_seo_title: "Start a Project — Adis Klobodanović | Full-Stack Developer",
-  hire_seo_desc: "Ready to build something? Fixed-price web development — from $99 for a landing page. Fast turnaround, full ownership.",
+  hire_seo_desc:
+    "Ready to build something? Fixed-price web development — from $99 for a landing page. Fast turnaround, full ownership.",
   projects_seo_title: "Projects — Adis Klobodanović | Full-Stack Developer",
-  projects_seo_desc: "Full-stack web projects — booking platforms, real estate sites, SaaS apps, and more.",
+  projects_seo_desc:
+    "Full-stack web projects — booking platforms, real estate sites, SaaS apps, and more.",
   // ─── ADDON/FORM TRANSLATIONS ──────────────────────────────────────────────
   addon_client_pays: "Client pays yearly",
   hire_addons_label: "Add-ons",

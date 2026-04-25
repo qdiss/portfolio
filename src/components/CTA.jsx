@@ -40,67 +40,332 @@ import {
 
 function buildPackages(t) {
   return [
-    { id: "starter", labelKey: "form_pkg_starter", priceKey: "form_pkg_starter_price", Icon: ZapIcon },
-    { id: "business", labelKey: "form_pkg_business", priceKey: "form_pkg_business_price", Icon: GlobeIcon },
-    { id: "premium", labelKey: "form_pkg_premium", priceKey: "form_pkg_premium_price", Icon: RocketIcon },
-    { id: "custom", labelKey: "form_pkg_custom", priceKey: null, Icon: LayersIcon },
+    {
+      id: "starter",
+      labelKey: "form_pkg_starter",
+      priceKey: "form_pkg_starter_price",
+      Icon: ZapIcon,
+    },
+    {
+      id: "business",
+      labelKey: "form_pkg_business",
+      priceKey: "form_pkg_business_price",
+      Icon: GlobeIcon,
+    },
+    {
+      id: "premium",
+      labelKey: "form_pkg_premium",
+      priceKey: "form_pkg_premium_price",
+      Icon: RocketIcon,
+    },
+    {
+      id: "custom",
+      labelKey: "form_pkg_custom",
+      priceKey: null,
+      Icon: LayersIcon,
+    },
   ];
 }
 
 function buildPaketOptions(t) {
   return [
-    { id: "starter", label: t.form_pkg_starter || "Starter", price: 200, Icon: ZapIcon },
-    { id: "business", label: t.form_pkg_business || "Business", price: 400, Icon: GlobeIcon },
-    { id: "premium", label: t.form_pkg_premium || "Premium", price: 650, Icon: RocketIcon },
-    { id: "custom", label: t.form_pkg_custom || "Custom", price: 0, Icon: LayersIcon },
+    {
+      id: "starter",
+      label: t.form_pkg_starter || "Starter",
+      price: 200,
+      Icon: ZapIcon,
+    },
+    {
+      id: "business",
+      label: t.form_pkg_business || "Business",
+      price: 400,
+      Icon: GlobeIcon,
+    },
+    {
+      id: "premium",
+      label: t.form_pkg_premium || "Premium",
+      price: 650,
+      Icon: RocketIcon,
+    },
+    {
+      id: "custom",
+      label: t.form_pkg_custom || "Custom",
+      price: 0,
+      Icon: LayersIcon,
+    },
   ];
 }
 
 const ADDON_OPTIONS = [
-  { id: "googlebiz", Icon: MapPinIcon, labelKey: "addon_googlebiz_name", price: 60, perKey: "addon_per_onetime" },
-  { id: "emailsig", Icon: MailIcon, labelKey: "addon_emailsig_name", price: 40, perKey: "addon_per_onetime" },
-  { id: "logo", Icon: PaletteIcon, labelKey: "addon_logo_name", price: 80, perKey: "addon_per_onetime" },
-  { id: "social", Icon: SmartphoneIcon, labelKey: "addon_social_name", price: 50, perKey: "addon_per_onetime" },
-  { id: "booking", Icon: CalendarIcon, labelKey: "addon_booking_name", price: 70, perKey: "addon_per_onetime" },
-  { id: "translation", Icon: GlobeIcon, labelKey: "addon_translation_name", price: 60, perKey: "addon_per_onetime" },
-  { id: "copy", Icon: PenIcon, labelKey: "addon_copy_name", price: 70, perKey: "addon_per_page" },
-  { id: "gallery", Icon: ImageIcon, labelKey: "addon_gallery_name", price: 40, perKey: "addon_per_onetime" },
-  { id: "reviews", Icon: StarIcon, labelKey: "addon_reviews_name", price: 35, perKey: "addon_per_onetime" },
-  { id: "qr", Icon: QrCodeIcon, labelKey: "addon_qr_name", price: 15, perKey: "addon_per_onetime" },
-  { id: "analytics", Icon: BarChartIcon, labelKey: "addon_analytics_name", price: 30, perKey: "addon_per_onetime" },
-  { id: "menu", Icon: MenuSquareIcon, labelKey: "addon_menu_name", price: 55, perKey: "addon_per_onetime" },
-  { id: "ssl", Icon: ShieldIcon, labelKey: "addon_ssl_name", price: 20, perKey: "addon_per_yearly" },
-  { id: "domain", Icon: LinkIcon, labelKey: "addon_domain_name", price: 30, perKey: "addon_per_yearly" },
-  { id: "hosting", Icon: ServerIcon, labelKey: "addon_hosting_name", price: 50, perKey: "addon_per_yearly" },
-  { id: "proemail", Icon: AtSignIcon, labelKey: "addon_proemail_name", price: 25, perKey: "addon_per_yearly" },
-  { id: "chatwidget", Icon: MailIcon, labelKey: "addon_chatwidget_name", price: 25, perKey: "addon_per_onetime" },
-  { id: "faqsection", Icon: FileIcon, labelKey: "addon_faqsection_name", price: 40, perKey: "addon_per_onetime" },
-  { id: "countdown", Icon: ClockIcon, labelKey: "addon_countdown_name", price: 30, perKey: "addon_per_onetime" },
-  { id: "cookiebanner", Icon: ShieldIcon, labelKey: "addon_cookiebanner_name", price: 35, perKey: "addon_per_onetime" },
-  { id: "speedopt", Icon: ZapIcon, labelKey: "addon_speedopt_name", price: 60, perKey: "addon_per_onetime" },
-  { id: "darkmode", Icon: UserIcon, labelKey: "addon_darkmode_name", price: 40, perKey: "addon_per_onetime" },
-  { id: "video", Icon: ImageIcon, labelKey: "addon_video_name", price: 35, perKey: "addon_per_onetime" },
-  { id: "slider", Icon: LayersIcon, labelKey: "addon_slider_name", price: 35, perKey: "addon_per_onetime" },
-  { id: "newsletter", Icon: MailIcon, labelKey: "addon_newsletter_name", price: 45, perKey: "addon_per_onetime" },
-  { id: "pdf", Icon: FileIcon, labelKey: "addon_pdf_name", price: 40, perKey: "addon_per_onetime" },
-  { id: "pricingtable", Icon: BarChartIcon, labelKey: "addon_pricingtable_name", price: 45, perKey: "addon_per_onetime" },
-  { id: "blog", Icon: PenIcon, labelKey: "addon_blog_name", price: 80, perKey: "addon_per_onetime" },
-  { id: "careers", Icon: RocketIcon, labelKey: "addon_careers_name", price: 50, perKey: "addon_per_onetime" },
-  { id: "formsadv", Icon: SendIcon, labelKey: "addon_formsadv_name", price: 55, perKey: "addon_per_onetime" },
-  { id: "mapsadv", Icon: MapPinIcon, labelKey: "addon_mapsadv_name", price: 50, perKey: "addon_per_onetime" },
-  { id: "promobar", Icon: GlobeIcon, labelKey: "addon_promobar_name", price: 25, perKey: "addon_per_onetime" },
-  { id: "sitemap", Icon: LinkIcon, labelKey: "addon_sitemap_name", price: 30, perKey: "addon_per_onetime" },
-  { id: "maintenance", Icon: ZapIcon, labelKey: "addon_maintenance_name", price: 40, perKey: "addon_per_yearly" },
-  { id: "backup", Icon: ServerIcon, labelKey: "addon_backup_name", price: 30, perKey: "addon_per_yearly" },
-  { id: "multisite", Icon: LanguagesIcon, labelKey: "addon_multisite_name", price: 80, perKey: "addon_per_onetime" },
+  {
+    id: "googlebiz",
+    Icon: MapPinIcon,
+    labelKey: "addon_googlebiz_name",
+    price: 60,
+    perKey: "addon_per_onetime",
+  },
+  {
+    id: "emailsig",
+    Icon: MailIcon,
+    labelKey: "addon_emailsig_name",
+    price: 40,
+    perKey: "addon_per_onetime",
+  },
+  {
+    id: "logo",
+    Icon: PaletteIcon,
+    labelKey: "addon_logo_name",
+    price: 80,
+    perKey: "addon_per_onetime",
+  },
+  {
+    id: "social",
+    Icon: SmartphoneIcon,
+    labelKey: "addon_social_name",
+    price: 50,
+    perKey: "addon_per_onetime",
+  },
+  {
+    id: "booking",
+    Icon: CalendarIcon,
+    labelKey: "addon_booking_name",
+    price: 70,
+    perKey: "addon_per_onetime",
+  },
+  {
+    id: "translation",
+    Icon: GlobeIcon,
+    labelKey: "addon_translation_name",
+    price: 60,
+    perKey: "addon_per_onetime",
+  },
+  {
+    id: "copy",
+    Icon: PenIcon,
+    labelKey: "addon_copy_name",
+    price: 70,
+    perKey: "addon_per_page",
+  },
+  {
+    id: "gallery",
+    Icon: ImageIcon,
+    labelKey: "addon_gallery_name",
+    price: 40,
+    perKey: "addon_per_onetime",
+  },
+  {
+    id: "reviews",
+    Icon: StarIcon,
+    labelKey: "addon_reviews_name",
+    price: 35,
+    perKey: "addon_per_onetime",
+  },
+  {
+    id: "qr",
+    Icon: QrCodeIcon,
+    labelKey: "addon_qr_name",
+    price: 15,
+    perKey: "addon_per_onetime",
+  },
+  {
+    id: "analytics",
+    Icon: BarChartIcon,
+    labelKey: "addon_analytics_name",
+    price: 30,
+    perKey: "addon_per_onetime",
+  },
+  {
+    id: "menu",
+    Icon: MenuSquareIcon,
+    labelKey: "addon_menu_name",
+    price: 55,
+    perKey: "addon_per_onetime",
+  },
+  {
+    id: "ssl",
+    Icon: ShieldIcon,
+    labelKey: "addon_ssl_name",
+    price: 20,
+    perKey: "addon_per_yearly",
+  },
+  {
+    id: "domain",
+    Icon: LinkIcon,
+    labelKey: "addon_domain_name",
+    price: 30,
+    perKey: "addon_per_yearly",
+  },
+  {
+    id: "hosting",
+    Icon: ServerIcon,
+    labelKey: "addon_hosting_name",
+    price: 50,
+    perKey: "addon_per_yearly",
+  },
+  {
+    id: "proemail",
+    Icon: AtSignIcon,
+    labelKey: "addon_proemail_name",
+    price: 25,
+    perKey: "addon_per_yearly",
+  },
+  {
+    id: "chatwidget",
+    Icon: MailIcon,
+    labelKey: "addon_chatwidget_name",
+    price: 25,
+    perKey: "addon_per_onetime",
+  },
+  {
+    id: "faqsection",
+    Icon: FileIcon,
+    labelKey: "addon_faqsection_name",
+    price: 40,
+    perKey: "addon_per_onetime",
+  },
+  {
+    id: "countdown",
+    Icon: ClockIcon,
+    labelKey: "addon_countdown_name",
+    price: 30,
+    perKey: "addon_per_onetime",
+  },
+  {
+    id: "cookiebanner",
+    Icon: ShieldIcon,
+    labelKey: "addon_cookiebanner_name",
+    price: 35,
+    perKey: "addon_per_onetime",
+  },
+  {
+    id: "speedopt",
+    Icon: ZapIcon,
+    labelKey: "addon_speedopt_name",
+    price: 60,
+    perKey: "addon_per_onetime",
+  },
+  {
+    id: "darkmode",
+    Icon: UserIcon,
+    labelKey: "addon_darkmode_name",
+    price: 40,
+    perKey: "addon_per_onetime",
+  },
+  {
+    id: "video",
+    Icon: ImageIcon,
+    labelKey: "addon_video_name",
+    price: 35,
+    perKey: "addon_per_onetime",
+  },
+  {
+    id: "slider",
+    Icon: LayersIcon,
+    labelKey: "addon_slider_name",
+    price: 35,
+    perKey: "addon_per_onetime",
+  },
+  {
+    id: "newsletter",
+    Icon: MailIcon,
+    labelKey: "addon_newsletter_name",
+    price: 45,
+    perKey: "addon_per_onetime",
+  },
+  {
+    id: "pdf",
+    Icon: FileIcon,
+    labelKey: "addon_pdf_name",
+    price: 40,
+    perKey: "addon_per_onetime",
+  },
+  {
+    id: "pricingtable",
+    Icon: BarChartIcon,
+    labelKey: "addon_pricingtable_name",
+    price: 45,
+    perKey: "addon_per_onetime",
+  },
+  {
+    id: "blog",
+    Icon: PenIcon,
+    labelKey: "addon_blog_name",
+    price: 80,
+    perKey: "addon_per_onetime",
+  },
+  {
+    id: "careers",
+    Icon: RocketIcon,
+    labelKey: "addon_careers_name",
+    price: 50,
+    perKey: "addon_per_onetime",
+  },
+  {
+    id: "formsadv",
+    Icon: SendIcon,
+    labelKey: "addon_formsadv_name",
+    price: 55,
+    perKey: "addon_per_onetime",
+  },
+  {
+    id: "mapsadv",
+    Icon: MapPinIcon,
+    labelKey: "addon_mapsadv_name",
+    price: 50,
+    perKey: "addon_per_onetime",
+  },
+  {
+    id: "promobar",
+    Icon: GlobeIcon,
+    labelKey: "addon_promobar_name",
+    price: 25,
+    perKey: "addon_per_onetime",
+  },
+  {
+    id: "sitemap",
+    Icon: LinkIcon,
+    labelKey: "addon_sitemap_name",
+    price: 30,
+    perKey: "addon_per_onetime",
+  },
+  {
+    id: "maintenance",
+    Icon: ZapIcon,
+    labelKey: "addon_maintenance_name",
+    price: 40,
+    perKey: "addon_per_yearly",
+  },
+  {
+    id: "backup",
+    Icon: ServerIcon,
+    labelKey: "addon_backup_name",
+    price: 30,
+    perKey: "addon_per_yearly",
+  },
+  {
+    id: "multisite",
+    Icon: LanguagesIcon,
+    labelKey: "addon_multisite_name",
+    price: 80,
+    perKey: "addon_per_onetime",
+  },
 ];
 
 function AddonAccordion({ selectedAddons, setSelectedAddons, t, lang }) {
   const [open, setOpen] = useState(false);
   const GROUPS = [
-    { label: t.addon_group_onetime || "One-time", items: ADDON_OPTIONS.filter((a) => a.perKey === "addon_per_onetime") },
-    { label: t.addon_group_yearly || "Yearly", items: ADDON_OPTIONS.filter((a) => a.perKey === "addon_per_yearly") },
-    { label: t.addon_group_perpage || "Per page", items: ADDON_OPTIONS.filter((a) => a.perKey === "addon_per_page") },
+    {
+      label: t.addon_group_onetime || "One-time",
+      items: ADDON_OPTIONS.filter((a) => a.perKey === "addon_per_onetime"),
+    },
+    {
+      label: t.addon_group_yearly || "Yearly",
+      items: ADDON_OPTIONS.filter((a) => a.perKey === "addon_per_yearly"),
+    },
+    {
+      label: t.addon_group_perpage || "Per page",
+      items: ADDON_OPTIONS.filter((a) => a.perKey === "addon_per_page"),
+    },
   ].filter((g) => g.items.length > 0);
   const count = selectedAddons.length;
   return (
@@ -117,11 +382,26 @@ function AddonAccordion({ selectedAddons, setSelectedAddons, t, lang }) {
         </span>
         <span className="addon-accordion-hint">
           {count > 0
-            ? selectedAddons.map((id) => { const a = ADDON_OPTIONS.find((x) => x.id === id); return a ? t[a.labelKey] || a.labelKey : ""; }).filter(Boolean).join(", ")
+            ? selectedAddons
+                .map((id) => {
+                  const a = ADDON_OPTIONS.find((x) => x.id === id);
+                  return a ? t[a.labelKey] || a.labelKey : "";
+                })
+                .filter(Boolean)
+                .join(", ")
             : t.hire_addons_hint || "optional — click to expand"}
         </span>
         <span className={`addon-accordion-chevron${open ? " rotated" : ""}`}>
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <svg
+            width="14"
+            height="14"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          >
             <polyline points="6 9 12 15 18 9" />
           </svg>
         </span>
@@ -139,15 +419,40 @@ function AddonAccordion({ selectedAddons, setSelectedAddons, t, lang }) {
                       key={id}
                       type="button"
                       className={`hire-addon-chip${checked ? " checked" : ""}`}
-                      onClick={() => setSelectedAddons((prev) => checked ? prev.filter((x) => x !== id) : [...prev, id])}
+                      onClick={() =>
+                        setSelectedAddons((prev) =>
+                          checked
+                            ? prev.filter((x) => x !== id)
+                            : [...prev, id],
+                        )
+                      }
                       aria-pressed={checked}
                     >
-                      <span className="hire-addon-chip-icon"><Icon size={13} /></span>
-                      <span style={{ flex: 1 }}>
-                        <span style={{ display: "block", fontSize: "0.77rem", fontWeight: 500, color: "var(--text)" }}>{t[labelKey] || labelKey}</span>
-                        <span style={{ fontSize: "0.69rem", color: "var(--muted)" }}>+{formatAddonPrice(price, lang)}</span>
+                      <span className="hire-addon-chip-icon">
+                        <Icon size={13} />
                       </span>
-                      {checked && <span className="hire-addon-chip-check"><CheckIcon size={11} /></span>}
+                      <span style={{ flex: 1 }}>
+                        <span
+                          style={{
+                            display: "block",
+                            fontSize: "0.77rem",
+                            fontWeight: 500,
+                            color: "var(--text)",
+                          }}
+                        >
+                          {t[labelKey] || labelKey}
+                        </span>
+                        <span
+                          style={{ fontSize: "0.69rem", color: "var(--muted)" }}
+                        >
+                          +{formatAddonPrice(price, lang)}
+                        </span>
+                      </span>
+                      {checked && (
+                        <span className="hire-addon-chip-check">
+                          <CheckIcon size={11} />
+                        </span>
+                      )}
                     </button>
                   );
                 })}
@@ -164,13 +469,57 @@ function Toast({ title, sub, type, onClose }) {
   if (!title) return null;
   const isSuccess = type === "success";
   return (
-    <div style={{ position: "fixed", bottom: "2rem", right: "2rem", zIndex: 9999, background: isSuccess ? "var(--accent)" : "#e74c3c", color: isSuccess ? "#0a0a0a" : "#fff", borderRadius: "14px", padding: "1rem 1.25rem", boxShadow: "0 8px 32px rgba(0,0,0,0.25)", display: "flex", alignItems: "flex-start", gap: "0.65rem", animation: "slideInToast 0.3s ease", maxWidth: "320px" }}>
-      <span style={{ marginTop: "2px", flexShrink: 0 }}>{isSuccess ? <CheckIcon size={16} /> : <XIcon size={16} />}</span>
-      <div style={{ display: "flex", flexDirection: "column", gap: "2px", flex: 1 }}>
+    <div
+      style={{
+        position: "fixed",
+        bottom: "2rem",
+        right: "2rem",
+        zIndex: 9999,
+        background: isSuccess ? "var(--accent)" : "#e74c3c",
+        color: isSuccess ? "#0a0a0a" : "#fff",
+        borderRadius: "14px",
+        padding: "1rem 1.25rem",
+        boxShadow: "0 8px 32px rgba(0,0,0,0.25)",
+        display: "flex",
+        alignItems: "flex-start",
+        gap: "0.65rem",
+        animation: "slideInToast 0.3s ease",
+        maxWidth: "320px",
+      }}
+    >
+      <span style={{ marginTop: "2px", flexShrink: 0 }}>
+        {isSuccess ? <CheckIcon size={16} /> : <XIcon size={16} />}
+      </span>
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          gap: "2px",
+          flex: 1,
+        }}
+      >
         <span style={{ fontSize: "0.88rem", fontWeight: 600 }}>{title}</span>
-        {sub && <span style={{ fontSize: "0.78rem", opacity: 0.75, fontWeight: 400 }}>{sub}</span>}
+        {sub && (
+          <span style={{ fontSize: "0.78rem", opacity: 0.75, fontWeight: 400 }}>
+            {sub}
+          </span>
+        )}
       </div>
-      <button onClick={onClose} style={{ background: "none", border: "none", color: "inherit", cursor: "pointer", padding: 0, opacity: 0.6, flexShrink: 0, display: "flex", alignItems: "center" }} aria-label="Close">
+      <button
+        onClick={onClose}
+        style={{
+          background: "none",
+          border: "none",
+          color: "inherit",
+          cursor: "pointer",
+          padding: 0,
+          opacity: 0.6,
+          flexShrink: 0,
+          display: "flex",
+          alignItems: "center",
+        }}
+        aria-label="Close"
+      >
         <XIcon size={14} />
       </button>
     </div>
@@ -192,8 +541,12 @@ export default function CTA() {
     setTimeout(() => setToast({ title: "", sub: "", type: "success" }), 5000);
   };
 
-  const selectedPackagePrice = PAKET_OPTIONS.find((p) => p.id === selectedPaket)?.price || 0;
-  const addonsTotal = selectedAddons.reduce((sum, id) => { const addon = ADDON_OPTIONS.find((a) => a.id === id); return sum + (addon?.price || 0); }, 0);
+  const selectedPackagePrice =
+    PAKET_OPTIONS.find((p) => p.id === selectedPaket)?.price || 0;
+  const addonsTotal = selectedAddons.reduce((sum, id) => {
+    const addon = ADDON_OPTIONS.find((a) => a.id === id);
+    return sum + (addon?.price || 0);
+  }, 0);
   const totalPrice = selectedPackagePrice + addonsTotal;
 
   const handleSubmit = async (e) => {
@@ -207,28 +560,66 @@ export default function CTA() {
     setSending(true);
     const data = Object.fromEntries(new FormData(formRef.current));
     const paketObj = PAKET_OPTIONS.find((p) => p.id === selectedPaket);
-    const paketLabel = paketObj ? (paketObj.price ? `${paketObj.label} (${formatAddonPrice(paketObj.price, lang)})` : paketObj.label) : selectedPaket;
+    const paketLabel = paketObj
+      ? paketObj.price
+        ? `${paketObj.label} (${formatAddonPrice(paketObj.price, lang)})`
+        : paketObj.label
+      : selectedPaket;
 
     if (formRef.current) {
       let h = formRef.current.querySelector('input[name="paket_display"]');
-      if (!h) { h = document.createElement("input"); h.type = "hidden"; h.name = "paket_display"; formRef.current.appendChild(h); }
+      if (!h) {
+        h = document.createElement("input");
+        h.type = "hidden";
+        h.name = "paket_display";
+        formRef.current.appendChild(h);
+      }
       h.value = paketLabel;
-      let addonsHidden = formRef.current.querySelector('input[name="addons_display"]');
-      if (!addonsHidden) { addonsHidden = document.createElement("input"); addonsHidden.type = "hidden"; addonsHidden.name = "addons_display"; formRef.current.appendChild(addonsHidden); }
-      addonsHidden.value = selectedAddons.map((id) => { const addon = ADDON_OPTIONS.find((a) => a.id === id); return addon ? `${t[addon.labelKey] || addon.labelKey} (${formatAddonPrice(addon.price, lang)})` : ""; }).filter(Boolean).join(", ");
-      let totalHidden = formRef.current.querySelector('input[name="total_display"]');
-      if (!totalHidden) { totalHidden = document.createElement("input"); totalHidden.type = "hidden"; totalHidden.name = "total_display"; formRef.current.appendChild(totalHidden); }
+      let addonsHidden = formRef.current.querySelector(
+        'input[name="addons_display"]',
+      );
+      if (!addonsHidden) {
+        addonsHidden = document.createElement("input");
+        addonsHidden.type = "hidden";
+        addonsHidden.name = "addons_display";
+        formRef.current.appendChild(addonsHidden);
+      }
+      addonsHidden.value = selectedAddons
+        .map((id) => {
+          const addon = ADDON_OPTIONS.find((a) => a.id === id);
+          return addon
+            ? `${t[addon.labelKey] || addon.labelKey} (${formatAddonPrice(addon.price, lang)})`
+            : "";
+        })
+        .filter(Boolean)
+        .join(", ");
+      let totalHidden = formRef.current.querySelector(
+        'input[name="total_display"]',
+      );
+      if (!totalHidden) {
+        totalHidden = document.createElement("input");
+        totalHidden.type = "hidden";
+        totalHidden.name = "total_display";
+        formRef.current.appendChild(totalHidden);
+      }
       totalHidden.value = formatAddonPrice(totalPrice, lang);
     }
 
     try {
       if (EMAILJS_READY) {
         const { default: emailjs } = await import("@emailjs/browser");
-        await emailjs.sendForm(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, formRef.current, EMAILJS_PUBLIC_KEY);
+        await emailjs.sendForm(
+          EMAILJS_SERVICE_ID,
+          EMAILJS_TEMPLATE_ID,
+          formRef.current,
+          EMAILJS_PUBLIC_KEY,
+        );
       } else {
         const subject = encodeURIComponent(`Project inquiry from ${data.name}`);
-        const body = encodeURIComponent(`Name: ${data.name}\nEmail: ${data.from_email}\nPackage: ${paketLabel}\n\n${data.message}`);
-        window.location.href = `mailto:adis.klobodanovic@gmail.com?subject=${subject}&body=${body}`;
+        const body = encodeURIComponent(
+          `Name: ${data.name}\nEmail: ${data.from_email}\nPackage: ${paketLabel}\n\n${data.message}`,
+        );
+        window.location.href = `mailto:info@adiss.dev?subject=${subject}&body=${body}`;
         showToast(t.toast_opening || "Opening mail client...");
         setSending(false);
         return;
@@ -237,9 +628,16 @@ export default function CTA() {
       setSelectedPaket("");
       setSelectedAddons([]);
       setDone(true);
-      showToast(t.toast_sent_title || "Message sent", t.toast_sent_sub || "I'll reply within 24h.");
+      showToast(
+        t.toast_sent_title || "Message sent",
+        t.toast_sent_sub || "I'll reply within 24h.",
+      );
     } catch {
-      showToast(t.toast_error_title || "Something went wrong.", t.toast_error_sub || "Try emailing directly.", "error");
+      showToast(
+        t.toast_error_title || "Something went wrong.",
+        t.toast_error_sub || "Try emailing directly.",
+        "error",
+      );
     } finally {
       setSending(false);
     }
@@ -333,66 +731,178 @@ export default function CTA() {
 
       <section id="contact" className="cta-section">
         <div className="cta-glow" />
-        <h2 className="reveal" dangerouslySetInnerHTML={{ __html: t.cta_title }} />
+        <h2
+          className="reveal"
+          dangerouslySetInnerHTML={{ __html: t.cta_title }}
+        />
         <p className="cta-human reveal">{t.cta_sub}</p>
 
         {done ? (
           <div className="cta-success reveal">
-            <div className="cta-success-icon"><CheckIcon size={22} /></div>
-            <h3 style={{ fontFamily: "var(--font-display)", fontSize: "1.2rem", marginBottom: "0.4rem", letterSpacing: "-0.02em" }}>{t.hire_msg_received_title}</h3>
-            <p style={{ color: "var(--muted)", fontWeight: 300, fontSize: "0.9rem" }}>{t.hire_msg_received_sub}</p>
+            <div className="cta-success-icon">
+              <CheckIcon size={22} />
+            </div>
+            <h3
+              style={{
+                fontFamily: "var(--font-display)",
+                fontSize: "1.2rem",
+                marginBottom: "0.4rem",
+                letterSpacing: "-0.02em",
+              }}
+            >
+              {t.hire_msg_received_title}
+            </h3>
+            <p
+              style={{
+                color: "var(--muted)",
+                fontWeight: 300,
+                fontSize: "0.9rem",
+              }}
+            >
+              {t.hire_msg_received_sub}
+            </p>
           </div>
         ) : (
           <div className="cta-form-wrap reveal">
-            <form ref={formRef} onSubmit={handleSubmit} className="cta-form-inner">
+            <form
+              ref={formRef}
+              onSubmit={handleSubmit}
+              className="cta-form-inner"
+            >
               <div className="cta-row">
-                <input name="name" type="text" placeholder={t.hire_name || "Your name"} aria-label={t.hire_name || "Your name"} required autoComplete="name" className="hire-input" />
-                <input name="from_email" type="email" placeholder={t.hire_email || "your@email.com"} aria-label={t.hire_email || "your@email.com"} required autoComplete="email" className="hire-input" />
+                <input
+                  name="name"
+                  type="text"
+                  placeholder={t.hire_name || "Your name"}
+                  aria-label={t.hire_name || "Your name"}
+                  required
+                  autoComplete="name"
+                  className="hire-input"
+                />
+                <input
+                  name="from_email"
+                  type="email"
+                  placeholder={t.hire_email || "your@email.com"}
+                  aria-label={t.hire_email || "your@email.com"}
+                  required
+                  autoComplete="email"
+                  className="hire-input"
+                />
               </div>
 
               <div>
-                <span className="hire-field-label">{t.form_pkg_placeholder || "Select a package"}</span>
+                <span className="hire-field-label">
+                  {t.form_pkg_placeholder || "Select a package"}
+                </span>
                 <div className="hire-pkg-grid">
                   {PAKET_OPTIONS.map(({ id, label, price, Icon }) => {
                     const isSel = selectedPaket === id;
                     return (
-                      <button key={id} type="button" className={`hire-pkg-pill${isSel ? " selected" : ""}`} onClick={() => setSelectedPaket(isSel ? "" : id)} aria-pressed={isSel}>
-                        <span className="hire-pkg-pill-icon"><Icon size={15} /></span>
+                      <button
+                        key={id}
+                        type="button"
+                        className={`hire-pkg-pill${isSel ? " selected" : ""}`}
+                        onClick={() => setSelectedPaket(isSel ? "" : id)}
+                        aria-pressed={isSel}
+                      >
+                        <span className="hire-pkg-pill-icon">
+                          <Icon size={15} />
+                        </span>
                         <span className="hire-pkg-pill-label">{label}</span>
-                        {price > 0 && <span className="hire-pkg-pill-price">{formatAddonPrice(price, lang)}</span>}
-                        {isSel && <span className="hire-pkg-pill-check"><CheckIcon size={12} /></span>}
+                        {price > 0 && (
+                          <span className="hire-pkg-pill-price">
+                            {formatAddonPrice(price, lang)}
+                          </span>
+                        )}
+                        {isSel && (
+                          <span className="hire-pkg-pill-check">
+                            <CheckIcon size={12} />
+                          </span>
+                        )}
                       </button>
                     );
                   })}
                 </div>
-                <input type="hidden" name="paket" value={selectedPaket} readOnly />
+                <input
+                  type="hidden"
+                  name="paket"
+                  value={selectedPaket}
+                  readOnly
+                />
               </div>
 
-              <AddonAccordion selectedAddons={selectedAddons} setSelectedAddons={setSelectedAddons} t={t} lang={lang} />
+              <AddonAccordion
+                selectedAddons={selectedAddons}
+                setSelectedAddons={setSelectedAddons}
+                t={t}
+                lang={lang}
+              />
 
               <div className="hire-total-bar">
-                <span style={{ color: "var(--muted)" }}>{t.hire_total_label || "Total estimate"}</span>
-                <strong style={{ color: "var(--text)", fontSize: "0.95rem" }}>{totalPrice > 0 ? formatAddonPrice(totalPrice, lang) : "—"}</strong>
+                <span style={{ color: "var(--muted)" }}>
+                  {t.hire_total_label || "Total estimate"}
+                </span>
+                <strong style={{ color: "var(--text)", fontSize: "0.95rem" }}>
+                  {totalPrice > 0 ? formatAddonPrice(totalPrice, lang) : "—"}
+                </strong>
               </div>
 
-              <textarea name="message" placeholder={t.hire_message || "Tell me about your project..."} aria-label={t.hire_message || "Tell me about your project..."} required className="hire-input" style={{ minHeight: "110px", resize: "vertical" }} />
+              <textarea
+                name="message"
+                placeholder={t.hire_message || "Tell me about your project..."}
+                aria-label={t.hire_message || "Tell me about your project..."}
+                required
+                className="hire-input"
+                style={{ minHeight: "110px", resize: "vertical" }}
+              />
 
-              <button type="submit" className="btn-primary cta-submit" disabled={sending} style={{ cursor: sending ? "not-allowed" : "pointer", opacity: sending ? 0.6 : 1 }}>
-                {sending ? (<><SpinnerIcon size={16} />{t.hire_sending || "Sending..."}</>) : (<><SendIcon size={16} />{t.hire_send || "Send message"}</>)}
+              <button
+                type="submit"
+                className="btn-primary cta-submit"
+                disabled={sending}
+                style={{
+                  cursor: sending ? "not-allowed" : "pointer",
+                  opacity: sending ? 0.6 : 1,
+                }}
+              >
+                {sending ? (
+                  <>
+                    <SpinnerIcon size={16} />
+                    {t.hire_sending || "Sending..."}
+                  </>
+                ) : (
+                  <>
+                    <SendIcon size={16} />
+                    {t.hire_send || "Send message"}
+                  </>
+                )}
               </button>
 
               <div className="cta-divider">{t.form_or || "or"}</div>
-              <a href="https://linkedin.com/in/adis-klobodanovic" target="_blank" rel="noopener noreferrer" className="cta-linkedin-btn">
-                <LinkedInIcon size={16} />{t.form_linkedin || "Connect on LinkedIn"}
+              <a
+                href="https://linkedin.com/in/adis-klobodanovic"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="cta-linkedin-btn"
+              >
+                <LinkedInIcon size={16} />
+                {t.form_linkedin || "Connect on LinkedIn"}
               </a>
             </form>
           </div>
         )}
 
-        <p className="cta-note reveal" style={{ marginTop: "1.5rem" }}>{t.cta_note}</p>
+        <p className="cta-note reveal" style={{ marginTop: "1.5rem" }}>
+          {t.cta_note}
+        </p>
       </section>
 
-      <Toast title={toast.title} sub={toast.sub} type={toast.type} onClose={() => setToast({ title: "" })} />
+      <Toast
+        title={toast.title}
+        sub={toast.sub}
+        type={toast.type}
+        onClose={() => setToast({ title: "" })}
+      />
     </>
   );
 }

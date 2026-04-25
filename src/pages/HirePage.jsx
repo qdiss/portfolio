@@ -565,7 +565,7 @@ function ContactForm({ t, lang, preselectedPaket }) {
         const body = encodeURIComponent(
           `Ime: ${data.name}\nEmail: ${data.from_email}\nPaket: ${paketLabel}\n\n${data.message}`,
         );
-        window.location.href = `mailto:adis.klobodanovic@gmail.com?subject=${subject}&body=${body}`;
+        window.location.href = `mailto:info@adiss.dev?subject=${subject}&body=${body}`;
       }
       formRef.current.reset();
       setSelectedPaket("");
@@ -1487,11 +1487,8 @@ export default function HirePage() {
           }}
         >
           {t.hire_prefer_email}{" "}
-          <a
-            href="mailto:adis.klobodanovic@gmail.com"
-            style={{ color: "var(--accent)" }}
-          >
-            adis.klobodanovic@gmail.com
+          <a href="mailto:info@adiss.dev" style={{ color: "var(--accent)" }}>
+            info@adiss.dev
           </a>
         </p>
       </div>

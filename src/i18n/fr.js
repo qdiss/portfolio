@@ -512,43 +512,58 @@ const fr = {
   addon_chatwidget_name: "Bouton WhatsApp / chat en direct",
   addon_chatwidget_desc: "Bouton flottant lié à WhatsApp ou Messenger.",
   addon_faqsection_name: "Section FAQ",
-  addon_faqsection_desc: "Section FAQ en accordéon avec vos questions les plus fréquentes.",
+  addon_faqsection_desc:
+    "Section FAQ en accordéon avec vos questions les plus fréquentes.",
   addon_countdown_name: "Minuteur compte à rebours",
-  addon_countdown_desc: "Compte à rebours de lancement ou minuteur d'offre limitée.",
+  addon_countdown_desc:
+    "Compte à rebours de lancement ou minuteur d'offre limitée.",
   addon_cookiebanner_name: "Bandeau cookies (RGPD)",
-  addon_cookiebanner_desc: "Bandeau de consentement cookies conforme au RGPD avec préférences.",
+  addon_cookiebanner_desc:
+    "Bandeau de consentement cookies conforme au RGPD avec préférences.",
   addon_speedopt_name: "Optimisation des performances",
-  addon_speedopt_desc: "Compression d'images, chargement différé et corrections Core Web Vitals.",
+  addon_speedopt_desc:
+    "Compression d'images, chargement différé et corrections Core Web Vitals.",
   addon_darkmode_name: "Mode sombre / clair",
   addon_darkmode_desc: "Interrupteur qui mémorise la préférence du visiteur.",
   addon_video_name: "Vidéo promo / fond vidéo",
-  addon_video_desc: "Vidéo intégrée ou en fond de page (YouTube, Vimeo ou upload).",
+  addon_video_desc:
+    "Vidéo intégrée ou en fond de page (YouTube, Vimeo ou upload).",
   addon_slider_name: "Slider d'images / témoignages",
   addon_slider_desc: "Carrousel fluide pour photos ou témoignages.",
   addon_newsletter_name: "Inscription newsletter",
-  addon_newsletter_desc: "Formulaire email connecté à Mailchimp, ConvertKit ou similaire.",
+  addon_newsletter_desc:
+    "Formulaire email connecté à Mailchimp, ConvertKit ou similaire.",
   addon_pdf_name: "Brochure PDF téléchargeable",
-  addon_pdf_desc: "Menu, catalogue ou brochure PDF disponible en téléchargement.",
+  addon_pdf_desc:
+    "Menu, catalogue ou brochure PDF disponible en téléchargement.",
   addon_pricingtable_name: "Tableau de tarifs",
-  addon_pricingtable_desc: "Cartes de prix claires avec comparaison de fonctionnalités.",
+  addon_pricingtable_desc:
+    "Cartes de prix claires avec comparaison de fonctionnalités.",
   addon_blog_name: "Blog / section actualités",
   addon_blog_desc: "Blog complet avec CMS pour publier vous-même vos articles.",
   addon_careers_name: "Page carrières / offres d'emploi",
-  addon_careers_desc: "Page listant les postes ouverts avec formulaire de candidature.",
+  addon_careers_desc:
+    "Page listant les postes ouverts avec formulaire de candidature.",
   addon_formsadv_name: "Formulaire multi-étapes / avancé",
-  addon_formsadv_desc: "Formulaire de devis multi-étapes, calculateur ou assistant.",
+  addon_formsadv_desc:
+    "Formulaire de devis multi-étapes, calculateur ou assistant.",
   addon_mapsadv_name: "Carte interactive personnalisée",
-  addon_mapsadv_desc: "Google Maps avec marqueurs personnalisés et fenêtres d'info.",
+  addon_mapsadv_desc:
+    "Google Maps avec marqueurs personnalisés et fenêtres d'info.",
   addon_promobar_name: "Bandeau annonce / promo",
   addon_promobar_desc: "Barre supérieure pour promotions, annonces ou alertes.",
   addon_sitemap_name: "Sitemap XML + données structurées",
-  addon_sitemap_desc: "Sitemap SEO et balisage schema pour une meilleure indexation.",
+  addon_sitemap_desc:
+    "Sitemap SEO et balisage schema pour une meilleure indexation.",
   addon_maintenance_name: "Maintenance mensuelle (1h)",
-  addon_maintenance_desc: "Une heure de mises à jour, corrections ou modifications de contenu par mois.",
+  addon_maintenance_desc:
+    "Une heure de mises à jour, corrections ou modifications de contenu par mois.",
   addon_backup_name: "Sauvegardes automatiques",
-  addon_backup_desc: "Sauvegardes automatiques hebdomadaires avec restauration en un clic.",
+  addon_backup_desc:
+    "Sauvegardes automatiques hebdomadaires avec restauration en un clic.",
   addon_multisite_name: "Multilingue / multi-région",
-  addon_multisite_desc: "Configuration multilingue complète — pages séparées par langue.",
+  addon_multisite_desc:
+    "Configuration multilingue complète — pages séparées par langue.",
   referral_title_1: "Recommandez quelqu'un.",
   referral_title_2: "Vous bénéficiez tous les deux d'une remise.",
   referral_sub:
@@ -591,7 +606,7 @@ const fr = {
   toast_sent_sub: "Je répondrai dans les 24h. Pas de réponses automatiques.",
   toast_opening: "Ouverture de votre client mail...",
   toast_error_title: "Une erreur s'est produite.",
-  toast_error_sub: "Écrivez-moi directement à adis.klobodanovic@gmail.com",
+  toast_error_sub: "Écrivez-moi directement à info@adiss.dev",
   cookie_modal_title: "Préférences de cookies",
   cookie_modal_sub:
     "Gérez vos préférences de cookies ci-dessous. Les cookies essentiels ne peuvent pas être désactivés car ils assurent le bon fonctionnement du site.",
@@ -628,7 +643,8 @@ const fr = {
   // ─── 404 PAGE ─────────────────────────────────────────────────────────────
   nf_error_label: "Erreur",
   nf_title: "Page introuvable",
-  nf_sub_1: "On dirait que cette page n'existe pas — ou qu'elle a été déplacée.",
+  nf_sub_1:
+    "On dirait que cette page n'existe pas — ou qu'elle a été déplacée.",
   nf_sub_2: "Revenons quelque part d'utile.",
   nf_back_home: "Retour à l'accueil",
   nf_start_project: "Démarrer un projet",
@@ -636,17 +652,24 @@ const fr = {
   nf_redirect_suffix: "secondes...",
   example_label: "Exemple",
   // ─── HOME PAGE SEO ────────────────────────────────────────────────────────
-  home_page_title: "Adis Klobodanović — Développeur Full-Stack | React, Next.js, Node.js",
-  home_page_desc: "Développeur full-stack spécialisé en React, Next.js et Node.js. Je crée des applications web rapides et des produits SaaS livrés dans les délais.",
+  home_page_title:
+    "Adis Klobodanović — Développeur Full-Stack | React, Next.js, Node.js",
+  home_page_desc:
+    "Développeur full-stack spécialisé en React, Next.js et Node.js. Je crée des applications web rapides et des produits SaaS livrés dans les délais.",
   // ─── PAGE SEO TITLES ─────────────────────────────────────────────────────
   blog_seo_title: "Blog — Adis Klobodanović | Développement Web",
-  blog_seo_desc: "Articles sur React, Next.js, Node.js et le développement freelance. Expérience réelle, sans blabla.",
+  blog_seo_desc:
+    "Articles sur React, Next.js, Node.js et le développement freelance. Expérience réelle, sans blabla.",
   uses_seo_title: "Outils — Stack & Setup | Adis Klobodanović",
-  uses_seo_desc: "Les outils, matériel et logiciels que j'utilise chaque jour en tant que développeur full-stack.",
-  hire_seo_title: "Démarrer un Projet — Adis Klobodanović | Développeur Full-Stack",
-  hire_seo_desc: "Prêt à construire quelque chose ? Prix fixes — à partir de 100 € pour une landing page.",
+  uses_seo_desc:
+    "Les outils, matériel et logiciels que j'utilise chaque jour en tant que développeur full-stack.",
+  hire_seo_title:
+    "Démarrer un Projet — Adis Klobodanović | Développeur Full-Stack",
+  hire_seo_desc:
+    "Prêt à construire quelque chose ? Prix fixes — à partir de 100 € pour une landing page.",
   projects_seo_title: "Projets — Adis Klobodanović | Développeur Full-Stack",
-  projects_seo_desc: "Projets web full-stack — plateformes de réservation, sites immobiliers, SaaS et plus.",
+  projects_seo_desc:
+    "Projets web full-stack — plateformes de réservation, sites immobiliers, SaaS et plus.",
   // ─── ADDON/FORM TRANSLATIONS ──────────────────────────────────────────────
   addon_client_pays: "Client paie annuellement",
   hire_addons_optional: "(optionnel)",

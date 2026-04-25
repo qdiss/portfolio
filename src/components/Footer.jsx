@@ -7,8 +7,12 @@ export default function Footer() {
     <footer>
       <p>© {new Date().getFullYear()} Adis Klobodanovic</p>
       <div className="footer-links">
-        <a href="mailto:adis.klobodanovic@gmail.com">{t.footer_email}</a>
-        <a href="https://github.com/qdiss" target="_blank" rel="noopener noreferrer">
+        <a href="mailto:info@adiss.dev">{t.footer_email}</a>
+        <a
+          href="https://github.com/qdiss"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           {t.footer_github}
         </a>
         <a

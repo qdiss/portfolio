@@ -101,8 +101,7 @@ const bs = {
   proc1_title: "Discovery poziv",
   proc1_desc: "15–30 minuta. Besplatno. Bez pitcha.",
   proc2_title: "Prijedlog",
-  proc2_desc:
-    "Scope, rok, cijena, u pisanoj formi, prije nego što išta počne.",
+  proc2_desc: "Scope, rok, cijena, u pisanoj formi, prije nego što išta počne.",
   proc3_title: "Gradnja",
   proc3_desc: "Redovni apdejtovi, live pregledi, runde povratnih informacija.",
   proc4_title: "Lansiranje",
@@ -330,7 +329,7 @@ const bs = {
   toast_sent_sub: "Odgovaram za 24h. Bez automatskih odgovora.",
   toast_opening: "Otvaram email klijent...",
   toast_error_title: "Nešto je pošlo naopako.",
-  toast_error_sub: "Piši mi direktno: adis.klobodanovic@gmail.com",
+  toast_error_sub: "Piši mi direktno: info@adiss.dev",
   // Cookie modal
   cookie_modal_title: "Postavke kolačića",
   cookie_modal_sub:
@@ -539,17 +538,21 @@ const bs = {
   addon_countdown_name: "Odbrojavanje (countdown timer)",
   addon_countdown_desc: "Timer za lansiranje ili vremenski ograničene ponude.",
   addon_cookiebanner_name: "Cookie banner (GDPR)",
-  addon_cookiebanner_desc: "GDPR banner za saglasnost s kolačićima i postavkama.",
+  addon_cookiebanner_desc:
+    "GDPR banner za saglasnost s kolačićima i postavkama.",
   addon_speedopt_name: "Optimizacija performansi",
-  addon_speedopt_desc: "Kompresija slika, lazy loading i poboljšanje Core Web Vitals.",
+  addon_speedopt_desc:
+    "Kompresija slika, lazy loading i poboljšanje Core Web Vitals.",
   addon_darkmode_name: "Tamni / svijetli mod",
   addon_darkmode_desc: "Preklopnik koji pamti preferencu posjetitelja.",
   addon_video_name: "Promo video / video u pozadini",
-  addon_video_desc: "Ugradeni ili pozadinski video (YouTube, Vimeo ili upload).",
+  addon_video_desc:
+    "Ugradeni ili pozadinski video (YouTube, Vimeo ili upload).",
   addon_slider_name: "Slider slika / preporuka",
   addon_slider_desc: "Glatki klizač za fotografije ili testimonijale.",
   addon_newsletter_name: "Prijava na newsletter",
-  addon_newsletter_desc: "Forma za email spojena na Mailchimp, ConvertKit i sl.",
+  addon_newsletter_desc:
+    "Forma za email spojena na Mailchimp, ConvertKit i sl.",
   addon_pdf_name: "PDF brošura za download",
   addon_pdf_desc: "PDF meni, katalog ili brošura dostupna za preuzimanje.",
   addon_pricingtable_name: "Tabela cijena",
@@ -559,7 +562,8 @@ const bs = {
   addon_careers_name: "Stranica za zapošljavanje",
   addon_careers_desc: "Stranica s otvorenim pozicijama i formom za prijavu.",
   addon_formsadv_name: "Višekoračni / napredni formular",
-  addon_formsadv_desc: "Višekoračni formular za ponudu, kalkulator ili čarobnjak.",
+  addon_formsadv_desc:
+    "Višekoračni formular za ponudu, kalkulator ili čarobnjak.",
   addon_mapsadv_name: "Interaktivna mapa s pinovima",
   addon_mapsadv_desc: "Google mapa s brendiranim pinovima i info-prozorima.",
   addon_promobar_name: "Najava / promo traka",
@@ -567,11 +571,13 @@ const bs = {
   addon_sitemap_name: "XML sitemap + strukturirani podaci",
   addon_sitemap_desc: "SEO sitemap i schema markup za bolju indeksiranost.",
   addon_maintenance_name: "Mjesečno održavanje (1h)",
-  addon_maintenance_desc: "Jedan sat ažuriranja, ispravki ili promjene sadržaja.",
+  addon_maintenance_desc:
+    "Jedan sat ažuriranja, ispravki ili promjene sadržaja.",
   addon_backup_name: "Automatski backup",
   addon_backup_desc: "Sedmični automatski backup s jednim klikom za vraćanje.",
   addon_multisite_name: "Višejezična / više-regionalna verzija",
-  addon_multisite_desc: "Kompletno višejezično podešavanje — posebne stranice po jeziku.",
+  addon_multisite_desc:
+    "Kompletno višejezično podešavanje — posebne stranice po jeziku.",
   referral_title_1: "Preporuči nekoga.",
   referral_title_2: "Oboje dobijete popust.",
   referral_sub:
@@ -619,17 +625,23 @@ const bs = {
   nf_redirect_suffix: "sekundi...",
   example_label: "Primjer",
   // ─── HOME PAGE SEO ────────────────────────────────────────────────────────
-  home_page_title: "Adis Klobodanović — Full-Stack Developer | React, Next.js, Node.js",
-  home_page_desc: "Full-stack developer specijaliziran za React, Next.js i Node.js. Gradim brze web aplikacije i SaaS proizvode koji se zaista isporučuju — dostupan za nove projekte.",
+  home_page_title:
+    "Adis Klobodanović — Full-Stack Developer | React, Next.js, Node.js",
+  home_page_desc:
+    "Full-stack developer specijaliziran za React, Next.js i Node.js. Gradim brze web aplikacije i SaaS proizvode koji se zaista isporučuju — dostupan za nove projekte.",
   // ─── PAGE SEO TITLES ─────────────────────────────────────────────────────
   blog_seo_title: "Blog — Adis Klobodanović | Web Development",
-  blog_seo_desc: "Članci o React-u, Next.js-u, Node.js-u i freelance razvoju. Stvarno iskustvo, bez fluffa.",
+  blog_seo_desc:
+    "Članci o React-u, Next.js-u, Node.js-u i freelance razvoju. Stvarno iskustvo, bez fluffa.",
   uses_seo_title: "Oprema — Alati i Stack | Adis Klobodanović",
-  uses_seo_desc: "Alati, hardver i softver koje svakodnevno koristim kao full-stack developer.",
+  uses_seo_desc:
+    "Alati, hardver i softver koje svakodnevno koristim kao full-stack developer.",
   hire_seo_title: "Počni projekat — Adis Klobodanović | Full-Stack Developer",
-  hire_seo_desc: "Spreman da gradiš nešto? Fiksne cijene — od 200 KM za landing stranicu. Brza isporuka, potpuno vlasništvo.",
+  hire_seo_desc:
+    "Spreman da gradiš nešto? Fiksne cijene — od 200 KM za landing stranicu. Brza isporuka, potpuno vlasništvo.",
   projects_seo_title: "Projekti — Adis Klobodanović | Full-Stack Developer",
-  projects_seo_desc: "Full-stack web projekti — booking platforme, sajtovi za nekretnine, SaaS aplikacije i više.",
+  projects_seo_desc:
+    "Full-stack web projekti — booking platforme, sajtovi za nekretnine, SaaS aplikacije i više.",
   // ─── ADDON/FORM TRANSLATIONS ──────────────────────────────────────────────
   addon_client_pays: "Klijent plaća godišnje",
   hire_addons_label: "Dodaci",

@@ -496,25 +496,32 @@ const sv = {
   addon_proemail_desc: "info@dittföretag.se etc.",
   // ─── NYA TILLÄGG ──────────────────────────────────────────────────────────
   addon_chatwidget_name: "WhatsApp / livechatknapp",
-  addon_chatwidget_desc: "Flytande chattknapp länkad till WhatsApp eller Messenger.",
+  addon_chatwidget_desc:
+    "Flytande chattknapp länkad till WhatsApp eller Messenger.",
   addon_faqsection_name: "FAQ-sektion",
   addon_faqsection_desc: "Accordion-FAQ-sektion med dina vanligaste frågor.",
   addon_countdown_name: "Nedräkningstimer",
-  addon_countdown_desc: "Lanseringsnedräkning eller tidsbegränsat erbjudande på valfri sida.",
+  addon_countdown_desc:
+    "Lanseringsnedräkning eller tidsbegränsat erbjudande på valfri sida.",
   addon_cookiebanner_name: "Cookie-banner (GDPR)",
-  addon_cookiebanner_desc: "GDPR-kompatibel cookiesamtycksbanner med inställningar.",
+  addon_cookiebanner_desc:
+    "GDPR-kompatibel cookiesamtycksbanner med inställningar.",
   addon_speedopt_name: "Prestandaoptimering",
-  addon_speedopt_desc: "Bildkomprimering, lazy loading och förbättringar av Core Web Vitals.",
+  addon_speedopt_desc:
+    "Bildkomprimering, lazy loading och förbättringar av Core Web Vitals.",
   addon_darkmode_name: "Mörkt / ljust läge",
   addon_darkmode_desc: "Växlare som kommer ihåg besökarens inställning.",
   addon_video_name: "Promovideo / bakgrundsvideo",
-  addon_video_desc: "Inbäddad eller bakgrundsvideo (YouTube, Vimeo eller uppladdning).",
+  addon_video_desc:
+    "Inbäddad eller bakgrundsvideo (YouTube, Vimeo eller uppladdning).",
   addon_slider_name: "Bild- / recensionsslider",
   addon_slider_desc: "Smidig karusell för foton eller vittnesmål.",
   addon_newsletter_name: "Nyhetsbrevsprenumeration",
-  addon_newsletter_desc: "E-postformulär kopplat till Mailchimp, ConvertKit eller liknande.",
+  addon_newsletter_desc:
+    "E-postformulär kopplat till Mailchimp, ConvertKit eller liknande.",
   addon_pdf_name: "PDF-broschyr för nedladdning",
-  addon_pdf_desc: "Nedladdningsbar PDF-meny, katalog eller broschyr på din sida.",
+  addon_pdf_desc:
+    "Nedladdningsbar PDF-meny, katalog eller broschyr på din sida.",
   addon_pricingtable_name: "Pristabellsektion",
   addon_pricingtable_desc: "Tydliga priskort med funktionsjämförelse.",
   addon_blog_name: "Blogg / nyhetssektion",
@@ -524,17 +531,21 @@ const sv = {
   addon_formsadv_name: "Flerstegigt / avancerat formulär",
   addon_formsadv_desc: "Flerstegigt offertformulär, kalkylator eller guide.",
   addon_mapsadv_name: "Anpassad interaktiv karta",
-  addon_mapsadv_desc: "Google Maps med varumärkesnålar och informationspopupar.",
+  addon_mapsadv_desc:
+    "Google Maps med varumärkesnålar och informationspopupar.",
   addon_promobar_name: "Annonsering / promofält",
   addon_promobar_desc: "Övre fält för kampanjer, meddelanden eller varningar.",
   addon_sitemap_name: "XML-sitemap + strukturerad data",
   addon_sitemap_desc: "SEO-sitemap och schemamarkering för bättre indexering.",
   addon_maintenance_name: "Månatligt underhåll (1h)",
-  addon_maintenance_desc: "En timme uppdateringar, korrigeringar eller innehållsändringar per månad.",
+  addon_maintenance_desc:
+    "En timme uppdateringar, korrigeringar eller innehållsändringar per månad.",
   addon_backup_name: "Automatiska säkerhetskopior",
-  addon_backup_desc: "Veckovisa automatiska säkerhetskopior med ett-klicks-återställning.",
+  addon_backup_desc:
+    "Veckovisa automatiska säkerhetskopior med ett-klicks-återställning.",
   addon_multisite_name: "Flerspråkig / multi-region",
-  addon_multisite_desc: "Komplett flerspråkig inställning — separata sidor per språk.",
+  addon_multisite_desc:
+    "Komplett flerspråkig inställning — separata sidor per språk.",
   referral_title_1: "Rekommendera någon.",
   referral_title_2: "Ni får båda rabatt.",
   referral_sub:
@@ -575,7 +586,7 @@ const sv = {
   toast_sent_sub: "Jag svarar inom 24h. Inga automatiska svar.",
   toast_opening: "Öppnar din e-postklient...",
   toast_error_title: "Något gick fel.",
-  toast_error_sub: "Maila mig direkt på adis.klobodanovic@gmail.com",
+  toast_error_sub: "Maila mig direkt på info@adiss.dev",
   cookie_modal_title: "Cookie-inställningar",
   cookie_modal_sub:
     "Hantera dina cookie-inställningar nedan. Nödvändiga cookies kan inte inaktiveras eftersom de säkerställer att webbplatsen fungerar korrekt.",
@@ -620,17 +631,24 @@ const sv = {
   nf_redirect_suffix: "sekunder...",
   example_label: "Exempel",
   // ─── HOME PAGE SEO ────────────────────────────────────────────────────────
-  home_page_title: "Adis Klobodanović — Full-Stack Utvecklare | React, Next.js, Node.js",
-  home_page_desc: "Full-stack-utvecklare specialiserad på React, Next.js och Node.js. Jag bygger snabba webbappar och SaaS-produkter som levereras i tid.",
+  home_page_title:
+    "Adis Klobodanović — Full-Stack Utvecklare | React, Next.js, Node.js",
+  home_page_desc:
+    "Full-stack-utvecklare specialiserad på React, Next.js och Node.js. Jag bygger snabba webbappar och SaaS-produkter som levereras i tid.",
   // ─── PAGE SEO TITLES ─────────────────────────────────────────────────────
   blog_seo_title: "Blogg — Adis Klobodanović | Webbutveckling",
-  blog_seo_desc: "Artiklar om React, Next.js, Node.js och frilansutveckling. Verklig erfarenhet, inget fluff.",
+  blog_seo_desc:
+    "Artiklar om React, Next.js, Node.js och frilansutveckling. Verklig erfarenhet, inget fluff.",
   uses_seo_title: "Verktyg — Stack & Setup | Adis Klobodanović",
-  uses_seo_desc: "Verktyg, hårdvara och programvara jag använder dagligen som full-stack-utvecklare.",
-  hire_seo_title: "Starta ett Projekt — Adis Klobodanović | Full-Stack Utvecklare",
-  hire_seo_desc: "Redo att bygga något? Fasta priser — från 100 € för en landningssida.",
+  uses_seo_desc:
+    "Verktyg, hårdvara och programvara jag använder dagligen som full-stack-utvecklare.",
+  hire_seo_title:
+    "Starta ett Projekt — Adis Klobodanović | Full-Stack Utvecklare",
+  hire_seo_desc:
+    "Redo att bygga något? Fasta priser — från 100 € för en landningssida.",
   projects_seo_title: "Projekt — Adis Klobodanović | Full-Stack Utvecklare",
-  projects_seo_desc: "Full-stack-webbprojekt — bokningsplattformar, fastighetssidor, SaaS-appar och mer.",
+  projects_seo_desc:
+    "Full-stack-webbprojekt — bokningsplattformar, fastighetssidor, SaaS-appar och mer.",
   // ─── ADDON/FORM TRANSLATIONS ──────────────────────────────────────────────
   addon_client_pays: "Kunden betalar årligen",
   hire_addons_optional: "(valfritt)",

@@ -495,45 +495,58 @@ const nl = {
   addon_proemail_desc: "info@uwbedrijf.nl etc.",
   // ─── NIEUWE ADD-ONS ───────────────────────────────────────────────────────
   addon_chatwidget_name: "WhatsApp / live chat knop",
-  addon_chatwidget_desc: "Zwevende chatknop gekoppeld aan WhatsApp of Messenger.",
+  addon_chatwidget_desc:
+    "Zwevende chatknop gekoppeld aan WhatsApp of Messenger.",
   addon_faqsection_name: "FAQ-sectie",
   addon_faqsection_desc: "Accordion FAQ-sectie met uw meest gestelde vragen.",
   addon_countdown_name: "Afteltimer",
-  addon_countdown_desc: "Lanceer-countdown of timer voor tijdelijk aanbod op elke pagina.",
+  addon_countdown_desc:
+    "Lanceer-countdown of timer voor tijdelijk aanbod op elke pagina.",
   addon_cookiebanner_name: "Cookiebanner (AVG)",
-  addon_cookiebanner_desc: "AVG-conforme cookietoestemmingsbanner met voorkeuren.",
+  addon_cookiebanner_desc:
+    "AVG-conforme cookietoestemmingsbanner met voorkeuren.",
   addon_speedopt_name: "Prestatie-optimalisatie",
-  addon_speedopt_desc: "Afbeeldingscompressie, lazy loading en Core Web Vitals verbeteringen.",
+  addon_speedopt_desc:
+    "Afbeeldingscompressie, lazy loading en Core Web Vitals verbeteringen.",
   addon_darkmode_name: "Donkere / lichte modus",
   addon_darkmode_desc: "Schakelaar die de voorkeur van de bezoeker onthoudt.",
   addon_video_name: "Promovideo / achtergrondvideo",
-  addon_video_desc: "Ingesloten of achtergrondvideo (YouTube, Vimeo of upload).",
+  addon_video_desc:
+    "Ingesloten of achtergrondvideo (YouTube, Vimeo of upload).",
   addon_slider_name: "Afbeeldings- / testimonialslider",
   addon_slider_desc: "Vloeiende carrousel voor foto's of getuigenissen.",
   addon_newsletter_name: "Nieuwsbriefinschrijving",
-  addon_newsletter_desc: "E-mailformulier verbonden met Mailchimp, ConvertKit of vergelijkbaar.",
+  addon_newsletter_desc:
+    "E-mailformulier verbonden met Mailchimp, ConvertKit of vergelijkbaar.",
   addon_pdf_name: "PDF-brochure downloaden",
   addon_pdf_desc: "Downloadbaar PDF-menu, catalogus of brochure op uw site.",
   addon_pricingtable_name: "Prijzentabel",
-  addon_pricingtable_desc: "Overzichtelijke prijskaarten met functievergelijking.",
+  addon_pricingtable_desc:
+    "Overzichtelijke prijskaarten met functievergelijking.",
   addon_blog_name: "Blog / nieuwssectie",
-  addon_blog_desc: "Volledige blogopzet met CMS om zelf berichten te publiceren.",
+  addon_blog_desc:
+    "Volledige blogopzet met CMS om zelf berichten te publiceren.",
   addon_careers_name: "Carrière / vacaturepagina",
-  addon_careers_desc: "Pagina met openstaande vacatures en sollicitatieformulier.",
+  addon_careers_desc:
+    "Pagina met openstaande vacatures en sollicitatieformulier.",
   addon_formsadv_name: "Meerstaps / geavanceerd formulier",
   addon_formsadv_desc: "Meerstaps offerteformulier, calculator of wizard.",
   addon_mapsadv_name: "Aangepaste interactieve kaart",
   addon_mapsadv_desc: "Google Maps met merkpins en info-popups.",
   addon_promobar_name: "Aankondiging / promobalk",
-  addon_promobar_desc: "Bovenste balk voor aanbiedingen, aankondigingen of meldingen.",
+  addon_promobar_desc:
+    "Bovenste balk voor aanbiedingen, aankondigingen of meldingen.",
   addon_sitemap_name: "XML-sitemap + gestructureerde data",
   addon_sitemap_desc: "SEO-sitemap en schema-opmaak voor betere indexering.",
   addon_maintenance_name: "Maandelijks onderhoud (1u)",
-  addon_maintenance_desc: "Één uur updates, reparaties of inhoudswijzigingen per maand.",
+  addon_maintenance_desc:
+    "Één uur updates, reparaties of inhoudswijzigingen per maand.",
   addon_backup_name: "Automatische back-ups",
-  addon_backup_desc: "Wekelijkse automatische back-ups met herstel met één klik.",
+  addon_backup_desc:
+    "Wekelijkse automatische back-ups met herstel met één klik.",
   addon_multisite_name: "Meertalig / multi-regio",
-  addon_multisite_desc: "Volledige meertalige opzet — aparte pagina's per taal.",
+  addon_multisite_desc:
+    "Volledige meertalige opzet — aparte pagina's per taal.",
   referral_title_1: "Verwijs iemand door.",
   referral_title_2: "Jullie krijgen allebei korting.",
   referral_sub:
@@ -574,7 +587,7 @@ const nl = {
   toast_sent_sub: "Ik reageer binnen 24u. Geen automatische antwoorden.",
   toast_opening: "E-mailprogramma openen...",
   toast_error_title: "Er is iets misgegaan.",
-  toast_error_sub: "Mail me direct op adis.klobodanovic@gmail.com",
+  toast_error_sub: "Mail me direct op info@adiss.dev",
   cookie_modal_title: "Cookie-voorkeuren",
   cookie_modal_sub:
     "Beheer hieronder uw cookie-voorkeuren. Essentiële cookies kunnen niet worden uitgeschakeld omdat ze het functioneren van de site waarborgen.",
@@ -620,17 +633,23 @@ const nl = {
   nf_redirect_suffix: "seconden...",
   example_label: "Voorbeeld",
   // ─── HOME PAGE SEO ────────────────────────────────────────────────────────
-  home_page_title: "Adis Klobodanović — Full-Stack Developer | React, Next.js, Node.js",
-  home_page_desc: "Full-stack developer gespecialiseerd in React, Next.js en Node.js. Ik bouw snelle webapps en SaaS-producten die op tijd worden opgeleverd.",
+  home_page_title:
+    "Adis Klobodanović — Full-Stack Developer | React, Next.js, Node.js",
+  home_page_desc:
+    "Full-stack developer gespecialiseerd in React, Next.js en Node.js. Ik bouw snelle webapps en SaaS-producten die op tijd worden opgeleverd.",
   // ─── PAGE SEO TITLES ─────────────────────────────────────────────────────
   blog_seo_title: "Blog — Adis Klobodanović | Webontwikkeling",
-  blog_seo_desc: "Artikelen over React, Next.js, Node.js en freelance ontwikkeling. Echte ervaring, geen fluff.",
+  blog_seo_desc:
+    "Artikelen over React, Next.js, Node.js en freelance ontwikkeling. Echte ervaring, geen fluff.",
   uses_seo_title: "Tools — Stack & Setup | Adis Klobodanović",
-  uses_seo_desc: "De tools, hardware en software die ik dagelijks gebruik als full-stack developer.",
+  uses_seo_desc:
+    "De tools, hardware en software die ik dagelijks gebruik als full-stack developer.",
   hire_seo_title: "Project Starten — Adis Klobodanović | Full-Stack Developer",
-  hire_seo_desc: "Klaar om iets te bouwen? Vaste prijzen — vanaf 100 € voor een landingspagina.",
+  hire_seo_desc:
+    "Klaar om iets te bouwen? Vaste prijzen — vanaf 100 € voor een landingspagina.",
   projects_seo_title: "Projecten — Adis Klobodanović | Full-Stack Developer",
-  projects_seo_desc: "Full-stack webprojecten — boekingsplatforms, vastgoedsites, SaaS-apps en meer.",
+  projects_seo_desc:
+    "Full-stack webprojecten — boekingsplatforms, vastgoedsites, SaaS-apps en meer.",
   // ─── ADDON/FORM TRANSLATIONS ──────────────────────────────────────────────
   addon_client_pays: "Klant betaalt jaarlijks",
   hire_addons_optional: "(optioneel)",
