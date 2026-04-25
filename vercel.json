@@ -34,10 +34,7 @@
       ]
     }
   ],
-  "rewrites": [
-    { "source": "/sitemap.xml", "destination": "/api/sitemap.xml" },
-    { "source": "/((?!api/.*).*)", "destination": "/index.html" }
-  ],
+  "rewrites": [{ "source": "/((?!api/.*).*)", "destination": "/index.html" }],
   "routes": [
     { "handle": "filesystem" },
     { "src": "/(.*)", "dest": "/index.html" }

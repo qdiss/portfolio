@@ -4,7 +4,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "node node_modules/vite/bin/vite.js build",
+    "build": "node scripts/generate-sitemap.js && node node_modules/vite/bin/vite.js build",
     "preview": "vite preview",
     "vercel-build": "npm install && npm run build"
   },
