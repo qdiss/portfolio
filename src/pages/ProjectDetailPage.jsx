@@ -4,7 +4,7 @@ import { useEffect } from "react";
 import { useLang } from "../context/LangContext";
 import { useSEO } from "../hooks/useSEO";
 
-const SS = (slug) => `/projects/${slug}.png`;
+const SS = (slug) => `/projects/${slug}.webp`;
 
 const PROJECT_DATA = {
   medibook: {

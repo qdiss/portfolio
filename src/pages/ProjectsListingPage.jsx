@@ -5,7 +5,7 @@ import { useLang } from "../context/LangContext";
 import { useSEO } from "../hooks/useSEO";
 
 // Lokalni screenshot path
-const SS = (slug) => `/projects/${slug}.png`;
+const SS = (slug) => `/projects/${slug}.webp`;
 
 // Keep this in sync with ProjectDetailPage.jsx PROJECT_DATA
 const PROJECTS = [
@@ -69,9 +69,12 @@ export default function ProjectsListingPage() {
   const { t } = useLang();
 
   useSEO({
-    title: t.projects_seo_title || "Projects — Adis Klobodanović | Full-Stack Developer",
+    title:
+      t.projects_seo_title ||
+      "Projects — Adis Klobodanović | Full-Stack Developer",
     description:
-      t.projects_seo_desc || "Full-stack web projects — booking platforms, real estate sites, SaaS apps, and more.",
+      t.projects_seo_desc ||
+      "Full-stack web projects — booking platforms, real estate sites, SaaS apps, and more.",
     canonical: "https://adiss.dev/contents/projects",
   });
 

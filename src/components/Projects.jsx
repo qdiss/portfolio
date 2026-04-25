@@ -1,7 +1,7 @@
 import { useLang } from "../context/LangContext";
 import { useNavigate } from "react-router-dom";
 
-const SS = (slug) => `/projects/${slug}.png`;
+const SS = (slug) => `/projects/${slug}.webp`;
 
 const PROJECTS = [
   {
