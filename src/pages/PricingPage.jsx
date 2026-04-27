@@ -1126,7 +1126,13 @@ export default function PricingPage() {
               <div
                 key={pkg.id}
                 className={`pkg-card${pkg.highlight ? " featured" : ""} reveal reveal-delay-${i + 1}`}
-                onClick={() => setSelectedPkg(pkg)}
+                onClick={() => {
+                  setSelectedPkg(pkg);
+                  window.gtag?.("event", "package_view", {
+                    event_category: "engagement",
+                    event_label: pkg.id,
+                  });
+                }}
                 role="button"
                 tabIndex={0}
                 onKeyDown={(e) => e.key === "Enter" && setSelectedPkg(pkg)}

@@ -124,15 +124,25 @@ export default function PricingPreview() {
           <div
             key={pkg.id}
             className={`pv-card${pkg.highlight ? " featured" : ""} reveal reveal-delay-${i + 1}`}
-            onClick={() => navigate(`/hire?paket=${pkg.id}`)}
+            onClick={() => {
+              window.gtag?.("event", "package_click", {
+                event_category: "engagement",
+                event_label: pkg.id,
+              });
+              navigate(`/hire?paket=${pkg.id}`);
+            }}
             role="button"
             tabIndex={0}
             onKeyDown={(e) =>
               e.key === "Enter" && navigate(`/hire?paket=${pkg.id}`)
             }
           >
-            {pkg.badge && <div className="pv-badge">{t[pkg.badge] || pkg.badge}</div>}
-            <div className="pv-icon"><pkg.icon size={24} /></div>
+            {pkg.badge && (
+              <div className="pv-badge">{t[pkg.badge] || pkg.badge}</div>
+            )}
+            <div className="pv-icon">
+              <pkg.icon size={24} />
+            </div>
             <div className="pv-name">{t[pkg.nameKey] || pkg.nameKey}</div>
             <p className="pv-desc">{t[pkg.descKey] || pkg.descKey}</p>
             <div className="pv-footer">

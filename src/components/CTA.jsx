@@ -890,6 +890,12 @@ export default function CTA() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="cta-linkedin-btn"
+                onClick={() =>
+                  window.gtag?.("event", "linkedin_click", {
+                    event_category: "outbound",
+                    event_label: "cta_section",
+                  })
+                }
               >
                 <LinkedInIcon size={16} />
                 {t.form_linkedin || "Connect on LinkedIn"}
