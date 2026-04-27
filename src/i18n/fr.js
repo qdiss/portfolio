@@ -67,6 +67,75 @@ const fr = {
     "Recherche de destinations, planification d'itinéraires, données API en direct.",
   p4_title: "Clone Duolingo",
   p4_desc: "Flux de cours complet, système XP, séries, suivi des progrès.",
+  p5_title: "KORIJEN Leather",
+  p6_title: "Clone Instagram",
+
+  p1_problem:
+    "Les patients devaient appeler pour prendre rendez-vous — les systèmes existants étaient peu pratiques et mal adaptés au mobile.",
+  p1_solution:
+    "Création d'une plateforme de réservation full-stack avec disponibilité en temps réel, gestion des rendez-vous et confirmations par email.",
+  p1_how:
+    "App Router pour le rendu côté serveur, Prisma ORM pour l'accès à la base de données et un système de calendrier pour la gestion des disponibilités.",
+
+  p2_problem:
+    "Une agence immobilière croate avait besoin d'un site moderne pour présenter des propriétés de luxe et générer des leads.",
+  p2_solution:
+    "Site marketing performant et optimisé SEO avec listings de propriétés, galeries d'images et formulaires de contact.",
+  p2_how:
+    "Génération statique pour des chargements rapides, images optimisées via next/image et une structure de contenu compatible CMS.",
+
+  p5_problem:
+    "Un atelier de maroquinerie de Sarajevo avait besoin d'une landing page premium à la hauteur de la qualité de ses bracelets de montre faits main — la plupart des templates semblaient trop génériques.",
+  p5_solution:
+    "Site personnalisé d'une page conçu et développé de zéro : hero, collection produits, matériaux, timeline du processus, avis et contact.",
+  p5_how:
+    "Aucun framework — HTML/CSS/JS pur. Animations scroll via IntersectionObserver, illustrations SVG animées, nuanciers interactifs avec aperçu produit en temps réel et ticker parallax fixe.",
+
+  p3_problem:
+    "Les voyageurs n'avaient aucun moyen simple de découvrir et planifier des voyages en un seul endroit.",
+  p3_solution:
+    "Application React de découverte de voyages avec données de vols et d'hôtels en direct via des APIs externes.",
+  p3_how:
+    "Backend Node.js pour proxifier les appels API et sécuriser les clés ; frontend React pour la gestion d'état et le rendu dynamique des résultats.",
+
+  p4_problem:
+    "Objectif : comprendre en profondeur les mécaniques de gamification et comment des plateformes comme Duolingo fidélisent leurs utilisateurs.",
+  p4_solution:
+    "Application d'apprentissage des langues entièrement fonctionnelle avec séries, cœurs, système XP et progression des leçons.",
+  p4_how:
+    "Clerk pour l'authentification, Drizzle pour le schéma de base de données, Stripe pour les niveaux d'abonnement.",
+
+  p6_problem:
+    "Objectif : comprendre par rétro-ingénierie comment le fil d'actualité, les stories et les mécaniques d'engagement fonctionnent au niveau des composants.",
+  p6_solution:
+    "Clone frontend Instagram fidèle au pixel avec bulles de stories, posts, likes, commentaires et navigation de profil.",
+  p6_how:
+    "Architecture orientée composants avec des composants Feed, Stories, Post et Profil séparés. État partagé pour les likes, abonnements et contexte utilisateur actif.",
+
+  p1_r1: "Disponibilité des créneaux en temps réel",
+  p1_r2: "Flux de confirmation par email",
+  p1_r3: "Design mobile-first",
+  p1_r4: "Chargement en moins de 2s",
+  p2_r1: "Top 3 Google pour les mots-clés locaux",
+  p2_r2: "40% de demandes en plus vs ancien site",
+  p2_r3: "Score Lighthouse 95+",
+  p2_r4: "Déployé en 3 semaines",
+  p5_r1: "Esthétique de marque premium",
+  p5_r2: "Nuanciers de couleurs interactifs",
+  p5_r3: "Animations scroll-reveal",
+  p5_r4: "Responsive mobile",
+  p3_r1: "Données de vol en direct",
+  p3_r2: "Recherche & filtres d'hôtels",
+  p3_r3: "Proxy API sécurisé",
+  p3_r4: "Interface React rapide",
+  p4_r1: "Auth complète avec Clerk",
+  p4_r2: "Abonnement Stripe",
+  p4_r3: "Système XP + streak",
+  p4_r4: "Progression des leçons",
+  p6_r1: "UI bulles de stories",
+  p6_r2: "Flux likes & commentaires",
+  p6_r3: "Navigation de profil",
+  p6_r4: "Mise en page responsive",
   proj_view: "Voir le projet  ",
   proj_live: "Voir en direct  ",
   test_label: "Ce que disent les gens",

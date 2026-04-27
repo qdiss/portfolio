@@ -68,6 +68,74 @@ const bs = {
   p4_title: "Duolingo Klon",
   p4_desc:
     "Potpuni tok lekcija, XP sistem, streaks, praćenje napretka. Gamifikacijska logika je zaista zahtjevna.",
+  p5_title: "KORIJEN Leather",
+  p6_title: "Instagram Klon",
+
+  p1_problem:
+    "Pacijenti su morali zvati da zakažu termin — postojeći sistemi su bili nezgrapni i loši na mobilnom.",
+  p1_solution:
+    "Izgradio sam full-stack platformu za zakazivanje s dostupnošću u realnom vremenu, upravljanjem terminima i email potvrdom.",
+  p1_how:
+    "Koristio App Router za server-side rendering, Prisma ORM za pristup bazi i integrisao kalendarski sistem za upravljanje dostupnošću.",
+
+  p2_problem:
+    "Hrvatska agencija za nekretnine trebala je moderan sajt za prikaz luksuznih nekretnina i generisanje upita.",
+  p2_solution:
+    "Isporučio sam performansan, SEO-optimizovan marketinški sajt s listingom nekretnina, galerijama slika i kontakt formama.",
+  p2_how:
+    "Izgrađen sa statičnim generisanjem za brzo učitavanje, optimiziranim slikama putem next/image i CMS-friendly strukturom sadržaja.",
+
+  p5_problem:
+    "Sarajevski atelje za kožu trebao je premium landing page koji odgovara kvalitetu njihovih ručno rađenih remena za satove — većina templata je bila pregeneriška.",
+  p5_solution:
+    "Dizajnirao i izgradio potpuno prilagođenu jednostranu stranicu: hero, kolekcija proizvoda, materijali, vremenski okvir procesa, recenzije i kontakt — sve od nule.",
+  p5_how:
+    "Bez frameworka — čisti HTML/CSS/JS. Scroll animacije putem IntersectionObserver, animirane SVG ilustracije remena, interaktivni swatchevi boja koji u realnom vremenu ažuriraju pregled proizvoda i fiksni parallax ticker.",
+
+  p3_problem:
+    "Putnici nisu imali jednostavan način da otkriju i planiraju putovanja na jednom mjestu.",
+  p3_solution:
+    "React aplikacija za otkrivanje putovanja s live podacima o letovima i hotelima putem eksternih API-ja.",
+  p3_how:
+    "Node.js backend proksira API pozive radi sigurnosti ključeva; React frontend upravlja stanjem i dinamički renderuje rezultate.",
+
+  p4_problem:
+    "Htio sam duboko razumjeti mehaniku gamifikacije i kako platforme poput Duolinga zadržavaju korisnike.",
+  p4_solution:
+    "Potpuno funkcionalna aplikacija za učenje jezika sa streaksima, srcima, XP sistemom i napretkom kroz lekcije.",
+  p4_how:
+    "Clerk upravlja autentifikacijom, Drizzle upravlja shemom baze podataka, a Stripe je integrisan za nivoe pretplate.",
+
+  p6_problem:
+    "Htio sam obrnuto inženjerisat kako feed, stories i mehanika angažmana funkcionišu na komponentnom nivou.",
+  p6_solution:
+    "Pixel-vjerni Instagram frontend klon s bubble stories, feed postovima, lajkovima, komentarima i navigacijom profila.",
+  p6_how:
+    "Arhitektura bazirana na komponentama s odvojenim Feed, Stories, Post i Profile komponentama. Dijeljeno stanje za lajkove, pracenje i kontekst aktivnog korisnika.",
+  p1_r1: "Dostupnost termina u realnom vremenu",
+  p1_r2: "Email potvrda rezervacije",
+  p1_r3: "Mobile-first dizajn",
+  p1_r4: "Učitavanje ispod 2s",
+  p2_r1: "Top 3 na Googleu za lokalne ključne riječi",
+  p2_r2: "40% više upita vs stari sajt",
+  p2_r3: "95+ Lighthouse score",
+  p2_r4: "Isporučeno za 3 sedmice",
+  p5_r1: "Premium brend estetika",
+  p5_r2: "Interaktivni swatchevi boja",
+  p5_r3: "Scroll-reveal animacije",
+  p5_r4: "Mobile responsive",
+  p3_r1: "Live podaci o letovima",
+  p3_r2: "Pretraga i filtriranje hotela",
+  p3_r3: "Siguran API proxy",
+  p3_r4: "Brz React UI",
+  p4_r1: "Kompletna auth s Clerkom",
+  p4_r2: "Stripe pretplata",
+  p4_r3: "XP + streak sistem",
+  p4_r4: "Napredak kroz lekcije",
+  p6_r1: "Story bubble UI",
+  p6_r2: "Like & comment tok",
+  p6_r3: "Navigacija profila",
+  p6_r4: "Responsivan layout",
   proj_view: "Pogledaj projekat  ",
   proj_live: "Pogledaj live  ",
   test_label: "Šta kažu ljudi",

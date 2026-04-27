@@ -69,6 +69,75 @@ const en = {
   p4_title: "Duolingo Clone",
   p4_desc:
     "Full lesson flow, XP system, streaks, progress tracking. More interesting than it sounds — gamification logic is genuinely tricky to get right.",
+  p5_title: "KORIJEN Leather",
+  p6_title: "Instagram Clone",
+
+  p1_problem:
+    "Patients struggled to book medical appointments online — existing systems were clunky and didn't work well on mobile.",
+  p1_solution:
+    "Built a full-stack booking platform with real-time availability, appointment management, and email confirmations.",
+  p1_how:
+    "Used App Router for server-side rendering, Prisma ORM for database access, and integrated a calendar system for availability management.",
+
+  p2_problem:
+    "A Croatian real estate agency needed a modern website to showcase luxury properties and generate leads.",
+  p2_solution:
+    "Delivered a performant, SEO-optimised marketing site with property listings, image galleries, and contact forms.",
+  p2_how:
+    "Built with static generation for fast page loads, optimised images via next/image, and a CMS-friendly content structure.",
+
+  p5_problem:
+    "A Sarajevo leather atelier needed a premium landing page that matched the quality of their handmade watch straps — most templates felt too generic.",
+  p5_solution:
+    "Designed and built a fully custom single-page site: hero, product collection, materials, process timeline, reviews, and contact — all from scratch.",
+  p5_how:
+    "No frameworks — pure HTML/CSS/JS. Scroll animations via IntersectionObserver, animated SVG strap illustrations, interactive colour swatches that update the product preview in real time, and a fixed parallax ticker.",
+
+  p3_problem:
+    "Travellers had no simple way to discover and plan trips in one place.",
+  p3_solution:
+    "A React-based travel discovery app with live flight and hotel data powered by external APIs.",
+  p3_how:
+    "Node.js backend proxies API calls to keep keys secure; React frontend handles state management and renders results dynamically.",
+
+  p4_problem:
+    "Wanted to deeply understand gamification mechanics and how platforms like Duolingo keep users engaged.",
+  p4_solution:
+    "Fully functional language learning app with streaks, hearts, XP system, and lesson progression.",
+  p4_how:
+    "Clerk handles authentication, Drizzle manages database schema, and Stripe is integrated for subscription tiers.",
+
+  p6_problem:
+    "Wanted to reverse-engineer how a social feed, stories, and engagement mechanics work at the component level.",
+  p6_solution:
+    "A pixel-faithful Instagram frontend clone with story bubbles, feed posts, likes, comments, and profile navigation.",
+  p6_how:
+    "Component-driven architecture with separate Feed, Stories, Post, and Profile components. Shared state for likes, follows, and active user context.",
+
+  p1_r1: "Real-time slot availability",
+  p1_r2: "Email confirmation flow",
+  p1_r3: "Mobile-first design",
+  p1_r4: "Sub-2s page loads",
+  p2_r1: "Top 3 Google ranking for local keywords",
+  p2_r2: "40% more enquiries vs old site",
+  p2_r3: "95+ Lighthouse score",
+  p2_r4: "Deployed in 3 weeks",
+  p5_r1: "Premium brand aesthetic",
+  p5_r2: "Interactive colour swatches",
+  p5_r3: "Scroll-reveal animations",
+  p5_r4: "Mobile responsive",
+  p3_r1: "Live flight data",
+  p3_r2: "Hotel search & filter",
+  p3_r3: "Secure API proxy",
+  p3_r4: "Fast React UI",
+  p4_r1: "Full auth with Clerk",
+  p4_r2: "Stripe subscription",
+  p4_r3: "XP + streak system",
+  p4_r4: "Lesson progression",
+  p6_r1: "Story bubble UI",
+  p6_r2: "Like & comment flow",
+  p6_r3: "Profile navigation",
+  p6_r4: "Responsive layout",
   proj_view: "View project  ",
   proj_live: "View live  ",
   test_label: "What people say",

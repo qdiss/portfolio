@@ -1,3 +1,4 @@
+//src/pages/ProjectDetailPage.jsx
 import { useParams, Link } from "react-router-dom";
 import Nav from "../components/Nav";
 import { useEffect } from "react";
@@ -14,10 +15,9 @@ const PROJECT_DATA = {
     liveUrl: "https://medibook-pi.vercel.app/",
     year: "2024",
     gradient: "linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%)",
-    problem:
-      "Patients struggled to book medical appointments online — existing systems were clunky and didn't work well on mobile.",
-    solution:
-      "Built a full-stack booking platform with real-time availability, appointment management, and email confirmations.",
+    problemKey: "p1_problem",
+    solutionKey: "p1_solution",
+    howKey: "p1_how",
     stack: [
       "Next.js 14",
       "TypeScript",
@@ -26,13 +26,7 @@ const PROJECT_DATA = {
       "Tailwind CSS",
       "Vercel",
     ],
-    how: "Used App Router for server-side rendering, Prisma ORM for database access, and integrated a calendar system for availability management.",
-    results: [
-      "Real-time slot availability",
-      "Email confirmation flow",
-      "Mobile-first design",
-      "Sub-2s page loads",
-    ],
+    results: ["p1_r1", "p1_r2", "p1_r3", "p1_r4"],
   },
   "dalmatinske-vizure": {
     title: "Dalmatinske Vizure",
@@ -41,18 +35,11 @@ const PROJECT_DATA = {
     liveUrl: "https://dalmatinske-vizure.com",
     year: "2024",
     gradient: "linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%)",
-    problem:
-      "A Croatian real estate agency needed a modern website to showcase luxury properties and generate leads.",
-    solution:
-      "Delivered a performant, SEO-optimised marketing site with property listings, image galleries, and contact forms.",
+    problemKey: "p2_problem",
+    solutionKey: "p2_solution",
+    howKey: "p2_how",
     stack: ["Next.js", "TailwindCSS", "Vercel", "Google Analytics"],
-    how: "Built with static generation for fast page loads, optimised images via next/image, and a CMS-friendly content structure.",
-    results: [
-      "Top 3 Google ranking for local keywords",
-      "40% more enquiries vs old site",
-      "95+ Lighthouse score",
-      "Deployed in 3 weeks",
-    ],
+    results: ["p2_r1", "p2_r2", "p2_r3", "p2_r4"],
   },
   korijen: {
     title: "KORIJEN Leather",
@@ -61,18 +48,11 @@ const PROJECT_DATA = {
     liveUrl: "https://korijen-landing-page.vercel.app/",
     year: "2025",
     gradient: "linear-gradient(135deg, #1a0f08 0%, #3a1e0e 50%, #8b5c35 100%)",
-    problem:
-      "A Sarajevo leather atelier needed a premium landing page that matched the quality of their handmade watch straps — most templates felt too generic.",
-    solution:
-      "Designed and built a fully custom single-page site: hero, product collection, materials, process timeline, reviews, and contact — all from scratch.",
+    problemKey: "p5_problem",
+    solutionKey: "p5_solution",
+    howKey: "p5_how",
     stack: ["HTML5", "CSS3", "Vanilla JS", "Google Fonts", "SVG", "Vercel"],
-    how: "No frameworks — pure HTML/CSS/JS. Scroll animations via IntersectionObserver, animated SVG strap illustrations, interactive colour swatches that update the product preview in real time, and a fixed parallax ticker.",
-    results: [
-      "Premium brand aesthetic",
-      "Interactive colour swatches",
-      "Scroll-reveal animations",
-      "Mobile responsive",
-    ],
+    results: ["p5_r1", "p5_r2", "p5_r3", "p5_r4"],
   },
   "travel-app": {
     title: "Travel App",
@@ -81,18 +61,11 @@ const PROJECT_DATA = {
     liveUrl: "https://travel-app-liard-nine.vercel.app/",
     year: "2023",
     gradient: "linear-gradient(135deg, #134e5e 0%, #71b280 100%)",
-    problem:
-      "Travellers had no simple way to discover and plan trips in one place.",
-    solution:
-      "A React-based travel discovery app with live flight and hotel data powered by external APIs.",
+    problemKey: "p3_problem",
+    solutionKey: "p3_solution",
+    howKey: "p3_how",
     stack: ["React", "Node.js", "Express", "REST APIs", "CSS Modules"],
-    how: "Node.js backend proxies API calls to keep keys secure; React frontend handles state management and renders results dynamically.",
-    results: [
-      "Live flight data",
-      "Hotel search & filter",
-      "Secure API proxy",
-      "Fast React UI",
-    ],
+    results: ["p3_r1", "p3_r2", "p3_r3", "p3_r4"],
   },
   "duolingo-clone": {
     title: "Duolingo Clone",
@@ -101,10 +74,9 @@ const PROJECT_DATA = {
     liveUrl: "https://duolingo-clone-orcin.vercel.app/",
     year: "2024",
     gradient: "linear-gradient(135deg, #11998e 0%, #38ef7d 100%)",
-    problem:
-      "Wanted to deeply understand gamification mechanics and how platforms like Duolingo keep users engaged.",
-    solution:
-      "Fully functional language learning app with streaks, hearts, XP system, and lesson progression.",
+    problemKey: "p4_problem",
+    solutionKey: "p4_solution",
+    howKey: "p4_how",
     stack: [
       "Next.js 14",
       "TypeScript",
@@ -113,13 +85,7 @@ const PROJECT_DATA = {
       "Stripe",
       "Tailwind CSS",
     ],
-    how: "Clerk handles authentication, Drizzle manages database schema, and Stripe is integrated for subscription tiers.",
-    results: [
-      "Full auth with Clerk",
-      "Stripe subscription",
-      "XP + streak system",
-      "Lesson progression",
-    ],
+    results: ["p4_r1", "p4_r2", "p4_r3", "p4_r4"],
   },
   "instagram-clone": {
     title: "Instagram Clone",
@@ -128,18 +94,11 @@ const PROJECT_DATA = {
     liveUrl: "https://instagram-frontend-lime.vercel.app/",
     year: "2024",
     gradient: "linear-gradient(135deg, #833ab4 0%, #c13584 50%, #fcb045 100%)",
-    problem:
-      "Wanted to reverse-engineer how a social feed, stories, and engagement mechanics work at the component level.",
-    solution:
-      "A pixel-faithful Instagram frontend clone with story bubbles, feed posts, likes, comments, and profile navigation.",
+    problemKey: "p6_problem",
+    solutionKey: "p6_solution",
+    howKey: "p6_how",
     stack: ["React", "CSS Modules", "Vercel"],
-    how: "Component-driven architecture with separate Feed, Stories, Post, and Profile components. Shared state for likes, follows, and active user context.",
-    results: [
-      "Story bubble UI",
-      "Like & comment flow",
-      "Profile navigation",
-      "Responsive layout",
-    ],
+    results: ["p6_r1", "p6_r2", "p6_r3", "p6_r4"],
   },
 };
 
@@ -567,7 +526,7 @@ export default function ProjectDetailPage() {
               {project.results.map((r) => (
                 <div key={r} className="pd-stat">
                   <div className="pd-stat-dot" />
-                  <span className="pd-stat-text">{r}</span>
+                  <span className="pd-stat-text">{t[r]}</span>
                 </div>
               ))}
             </div>
@@ -581,21 +540,21 @@ export default function ProjectDetailPage() {
                     {t.proj_problem_label || "The Problem"}
                   </div>
                   <h2>{t.proj_problem_h2 || "What needed solving"}</h2>
-                  <p>{project.problem}</p>
+                  <p>{t[project.problemKey]}</p>
                 </div>
                 <div className="pd-block reveal">
                   <div className="pd-block-label">
                     {t.proj_solution_label || "The Solution"}
                   </div>
                   <h2>{t.proj_solution_h2 || "What I built"}</h2>
-                  <p>{project.solution}</p>
+                  <p>{t[project.solutionKey]}</p>
                 </div>
                 <div className="pd-block reveal">
                   <div className="pd-block-label">
                     {t.proj_how_label || "How It Was Built"}
                   </div>
                   <h2>{t.proj_how_h2 || "Technical approach"}</h2>
-                  <p>{project.how}</p>
+                  <p>{t[project.howKey]}</p>
                 </div>
               </div>
 

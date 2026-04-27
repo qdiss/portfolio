@@ -456,7 +456,7 @@ export default function PostPage() {
             dateModified: post.updated_at || post.date,
             url: `https://adiss.dev/blog/${post.slug}`,
             image: post.og_image || "https://adiss.dev/og-image.png",
-            inLanguage: "en-US",
+            inLanguage: "bs",
             keywords: (post.tags || []).join(", "),
             wordCount: post.content
               ? post.content.split(/\s+/).length
@@ -509,9 +509,10 @@ export default function PostPage() {
               },
             ],
           },
+          onlyBs: true, // ← samo ovo dodaje ispod članka, ne i na homepage
         }
       : {
-          title: "Blog — Adis Klobodanovic",
+          title: "Blog - Adis Klobodanovic",
           description:
             "Articles on React, Next.js, Node.js and web development.",
           canonical: "https://adiss.dev/blog",

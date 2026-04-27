@@ -26,12 +26,12 @@
       href="/favicon-terminal.svg"
       media="(prefers-color-scheme: dark)"
     />
-    <!-- Dodaj ovo u <head>, pored postojećih favicon linkova -->
     <link rel="icon" type="image/png" sizes="48x48" href="/favicon.png" />
     <link rel="shortcut icon" href="/favicon.ico" />
     <!-- Fallback for browsers that ignore media on rel=icon (reads first match) -->
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/favicon.svg" />
+    <!-- FIX 1: apple-touch-icon mora biti PNG, ne SVG -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon.png" />
     <meta name="mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta
@@ -72,14 +72,15 @@
       property="og:description"
       content="Full-stack developer. React, Next.js, Node.js. Building fast web apps and SaaS products that actually ship — available for projects worldwide."
     />
-    <meta property="og:image" content="https://adiss.dev/og-image.svg" />
+    <!-- FIX 2: og:image mora biti PNG, Facebook/LinkedIn ne podrzavaju SVG -->
+    <meta property="og:image" content="https://adiss.dev/og-image.png" />
     <meta
       property="og:image:secure_url"
-      content="https://adiss.dev/og-image.svg"
+      content="https://adiss.dev/og-image.png"
     />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta property="og:image:type" content="image/svg+xml" />
+    <meta property="og:image:type" content="image/png" />
     <meta
       property="og:image:alt"
       content="Adis Klobodanovic — Full-Stack Developer portfolio preview"
@@ -99,7 +100,8 @@
       name="twitter:description"
       content="Full-stack developer. React, Next.js, Node.js. Building fast web apps and SaaS products that actually ship."
     />
-    <meta name="twitter:image" content="https://adiss.dev/og-image.svg" />
+    <!-- FIX 2 (nastavak): Twitter image takodje treba PNG -->
+    <meta name="twitter:image" content="https://adiss.dev/og-image.png" />
     <meta
       name="twitter:image:alt"
       content="Adis Klobodanovic — Full-Stack Developer"
@@ -119,9 +121,32 @@
     <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
     <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
     <link rel="dns-prefetch" href="https://flagcdn.com" />
+    <link rel="dns-prefetch" href="https://hrnxwmmcntastjpaavfo.supabase.co" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="preconnect" href="https://flagcdn.com" crossorigin />
+    <!-- FIX 3: Supabase preconnect - ubrzava sve API pozive -->
+    <link
+      rel="preconnect"
+      href="https://hrnxwmmcntastjpaavfo.supabase.co"
+      crossorigin
+    />
+
+    <!-- FONT PRELOAD — sprječava FOUT za primarne fontove -->
+    <link
+      rel="preload"
+      as="font"
+      type="font/woff2"
+      crossorigin
+      href="https://fonts.gstatic.com/s/syne/v22/8vIS7w4qzmVxsWxjBZRjr0FKM_04uQ.woff2"
+    />
+    <link
+      rel="preload"
+      as="font"
+      type="font/woff2"
+      crossorigin
+      href="https://fonts.gstatic.com/s/dmsans/v14/rP2tp2ywxg089UriI5-g4vlH9VoD8Cmcqbu6-K6z9mXgjU0.woff2"
+    />
 
     <!-- FONTS non-blocking -->
     <link
@@ -141,7 +166,6 @@
     </noscript>
 
     <!-- SCHEMA: Person -->
-
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -149,10 +173,10 @@
         "@id": "https://adiss.dev/#person",
         "name": "Adis Klobodanovic",
         "url": "https://adiss.dev",
-        "email": "info@adiss.dev"
+        "email": "info@adiss.dev",
         "jobTitle": "Full-Stack Developer",
         "description": "Full-stack developer specialising in React, Next.js and Node.js. Building fast web apps, SaaS products and landing pages for clients worldwide.",
-        "image": "https://adiss.dev/og-image.svg",
+        "image": "https://adiss.dev/og-image.png",
         "worksFor": {
           "@type": "Organization",
           "name": "adiss.dev",

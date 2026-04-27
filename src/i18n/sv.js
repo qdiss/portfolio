@@ -64,6 +64,75 @@ const sv = {
   p3_desc: "Destinationssökning, reseplaning, live API-data.",
   p4_title: "Duolingo-klon",
   p4_desc: "Fullt lektionsflöde, XP-system, streakar, framstegsspårning.",
+  p5_title: "KORIJEN Leather",
+  p6_title: "Instagram-klon",
+
+  p1_problem:
+    "Patienter var tvungna att ringa för att boka tider — befintliga system var klumpiga och fungerade dåligt på mobil.",
+  p1_solution:
+    "Byggde en fullstack-bokningsplattform med tillgänglighet i realtid, tidsbokningshantering och e-postbekräftelser.",
+  p1_how:
+    "App Router för server-side rendering, Prisma ORM för databasåtkomst och ett kalendersystem för tillgänglighetshantering.",
+
+  p2_problem:
+    "En kroatisk fastighetsbyra behövde en modern webbplats för att visa upp lyxfastigheter och generera leads.",
+  p2_solution:
+    "Levererade en snabb, SEO-optimerad marknadsföringswebbplats med fastighetslisting, bildgallerier och kontaktformulär.",
+  p2_how:
+    "Byggd med statisk generering för snabba laddningstider, optimerade bilder via next/image och en CMS-vänlig innehållsstruktur.",
+
+  p5_problem:
+    "En läderstudio i Sarajevo behövde en premium landningssida som matchade kvaliteten på deras handgjorda klockarmband — de flesta mallar kändes för generiska.",
+  p5_solution:
+    "Designade och byggde en helt skräddarsydd ensidas webbplats: hero, produktkollektion, material, processtidslinje, recensioner och kontakt — allt från grunden.",
+  p5_how:
+    "Inga ramverk — ren HTML/CSS/JS. Scroll-animationer via IntersectionObserver, animerade SVG-armbandsillustrationer, interaktiva färgprover som uppdaterar produktförhandsvisningen i realtid och en fast parallax-ticker.",
+
+  p3_problem:
+    "Resenärer hade inget enkelt sätt att upptäcka och planera resor på ett ställe.",
+  p3_solution:
+    "React-baserad reseupptäckningsapp med live flyg- och hotelldata via externa API:er.",
+  p3_how:
+    "Node.js-backend proxierar API-anrop för att hålla nycklar säkra; React-frontend hanterar tillstånd och renderar resultat dynamiskt.",
+
+  p4_problem:
+    "Ville förstå gamification-mekaniker på djupet och hur plattformar som Duolingo håller användare engagerade.",
+  p4_solution:
+    "Fullt fungerande språkinlärningsapp med streaks, hjärtan, XP-system och lektionsframsteg.",
+  p4_how:
+    "Clerk hanterar autentisering, Drizzle hanterar databasschema och Stripe är integrerat för prenumerationsnivåer.",
+
+  p6_problem:
+    "Ville förstå hur ett socialt flöde, stories och engagemangmekaniker fungerar på komponentnivå.",
+  p6_solution:
+    "Pixeltrogen Instagram-frontend-klon med story-bubblor, flödesinlägg, likes, kommentarer och profilnavigering.",
+  p6_how:
+    "Komponentdriven arkitektur med separata Feed-, Stories-, Post- och Profilkomponenter. Delat tillstånd för likes, följningar och aktiv användarkontext.",
+
+  p1_r1: "Tillgänglighet i realtid",
+  p1_r2: "E-postbekräftelseflöde",
+  p1_r3: "Mobile-first design",
+  p1_r4: "Sidladdning under 2s",
+  p2_r1: "Topp 3 på Google för lokala sökord",
+  p2_r2: "40% fler förfrågningar vs gamla sidan",
+  p2_r3: "95+ Lighthouse-poäng",
+  p2_r4: "Driftsatt på 3 veckor",
+  p5_r1: "Premium varumärkesestetik",
+  p5_r2: "Interaktiva färgprover",
+  p5_r3: "Scroll-reveal-animationer",
+  p5_r4: "Mobilresponsiv",
+  p3_r1: "Live flygdata",
+  p3_r2: "Hotellsökning & filter",
+  p3_r3: "Säker API-proxy",
+  p3_r4: "Snabbt React-UI",
+  p4_r1: "Fullständig auth med Clerk",
+  p4_r2: "Stripe-prenumeration",
+  p4_r3: "XP + streak-system",
+  p4_r4: "Lektionsframsteg",
+  p6_r1: "Story-bubble-UI",
+  p6_r2: "Gilla- & kommentarsflöde",
+  p6_r3: "Profilnavigering",
+  p6_r4: "Responsiv layout",
   proj_view: "Se projektet  ",
   proj_live: "Se live  ",
   test_label: "Vad folk säger",

@@ -64,6 +64,75 @@ const nl = {
   p3_desc: "Bestemmingszoekopdracht, reisplanning, live API-data.",
   p4_title: "Duolingo Kloon",
   p4_desc: "Volledig lesflow, XP-systeem, streaks, voortgangsregistratie.",
+  p5_title: "KORIJEN Leather",
+  p6_title: "Instagram-kloon",
+
+  p1_problem:
+    "Patiënten moesten bellen om afspraken te maken — bestaande systemen waren onhandig en werkten slecht op mobiel.",
+  p1_solution:
+    "Full-stack boekingsplatform gebouwd met realtime beschikbaarheid, afspraakbeheer en e-mailbevestigingen.",
+  p1_how:
+    "App Router voor server-side rendering, Prisma ORM voor databasetoegang en een kalendersysteem voor beschikbaarheidsbeheer.",
+
+  p2_problem:
+    "Een Kroatisch vastgoedkantoor had een moderne website nodig om luxe woningen te presenteren en leads te genereren.",
+  p2_solution:
+    "Performante, SEO-geoptimaliseerde marketingsite met vastgoedlistings, fotogalerijen en contactformulieren.",
+  p2_how:
+    "Statische generatie voor snelle laadtijden, geoptimaliseerde afbeeldingen via next/image en een CMS-vriendelijke inhoudsstructuur.",
+
+  p5_problem:
+    "Een lederatelier in Sarajevo had een premium landingspagina nodig die paste bij de kwaliteit van hun handgemaakte horlogebanden — de meeste templates voelden te generiek aan.",
+  p5_solution:
+    "Volledig op maat gemaakte eenpaginasite ontworpen en gebouwd: hero, productcollectie, materialen, procestijdlijn, recensies en contact — alles van nul af aan.",
+  p5_how:
+    "Geen frameworks — puur HTML/CSS/JS. Scroll-animaties via IntersectionObserver, geanimeerde SVG-bandilustraties, interactieve kleurstalen die de productpreview in realtime bijwerken en een vaste parallax-ticker.",
+
+  p3_problem:
+    "Reizigers hadden geen eenvoudige manier om reizen op één plek te ontdekken en te plannen.",
+  p3_solution:
+    "React-gebaseerde reisontdekking-app met live vlucht- en hotelgegevens via externe API's.",
+  p3_how:
+    "Node.js-backend proxiet API-aanroepen om sleutels te beveiligen; React-frontend beheert de staat en rendert resultaten dynamisch.",
+
+  p4_problem:
+    "Doel: gamification-mechanismen diepgaand begrijpen en leren hoe platforms zoals Duolingo gebruikers betrokken houden.",
+  p4_solution:
+    "Volledig functionele taalapp met streaks, harten, XP-systeem en lesvoortgang.",
+  p4_how:
+    "Clerk voor authenticatie, Drizzle voor databaseschema, Stripe voor abonnementsniveaus.",
+
+  p6_problem:
+    "Doel: begrijpen hoe een sociale feed, stories en betrokkenheidsmechanismen werken op componentniveau.",
+  p6_solution:
+    "Pixel-getrouwe Instagram-frontend-kloon met story-bubbles, feedberichten, likes, reacties en profielnavigatie.",
+  p6_how:
+    "Componentgestuurde architectuur met afzonderlijke Feed-, Stories-, Post- en Profielcomponenten. Gedeelde staat voor likes, volgacties en actieve gebruikerscontext.",
+
+  p1_r1: "Realtime beschikbaarheid van tijdslots",
+  p1_r2: "E-mailbevestigingsstroom",
+  p1_r3: "Mobile-first design",
+  p1_r4: "Paginalaadtijd onder 2s",
+  p2_r1: "Top 3 in Google voor lokale zoekwoorden",
+  p2_r2: "40% meer aanvragen vs oude site",
+  p2_r3: "95+ Lighthouse-score",
+  p2_r4: "Gedeployed in 3 weken",
+  p5_r1: "Premium merkesthetiek",
+  p5_r2: "Interactieve kleurstalen",
+  p5_r3: "Scroll-reveal animaties",
+  p5_r4: "Mobielvriendelijk",
+  p3_r1: "Live vluchtgegevens",
+  p3_r2: "Hotelzoeken & filters",
+  p3_r3: "Veilige API-proxy",
+  p3_r4: "Snel React-UI",
+  p4_r1: "Volledige auth met Clerk",
+  p4_r2: "Stripe-abonnement",
+  p4_r3: "XP + streaksysteem",
+  p4_r4: "Lesvoortgang",
+  p6_r1: "Story-bubble-UI",
+  p6_r2: "Like- & commentaarstroom",
+  p6_r3: "Profielnavigatie",
+  p6_r4: "Responsieve lay-out",
   proj_view: "Project bekijken  ",
   proj_live: "Live bekijken  ",
   test_label: "Wat mensen zeggen",

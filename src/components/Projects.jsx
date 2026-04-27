@@ -1,3 +1,4 @@
+//src/components/Projects.jsx
 import { useLang } from "../context/LangContext";
 import { useNavigate } from "react-router-dom";
 

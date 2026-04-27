@@ -66,6 +66,74 @@ const de = {
   p4_title: "Duolingo-Klon",
   p4_desc:
     "Vollständiger Lernfluss, XP-System, Streaks, Fortschrittsverfolgung.",
+  p5_title: "KORIJEN Leather",
+  p6_title: "Instagram-Klon",
+
+  p1_problem:
+    "Patienten mussten telefonisch Termine buchen — bestehende Systeme waren umständlich und auf Mobilgeräten kaum nutzbar.",
+  p1_solution:
+    "Entwicklung einer Full-Stack-Buchungsplattform mit Echtzeit-Verfügbarkeit, Terminverwaltung und E-Mail-Bestätigungen.",
+  p1_how:
+    "App Router für serverseitiges Rendering, Prisma ORM für Datenbankzugriff und ein Kalendersystem zur Verfügbarkeitsverwaltung.",
+
+  p2_problem:
+    "Eine kroatische Immobilienagentur benötigte eine moderne Website zur Präsentation von Luxusimmobilien und zur Lead-Generierung.",
+  p2_solution:
+    "Performante, SEO-optimierte Marketing-Website mit Immobilien-Listings, Bildgalerien und Kontaktformularen.",
+  p2_how:
+    "Statische Generierung für schnelle Ladezeiten, optimierte Bilder via next/image und eine CMS-freundliche Inhaltsstruktur.",
+
+  p5_problem:
+    "Ein Sarajevo Lederatelier benötigte eine Premium-Landing-Page, die der Qualität ihrer handgefertigten Uhrenarmbänder entspricht — die meisten Templates wirkten zu generisch.",
+  p5_solution:
+    "Vollständig maßgeschneiderte einseitige Website gestaltet und entwickelt: Hero, Produktkollektion, Materialien, Prozess-Timeline, Bewertungen und Kontakt — alles von Grund auf.",
+  p5_how:
+    "Keine Frameworks — reines HTML/CSS/JS. Scroll-Animationen via IntersectionObserver, animierte SVG-Armbandillustrationen, interaktive Farbmuster mit Echtzeit-Produktvorschau und ein fixer Parallax-Ticker.",
+
+  p3_problem:
+    "Reisende hatten keine einfache Möglichkeit, Reisen an einem Ort zu entdecken und zu planen.",
+  p3_solution:
+    "React-basierte Reise-Discovery-App mit Live-Flug- und Hoteldaten über externe APIs.",
+  p3_how:
+    "Node.js-Backend proxied API-Aufrufe zur Schlüsselsicherheit; React-Frontend verwaltet den Zustand und rendert Ergebnisse dynamisch.",
+
+  p4_problem:
+    "Ziel war es, Gamification-Mechaniken tiefgehend zu verstehen und zu lernen, wie Plattformen wie Duolingo Nutzer binden.",
+  p4_solution:
+    "Voll funktionsfähige Sprachlern-App mit Streaks, Herzen, XP-System und Lektionsfortschritt.",
+  p4_how:
+    "Clerk für Authentifizierung, Drizzle für Datenbankschema, Stripe für Abonnementstufen.",
+
+  p6_problem:
+    "Ziel war es, Feed, Stories und Engagement-Mechaniken auf Komponentenebene nachzuverstehen.",
+  p6_solution:
+    "Pixelgetreuer Instagram-Frontend-Klon mit Story-Bubbles, Feed-Posts, Likes, Kommentaren und Profilnavigation.",
+  p6_how:
+    "Komponentenbasierte Architektur mit getrennten Feed-, Stories-, Post- und Profilkomponenten. Geteilter Zustand für Likes, Follows und aktiven Nutzerkontext.",
+  p1_r1: "Echtzeit-Terminverfügbarkeit",
+  p1_r2: "E-Mail-Bestätigungsablauf",
+  p1_r3: "Mobile-first Design",
+  p1_r4: "Ladezeiten unter 2s",
+  p2_r1: "Top 3 bei Google für lokale Keywords",
+  p2_r2: "40% mehr Anfragen vs. alte Website",
+  p2_r3: "95+ Lighthouse-Score",
+  p2_r4: "In 3 Wochen deployed",
+  p5_r1: "Premium-Markenästhetik",
+  p5_r2: "Interaktive Farbmuster",
+  p5_r3: "Scroll-Reveal-Animationen",
+  p5_r4: "Mobile-responsiv",
+  p3_r1: "Live-Flugdaten",
+  p3_r2: "Hotelsuche & Filter",
+  p3_r3: "Sicherer API-Proxy",
+  p3_r4: "Schnelles React-UI",
+  p4_r1: "Vollständige Auth mit Clerk",
+  p4_r2: "Stripe-Abonnement",
+  p4_r3: "XP + Streak-System",
+  p4_r4: "Lektionsfortschritt",
+  p6_r1: "Story-Bubble-UI",
+  p6_r2: "Like- & Kommentar-Flow",
+  p6_r3: "Profilnavigation",
+  p6_r4: "Responsives Layout",
   proj_view: "Projekt ansehen  ",
   proj_live: "Live ansehen  ",
   test_label: "Was Leute sagen",

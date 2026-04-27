@@ -17,6 +17,7 @@ import { useEffect } from "react";
  * @param {Object}   [opts.jsonLd]         — raw schema object, injected as-is
  * @param {string}   [opts.jsonLdId]       — id of the <script> tag (for updates)
  * @param {string}   [opts.breadcrumb]     — JSON string for BreadcrumbList
+ * @param {boolean}  [opts.onlyBs]         — true za blog postove (samo bosanski hreflang)
  */
 export function useSEO({
   title,
@@ -31,16 +32,17 @@ export function useSEO({
   jsonLd,
   jsonLdId = "page-jsonld",
   breadcrumb,
+  onlyBs = false,
 }) {
   useEffect(() => {
     const pageLang = document.documentElement.lang || "en";
-    // Keep <html lang> in sync so each page/route is correctly labelled
     if (pageLang) document.documentElement.lang = pageLang;
+
     // ── Title ─────────────────────────────────────────────────────────
     if (title) document.title = title;
 
     // ── Helper: set/create meta ───────────────────────────────────────
-    const setMeta = (selector, content, isProperty = false) => {
+    const setMeta = (selector, content) => {
       if (!content) return;
       let el = document.querySelector(selector);
       if (!el) {
@@ -60,43 +62,40 @@ export function useSEO({
     );
 
     // ── Open Graph ────────────────────────────────────────────────────
-    setMeta('meta[property="og:type"]', ogType, true);
-    setMeta('meta[property="og:title"]', title, true);
-    setMeta('meta[property="og:description"]', description, true);
-    setMeta('meta[property="og:url"]', canonical || window.location.href, true);
+    setMeta('meta[property="og:type"]', ogType);
+    setMeta('meta[property="og:title"]', title);
+    setMeta('meta[property="og:description"]', description);
+    setMeta('meta[property="og:url"]', canonical || window.location.href);
     setMeta(
       'meta[property="og:image"]',
-      ogImage || "https://adiss.dev/og-image.svg",
-      true,
+      ogImage || "https://adiss.dev/og-image.png",
     );
-    setMeta('meta[property="og:image:alt"]', ogImageAlt || title, true);
-    setMeta('meta[property="og:site_name"]', "adiss.dev", true);
-    setMeta('meta[property="og:locale"]', pageLang === "en" ? "en_US" : pageLang, true);
+    setMeta('meta[property="og:image:alt"]', ogImageAlt || title);
+    setMeta('meta[property="og:site_name"]', "adiss.dev");
+    setMeta(
+      'meta[property="og:locale"]',
+      pageLang === "en" ? "en_US" : pageLang,
+    );
 
     // ── Twitter ───────────────────────────────────────────────────────
     setMeta('meta[name="twitter:title"]', title);
     setMeta('meta[name="twitter:description"]', description);
     setMeta(
       'meta[name="twitter:image"]',
-      ogImage || "https://adiss.dev/og-image.svg",
+      ogImage || "https://adiss.dev/og-image.png",
     );
     setMeta('meta[name="twitter:image:alt"]', ogImageAlt || title);
     setMeta('meta[name="twitter:card"]', "summary_large_image");
 
     // ── Article meta (blog posts) ─────────────────────────────────────
     if (articleDate) {
-      setMeta('meta[property="article:published_time"]', articleDate, true);
-      setMeta('meta[property="article:author"]', "Adis Klobodanovic", true);
-      setMeta('meta[property="article:publisher"]', "https://adiss.dev", true);
+      setMeta('meta[property="article:published_time"]', articleDate);
+      setMeta('meta[property="article:author"]', "Adis Klobodanovic");
+      setMeta('meta[property="article:publisher"]', "https://adiss.dev");
       if (articleModified) {
-        setMeta(
-          'meta[property="article:modified_time"]',
-          articleModified,
-          true,
-        );
+        setMeta('meta[property="article:modified_time"]', articleModified);
       }
       if (articleTags?.length) {
-        // Remove old article:tag metas first
         document
           .querySelectorAll('meta[property="article:tag"]')
           .forEach((el) => el.remove());
@@ -120,21 +119,49 @@ export function useSEO({
       link.setAttribute("href", canonical);
     }
 
-    // ── Hreflang alternates ───────────────────────────────────────────────
+    // ── Hreflang ─────────────────────────────────────────────────────
     const path = window.location.pathname;
-    const langs = ["en", "bs", "de", "fr", "nl", "sv"];
-    langs.forEach((l) => {
-      const href = `https://adiss.dev${path}${path.includes("?") ? "&" : "?"}lang=${l}`;
-      const selector = `link[rel="alternate"][hreflang="${l}"]`;
-      let alt = document.querySelector(selector);
-      if (!alt) {
-        alt = document.createElement("link");
-        alt.setAttribute("rel", "alternate");
-        alt.setAttribute("hreflang", l);
-        document.head.appendChild(alt);
-      }
-      alt.setAttribute("href", href);
-    });
+    const allLangs = ["en", "bs", "de", "fr", "nl", "sv"];
+
+    if (onlyBs) {
+      // Blog postovi — samo bosanski, makni ostale ako postoje
+      allLangs.forEach((l) => {
+        document
+          .querySelector(`link[rel="alternate"][hreflang="${l}"]`)
+          ?.remove();
+      });
+      document
+        .querySelector(`link[rel="alternate"][hreflang="x-default"]`)
+        ?.remove();
+
+      // Dodaj bs
+      const bsLink = document.createElement("link");
+      bsLink.setAttribute("rel", "alternate");
+      bsLink.setAttribute("hreflang", "bs");
+      bsLink.setAttribute("href", `https://adiss.dev${path}`);
+      document.head.appendChild(bsLink);
+
+      // x-default uvijek treba postojati
+      const xDefault = document.createElement("link");
+      xDefault.setAttribute("rel", "alternate");
+      xDefault.setAttribute("hreflang", "x-default");
+      xDefault.setAttribute("href", `https://adiss.dev${path}`);
+      document.head.appendChild(xDefault);
+    } else {
+      // Ostale stranice — svih 6 jezika s ?lang= parametrom
+      allLangs.forEach((l) => {
+        const href = `https://adiss.dev${path}${path.includes("?") ? "&" : "?"}lang=${l}`;
+        const selector = `link[rel="alternate"][hreflang="${l}"]`;
+        let alt = document.querySelector(selector);
+        if (!alt) {
+          alt = document.createElement("link");
+          alt.setAttribute("rel", "alternate");
+          alt.setAttribute("hreflang", l);
+          document.head.appendChild(alt);
+        }
+        alt.setAttribute("href", href);
+      });
+    }
 
     // ── JSON-LD structured data ───────────────────────────────────────
     if (jsonLd) {
@@ -163,7 +190,7 @@ export function useSEO({
           : JSON.stringify(breadcrumb);
     }
 
-    // Cleanup on unmount: restore default title
+    // Cleanup on unmount
     return () => {
       const prev = document.getElementById(jsonLdId);
       if (prev && jsonLd) prev.textContent = "{}";
@@ -177,5 +204,6 @@ export function useSEO({
     articleDate,
     articleModified,
     jsonLd,
+    onlyBs,
   ]);
 }
