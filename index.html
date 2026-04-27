@@ -233,44 +233,60 @@
         "@id": "https://adiss.dev/#service",
         "name": "adiss.dev — Web Development Services",
         "url": "https://adiss.dev",
+        "image": "https://adiss.dev/og-image.png",
+        "telephone": "+387644335989",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Zenica",
+          "addressCountry": "BA"
+        },
         "description": "Full-stack web development services — React, Next.js, Node.js. Landing pages, business websites, and SaaS web applications built and shipped on time.",
-        "provider": { "@id": "https://adiss.dev/#person" },
-        "priceRange": "150 KM – 600 KM+",
+        "priceRange": "200 KM – 650 KM+",
         "currenciesAccepted": "BAM, EUR, USD",
         "paymentAccepted": "Bank Transfer, PayPal",
-        "serviceType": [
-          "Web Development",
-          "Full-Stack Development",
-          "SaaS Development",
-          "Landing Page Development",
-          "React Development",
-          "Next.js Development"
-        ],
         "areaServed": { "@type": "AdministrativeArea", "name": "Worldwide" },
         "hasOfferCatalog": {
           "@type": "OfferCatalog",
           "name": "Web Development Packages",
           "itemListElement": [
             {
-              "@type": "Offer",
+              "@type": "Service",
               "name": "Starter Package",
-              "description": "Single-page website with contact form, Google Maps, mobile-responsive. Delivered in 5 days.",
-              "price": "150",
-              "priceCurrency": "BAM"
+              "serviceType": "Web Development",
+              "provider": { "@id": "https://adiss.dev/#person" },
+              "offers": {
+                "@type": "Offer",
+                "name": "Starter Package",
+                "description": "Single-page website with contact form, Google Maps, mobile-responsive. Delivered in 5 days.",
+                "price": "200",
+                "priceCurrency": "BAM"
+              }
             },
             {
-              "@type": "Offer",
+              "@type": "Service",
               "name": "Business Package",
-              "description": "Multi-page website with SEO, analytics, social media kit, email signature. Delivered in 7 days.",
-              "price": "350",
-              "priceCurrency": "BAM"
+              "serviceType": "Full-Stack Development",
+              "provider": { "@id": "https://adiss.dev/#person" },
+              "offers": {
+                "@type": "Offer",
+                "name": "Business Package",
+                "description": "Multi-page website with SEO, analytics, social media kit, email signature. Delivered in 7 days.",
+                "price": "400",
+                "priceCurrency": "BAM"
+              }
             },
             {
-              "@type": "Offer",
+              "@type": "Service",
               "name": "Premium Package",
-              "description": "Full business website with custom design, blog/news section, booking system. Delivered in 14 days.",
-              "price": "600",
-              "priceCurrency": "BAM"
+              "serviceType": "SaaS Development",
+              "provider": { "@id": "https://adiss.dev/#person" },
+              "offers": {
+                "@type": "Offer",
+                "name": "Premium Package",
+                "description": "Full business website with custom design, blog/news section, booking system. Delivered in 14 days.",
+                "price": "650",
+                "priceCurrency": "BAM"
+              }
             }
           ]
         }
@@ -288,7 +304,7 @@
             "name": "How much does a website cost?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Packages start at 150 KM for a Starter single-page site, 350 KM for a Business multi-page site, and 600 KM for a full Premium website. Every project gets a written quote before anything starts."
+              "text": "Packages start at 200 KM for a Starter single-page site, 400 KM for a Business multi-page site, and 650 KM for a full Premium website. Every project gets a written quote before anything starts."
             }
           },
           {
