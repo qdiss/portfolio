@@ -1,42 +1,52 @@
 import { createClient } from "@supabase/supabase-js";
 import { writeFileSync } from "fs";
+import { config } from "dotenv";
+
+config({ path: ".env.local" }); // učitaj env varijable lokalno
 
 const supabase = createClient(
   process.env.VITE_SUPABASE_URL,
   process.env.VITE_SUPABASE_ANON_KEY,
 );
 
+const TODAY = new Date().toISOString().split("T")[0];
+
 const STATIC_URLS = [
   {
     loc: "https://adiss.dev/",
     priority: "1.0",
     changefreq: "monthly",
-    lastmod: "2026-04-27",
+    lastmod: TODAY,
   },
   {
     loc: "https://adiss.dev/hire",
     priority: "0.9",
     changefreq: "monthly",
-    lastmod: "2026-04-27",
+    lastmod: TODAY,
   },
   {
     loc: "https://adiss.dev/pricing",
     priority: "0.9",
     changefreq: "monthly",
-    lastmod: "2026-04-27",
+    lastmod: TODAY,
   },
-  { loc: "https://adiss.dev/blog", priority: "0.8", changefreq: "weekly" },
+  {
+    loc: "https://adiss.dev/blog",
+    priority: "0.8",
+    changefreq: "weekly",
+    lastmod: TODAY,
+  },
   {
     loc: "https://adiss.dev/uses",
     priority: "0.6",
     changefreq: "yearly",
-    lastmod: "2026-04-27",
+    lastmod: TODAY,
   },
   {
     loc: "https://adiss.dev/contents/projects",
     priority: "0.8",
     changefreq: "monthly",
-    lastmod: "2026-04-27",
+    lastmod: TODAY,
   },
   {
     loc: "https://adiss.dev/contents/projects/medibook",
@@ -70,16 +80,22 @@ const STATIC_URLS = [
   },
 ];
 
-const { data: posts } = await supabase
+const { data: posts, error } = await supabase
   .from("posts")
-  .select("slug, date")
-  .eq("published", true);
+  .select("slug, date, updated_at")
+  .eq("published", true)
+  .order("date", { ascending: false });
+
+if (error) {
+  console.error("Supabase error:", error.message);
+  process.exit(1);
+}
 
 const blogUrls = (posts || []).map((p) => ({
   loc: `https://adiss.dev/blog/${p.slug}`,
   priority: "0.7",
   changefreq: "yearly",
-  lastmod: p.date,
+  lastmod: p.updated_at ? p.updated_at.split("T")[0] : p.date || TODAY,
 }));
 
 const allUrls = [...STATIC_URLS, ...blogUrls];
@@ -91,7 +107,7 @@ ${allUrls
     (u) => `  <url>
     <loc>${u.loc}</loc>
     ${u.lastmod ? `<lastmod>${u.lastmod}</lastmod>` : ""}
-    ${u.changefreq ? `<changefreq>${u.changefreq}</changefreq>` : ""}
+    <changefreq>${u.changefreq || "yearly"}</changefreq>
     <priority>${u.priority}</priority>
   </url>`,
   )
@@ -99,4 +115,6 @@ ${allUrls
 </urlset>`;
 
 writeFileSync("public/sitemap.xml", xml);
-console.log(`Sitemap generated with ${allUrls.length} URLs`);
+console.log(
+  `Sitemap generated: ${allUrls.length} URLs (${blogUrls.length} blog posts)`,
+);
