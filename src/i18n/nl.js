@@ -64,9 +64,12 @@ const nl = {
   p3_desc: "Bestemmingszoekopdracht, reisplanning, live API-data.",
   p4_title: "Duolingo Kloon",
   p4_desc: "Volledig lesflow, XP-systeem, streaks, voortgangsregistratie.",
-  p5_title: "KORIJEN Leather",
+  p5_title: "Korijen Leather",
+  p5_desc:
+    "Premium landingspagina voor een Sarajevo leather atelier. Interactieve swatches, animaties en product preview.",
   p6_title: "Instagram-kloon",
-
+  p6_desc:
+    "Pixel-faithful frontend-kloon van Instagram met bubble stories, feed, likes en comments.",
   p1_problem:
     "Patiënten moesten bellen om afspraken te maken — bestaande systemen waren onhandig en werkten slecht op mobiel.",
   p1_solution:

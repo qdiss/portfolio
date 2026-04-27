@@ -64,9 +64,12 @@ const sv = {
   p3_desc: "Destinationssökning, reseplaning, live API-data.",
   p4_title: "Duolingo-klon",
   p4_desc: "Fullt lektionsflöde, XP-system, streakar, framstegsspårning.",
-  p5_title: "KORIJEN Leather",
+  p5_title: "Korijen Leather",
+  p5_desc:
+    "Premium landningssida för ett Sarajevo leather atelier. Interaktiva swatches, animationer och produkt preview.",
   p6_title: "Instagram-klon",
-
+  p6_desc:
+    "Pixel-faithful frontend-klon av Instagram med bubble stories, feed, likes och comments.",
   p1_problem:
     "Patienter var tvungna att ringa för att boka tider — befintliga system var klumpiga och fungerade dåligt på mobil.",
   p1_solution:

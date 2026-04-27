@@ -69,9 +69,12 @@ const en = {
   p4_title: "Duolingo Clone",
   p4_desc:
     "Full lesson flow, XP system, streaks, progress tracking. More interesting than it sounds — gamification logic is genuinely tricky to get right.",
-  p5_title: "KORIJEN Leather",
+  p5_title: "Korijen Leather",
+  p5_desc:
+    "Premium landing page for a Sarajevo leather atelier. Interactive swatches, animations, and product preview.",
   p6_title: "Instagram Clone",
-
+  p6_desc:
+    "Pixel-faithful frontend clone of Instagram with bubble stories, feed, likes, and comments.",
   p1_problem:
     "Patients struggled to book medical appointments online — existing systems were clunky and didn't work well on mobile.",
   p1_solution:

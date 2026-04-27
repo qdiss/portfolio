@@ -30,7 +30,7 @@ const PROJECTS = [
   },
   {
     slug: "korijen",
-    title: "KORIJEN Leather",
+    title: "Korijen Leather",
     emoji: "⌚",
     tags: ["HTML/CSS", "JavaScript", "Landing Page"],
     excerptKey: "p5_desc",

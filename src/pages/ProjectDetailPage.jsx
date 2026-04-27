@@ -42,7 +42,7 @@ const PROJECT_DATA = {
     results: ["p2_r1", "p2_r2", "p2_r3", "p2_r4"],
   },
   korijen: {
-    title: "KORIJEN Leather",
+    title: "Korijen Leather",
     emoji: "⌚",
     tags: ["HTML/CSS", "JavaScript", "Landing Page"],
     liveUrl: "https://korijen-landing-page.vercel.app/",

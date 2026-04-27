@@ -66,9 +66,12 @@ const de = {
   p4_title: "Duolingo-Klon",
   p4_desc:
     "Vollständiger Lernfluss, XP-System, Streaks, Fortschrittsverfolgung.",
-  p5_title: "KORIJEN Leather",
+  p5_title: "Korijen Leather",
+  p5_desc:
+    "Premium-Landingpage für ein sarajevisches Lederatelier. Interaktive Swatches, Animationen und Produktvorschau.",
   p6_title: "Instagram-Klon",
-
+  p6_desc:
+    "Pixelgetreuer Frontend-Klon von Instagram mit Bubble-Stories, Feed, Likes und Kommentaren.",
   p1_problem:
     "Patienten mussten telefonisch Termine buchen — bestehende Systeme waren umständlich und auf Mobilgeräten kaum nutzbar.",
   p1_solution:

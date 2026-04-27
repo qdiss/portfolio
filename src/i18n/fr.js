@@ -67,9 +67,12 @@ const fr = {
     "Recherche de destinations, planification d'itinéraires, données API en direct.",
   p4_title: "Clone Duolingo",
   p4_desc: "Flux de cours complet, système XP, séries, suivi des progrès.",
-  p5_title: "KORIJEN Leather",
+  p5_title: "Korijen Leather",
+  p5_desc:
+    "Landing page premium pour un atelier de cuir de Sarajevo. Swatches interactifs, animations et aperçu du produit.",
   p6_title: "Clone Instagram",
-
+  p6_desc:
+    "Clone frontend fidèle au pixel d'Instagram avec bulles de stories, feed, likes et commentaires.",
   p1_problem:
     "Les patients devaient appeler pour prendre rendez-vous — les systèmes existants étaient peu pratiques et mal adaptés au mobile.",
   p1_solution:

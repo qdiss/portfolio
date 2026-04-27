@@ -68,9 +68,12 @@ const bs = {
   p4_title: "Duolingo Klon",
   p4_desc:
     "Potpuni tok lekcija, XP sistem, streaks, praćenje napretka. Gamifikacijska logika je zaista zahtjevna.",
-  p5_title: "KORIJEN Leather",
+  p5_title: "Korijen Leather",
+  p5_desc:
+    "Premium landing stranica za sarajevski atelje za kožu. Interaktivni swatchevi, animacije i pregled proizvoda.",
   p6_title: "Instagram Klon",
-
+  p6_desc:
+    "Pixel-vjerni frontend klon Instagrama s bubble stories, feedom, lajkovima i komentarima.",
   p1_problem:
     "Pacijenti su morali zvati da zakažu termin — postojeći sistemi su bili nezgrapni i loši na mobilnom.",
   p1_solution:
