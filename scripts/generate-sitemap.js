@@ -1,8 +1,5 @@
 import { createClient } from "@supabase/supabase-js";
 import { writeFileSync } from "fs";
-import { config } from "dotenv";
-
-config({ path: ".env.local" }); // učitaj env varijable lokalno
 
 const supabase = createClient(
   process.env.VITE_SUPABASE_URL,
