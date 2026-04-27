@@ -628,6 +628,12 @@ export default function CTA() {
       setSelectedPaket("");
       setSelectedAddons([]);
       setDone(true);
+      // GA4 conversion event
+      window.gtag?.("event", "form_submit", {
+        event_category: "contact",
+        event_label: selectedPaket,
+        value: totalPrice,
+      });
       showToast(
         t.toast_sent_title || "Message sent",
         t.toast_sent_sub || "I'll reply within 24h.",

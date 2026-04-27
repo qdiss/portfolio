@@ -571,6 +571,12 @@ function ContactForm({ t, lang, preselectedPaket }) {
       setSelectedPaket("");
       setSelectedAddons([]);
       setDone(true);
+      // GA4 conversion event
+      window.gtag?.("event", "form_submit", {
+        event_category: "contact",
+        event_label: selectedPaket,
+        value: totalPrice,
+      });
     } catch {
       setError(
         t.hire_form_error || "Greška pri slanju. Pokušaj ponovo za minutu.",
