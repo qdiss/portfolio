@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 
 /**
- * useSEO — sets document title + all meta tags per page.
+ * useSEO - sets document title + all meta tags per page.
  * Supports: basic, Open Graph, Twitter, canonical, JSON-LD, article meta.
  *
  * @param {Object} opts
@@ -10,15 +10,15 @@ import { useEffect } from "react";
  * @param {string}   [opts.canonical]
  * @param {string}   [opts.ogImage]
  * @param {string}   [opts.ogImageAlt]
- * @param {string}   [opts.ogType]         — default "website"
- * @param {string}   [opts.articleDate]    — ISO date, triggers article meta
+ * @param {string}   [opts.ogType]         - default "website"
+ * @param {string}   [opts.articleDate]    - ISO date, triggers article meta
  * @param {string}   [opts.articleModified]
  * @param {string[]} [opts.articleTags]
- * @param {Object}   [opts.jsonLd]         — raw schema object, injected as-is
- * @param {string}   [opts.jsonLdId]       — id of the <script> tag (for updates)
- * @param {string}   [opts.breadcrumb]     — JSON string for BreadcrumbList
+ * @param {Object}   [opts.jsonLd]         - raw schema object, injected as-is
+ * @param {string}   [opts.jsonLdId]       - id of the <script> tag (for updates)
+ * @param {string}   [opts.breadcrumb]     - JSON string for BreadcrumbList
 <<<<<<< HEAD
- * @param {boolean}  [opts.onlyBs]         — true za blog postove (samo bosanski hreflang)
+ * @param {boolean}  [opts.onlyBs]         - true za blog postove (samo bosanski hreflang)
 =======
  * @param {boolean}  [opts.noIndex]
 >>>>>>> 7b49ab8 (improved SEO for GSC crawling)
@@ -144,7 +144,7 @@ export function useSEO({
     const allLangs = ["en", "bs", "de", "fr", "nl", "sv"];
 
     if (onlyBs) {
-      // Blog postovi — samo bosanski, makni ostale ako postoje
+      // Blog postovi - samo bosanski, makni ostale ako postoje
       allLangs.forEach((l) => {
         document
           .querySelector(`link[rel="alternate"][hreflang="${l}"]`)
@@ -168,7 +168,7 @@ export function useSEO({
       xDefault.setAttribute("href", `https://adiss.dev${path}`);
       document.head.appendChild(xDefault);
     } else {
-      // Ostale stranice — svih 6 jezika s ?lang= parametrom
+      // Ostale stranice - svih 6 jezika s ?lang= parametrom
       allLangs.forEach((l) => {
         const href = `https://adiss.dev${path}${path.includes("?") ? "&" : "?"}lang=${l}`;
         const selector = `link[rel="alternate"][hreflang="${l}"]`;
