@@ -17,11 +17,8 @@ import { useEffect } from "react";
  * @param {Object}   [opts.jsonLd]         - raw schema object, injected as-is
  * @param {string}   [opts.jsonLdId]       - id of the <script> tag (for updates)
  * @param {string}   [opts.breadcrumb]     - JSON string for BreadcrumbList
-<<<<<<< HEAD
  * @param {boolean}  [opts.onlyBs]         - true za blog postove (samo bosanski hreflang)
-=======
- * @param {boolean}  [opts.noIndex]
->>>>>>> 7b49ab8 (improved SEO for GSC crawling)
+ * @param {boolean}  [opts.noIndex]        - set true to noindex the page
  */
 export function useSEO({
   title,
@@ -36,11 +33,8 @@ export function useSEO({
   jsonLd,
   jsonLdId = "page-jsonld",
   breadcrumb,
-<<<<<<< HEAD
   onlyBs = false,
-=======
   noIndex = false,
->>>>>>> 7b49ab8 (improved SEO for GSC crawling)
 }) {
   useEffect(() => {
     const pageLang = document.documentElement.lang || "en";
@@ -86,16 +80,6 @@ export function useSEO({
       'meta[property="og:locale"]',
       pageLang === "en" ? "en_US" : pageLang,
     );
-<<<<<<< HEAD
-=======
-    setMeta('meta[property="og:image:alt"]', ogImageAlt || title, true);
-    setMeta('meta[property="og:site_name"]', "adiss.dev", true);
-    setMeta(
-      'meta[property="og:locale"]',
-      pageLang === "en" ? "en_US" : pageLang,
-      true,
-    );
->>>>>>> 7b49ab8 (improved SEO for GSC crawling)
 
     // ── Twitter ───────────────────────────────────────────────────────
     setMeta('meta[name="twitter:title"]', title);
@@ -154,14 +138,12 @@ export function useSEO({
         .querySelector(`link[rel="alternate"][hreflang="x-default"]`)
         ?.remove();
 
-      // Dodaj bs
       const bsLink = document.createElement("link");
       bsLink.setAttribute("rel", "alternate");
       bsLink.setAttribute("hreflang", "bs");
       bsLink.setAttribute("href", `https://adiss.dev${path}`);
       document.head.appendChild(bsLink);
 
-      // x-default uvijek treba postojati
       const xDefault = document.createElement("link");
       xDefault.setAttribute("rel", "alternate");
       xDefault.setAttribute("hreflang", "x-default");
@@ -225,5 +207,6 @@ export function useSEO({
     articleModified,
     jsonLd,
     onlyBs,
+    noIndex,
   ]);
 }
