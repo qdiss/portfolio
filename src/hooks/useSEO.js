@@ -150,9 +150,8 @@ export function useSEO({
       xDefault.setAttribute("href", `https://adiss.dev${path}`);
       document.head.appendChild(xDefault);
     } else {
-      // Ostale stranice - svih 6 jezika s ?lang= parametrom
+      // Ostale stranice - svih 6 jezika, isti URL (lang je client-side)
       allLangs.forEach((l) => {
-        const href = `https://adiss.dev${path}${path.includes("?") ? "&" : "?"}lang=${l}`;
         const selector = `link[rel="alternate"][hreflang="${l}"]`;
         let alt = document.querySelector(selector);
         if (!alt) {
@@ -161,8 +160,20 @@ export function useSEO({
           alt.setAttribute("hreflang", l);
           document.head.appendChild(alt);
         }
-        alt.setAttribute("href", href);
+        alt.setAttribute("href", `https://adiss.dev${path}`);
       });
+
+      // x-default
+      let xDefault = document.querySelector(
+        'link[rel="alternate"][hreflang="x-default"]',
+      );
+      if (!xDefault) {
+        xDefault = document.createElement("link");
+        xDefault.setAttribute("rel", "alternate");
+        xDefault.setAttribute("hreflang", "x-default");
+        document.head.appendChild(xDefault);
+      }
+      xDefault.setAttribute("href", `https://adiss.dev${path}`);
     }
 
     // ── JSON-LD structured data ───────────────────────────────────────
