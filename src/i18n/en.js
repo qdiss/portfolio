@@ -8,7 +8,7 @@ const en = {
   hero_tag: "Available for new projects",
   hero_h1: "Building web apps <em>that actually ship.</em>",
   hero_sub:
-    "Full-stack dev. React, Next.js, Node. I build things people actually use — not just things that look good in Figma.",
+    "Full-stack dev. React, Next.js, Node. I build things people actually use - not just things that look good in Figma.",
   hero_human:
     "Not an agency, not a team. One developer. You'll talk to me directly, from the first message to the last commit.",
   hero_cta1: "See my work",
@@ -25,7 +25,7 @@ const en = {
   about_label: "About me",
   about_title: "I write code. <em>Not decks.</em>",
   about_p1:
-    "Started building things on the web out of curiosity — stayed because I liked seeing something work that didn't exist the day before. Four years of projects later, one of them professional, I've got a decent sense for what breaks and why.",
+    "Started building things on the web out of curiosity - stayed because I liked seeing something work that didn't exist the day before. Four years of projects later, one of them professional, I've got a decent sense for what breaks and why.",
   about_p2:
     "When you hire me, you get <strong>me</strong>. Not a project manager who passes things to a junior. I write the code, I answer the messages, I show up to the calls.",
   about_p3:
@@ -38,14 +38,14 @@ const en = {
     "The moment when the pieces fit. Fast UI, clean API response, no bugs on mobile. And then seeing someone use it without knowing I built it.",
   about_outside_label: "Outside of code",
   about_outside:
-    "Curious about design, performance, and how things are built. Currently exploring edge computing and AI tooling — more because it's interesting than because it's trendy.",
+    "Curious about design, performance, and how things are built. Currently exploring edge computing and AI tooling - more because it's interesting than because it's trendy.",
   serv_label: "What I offer",
   serv_title: "Services & pricing",
   serv_sub:
     "You know what you're paying before anything starts. No hourly estimates that grow legs.",
   s1_title: "Landing Pages",
   s1_desc:
-    "Fast and focused. Built for people who need something online that actually works — loads quick, looks sharp, doesn't fall apart on mobile.",
+    "Fast and focused. Built for people who need something online that actually works - loads quick, looks sharp, doesn't fall apart on mobile.",
   s2_title: "Business Websites",
   s2_desc:
     "Multi-page sites with proper structure, SEO basics, and something that makes your business look like it takes itself seriously online.",
@@ -57,7 +57,7 @@ const en = {
   work_label: "Selected work",
   work_title: "Things I've built",
   work_sub: "Real projects, real constraints, real shipping dates.",
-  p1_title: "MediBook — Appointment Booking",
+  p1_title: "MediBook - Appointment Booking",
   p1_desc:
     "Patients were calling to book appointments. Built a self-scheduling system with real-time availability, confirmation emails, and a UI that works on any phone.",
   p2_title: "Dalmatinske Vizure",
@@ -68,7 +68,7 @@ const en = {
     "Destination search, itinerary planning, live API data. The challenge was making a lot of information feel light and easy to navigate.",
   p4_title: "Duolingo Clone",
   p4_desc:
-    "Full lesson flow, XP system, streaks, progress tracking. More interesting than it sounds — gamification logic is genuinely tricky to get right.",
+    "Full lesson flow, XP system, streaks, progress tracking. More interesting than it sounds - gamification logic is genuinely tricky to get right.",
   p5_title: "Korijen Leather",
   p5_desc:
     "Premium landing page for a Sarajevo leather atelier. Interactive swatches, animations, and product preview.",
@@ -76,7 +76,7 @@ const en = {
   p6_desc:
     "Pixel-faithful frontend clone of Instagram with bubble stories, feed, likes, and comments.",
   p1_problem:
-    "Patients struggled to book medical appointments online — existing systems were clunky and didn't work well on mobile.",
+    "Patients struggled to book medical appointments online - existing systems were clunky and didn't work well on mobile.",
   p1_solution:
     "Built a full-stack booking platform with real-time availability, appointment management, and email confirmations.",
   p1_how:
@@ -90,11 +90,11 @@ const en = {
     "Built with static generation for fast page loads, optimised images via next/image, and a CMS-friendly content structure.",
 
   p5_problem:
-    "A Sarajevo leather atelier needed a premium landing page that matched the quality of their handmade watch straps — most templates felt too generic.",
+    "A Sarajevo leather atelier needed a premium landing page that matched the quality of their handmade watch straps - most templates felt too generic.",
   p5_solution:
-    "Designed and built a fully custom single-page site: hero, product collection, materials, process timeline, reviews, and contact — all from scratch.",
+    "Designed and built a fully custom single-page site: hero, product collection, materials, process timeline, reviews, and contact - all from scratch.",
   p5_how:
-    "No frameworks — pure HTML/CSS/JS. Scroll animations via IntersectionObserver, animated SVG strap illustrations, interactive colour swatches that update the product preview in real time, and a fixed parallax ticker.",
+    "No frameworks - pure HTML/CSS/JS. Scroll animations via IntersectionObserver, animated SVG strap illustrations, interactive colour swatches that update the product preview in real time, and a fixed parallax ticker.",
 
   p3_problem:
     "Travellers had no simple way to discover and plan trips in one place.",
@@ -146,7 +146,7 @@ const en = {
   test_label: "What people say",
   test_title: "Testimonials",
   t1_text:
-    "Built our property site exactly how we imagined, faster than we expected. Good communication throughout — he flagged things we hadn't thought about.",
+    "Built our property site exactly how we imagined, faster than we expected. Good communication throughout - he flagged things we hadn't thought about.",
   t2_text:
     "He understood the product, not just the code. Asked the right questions early, which saved us a lot of back-and-forth later in the project.",
   t3_text:
@@ -162,7 +162,7 @@ const en = {
     "Most slow sites aren't slow because of bad code. They're slow because of unoptimized images, too many fonts, and third-party scripts nobody remembers adding.",
   b2_title: "What I learned building my first client project from scratch",
   b2_desc:
-    'The technical part was the easy bit. Scope creep, unclear feedback, and the phrase "can we just quickly add..." — that\'s where projects actually fall apart.',
+    'The technical part was the easy bit. Scope creep, unclear feedback, and the phrase "can we just quickly add..." - that\'s where projects actually fall apart.',
   b3_title: "Next.js App Router after 6 months: honest thoughts",
   b3_desc:
     "It's good. It's also confusing in ways the docs don't fully explain. Here's what I wish I'd known before migrating three projects to it.",
@@ -175,24 +175,23 @@ const en = {
     "15–30 minutes. You tell me what you're building, I ask questions. Free. No pitch.",
   proc2_title: "Proposal",
   proc2_desc:
-    "Scope, timeline, price — in writing, before anything starts. You can say no.",
+    "Scope, timeline, price - in writing, before anything starts. You can say no.",
   proc3_title: "Build",
   proc3_desc:
     "Regular updates, live previews, feedback rounds. You see it before it ships.",
   proc4_title: "Launch",
   proc4_desc:
-    "Deployment, testing, full handover. You own everything — code, domain, accounts.",
+    "Deployment, testing, full handover. You own everything - code, domain, accounts.",
   faq_label: "Common questions",
   faq_title: "FAQ",
   faq1_q: "How do we communicate during the project?",
   faq1_a:
-    "Email, Slack, WhatsApp — whatever works for you. I send updates without being asked so you're never left wondering where things are.",
+    "Email, Slack, WhatsApp - whatever works for you. I send updates without being asked so you're never left wondering where things are.",
   faq2_q: "Do you work with international clients?",
   faq2_a:
-    "Almost exclusively. Most of my clients are in Europe and the US. Remote work, good communication — timezone hasn't been an issue yet.",
+    "Almost exclusively. Most of my clients are in Europe and the US. Remote work, good communication - timezone hasn't been an issue yet.",
   faq3_q: "How much does a project cost?",
-  faq3_a:
-    "Landing pages from $600, websites from $1,200, web apps from $3,000. Every project gets a written quote — no vague hourly estimates that double by the end.",
+  faq3_a: "Landing pages from $30, websites from $85, web apps from $140. Every project gets a written quote.",
   faq4_q: "What if I need changes after launch?",
   faq4_a:
     "Every project includes a revision window after delivery. For ongoing work we agree on a rate upfront. You won't be left with an orphaned codebase.",
@@ -201,7 +200,7 @@ const en = {
     "Yes. Once the project is paid, everything is yours. Code, assets, access. I don't retain anything.",
   faq6_q: "How long does a typical project take?",
   faq6_a:
-    "Landing pages: 1–2 weeks. Business sites: 2–3 weeks. Web apps: 4–8 weeks. Depends on scope and how quickly feedback comes in — I'll give you a real estimate after the discovery call.",
+    "Landing pages: 1–2 weeks. Business sites: 2–3 weeks. Web apps: 4–8 weeks. Depends on scope and how quickly feedback comes in - I'll give you a real estimate after the discovery call.",
   faq7_q: "Do you work with non-technical clients?",
   faq7_a:
     "Most of my clients aren't developers. I handle the technical side fully and explain things in plain English. You don't need to know what a REST API is to work with me.",
@@ -210,13 +209,13 @@ const en = {
     "A rough idea of what you're building, who it's for, and roughly what you want to spend. That's enough for a discovery call. A proper brief can come after.",
   faq9_q: "Do you do design as well as development?",
   faq9_a:
-    "Yes — design is part of the build, not a separate phase. I work in Figma first for anything beyond a simple page, so you see how it looks before a line of code gets written.",
+    "Yes - design is part of the build, not a separate phase. I work in Figma first for anything beyond a simple page, so you see how it looks before a line of code gets written.",
   faq10_q: "What happens if something breaks after launch?",
   faq10_a:
-    "Every project includes two weeks of post-launch support for bugs. Not scope changes — actual things that are broken. After that, I'm available for ongoing maintenance at an agreed rate.",
+    "Every project includes two weeks of post-launch support for bugs. Not scope changes - actual things that are broken. After that, I'm available for ongoing maintenance at an agreed rate.",
   cta_title: "Have a project <em>in mind?</em>",
   cta_sub:
-    "Send me a message. Tell me what you're building. I'll tell you honestly if I can help — and if I can't, I'll say that too.",
+    "Send me a message. Tell me what you're building. I'll tell you honestly if I can help - and if I can't, I'll say that too.",
   cta_email: "Send me an email",
   cta_note: "Usually within 24 hours. No automated replies.",
   footer_email: "Email",
@@ -249,12 +248,12 @@ const en = {
   hire_std_title_1: "What's included",
   hire_std_title_2: "in every project",
   hire_std_sub:
-    "Regardless of scope or price. These aren't upsells — they're the baseline.",
+    "Regardless of scope or price. These aren't upsells - they're the baseline.",
   hire_pricing_label: "Pricing",
   hire_pricing_title_1: "Packages",
   hire_pricing_title_2: "& what they cost",
   hire_pricing_sub:
-    "Fixed-price, not hourly. You know the number before anything starts. Scope changes get a change order — no silent billing.",
+    "Fixed-price, not hourly. You know the number before anything starts. Scope changes get a change order - no silent billing.",
   hire_work_label: "Work",
   hire_work_title_1: "Things I've",
   hire_work_title_2: "actually built",
@@ -274,7 +273,7 @@ const en = {
   hire_limits_title_1: "What I",
   hire_limits_title_2: "won't do",
   hire_limits_sub:
-    "Not a list of excuses — a list of things that reliably ruin projects. I've learned these the hard way so you don't have to.",
+    "Not a list of excuses - a list of things that reliably ruin projects. I've learned these the hard way so you don't have to.",
   hire_start_label: "Start",
   hire_start_title_1: "Ready to",
   hire_start_title_2: "get started?",
@@ -286,33 +285,33 @@ const en = {
   hire_sending: "Sending...",
   hire_send: "Send message  ",
   hire_pkg1_name: "Landing Page",
-  hire_pkg1_price: "from $600",
+  hire_pkg1_price: "from $30",
   hire_pkg1_timeline: "1 – 2 weeks",
   hire_pkg1_desc:
     "Fast, focused, conversion-ready. One page that does one job well.",
   hire_pkg2_name: "Web Application",
-  hire_pkg2_price: "from $3,000",
+  hire_pkg2_price: "from hire_pkg2_price: 40",
   hire_pkg2_timeline: "4 – 8 weeks",
   hire_pkg2_desc:
     "SaaS, booking systems, dashboards, internal tools. Full stack end-to-end.",
   hire_pkg2_tag: "Most booked",
   hire_pkg3_name: "Business Website",
-  hire_pkg3_price: "from $1,200",
+  hire_pkg3_price: "from $85",
   hire_pkg3_timeline: "2 – 3 weeks",
   hire_pkg3_desc:
     "Multi-page with structure, SEO, and something that makes your business look serious online.",
   hire_step1_title: "You reach out",
   hire_step1_body:
-    "Fill the form below or email me directly. Tell me roughly what you need — doesn't have to be a full brief. A paragraph is enough to start.",
+    "Fill the form below or email me directly. Tell me roughly what you need - doesn't have to be a full brief. A paragraph is enough to start.",
   hire_step2_title: "Discovery call",
   hire_step2_body:
     "15 – 30 minutes. Free. I ask questions, you talk through the project. No pitch, no deck. We figure out together if it's a fit.",
   hire_step3_title: "Written proposal",
   hire_step3_body:
-    "Scope, timeline, price — all in writing, before anything starts. You can say no. If the scope changes later, we discuss it before the price does.",
+    "Scope, timeline, price - all in writing, before anything starts. You can say no. If the scope changes later, we discuss it before the price does.",
   hire_step4_title: "Kickoff",
   hire_step4_body:
-    "50% upfront, then work starts. You get a private preview link early — usually within the first few days. Real progress you can see, not status updates.",
+    "50% upfront, then work starts. You get a private preview link early - usually within the first few days. Real progress you can see, not status updates.",
   hire_step5_title: "Build phase",
   hire_step5_body:
     "Weekly updates without you having to ask. Feedback rounds are structured, not open-ended. Each round has a clear scope to avoid endless iteration.",
@@ -324,13 +323,13 @@ const en = {
     "You get everything: code, credentials, documentation. I don't retain access to anything. If you need ongoing help, we agree a rate upfront.",
   hire_need1_title: "A clear brief",
   hire_need1_body:
-    "What it does, who it's for, what success looks like. Doesn't need to be perfect — but the vaguer the brief, the wider the scope estimate.",
+    "What it does, who it's for, what success looks like. Doesn't need to be perfect - but the vaguer the brief, the wider the scope estimate.",
   hire_need2_title: "Fast feedback",
   hire_need2_body:
     "48h to respond to preview links and questions during the build. Projects stall when feedback takes a week. Your deadline is mine.",
   hire_need3_title: "Content ready",
   hire_need3_body:
-    "Text, logos, photos. If you don't have them, say so upfront — we can plan around it or add copywriting to scope.",
+    "Text, logos, photos. If you don't have them, say so upfront - we can plan around it or add copywriting to scope.",
   hire_need4_title: "One decision-maker",
   hire_need4_body:
     "One person who can approve things. Not a committee. Design-by-committee is where projects go to die and budgets go to grow.",
@@ -344,7 +343,7 @@ const en = {
   hire_email: "your@email.com",
   hire_budget: "Budget range",
   hire_message:
-    "Tell me about your project — what it does, who it's for, any deadline.",
+    "Tell me about your project - what it does, who it's for, any deadline.",
   hire_std1_title: "Direct access",
   hire_std1_body:
     "You talk to me. Not an account manager, not a junior. I answer messages myself.",
@@ -359,7 +358,7 @@ const en = {
     "Structured review rounds so feedback stays focused and iteration doesn't go in circles.",
   hire_std5_title: "Full ownership",
   hire_std5_body:
-    "Code, domain, accounts — all yours after handover. I retain nothing.",
+    "Code, domain, accounts - all yours after handover. I retain nothing.",
   hire_std6_title: "Post-launch window",
   hire_std6_body:
     "2 weeks of included fixes after delivery. Real bugs, not scope creep.",
@@ -408,11 +407,11 @@ const en = {
   hire_back: "Back to portfolio",
   // Form package selector
   form_pkg_starter: "Starter",
-  form_pkg_starter_price: "$99",
+  form_pkg_starter_price: "$30",
   form_pkg_business: "Business",
-  form_pkg_business_price: "$199",
+  form_pkg_business_price: "$85",
   form_pkg_premium: "Premium",
-  form_pkg_premium_price: "$349",
+  form_pkg_premium_price: "form_pkg_premium_price: 40",
   form_pkg_custom: "Custom / On request",
   form_pkg_placeholder: "Select a package",
   form_or: "or",
@@ -446,18 +445,18 @@ const en = {
   // Pricing
   pkg_popular_badge: "Most Popular",
   pkg_note_click:
-    "Click a package to pre-fill the form with that offer — or visit the pricing page for full details.",
+    "Click a package to pre-fill the form with that offer - or visit the pricing page for full details.",
   // Error boundary
   error_boundary_msg: "Something went wrong.",
   error_boundary_link: "Back to home",
   blog_page_label: "Writing",
   blog_page_title: "From the blog",
   blog_page_sub:
-    "Things I figured out, wrote down, and decided were worth sharing. No newsletter, no cadence — just posts when there's something to say.",
+    "Things I figured out, wrote down, and decided were worth sharing. No newsletter, no cadence - just posts when there's something to say.",
   blog_back: "Back to portfolio",
   post_building: "Building something?",
   post_building_sub:
-    "If this was useful, you might like working together. I take on a few projects a month — mostly web apps, landing pages, and SaaS products.",
+    "If this was useful, you might like working together. I take on a few projects a month - mostly web apps, landing pages, and SaaS products.",
   post_hire_link: "See how to hire me",
   post_more: "More posts",
   post_back: "Back to blog",
@@ -510,7 +509,7 @@ const en = {
   uses_figma_desc:
     "Wireframes, design tokens, component specs. All in one place.",
   uses_notion_desc: "Project notes, client docs, and content planning.",
-  uses_arc_desc: "Spaces for work vs. personal — changed how I browse.",
+  uses_arc_desc: "Spaces for work vs. personal - changed how I browse.",
   uses_vercel_desc: "Zero-config deploys for the Next.js ecosystem.",
   uses_cloudflare_desc: "DNS, CDN, and edge workers. Fast and cheap.",
   uses_macbook_desc: "Goes everywhere with me. Silent, all-day battery.",
@@ -531,7 +530,8 @@ const en = {
   pricing_pkgs_sub: "Click a package to see the exact breakdown line by line.",
   pricing_page_title: "Pricing",
   pricing_page_desc:
-    "Web development packages. Starter from 150 KM, Business from 350 KM, Premium from 600 KM.",
+    "Web development packages. Starter from $30, Business from $85, Premium from pricing_page_desc:
+    40.",
   pricing_cta_title: "Ready to start?",
   pricing_cta_title2: "Let's talk.",
   pricing_cta_sub: "Fill in a short form. I respond within 24 hours.",
@@ -540,7 +540,7 @@ const en = {
   pv_label: "Pricing",
   pv_title: "Packages & pricing",
   pv_sub:
-    "Click a package to fill the contact form with that offer — or visit the pricing page for all details.",
+    "Click a package to fill the contact form with that offer - or visit the pricing page for all details.",
   pv_see_all: "See all details and add-ons",
   pkg_includes: "Included",
   pkg_more: "more items",
@@ -673,28 +673,28 @@ const en = {
   addon_backup_desc: "Weekly automated backups with one-click restore.",
   addon_multisite_name: "Multilingual / multi-region",
   addon_multisite_desc:
-    "Full multilingual setup — separate pages per language.",
+    "Full multilingual setup - separate pages per language.",
   referral_title_1: "Refer someone.",
   referral_title_2: "You both get a discount.",
   referral_sub:
-    "If you refer someone who orders a project, you get 10% off your next project — and your friend gets 10% off from the start.",
+    "If you refer someone who orders a project, you get 10% off your next project - and your friend gets 10% off from the start.",
   ref_step1_title: "You refer",
-  ref_step1_body: "Send an email or message — no formal signup needed.",
+  ref_step1_body: "Send an email or message - no formal signup needed.",
   ref_step2_title: "They order",
   ref_step2_body:
-    "Your friend mentions your name — they immediately get 10% off.",
+    "Your friend mentions your name - they immediately get 10% off.",
   ref_step3_title: "You get a discount",
-  ref_step3_body: "On your next project — automatically, no paperwork.",
+  ref_step3_body: "On your next project - automatically, no paperwork.",
   referral_example:
-    "You refer the Business package (350 KM). Friend pays 315 KM. Your next project is 10% cheaper — automatically.",
+    "You refer the Business package ($85). Friend pays $76.50. Your next project is 10% cheaper - automatically.",
   // ─── PACKAGE PRICES (i18n) ────────────────────────────────────────────────
-  pkg_starter_price: "$99",
-  pkg_business_price: "$199",
-  pkg_premium_price: "$349",
+  pkg_starter_price: "50 KM",
+  pkg_business_price: "150 KM",
+  pkg_premium_price: "250 KM",
   // ─── 404 PAGE ─────────────────────────────────────────────────────────────
   nf_error_label: "Error",
   nf_title: "Page not found",
-  nf_sub_1: "Looks like this page doesn't exist — or it moved.",
+  nf_sub_1: "Looks like this page doesn't exist - or it moved.",
   nf_sub_2: "Let's get you back somewhere useful.",
   nf_back_home: "Back to home",
   nf_start_project: "Start a project",
@@ -703,27 +703,27 @@ const en = {
   example_label: "Example",
   // ─── HOME PAGE SEO ────────────────────────────────────────────────────────
   home_page_title:
-    "Adis Klobodanović — Full-Stack Developer | React, Next.js, Node.js",
+    "Adis Klobodanović - Full-Stack Developer | React, Next.js, Node.js",
   home_page_desc:
-    "Full-stack developer specialising in React, Next.js & Node.js. I build fast, clean web apps, SaaS products and landing pages that ship on time — available for new projects worldwide.",
+    "Full-stack developer specialising in React, Next.js & Node.js. I build fast, clean web apps, SaaS products and landing pages that ship on time - available for new projects worldwide.",
   // ─── PAGE SEO TITLES ─────────────────────────────────────────────────────
-  blog_seo_title: "Blog — Adis Klobodanović | Web Development Articles",
+  blog_seo_title: "Blog - Adis Klobodanović | Web Development Articles",
   blog_seo_desc:
     "Articles on React, Next.js, Node.js, web performance, and freelance development. Real-world experience, no fluff.",
-  uses_seo_title: "Uses — Tools & Stack | Adis Klobodanović",
+  uses_seo_title: "Uses - Tools & Stack | Adis Klobodanović",
   uses_seo_desc:
     "The tools, hardware, and software I use every day as a full-stack developer.",
-  hire_seo_title: "Start a Project — Adis Klobodanović | Full-Stack Developer",
+  hire_seo_title: "Start a Project - Adis Klobodanović | Full-Stack Developer",
   hire_seo_desc:
-    "Ready to build something? Fixed-price web development — from $99 for a landing page. Fast turnaround, full ownership.",
-  projects_seo_title: "Projects — Adis Klobodanović | Full-Stack Developer",
+    "Ready to build something? Fixed-price web development - from $30 for a landing page. Fast turnaround, full ownership.",
+  projects_seo_title: "Projects - Adis Klobodanović | Full-Stack Developer",
   projects_seo_desc:
-    "Full-stack web projects — booking platforms, real estate sites, SaaS apps, and more.",
+    "Full-stack web projects - booking platforms, real estate sites, SaaS apps, and more.",
   // ─── ADDON/FORM TRANSLATIONS ──────────────────────────────────────────────
   addon_client_pays: "Client pays yearly",
   hire_addons_label: "Add-ons",
   hire_addons_optional: "(optional)",
-  hire_addons_hint: "optional — click to expand",
+  hire_addons_hint: "optional - click to expand",
   addon_group_onetime: "One-time",
   addon_group_yearly: "Yearly (hosting & maintenance)",
   addon_group_perpage: "Per page",

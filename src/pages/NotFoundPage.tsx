@@ -10,7 +10,7 @@ export default function NotFoundPage() {
   const [countdown, setCountdown] = useState(10);
 
   useSEO({
-    title: `404 — ${t.nf_title || "Page not found"} · adiss.dev`,
+    title: `404 - ${t.nf_title || "Page not found"} · adiss.dev`,
     description:
       t.nf_sub_1 || "The page you are looking for doesn't exist or has moved.",
     canonical: "https://adiss.dev/404",
@@ -170,7 +170,7 @@ export default function NotFoundPage() {
           <h1 className="nf-title">{t.nf_title || "Page not found"}</h1>
 
           <p className="nf-sub">
-            {t.nf_sub_1 || "Looks like this page doesn't exist — or it moved."}
+            {t.nf_sub_1 || "Looks like this page doesn't exist - or it moved."}
             <br />
             {t.nf_sub_2 || "Let's get you back somewhere useful."}
           </p>

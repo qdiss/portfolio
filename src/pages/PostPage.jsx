@@ -435,7 +435,7 @@ export default function PostPage() {
   useSEO(
     post
       ? {
-          title: `${post.title} — Adis Klobodanovic`,
+          title: `${post.title} - Adis Klobodanovic`,
           description: post.excerpt || "",
           canonical: `https://adiss.dev/blog/${post.slug}`,
           ogType: "article",
@@ -481,7 +481,7 @@ export default function PostPage() {
             isPartOf: {
               "@type": "Blog",
               "@id": "https://adiss.dev/blog#blog",
-              name: "Adis Klobodanovic — Blog",
+              name: "Adis Klobodanovic - Blog",
               url: "https://adiss.dev/blog",
             },
           },
@@ -555,7 +555,7 @@ export default function PostPage() {
   // Cleanup meta kad se napusti stranica
   useEffect(() => {
     return () => {
-      document.title = "Adis Klobodanovic — Full-Stack Developer";
+      document.title = "Adis Klobodanovic - Full-Stack Developer";
       const jsonLd = document.getElementById("post-jsonld");
       if (jsonLd) jsonLd.remove();
     };

@@ -389,7 +389,7 @@ function AddonAccordion({ selectedAddons, setSelectedAddons, t, lang }) {
                 })
                 .filter(Boolean)
                 .join(", ")
-            : t.hire_addons_hint || "optional — click to expand"}
+            : t.hire_addons_hint || "optional - click to expand"}
         </span>
         <span className={`addon-accordion-chevron${open ? " rotated" : ""}`}>
           <svg
@@ -849,7 +849,7 @@ export default function CTA() {
                   {t.hire_total_label || "Total estimate"}
                 </span>
                 <strong style={{ color: "var(--text)", fontSize: "0.95rem" }}>
-                  {totalPrice > 0 ? formatAddonPrice(totalPrice, lang) : "—"}
+                  {totalPrice > 0 ? formatAddonPrice(totalPrice, lang) : "-"}
                 </strong>
               </div>
 

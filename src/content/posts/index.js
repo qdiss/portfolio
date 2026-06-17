@@ -16,7 +16,7 @@ export const posts = [
     slug: "first-client-project",
     title: "What I learned building my first client project from scratch",
     excerpt:
-      'The technical part was the easy bit. Scope creep, unclear feedback, and the phrase "can we just quickly add..." — that\'s where projects actually fall apart.',
+      'The technical part was the easy bit. Scope creep, unclear feedback, and the phrase "can we just quickly add..." - that\'s where projects actually fall apart.',
     date: "2025-02-04",
     readTime: "8 min read",
     tags: ["Freelance", "Process"],

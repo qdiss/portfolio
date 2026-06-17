@@ -273,7 +273,7 @@ export default function Services() {
       </h2>
       <p className="section-sub reveal">
         {t.pv_sub ||
-          "Klikni na paket da popuniš formu s tom ponudom — ili posjeti cjenovnik za sve detalje."}
+          "Klikni na paket da popuniš formu s tom ponudom - ili posjeti cjenovnik za sve detalje."}
       </p>
 
       <div className="svc-pricing-grid">
@@ -297,7 +297,9 @@ export default function Services() {
               </>
             )}
             <div className="svc-card-top">
-              <div className="svc-icon"><pkg.icon size={22} /></div>
+              <div className="svc-icon">
+                <pkg.icon size={22} />
+              </div>
             </div>
             <div className="svc-card-copy">
               <div className="svc-title">{t[pkg.nameKey] || pkg.nameKey}</div>
@@ -305,15 +307,13 @@ export default function Services() {
             </div>
             <div className="svc-footer">
               <div className="svc-price-stack">
-                <div className="svc-package-price">{t[pkg.priceKey] || pkg.priceKey}</div>
-                <div className="svc-price-note">
-                  {t.serv_get_started}
+                <div className="svc-package-price">
+                  {t[pkg.priceKey] || pkg.priceKey}
                 </div>
+                <div className="svc-price-note">{t.serv_get_started}</div>
               </div>
               <div className="svc-arrow-wrap">
-                <div className="svc-click-hint">
-                  {t.serv_get_started}
-                </div>
+                <div className="svc-click-hint">{t.serv_get_started}</div>
                 <div className="svc-arrow">
                   <ArrowUpRightIcon size={14} />
                 </div>

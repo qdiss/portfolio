@@ -147,10 +147,10 @@ function HomePageSEO() {
   useSEO({
     title:
       t.home_page_title ||
-      "Adis Klobodanović — Full-Stack Developer | React, Next.js, Node.js",
+      "Adis Klobodanović - Full-Stack Developer | React, Next.js, Node.js",
     description:
       t.home_page_desc ||
-      "Full-stack developer specialising in React, Next.js & Node.js. I build fast, clean web apps, SaaS products and landing pages that ship on time — available for new projects worldwide.",
+      "Full-stack developer specialising in React, Next.js & Node.js. I build fast, clean web apps, SaaS products and landing pages that ship on time - available for new projects worldwide.",
     canonical: "https://adiss.dev",
     ogType: "website",
     jsonLd: {

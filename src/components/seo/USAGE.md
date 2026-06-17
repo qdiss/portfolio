@@ -1,16 +1,16 @@
-## SEO component — kako koristiti
+## SEO component - kako koristiti
 
 ### 1. Wrap app u HelmetProvider (main.jsx)
 
 ```jsx
-import { HelmetProvider } from 'react-helmet-async';
+import { HelmetProvider } from "react-helmet-async";
 
-ReactDOM.createRoot(document.getElementById('root')).render(
+ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <HelmetProvider>
       <App />
     </HelmetProvider>
-  </React.StrictMode>
+  </React.StrictMode>,
 );
 ```
 
@@ -43,11 +43,11 @@ import SEO from '@/components/seo/SEO';
 
 ### 3. Stranice i njihovi SEO tagovi
 
-| Ruta | Title | Description |
-|------|-------|-------------|
-| / | (default) | Full-stack web developer iz BiH... |
-| /hire | Unajmi me | Trebate web stanicu? ... |
-| /pricing | Cijene | Transparentne cijene web razvoja... |
-| /blog | Blog | Savjeti o web razvoju za firme u BiH... |
-| /uses | Uses | Tech stack i alati koje koristim... |
-| /contents/projects | Projekti | Portfolio projekata... |
+| Ruta               | Title     | Description                             |
+| ------------------ | --------- | --------------------------------------- |
+| /                  | (default) | Full-stack web developer iz BiH...      |
+| /hire              | Unajmi me | Trebate web stanicu? ...                |
+| /pricing           | Cijene    | Transparentne cijene web razvoja...     |
+| /blog              | Blog      | Savjeti o web razvoju za firme u BiH... |
+| /uses              | Uses      | Tech stack i alati koje koristim...     |
+| /contents/projects | Projekti  | Portfolio projekata...                  |

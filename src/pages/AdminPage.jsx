@@ -33,7 +33,7 @@ export default function AdminPage() {
   const [preview, setPreview] = useState(false);
 
   useEffect(() => {
-    document.title = "Admin — Blog Management";
+    document.title = "Admin - Blog Management";
     window.scrollTo(0, 0);
     fetchPosts();
   }, []);
@@ -516,7 +516,7 @@ export default function AdminPage() {
                       letterSpacing: 0,
                     }}
                   >
-                    (prikazuje se u listingu — važno za SEO)
+                    (prikazuje se u listingu - važno za SEO)
                   </span>
                 </label>
                 <textarea
@@ -605,7 +605,7 @@ export default function AdminPage() {
                   Objavi odmah (published)
                 </label>
                 <span style={{ fontSize: "0.75rem", color: "var(--muted2)" }}>
-                  — ako isključiš, post je draft i neće biti vidljiv na blogu
+                  - ako isključiš, post je draft i neće biti vidljiv na blogu
                 </span>
               </div>
 
@@ -625,7 +625,7 @@ export default function AdminPage() {
                 )}
                 {status === "error" && (
                   <span className="status-msg status-error">
-                    ✗ Error — provjeri Supabase
+                    ✗ Error - provjeri Supabase
                   </span>
                 )}
               </div>

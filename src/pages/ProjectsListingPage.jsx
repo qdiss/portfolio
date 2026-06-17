@@ -72,10 +72,10 @@ export default function ProjectsListingPage() {
   useSEO({
     title:
       t.projects_seo_title ||
-      "Projects — Adis Klobodanović | Full-Stack Developer",
+      "Projects - Adis Klobodanović | Full-Stack Developer",
     description:
       t.projects_seo_desc ||
-      "Full-stack web projects — booking platforms, real estate sites, SaaS apps, and more.",
+      "Full-stack web projects - booking platforms, real estate sites, SaaS apps, and more.",
     canonical: "https://adiss.dev/contents/projects",
   });
 

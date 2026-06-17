@@ -7,7 +7,7 @@ import { HelmetProvider } from "react-helmet-async";
 const rootElement = document.getElementById("root");
 
 if (rootElement.hasChildNodes()) {
-  // react-snap je pre-renderovao HTML — hydriraj umjesto re-rendera
+  // react-snap je pre-renderovao HTML - hydriraj umjesto re-rendera
   ReactDOM.hydrateRoot(
     rootElement,
     <React.StrictMode>

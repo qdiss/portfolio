@@ -116,7 +116,7 @@ export default function PricingPreview() {
       </h2>
       <p className="section-sub reveal">
         {t.pv_sub ||
-          "Klikni na paket da popuniš formu s tom ponudom — ili posjeti cjenovnik za sve detalje."}
+          "Klikni na paket da popuniš formu s tom ponudom - ili posjeti cjenovnik za sve detalje."}
       </p>
 
       <div className="pricing-preview-grid">

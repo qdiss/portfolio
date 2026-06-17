@@ -19,16 +19,18 @@ export default function BlogPage() {
   const [loading, setLoading] = useState(true);
 
   useSEO({
-    title: t.blog_seo_title || "Blog — Adis Klobodanović | Web Development Articles",
+    title:
+      t.blog_seo_title || "Blog - Adis Klobodanović | Web Development Articles",
     description:
-      t.blog_seo_desc || "Articles on React, Next.js, Node.js, web performance, and freelance development. Real-world experience, no fluff.",
+      t.blog_seo_desc ||
+      "Articles on React, Next.js, Node.js, web performance, and freelance development. Real-world experience, no fluff.",
     canonical: "https://adiss.dev/blog",
     ogType: "website",
     jsonLd: {
       "@context": "https://schema.org",
       "@type": "Blog",
       "@id": "https://adiss.dev/blog#blog",
-      name: "Adis Klobodanovic — Blog",
+      name: "Adis Klobodanovic - Blog",
       url: "https://adiss.dev/blog",
       description:
         "Articles on React, Next.js, Node.js, web performance, and freelance development.",
@@ -97,7 +99,9 @@ export default function BlogPage() {
   }
 
   return (
-    <div style={{ display: "flex", flexDirection: "column", minHeight: "100vh" }}>
+    <div
+      style={{ display: "flex", flexDirection: "column", minHeight: "100vh" }}
+    >
       <style>{`
         .blog-page { max-width: 900px; margin: 0 auto; padding: 8rem 2.5rem 5rem; }
         .post-card { display: block; padding: 2rem 0; border-bottom: 1px solid var(--border); text-decoration: none; color: inherit; }

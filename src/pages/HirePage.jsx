@@ -405,7 +405,7 @@ function AddonAccordion({ selectedAddons, setSelectedAddons, t, lang }) {
                 })
                 .filter(Boolean)
                 .join(", ")
-            : t.hire_addons_hint || "optional — click to expand"}
+            : t.hire_addons_hint || "optional - click to expand"}
         </span>
         <span className={`addon-accordion-chevron${open ? " rotated" : ""}`}>
           <svg
@@ -763,7 +763,7 @@ function ContactForm({ t, lang, preselectedPaket }) {
             {t.hire_total_label || "Total estimate"}
           </span>
           <strong style={{ color: "var(--text)", fontSize: "0.95rem" }}>
-            {totalPrice > 0 ? `${formatAddonPrice(totalPrice, lang)}` : "—"}
+            {totalPrice > 0 ? `${formatAddonPrice(totalPrice, lang)}` : "-"}
           </strong>
         </div>
         <textarea
@@ -822,10 +822,10 @@ export default function HirePage() {
   useSEO({
     title:
       t.hire_seo_title ||
-      "Start a Project — Adis Klobodanović | Full-Stack Developer",
+      "Start a Project - Adis Klobodanović | Full-Stack Developer",
     description:
       t.hire_seo_desc ||
-      "Ready to build something? Fixed-price web development — landing pages from $600, web apps from $3,000. Fast turnaround, full ownership.",
+      "Ready to build something? Fixed-price web development - landing pages from $600, web apps from $3,000. Fast turnaround, full ownership.",
     canonical: "https://adiss.dev/hire",
     breadcrumb: {
       "@context": "https://schema.org",
@@ -974,7 +974,7 @@ export default function HirePage() {
     [
       t.hire_std5_title || "Full ownership",
       t.hire_std5_body ||
-        "Code, domain, accounts — all yours after handover. I retain nothing.",
+        "Code, domain, accounts - all yours after handover. I retain nothing.",
     ],
     [
       t.hire_std6_title || "Post-launch window",
@@ -1016,7 +1016,7 @@ export default function HirePage() {
         .need-body { color: var(--muted); font-size: 0.875rem; font-weight: 300; line-height: 1.65; }
         .wont-list { list-style: none; display: flex; flex-direction: column; gap: 0.6rem; margin-top: 1.5rem; }
         .wont-list li { color: var(--muted); font-size: 0.9rem; display: flex; align-items: center; gap: 0.65rem; font-weight: 300; }
-        .wont-list li::before { content: '—'; color: var(--muted2); flex-shrink: 0; }
+        .wont-list li::before { content: '-'; color: var(--muted2); flex-shrink: 0; }
         .hire-form-wrap { background: var(--bg2); border: 1px solid var(--border); border-radius: 24px; padding: 2.5rem; }
         .hire-hero-glow { position: absolute; top: -100px; right: -80px; width: 500px; height: 500px; background: radial-gradient(circle, rgba(200,240,96,0.07) 0%, transparent 65%); pointer-events: none; }
         /* Light mode input fixes */

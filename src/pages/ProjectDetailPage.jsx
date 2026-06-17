@@ -109,8 +109,8 @@ export default function ProjectDetailPage() {
 
   useSEO({
     title: project
-      ? `${project.title} — Adis Klobodanovic`
-      : "Project not found — Adis Klobodanovic",
+      ? `${project.title} - Adis Klobodanovic`
+      : "Project not found - Adis Klobodanovic",
     description: project
       ? `${project.problem} ${project.solution}`.slice(0, 155)
       : "",
@@ -168,8 +168,8 @@ export default function ProjectDetailPage() {
 
   useEffect(() => {
     window.scrollTo(0, 0);
-    if (project) document.title = `${project.title} — Adis Klobodanovic`;
-    else document.title = "Project not found — Adis Klobodanovic";
+    if (project) document.title = `${project.title} - Adis Klobodanovic`;
+    else document.title = "Project not found - Adis Klobodanovic";
 
     const observer = new IntersectionObserver(
       (entries) =>

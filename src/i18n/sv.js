@@ -25,7 +25,7 @@ const sv = {
   about_label: "Om mig",
   about_title: "Jag skriver kod. <em>Inte presentationer.</em>",
   about_p1:
-    "Jag började bygga saker på webben av nyfikenhet — stannade kvar för att jag gillade att se något fungera.",
+    "Jag började bygga saker på webben av nyfikenhet - stannade kvar för att jag gillade att se något fungera.",
   about_p2:
     "När du anlitar mig får du <strong>mig</strong>. Ingen projektledare. Jag skriver koden, svarar på meddelanden.",
   about_p3:
@@ -55,7 +55,7 @@ const sv = {
   work_label: "Utvalda arbeten",
   work_title: "Saker jag har byggt",
   work_sub: "Riktiga projekt, riktiga begränsningar, riktiga leveransdatum.",
-  p1_title: "MediBook — Tidsbokning",
+  p1_title: "MediBook - Tidsbokning",
   p1_desc:
     "Patienter ringde för att boka tider. Jag byggde ett självbokningssystem.",
   p2_title: "Dalmatinske Vizure",
@@ -71,7 +71,7 @@ const sv = {
   p6_desc:
     "Pixel-faithful frontend-klon av Instagram med bubble stories, feed, likes och comments.",
   p1_problem:
-    "Patienter var tvungna att ringa för att boka tider — befintliga system var klumpiga och fungerade dåligt på mobil.",
+    "Patienter var tvungna att ringa för att boka tider - befintliga system var klumpiga och fungerade dåligt på mobil.",
   p1_solution:
     "Byggde en fullstack-bokningsplattform med tillgänglighet i realtid, tidsbokningshantering och e-postbekräftelser.",
   p1_how:
@@ -85,11 +85,11 @@ const sv = {
     "Byggd med statisk generering för snabba laddningstider, optimerade bilder via next/image och en CMS-vänlig innehållsstruktur.",
 
   p5_problem:
-    "En läderstudio i Sarajevo behövde en premium landningssida som matchade kvaliteten på deras handgjorda klockarmband — de flesta mallar kändes för generiska.",
+    "En läderstudio i Sarajevo behövde en premium landningssida som matchade kvaliteten på deras handgjorda klockarmband - de flesta mallar kändes för generiska.",
   p5_solution:
-    "Designade och byggde en helt skräddarsydd ensidas webbplats: hero, produktkollektion, material, processtidslinje, recensioner och kontakt — allt från grunden.",
+    "Designade och byggde en helt skräddarsydd ensidas webbplats: hero, produktkollektion, material, processtidslinje, recensioner och kontakt - allt från grunden.",
   p5_how:
-    "Inga ramverk — ren HTML/CSS/JS. Scroll-animationer via IntersectionObserver, animerade SVG-armbandsillustrationer, interaktiva färgprover som uppdaterar produktförhandsvisningen i realtid och en fast parallax-ticker.",
+    "Inga ramverk - ren HTML/CSS/JS. Scroll-animationer via IntersectionObserver, animerade SVG-armbandsillustrationer, interaktiva färgprover som uppdaterar produktförhandsvisningen i realtid och en fast parallax-ticker.",
 
   p3_problem:
     "Resenärer hade inget enkelt sätt att upptäcka och planera resor på ett ställe.",
@@ -156,7 +156,7 @@ const sv = {
   b1_desc: "Ej optimerade bilder, för många typsnitt, third-party-skript.",
   b2_title: "Vad jag lärde mig av att bygga mitt första kundprojekt",
   b2_desc:
-    "Den tekniska delen var den lätta. Scope creep — det är där projekt faller isär.",
+    "Den tekniska delen var den lätta. Scope creep - det är där projekt faller isär.",
   b3_title: "Next.js App Router efter 6 månader",
   b3_desc:
     "Det är bra. Det är också förvirrande på sätt som dokumentationen inte förklarar helt.",
@@ -167,7 +167,7 @@ const sv = {
   proc1_title: "Upptäcktssamtal",
   proc1_desc: "15–30 minuter. Gratis. Ingen pitch.",
   proc2_title: "Förslag",
-  proc2_desc: "Omfattning, tidslinje, pris — skriftligt, innan något börjar.",
+  proc2_desc: "Omfattning, tidslinje, pris - skriftligt, innan något börjar.",
   proc3_title: "Bygga",
   proc3_desc:
     "Regelbundna uppdateringar, live-förhandsvisningar, feedbackrundor.",
@@ -176,12 +176,12 @@ const sv = {
   faq_label: "Vanliga frågor",
   faq_title: "FAQ",
   faq1_q: "Hur kommunicerar vi under projektet?",
-  faq1_a: "E-post, Slack, WhatsApp — vad som fungerar för dig.",
+  faq1_a: "E-post, Slack, WhatsApp - vad som fungerar för dig.",
   faq2_q: "Arbetar du med internationella kunder?",
   faq2_a: "Nästan uteslutande. De flesta av mina kunder är i Europa och USA.",
   faq3_q: "Hur mycket kostar ett projekt?",
   faq3_a:
-    "Landningssidor från $600, webbplatser från $1 200, webbappar från $3 000.",
+    "Landningssidor från 280 kr, webbplatser från 850 kr, webbappar från 1 400 kr.",
   faq4_q: "Vad händer om jag behöver ändringar efter lanseringen?",
   faq4_a: "Varje projekt inkluderar ett revisionsfönster efter leverans.",
   faq5_q: "Äger jag koden?",
@@ -196,7 +196,7 @@ const sv = {
   faq8_a:
     "En grov idé om vad du bygger, för vem det är och ungefär vad du vill spendera.",
   faq9_q: "Gör du även design?",
-  faq9_a: "Ja — design är en del av bygget. Jag arbetar i Figma först.",
+  faq9_a: "Ja - design är en del av bygget. Jag arbetar i Figma först.",
   faq10_q: "Vad händer om något går sönder efter lanseringen?",
   faq10_a:
     "Varje projekt inkluderar två veckors support efter lansering för buggar.",
@@ -221,7 +221,7 @@ const sv = {
   hire_std_title_1: "Vad som ingår",
   hire_std_title_2: "i varje projekt",
   hire_std_sub:
-    "Oavsett omfattning eller pris. Det här är inte tillägg — det är grunden.",
+    "Oavsett omfattning eller pris. Det här är inte tillägg - det är grunden.",
   hire_pricing_label: "Priser",
   hire_pricing_title_1: "Paket",
   hire_pricing_title_2: "& vad de kostar",
@@ -244,7 +244,7 @@ const sv = {
   hire_limits_label: "Gränser",
   hire_limits_title_1: "Vad jag",
   hire_limits_title_2: "inte gör",
-  hire_limits_sub: "Inga ursäkter — saker som tillförlitligt förstör projekt.",
+  hire_limits_sub: "Inga ursäkter - saker som tillförlitligt förstör projekt.",
   hire_start_label: "Start",
   hire_start_title_1: "Redo att",
   hire_start_title_2: "komma igång?",
@@ -259,30 +259,30 @@ const sv = {
   hire_total_label: "Totalt",
   hire_select_addons: "Välj paket för automatisk totalsumma",
   hire_pkg1_name: "Landningssida",
-  hire_pkg1_price: "från $600",
+  hire_pkg1_price: "från 280 kr",
   hire_pkg1_timeline: "1 – 2 veckor",
   hire_pkg1_desc:
     "Snabb, fokuserad, konverteringsoptimerad. En sida som gör ett jobb bra.",
   hire_pkg2_name: "Webbapplikation",
-  hire_pkg2_price: "från $3 000",
+  hire_pkg2_price: "från 1 400 kr",
   hire_pkg2_timeline: "4 – 8 veckor",
   hire_pkg2_desc:
     "SaaS, bokningssystem, dashboards, interna verktyg. Full stack från start till mål.",
   hire_pkg2_tag: "Mest bokad",
   hire_pkg3_name: "Företagswebbplats",
-  hire_pkg3_price: "från $1 200",
+  hire_pkg3_price: "från 850 kr",
   hire_pkg3_timeline: "2 – 3 veckor",
   hire_pkg3_desc:
     "Flersidigt med struktur, SEO och något som gör ditt företag seriöst online.",
   hire_step1_title: "Du hör av dig",
   hire_step1_body:
-    "Fyll i formuläret eller maila mig direkt. Berätta grovt vad du behöver — ett stycke räcker.",
+    "Fyll i formuläret eller maila mig direkt. Berätta grovt vad du behöver - ett stycke räcker.",
   hire_step2_title: "Upptäcktssamtal",
   hire_step2_body:
     "15 – 30 minuter. Gratis. Ingen pitch. Vi tar reda på om det passar.",
   hire_step3_title: "Skriftligt förslag",
   hire_step3_body:
-    "Omfattning, tidslinje, pris — allt skriftligt, innan något börjar.",
+    "Omfattning, tidslinje, pris - allt skriftligt, innan något börjar.",
   hire_step4_title: "Kickoff",
   hire_step4_body:
     "50% i förskott, sedan börjar arbetet. Du får en privat förhandsvisningslänk tidigt.",
@@ -320,7 +320,7 @@ const sv = {
   hire_email: "din@email.com",
   hire_budget: "Budgetintervall",
   hire_message:
-    "Berätta om ditt projekt — vad det gör, för vem det är, finns det en deadline.",
+    "Berätta om ditt projekt - vad det gör, för vem det är, finns det en deadline.",
   hire_std1_title: "Direkt tillgång",
   hire_std1_body:
     "Du pratar med mig. Inte en kundansvarig. Jag svarar på meddelanden personligen.",
@@ -335,7 +335,7 @@ const sv = {
     "Strukturerade granskningsrundor så att feedback förblir fokuserat.",
   hire_std5_title: "Fullt ägande",
   hire_std5_body:
-    "Kod, domän, konton — allt ditt efter överlämning. Jag behåller inget.",
+    "Kod, domän, konton - allt ditt efter överlämning. Jag behåller inget.",
   hire_std6_title: "Post-launch fönster",
   hire_std6_body:
     "2 veckors inkluderade korrigeringar efter leverans. Riktiga buggar, inte scope creep.",
@@ -385,7 +385,7 @@ const sv = {
   blog_page_label: "Skrivande",
   blog_page_title: "Från bloggen",
   blog_page_sub:
-    "Saker jag har listat ut och bestämt mig för att dela. Inget nyhetsbrev — bara inlägg när det finns något att säga.",
+    "Saker jag har listat ut och bestämt mig för att dela. Inget nyhetsbrev - bara inlägg när det finns något att säga.",
   blog_back: "Tillbaka till portföljen",
   post_building: "Bygger du något?",
   post_building_sub:
@@ -434,10 +434,10 @@ const sv = {
   uses_node_desc: "Solid reservlösning när jag behöver full kontroll.",
   uses_clerk_desc: "Auth löst på minuter, inte dagar.",
   uses_figma_desc:
-    "Wireframes, design-tokens, komponentspecifikationer — allt på ett ställe.",
+    "Wireframes, design-tokens, komponentspecifikationer - allt på ett ställe.",
   uses_notion_desc: "Projektanteckningar, kunddokument och innehållsplanering.",
   uses_arc_desc:
-    "Utrymmen för arbete och privatliv — förändrade hur jag surfar.",
+    "Utrymmen för arbete och privatliv - förändrade hur jag surfar.",
   uses_vercel_desc: "Zero-config-driftsättning för Next.js-ekosystemet.",
   uses_cloudflare_desc: "DNS, CDN och edge workers. Snabbt och billigt.",
   uses_macbook_desc:
@@ -460,7 +460,7 @@ const sv = {
   pricing_pkgs_sub: "Klicka på ett paket för exakt uppdelning rad för rad.",
   pricing_page_title: "Prislista",
   pricing_page_desc:
-    "Paket och priser för webbplatser. Starter från 999 kr, Business från 1999 kr, Premium från 3249 kr.",
+    "Paket och priser för webbplatser. Starter från 280 kr, Business från 850 kr, Premium från 1 400 kr.",
   pricing_cta_title: "Redo att börja?",
   pricing_cta_title2: "Låt oss prata.",
   pricing_cta_sub: "Fyll i ett kort formulär. Jag svarar inom 24 timmar.",
@@ -617,20 +617,20 @@ const sv = {
     "Veckovisa automatiska säkerhetskopior med ett-klicks-återställning.",
   addon_multisite_name: "Flerspråkig / multi-region",
   addon_multisite_desc:
-    "Komplett flerspråkig inställning — separata sidor per språk.",
+    "Komplett flerspråkig inställning - separata sidor per språk.",
   referral_title_1: "Rekommendera någon.",
   referral_title_2: "Ni får båda rabatt.",
   referral_sub:
-    "Om du rekommenderar någon som beställer ett projekt, får du 10% rabatt på ditt nästa projekt — och din vän får 10% rabatt direkt.",
+    "Om du rekommenderar någon som beställer ett projekt, får du 10% rabatt på ditt nästa projekt - och din vän får 10% rabatt direkt.",
   ref_step1_title: "Du rekommenderar",
   ref_step1_body:
-    "Skicka ett e-post eller meddelande — ingen formell registrering behövs.",
+    "Skicka ett e-post eller meddelande - ingen formell registrering behövs.",
   ref_step2_title: "De beställer",
-  ref_step2_body: "Din vän nämner ditt namn — de får omedelbart 10% rabatt.",
+  ref_step2_body: "Din vän nämner ditt namn - de får omedelbart 10% rabatt.",
   ref_step3_title: "Du får rabatt",
-  ref_step3_body: "På ditt nästa projekt — automatiskt, inget pappersarbete.",
+  ref_step3_body: "På ditt nästa projekt - automatiskt, inget pappersarbete.",
   referral_example:
-    "Du rekommenderar Business-paketet (1999 kr). Din vän betalar 1799 kr. Ditt nästa projekt är 10% billigare — automatiskt.",
+    "Du rekommenderar Business-paketet (850 kr). Din vän betalar 765 kr. Ditt nästa projekt är 10% billigare - automatiskt.",
   footer_github: "GitHub",
   footer_linkedin: "LinkedIn",
   footer_start_project: "Starta ett projekt",
@@ -645,11 +645,11 @@ const sv = {
   curr_tz_sub: "EU & US Öst vänlig",
   curr_next_slot_value: "Juli 2026",
   form_pkg_starter: "Starter",
-  form_pkg_starter_price: "999 kr",
+  form_pkg_starter_price: "280 kr",
   form_pkg_business: "Business",
-  form_pkg_business_price: "1999 kr",
+  form_pkg_business_price: "850 kr",
   form_pkg_premium: "Premium",
-  form_pkg_premium_price: "3249 kr",
+  form_pkg_premium_price: "1 400 kr",
   form_pkg_custom: "Anpassad / På begäran",
   form_pkg_placeholder: "Välj ett paket",
   form_or: "eller",
@@ -679,7 +679,7 @@ const sv = {
   mob_hire_btn: "Starta ett projekt",
   pkg_popular_badge: "Mest populär",
   pkg_note_click:
-    "Klicka på ett paket för att förifyll formuläret — eller besök prissidan för alla detaljer.",
+    "Klicka på ett paket för att förifyll formuläret - eller besök prissidan för alla detaljer.",
   error_boundary_msg: "Något gick fel.",
   error_boundary_link: "Tillbaka till hem",
   admin_loading: "Laddar...",
@@ -689,13 +689,13 @@ const sv = {
   admin_magic_link_sent: "Vi har skickat en magisk länk till",
   admin_try_again: "Försök igen",
   // ─── PACKAGE PRICES (i18n) ────────────────────────────────────────────────
-  pkg_starter_price: "999 kr",
-  pkg_business_price: "1999 kr",
-  pkg_premium_price: "3249 kr",
+  pkg_starter_price: "50 KM",
+  pkg_business_price: "150 KM",
+  pkg_premium_price: "250 KM",
   // ─── 404 PAGE ─────────────────────────────────────────────────────────────
   nf_error_label: "Fel",
   nf_title: "Sidan hittades inte",
-  nf_sub_1: "Det verkar som att den här sidan inte finns — eller har flyttats.",
+  nf_sub_1: "Det verkar som att den här sidan inte finns - eller har flyttats.",
   nf_sub_2: "Låt oss ta dig tillbaka till något användbart.",
   nf_back_home: "Tillbaka till hem",
   nf_start_project: "Starta ett projekt",
@@ -704,27 +704,27 @@ const sv = {
   example_label: "Exempel",
   // ─── HOME PAGE SEO ────────────────────────────────────────────────────────
   home_page_title:
-    "Adis Klobodanović — Full-Stack Utvecklare | React, Next.js, Node.js",
+    "Adis Klobodanović - Full-Stack Utvecklare | React, Next.js, Node.js",
   home_page_desc:
     "Full-stack-utvecklare specialiserad på React, Next.js och Node.js. Jag bygger snabba webbappar och SaaS-produkter som levereras i tid.",
   // ─── PAGE SEO TITLES ─────────────────────────────────────────────────────
-  blog_seo_title: "Blogg — Adis Klobodanović | Webbutveckling",
+  blog_seo_title: "Blogg - Adis Klobodanović | Webbutveckling",
   blog_seo_desc:
     "Artiklar om React, Next.js, Node.js och frilansutveckling. Verklig erfarenhet, inget fluff.",
-  uses_seo_title: "Verktyg — Stack & Setup | Adis Klobodanović",
+  uses_seo_title: "Verktyg - Stack & Setup | Adis Klobodanović",
   uses_seo_desc:
     "Verktyg, hårdvara och programvara jag använder dagligen som full-stack-utvecklare.",
   hire_seo_title:
-    "Starta ett Projekt — Adis Klobodanović | Full-Stack Utvecklare",
+    "Starta ett Projekt - Adis Klobodanović | Full-Stack Utvecklare",
   hire_seo_desc:
-    "Redo att bygga något? Fasta priser — från 100 € för en landningssida.",
-  projects_seo_title: "Projekt — Adis Klobodanović | Full-Stack Utvecklare",
+    "Redo att bygga något? Fasta priser - från 280 kr för en landningssida.",
+  projects_seo_title: "Projekt - Adis Klobodanović | Full-Stack Utvecklare",
   projects_seo_desc:
-    "Full-stack-webbprojekt — bokningsplattformar, fastighetssidor, SaaS-appar och mer.",
+    "Full-stack-webbprojekt - bokningsplattformar, fastighetssidor, SaaS-appar och mer.",
   // ─── ADDON/FORM TRANSLATIONS ──────────────────────────────────────────────
   addon_client_pays: "Kunden betalar årligen",
   hire_addons_optional: "(valfritt)",
-  hire_addons_hint: "valfritt — klicka för att expandera",
+  hire_addons_hint: "valfritt - klicka för att expandera",
   addon_group_onetime: "Engångs",
   addon_group_yearly: "Årligt (hosting & underhåll)",
   addon_group_perpage: "Per sida",

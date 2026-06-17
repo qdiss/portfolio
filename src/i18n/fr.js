@@ -25,7 +25,7 @@ const fr = {
   about_label: "À propos",
   about_title: "J'écris du code. <em>Pas des slides.</em>",
   about_p1:
-    "J'ai commencé à construire des choses sur le web par curiosité — je suis resté parce que j'aimais voir quelque chose fonctionner.",
+    "J'ai commencé à construire des choses sur le web par curiosité - je suis resté parce que j'aimais voir quelque chose fonctionner.",
   about_p2:
     "Quand tu m'engages, tu obtiens <strong>moi</strong>. Pas un chef de projet. J'écris le code, je réponds aux messages.",
   about_p3:
@@ -56,7 +56,7 @@ const fr = {
   work_label: "Travaux sélectionnés",
   work_title: "Ce que j'ai construit",
   work_sub: "Vrais projets, vraies contraintes, vraies dates de livraison.",
-  p1_title: "MediBook — Prise de rendez-vous",
+  p1_title: "MediBook - Prise de rendez-vous",
   p1_desc:
     "Les patients appelaient pour prendre des rendez-vous. J'ai construit un système de réservation automatique.",
   p2_title: "Dalmatinske Vizure",
@@ -74,7 +74,7 @@ const fr = {
   p6_desc:
     "Clone frontend fidèle au pixel d'Instagram avec bulles de stories, feed, likes et commentaires.",
   p1_problem:
-    "Les patients devaient appeler pour prendre rendez-vous — les systèmes existants étaient peu pratiques et mal adaptés au mobile.",
+    "Les patients devaient appeler pour prendre rendez-vous - les systèmes existants étaient peu pratiques et mal adaptés au mobile.",
   p1_solution:
     "Création d'une plateforme de réservation full-stack avec disponibilité en temps réel, gestion des rendez-vous et confirmations par email.",
   p1_how:
@@ -88,11 +88,11 @@ const fr = {
     "Génération statique pour des chargements rapides, images optimisées via next/image et une structure de contenu compatible CMS.",
 
   p5_problem:
-    "Un atelier de maroquinerie de Sarajevo avait besoin d'une landing page premium à la hauteur de la qualité de ses bracelets de montre faits main — la plupart des templates semblaient trop génériques.",
+    "Un atelier de maroquinerie de Sarajevo avait besoin d'une landing page premium à la hauteur de la qualité de ses bracelets de montre faits main - la plupart des templates semblaient trop génériques.",
   p5_solution:
     "Site personnalisé d'une page conçu et développé de zéro : hero, collection produits, matériaux, timeline du processus, avis et contact.",
   p5_how:
-    "Aucun framework — HTML/CSS/JS pur. Animations scroll via IntersectionObserver, illustrations SVG animées, nuanciers interactifs avec aperçu produit en temps réel et ticker parallax fixe.",
+    "Aucun framework - HTML/CSS/JS pur. Animations scroll via IntersectionObserver, illustrations SVG animées, nuanciers interactifs avec aperçu produit en temps réel et ticker parallax fixe.",
 
   p3_problem:
     "Les voyageurs n'avaient aucun moyen simple de découvrir et planifier des voyages en un seul endroit.",
@@ -159,7 +159,7 @@ const fr = {
   b1_desc: "Images non optimisées, trop de polices, scripts oubliés.",
   b2_title: "Ce que j'ai appris en construisant mon premier projet client",
   b2_desc:
-    "La partie technique était la partie facile. Le scope creep — c'est là que les projets s'effondrent.",
+    "La partie technique était la partie facile. Le scope creep - c'est là que les projets s'effondrent.",
   b3_title: "Next.js App Router après 6 mois",
   b3_desc:
     "C'est bien. C'est aussi déroutant d'une façon que la doc n'explique pas complètement.",
@@ -171,7 +171,7 @@ const fr = {
   proc1_desc: "15–30 minutes. Gratuit. Pas de pitch.",
   proc2_title: "Proposition",
   proc2_desc:
-    "Périmètre, calendrier, prix — par écrit, avant que quoi que ce soit commence.",
+    "Périmètre, calendrier, prix - par écrit, avant que quoi que ce soit commence.",
   proc3_title: "Construction",
   proc3_desc: "Mises à jour régulières, aperçus en direct, tours de feedback.",
   proc4_title: "Lancement",
@@ -179,13 +179,13 @@ const fr = {
   faq_label: "Questions fréquentes",
   faq_title: "FAQ",
   faq1_q: "Comment communiquons-nous pendant le projet ?",
-  faq1_a: "Email, Slack, WhatsApp — ce qui te convient.",
+  faq1_a: "Email, Slack, WhatsApp - ce qui te convient.",
   faq2_q: "Travailles-tu avec des clients internationaux ?",
   faq2_a:
     "Presque exclusivement. La plupart de mes clients sont en Europe et aux États-Unis.",
   faq3_q: "Combien coûte un projet ?",
   faq3_a:
-    "Pages d'atterrissage à partir de $600, sites à partir de $1 200, apps web à partir de $3 000.",
+    "Pages d'atterrissage à partir de 25 €, sites à partir de 75 €, apps web à partir de 125 €.",
   faq4_q: "Et si j'ai besoin de changements après le lancement ?",
   faq4_a: "Chaque projet inclut une fenêtre de révision après livraison.",
   faq5_q: "Le code m'appartient-il ?",
@@ -201,7 +201,7 @@ const fr = {
     "Une idée approximative de ce que tu construis, pour qui c'est et combien tu veux dépenser.",
   faq9_q: "Fais-tu aussi du design ?",
   faq9_a:
-    "Oui — le design fait partie de la construction. Je travaille d'abord sur Figma.",
+    "Oui - le design fait partie de la construction. Je travaille d'abord sur Figma.",
   faq10_q: "Que se passe-t-il si quelque chose se casse après le lancement ?",
   faq10_a:
     "Chaque projet inclut deux semaines de support post-lancement pour les bugs.",
@@ -226,7 +226,7 @@ const fr = {
   hire_std_title_1: "Ce qui est inclus",
   hire_std_title_2: "dans chaque projet",
   hire_std_sub:
-    "Quelle que soit la taille ou le prix. Ce ne sont pas des extras — c'est la base.",
+    "Quelle que soit la taille ou le prix. Ce ne sont pas des extras - c'est la base.",
   hire_pricing_label: "Tarifs",
   hire_pricing_title_1: "Forfaits",
   hire_pricing_title_2: "& ce qu'ils coûtent",
@@ -251,7 +251,7 @@ const fr = {
   hire_limits_title_1: "Ce que je",
   hire_limits_title_2: "ne ferai pas",
   hire_limits_sub:
-    "Pas une liste d'excuses — une liste de choses qui ruinent les projets.",
+    "Pas une liste d'excuses - une liste de choses qui ruinent les projets.",
   hire_start_label: "Démarrer",
   hire_start_title_1: "Prêt à",
   hire_start_title_2: "commencer ?",
@@ -267,18 +267,18 @@ const fr = {
   hire_total_label: "Total",
   hire_select_addons: "Choisis un forfait pour le total automatique",
   hire_pkg1_name: "Page d'atterrissage",
-  hire_pkg1_price: "à partir de $600",
+  hire_pkg1_price: "à partir de 25 €",
   hire_pkg1_timeline: "1 – 2 semaines",
   hire_pkg1_desc:
     "Rapide, ciblée, optimisée pour les conversions. Une page qui fait un travail bien.",
   hire_pkg2_name: "Application web",
-  hire_pkg2_price: "à partir de $3 000",
+  hire_pkg2_price: "à partir de 125 €",
   hire_pkg2_timeline: "4 – 8 semaines",
   hire_pkg2_desc:
     "SaaS, systèmes de réservation, tableaux de bord, outils internes. Full stack de bout en bout.",
   hire_pkg2_tag: "Le plus demandé",
   hire_pkg3_name: "Site d'entreprise",
-  hire_pkg3_price: "à partir de $1 200",
+  hire_pkg3_price: "à partir de 75 €",
   hire_pkg3_timeline: "2 – 3 semaines",
   hire_pkg3_desc:
     "Multi-pages avec structure, SEO et quelque chose qui rend ton entreprise sérieuse en ligne.",
@@ -290,7 +290,7 @@ const fr = {
     "15 – 30 minutes. Gratuit. Pas de pitch. On détermine ensemble si c'est un bon fit.",
   hire_step3_title: "Proposition écrite",
   hire_step3_body:
-    "Périmètre, calendrier, prix — tout par écrit, avant que quoi que ce soit commence.",
+    "Périmètre, calendrier, prix - tout par écrit, avant que quoi que ce soit commence.",
   hire_step4_title: "Démarrage",
   hire_step4_body:
     "50% d'avance, puis le travail commence. Tu obtiens un lien de prévisualisation privé tôt.",
@@ -328,7 +328,7 @@ const fr = {
   hire_email: "ton@email.com",
   hire_budget: "Fourchette de budget",
   hire_message:
-    "Parle-moi de ton projet — ce qu'il fait, pour qui il est, y a-t-il une deadline.",
+    "Parle-moi de ton projet - ce qu'il fait, pour qui il est, y a-t-il une deadline.",
   hire_std1_title: "Accès direct",
   hire_std1_body:
     "Tu me parles directement. Pas à un account manager. Je réponds aux messages moi-même.",
@@ -343,7 +343,7 @@ const fr = {
     "Rounds de révision structurés pour que le feedback reste focalisé.",
   hire_std5_title: "Propriété complète",
   hire_std5_body:
-    "Code, domaine, comptes — tout t'appartient après la livraison. Je ne conserve rien.",
+    "Code, domaine, comptes - tout t'appartient après la livraison. Je ne conserve rien.",
   hire_std6_title: "Fenêtre post-lancement",
   hire_std6_body:
     "2 semaines de corrections incluses après livraison. Vrais bugs, pas de scope creep.",
@@ -393,7 +393,7 @@ const fr = {
   blog_page_label: "Écriture",
   blog_page_title: "Du blog",
   blog_page_sub:
-    "Des choses que j'ai comprises et décidé de partager. Pas de newsletter — juste des posts quand j'ai quelque chose à dire.",
+    "Des choses que j'ai comprises et décidé de partager. Pas de newsletter - juste des posts quand j'ai quelque chose à dire.",
   blog_back: "Retour au portfolio",
   post_building: "Tu construis quelque chose ?",
   post_building_sub:
@@ -443,11 +443,11 @@ const fr = {
   uses_node_desc: "Valeur sûre quand j'ai besoin de contrôle total.",
   uses_clerk_desc: "Auth résolu en minutes, pas en jours.",
   uses_figma_desc:
-    "Wireframes, tokens de design, specs de composants — tout au même endroit.",
+    "Wireframes, tokens de design, specs de composants - tout au même endroit.",
   uses_notion_desc:
     "Notes de projet, docs clients et planification de contenu.",
   uses_arc_desc:
-    "Espaces pour le travail et le personnel — a changé ma façon de naviguer.",
+    "Espaces pour le travail et le personnel - a changé ma façon de naviguer.",
   uses_vercel_desc:
     "Déploiements sans configuration pour l'écosystème Next.js.",
   uses_cloudflare_desc:
@@ -474,7 +474,7 @@ const fr = {
     "Cliquez sur un forfait pour voir le détail exact ligne par ligne.",
   pricing_page_title: "Tarifs",
   pricing_page_desc:
-    "Forfaits et prix pour sites web. Starter dès 100 €, Business dès 200 €, Premium dès 325 €.",
+    "Forfaits et prix pour sites web. Starter dès 25 €, Business dès 75 €, Premium dès 125 €.",
   pricing_cta_title: "Prêt à démarrer?",
   pricing_cta_title2: "Parlons-en.",
   pricing_cta_sub: "Remplissez un court formulaire. Je réponds sous 24h.",
@@ -635,22 +635,22 @@ const fr = {
     "Sauvegardes automatiques hebdomadaires avec restauration en un clic.",
   addon_multisite_name: "Multilingue / multi-région",
   addon_multisite_desc:
-    "Configuration multilingue complète — pages séparées par langue.",
+    "Configuration multilingue complète - pages séparées par langue.",
   referral_title_1: "Recommandez quelqu'un.",
   referral_title_2: "Vous bénéficiez tous les deux d'une remise.",
   referral_sub:
-    "Si vous recommandez quelqu'un qui passe une commande, vous obtenez 10% sur votre prochain projet — et votre ami obtient 10% dès le départ.",
+    "Si vous recommandez quelqu'un qui passe une commande, vous obtenez 10% sur votre prochain projet - et votre ami obtient 10% dès le départ.",
   ref_step1_title: "Vous recommandez",
   ref_step1_body:
-    "Envoyez un email ou un message — pas d'inscription formelle nécessaire.",
+    "Envoyez un email ou un message - pas d'inscription formelle nécessaire.",
   ref_step2_title: "Il commande",
   ref_step2_body:
-    "Votre ami mentionne votre nom — il obtient immédiatement 10% de remise.",
+    "Votre ami mentionne votre nom - il obtient immédiatement 10% de remise.",
   ref_step3_title: "Vous obtenez une remise",
   ref_step3_body:
-    "Sur votre prochain projet — automatiquement, sans paperasse.",
+    "Sur votre prochain projet - automatiquement, sans paperasse.",
   referral_example:
-    "Tu recommandes le forfait Business (400 KM / 200 €). Ton ami paie 180 €. Ton prochain projet est 10% moins cher — automatiquement.",
+    "Tu recommandes le forfait Business (75 €). Ton ami paie 67,50 €. Ton prochain projet est 10% moins cher - automatiquement.",
   footer_github: "GitHub",
   footer_linkedin: "LinkedIn",
   footer_start_project: "Démarrer un projet",
@@ -665,11 +665,11 @@ const fr = {
   curr_tz_sub: "Compatible EU & US Est",
   curr_next_slot_value: "Juillet 2026",
   form_pkg_starter: "Starter",
-  form_pkg_starter_price: "100 €",
+  form_pkg_starter_price: "25 €",
   form_pkg_business: "Business",
-  form_pkg_business_price: "200 €",
+  form_pkg_business_price: "75 €",
   form_pkg_premium: "Premium",
-  form_pkg_premium_price: "325 €",
+  form_pkg_premium_price: "125 €",
   form_pkg_custom: "Personnalisé / Sur devis",
   form_pkg_placeholder: "Choisir un forfait",
   form_or: "ou",
@@ -699,7 +699,7 @@ const fr = {
   mob_hire_btn: "Démarrer un projet",
   pkg_popular_badge: "Le plus populaire",
   pkg_note_click:
-    "Cliquez sur un forfait pour pré-remplir le formulaire — ou visitez la page tarifs pour tous les détails.",
+    "Cliquez sur un forfait pour pré-remplir le formulaire - ou visitez la page tarifs pour tous les détails.",
   error_boundary_msg: "Une erreur s'est produite.",
   error_boundary_link: "Retour à l'accueil",
   admin_loading: "Chargement...",
@@ -709,14 +709,14 @@ const fr = {
   admin_magic_link_sent: "Nous avons envoyé un lien magique à",
   admin_try_again: "Réessayer",
   // ─── PACKAGE PRICES (i18n) ────────────────────────────────────────────────
-  pkg_starter_price: "100 €",
-  pkg_business_price: "200 €",
-  pkg_premium_price: "325 €",
+  pkg_starter_price: "50 KM",
+  pkg_business_price: "150 KM",
+  pkg_premium_price: "250 KM",
   // ─── 404 PAGE ─────────────────────────────────────────────────────────────
   nf_error_label: "Erreur",
   nf_title: "Page introuvable",
   nf_sub_1:
-    "On dirait que cette page n'existe pas — ou qu'elle a été déplacée.",
+    "On dirait que cette page n'existe pas - ou qu'elle a été déplacée.",
   nf_sub_2: "Revenons quelque part d'utile.",
   nf_back_home: "Retour à l'accueil",
   nf_start_project: "Démarrer un projet",
@@ -725,27 +725,27 @@ const fr = {
   example_label: "Exemple",
   // ─── HOME PAGE SEO ────────────────────────────────────────────────────────
   home_page_title:
-    "Adis Klobodanović — Développeur Full-Stack | React, Next.js, Node.js",
+    "Adis Klobodanović - Développeur Full-Stack | React, Next.js, Node.js",
   home_page_desc:
     "Développeur full-stack spécialisé en React, Next.js et Node.js. Je crée des applications web rapides et des produits SaaS livrés dans les délais.",
   // ─── PAGE SEO TITLES ─────────────────────────────────────────────────────
-  blog_seo_title: "Blog — Adis Klobodanović | Développement Web",
+  blog_seo_title: "Blog - Adis Klobodanović | Développement Web",
   blog_seo_desc:
     "Articles sur React, Next.js, Node.js et le développement freelance. Expérience réelle, sans blabla.",
-  uses_seo_title: "Outils — Stack & Setup | Adis Klobodanović",
+  uses_seo_title: "Outils - Stack & Setup | Adis Klobodanović",
   uses_seo_desc:
     "Les outils, matériel et logiciels que j'utilise chaque jour en tant que développeur full-stack.",
   hire_seo_title:
-    "Démarrer un Projet — Adis Klobodanović | Développeur Full-Stack",
+    "Démarrer un Projet - Adis Klobodanović | Développeur Full-Stack",
   hire_seo_desc:
-    "Prêt à construire quelque chose ? Prix fixes — à partir de 100 € pour une landing page.",
-  projects_seo_title: "Projets — Adis Klobodanović | Développeur Full-Stack",
+    "Prêt à construire quelque chose ? Prix fixes - à partir de 25 € pour une landing page.",
+  projects_seo_title: "Projets - Adis Klobodanović | Développeur Full-Stack",
   projects_seo_desc:
-    "Projets web full-stack — plateformes de réservation, sites immobiliers, SaaS et plus.",
+    "Projets web full-stack - plateformes de réservation, sites immobiliers, SaaS et plus.",
   // ─── ADDON/FORM TRANSLATIONS ──────────────────────────────────────────────
   addon_client_pays: "Client paie annuellement",
   hire_addons_optional: "(optionnel)",
-  hire_addons_hint: "optionnel — cliquer pour développer",
+  hire_addons_hint: "optionnel - cliquer pour développer",
   addon_group_onetime: "Unique",
   addon_group_yearly: "Annuel (hébergement & maintenance)",
   addon_group_perpage: "Par page",

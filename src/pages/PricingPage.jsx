@@ -786,7 +786,7 @@ export default function PricingPage() {
   usePageReveal("pricing-page");
 
   useSEO({
-    title: `${t.pricing_page_title || "Cjenovnik"} — Adis Klobodanović`,
+    title: `${t.pricing_page_title || "Cjenovnik"} - Adis Klobodanović`,
     description:
       t.pricing_page_desc ||
       "Paketi i cijene za web stranice. Starter od 150 KM, Business od 350 KM, Premium od 600 KM.",
@@ -1332,7 +1332,7 @@ export default function PricingPage() {
               }}
             >
               {t.referral_sub ||
-                "Ako preporučiš nekoga ko naruči projekat, ti dobijaš 10% popusta na sljedeći projekat — a tvoj prijatelj dobija 10% off od starta."}
+                "Ako preporučiš nekoga ko naruči projekat, ti dobijaš 10% popusta na sljedeći projekat - a tvoj prijatelj dobija 10% off od starta."}
             </p>
             <div className="ref-steps">
               <div className="ref-step">
@@ -1356,7 +1356,7 @@ export default function PricingPage() {
                   }}
                 >
                   {t.ref_step1_body ||
-                    "Pošalji email ili poruku — nije potrebna formalna prijava."}
+                    "Pošalji email ili poruku - nije potrebna formalna prijava."}
                 </p>
               </div>
               <div className="ref-step">
@@ -1380,7 +1380,7 @@ export default function PricingPage() {
                   }}
                 >
                   {t.ref_step2_body ||
-                    "Tvoj prijatelj pomene tvoje ime — odmah dobija popust od 10%."}
+                    "Tvoj prijatelj pomene tvoje ime - odmah dobija popust od 10%."}
                 </p>
               </div>
               <div className="ref-step">
@@ -1404,7 +1404,7 @@ export default function PricingPage() {
                   }}
                 >
                   {t.ref_step3_body ||
-                    "Na tvoj sljedeći projekat — automatski, bez papirologije."}
+                    "Na tvoj sljedeći projekat - automatski, bez papirologije."}
                 </p>
               </div>
             </div>
@@ -1424,7 +1424,7 @@ export default function PricingPage() {
                 {t.example_label || "Primjer"}:
               </strong>{" "}
               {t.referral_example ||
-                "Preporučiš Business paket (350 KM). Prijatelj plaća 315 KM. Tvoj sljedeći projekat je 10% jeftiniji — automatski."}
+                "Preporučiš Business paket (350 KM). Prijatelj plaća 315 KM. Tvoj sljedeći projekat je 10% jeftiniji - automatski."}
             </div>
           </div>
         </section>

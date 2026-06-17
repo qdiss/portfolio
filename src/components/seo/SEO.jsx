@@ -1,11 +1,12 @@
-import { Helmet } from 'react-helmet-async';
-import { useLocation } from 'react-router-dom';
+import { Helmet } from "react-helmet-async";
+import { useLocation } from "react-router-dom";
 
-const BASE_URL = 'https://adiss.dev';
+const BASE_URL = "https://adiss.dev";
 
 const DEFAULTS = {
-  title: 'Adis Klobodanović — Web Developer',
-  description: 'Full-stack web developer iz BiH. Izrađujem moderne web stranice i aplikacije za firme.',
+  title: "Adis Klobodanović - Web Developer",
+  description:
+    "Full-stack web developer iz BiH. Izrađujem moderne web stranice i aplikacije za firme.",
   image: `${BASE_URL}/og-image.jpg`,
 };
 
@@ -13,9 +14,7 @@ export default function SEO({ title, description, image, noIndex = false }) {
   const { pathname } = useLocation();
   const canonical = `${BASE_URL}${pathname}`;
 
-  const resolvedTitle = title
-    ? `${title} | Adis.dev`
-    : DEFAULTS.title;
+  const resolvedTitle = title ? `${title} | Adis.dev` : DEFAULTS.title;
   const resolvedDesc = description || DEFAULTS.description;
   const resolvedImage = image || DEFAULTS.image;
 

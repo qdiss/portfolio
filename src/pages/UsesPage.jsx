@@ -82,15 +82,16 @@ export default function UsesPage() {
   const { t } = useLang();
 
   useSEO({
-    title: t.uses_seo_title || "Uses — Tools & Stack | Adis Klobodanović",
+    title: t.uses_seo_title || "Uses - Tools & Stack | Adis Klobodanović",
     description:
-      t.uses_seo_desc || "The tools, hardware, and software I use every day as a full-stack developer.",
+      t.uses_seo_desc ||
+      "The tools, hardware, and software I use every day as a full-stack developer.",
     canonical: "https://adiss.dev/uses",
   });
 
   useEffect(() => {
     window.scrollTo(0, 0);
-    document.title = "Uses — Adis Klobodanovic";
+    document.title = "Uses - Adis Klobodanovic";
     const observer = new IntersectionObserver(
       (entries) =>
         entries.forEach((e) => {
@@ -376,9 +377,13 @@ export default function UsesPage() {
           </h1>
           <p className="uses-lead">
             {t.uses_intro ||
-              "Tools, hardware, and software I actually reach for — no filler."}{" "}
+              "Tools, hardware, and software I actually reach for - no filler."}{" "}
             Listed on{" "}
-            <a href="https://uses.tech" target="_blank" rel="noopener noreferrer">
+            <a
+              href="https://uses.tech"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               uses.tech
             </a>
             .

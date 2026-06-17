@@ -25,7 +25,7 @@ const nl = {
   about_label: "Over mij",
   about_title: "Ik schrijf code. <em>Geen presentaties.</em>",
   about_p1:
-    "Ik begon dingen te bouwen op het web uit nieuwsgierigheid — bleef omdat ik het leuk vond iets te zien werken.",
+    "Ik begon dingen te bouwen op het web uit nieuwsgierigheid - bleef omdat ik het leuk vond iets te zien werken.",
   about_p2:
     "Wanneer je mij inhuurt, krijg je <strong>mij</strong>. Geen projectmanager. Ik schrijf de code, beantwoord berichten.",
   about_p3:
@@ -55,7 +55,7 @@ const nl = {
   work_label: "Geselecteerd werk",
   work_title: "Dingen die ik heb gebouwd",
   work_sub: "Echte projecten, echte beperkingen, echte leveringsdata.",
-  p1_title: "MediBook — Afspraken boeken",
+  p1_title: "MediBook - Afspraken boeken",
   p1_desc:
     "Patiënten belden om afspraken te maken. Ik bouwde een zelfboekingssysteem.",
   p2_title: "Dalmatinske Vizure",
@@ -71,7 +71,7 @@ const nl = {
   p6_desc:
     "Pixel-faithful frontend-kloon van Instagram met bubble stories, feed, likes en comments.",
   p1_problem:
-    "Patiënten moesten bellen om afspraken te maken — bestaande systemen waren onhandig en werkten slecht op mobiel.",
+    "Patiënten moesten bellen om afspraken te maken - bestaande systemen waren onhandig en werkten slecht op mobiel.",
   p1_solution:
     "Full-stack boekingsplatform gebouwd met realtime beschikbaarheid, afspraakbeheer en e-mailbevestigingen.",
   p1_how:
@@ -85,11 +85,11 @@ const nl = {
     "Statische generatie voor snelle laadtijden, geoptimaliseerde afbeeldingen via next/image en een CMS-vriendelijke inhoudsstructuur.",
 
   p5_problem:
-    "Een lederatelier in Sarajevo had een premium landingspagina nodig die paste bij de kwaliteit van hun handgemaakte horlogebanden — de meeste templates voelden te generiek aan.",
+    "Een lederatelier in Sarajevo had een premium landingspagina nodig die paste bij de kwaliteit van hun handgemaakte horlogebanden - de meeste templates voelden te generiek aan.",
   p5_solution:
-    "Volledig op maat gemaakte eenpaginasite ontworpen en gebouwd: hero, productcollectie, materialen, procestijdlijn, recensies en contact — alles van nul af aan.",
+    "Volledig op maat gemaakte eenpaginasite ontworpen en gebouwd: hero, productcollectie, materialen, procestijdlijn, recensies en contact - alles van nul af aan.",
   p5_how:
-    "Geen frameworks — puur HTML/CSS/JS. Scroll-animaties via IntersectionObserver, geanimeerde SVG-bandilustraties, interactieve kleurstalen die de productpreview in realtime bijwerken en een vaste parallax-ticker.",
+    "Geen frameworks - puur HTML/CSS/JS. Scroll-animaties via IntersectionObserver, geanimeerde SVG-bandilustraties, interactieve kleurstalen die de productpreview in realtime bijwerken en een vaste parallax-ticker.",
 
   p3_problem:
     "Reizigers hadden geen eenvoudige manier om reizen op één plek te ontdekken en te plannen.",
@@ -158,7 +158,7 @@ const nl = {
     "Niet-geoptimaliseerde afbeeldingen, te veel lettertypen, vergeten scripts.",
   b2_title: "Wat ik leerde bij het eerste klantproject",
   b2_desc:
-    "Het technische deel was het gemakkelijke deel. Scope creep — daar gaan projecten mis.",
+    "Het technische deel was het gemakkelijke deel. Scope creep - daar gaan projecten mis.",
   b3_title: "Next.js App Router na 6 maanden",
   b3_desc:
     "Het is goed. Het is ook verwarrend op manieren die de documentatie niet volledig uitlegt.",
@@ -169,7 +169,7 @@ const nl = {
   proc1_title: "Ontdekkingsgesprek",
   proc1_desc: "15–30 minuten. Gratis. Geen pitch.",
   proc2_title: "Voorstel",
-  proc2_desc: "Scope, tijdlijn, prijs — schriftelijk, voordat er iets begint.",
+  proc2_desc: "Scope, tijdlijn, prijs - schriftelijk, voordat er iets begint.",
   proc3_title: "Bouwen",
   proc3_desc: "Regelmatige updates, live previews, feedbackrondes.",
   proc4_title: "Launch",
@@ -177,12 +177,12 @@ const nl = {
   faq_label: "Veelgestelde vragen",
   faq_title: "FAQ",
   faq1_q: "Hoe communiceren we tijdens het project?",
-  faq1_a: "E-mail, Slack, WhatsApp — wat voor jou werkt.",
+  faq1_a: "E-mail, Slack, WhatsApp - wat voor jou werkt.",
   faq2_q: "Werk je met internationale klanten?",
   faq2_a: "Bijna uitsluitend. De meeste klanten zijn in Europa en de VS.",
   faq3_q: "Hoeveel kost een project?",
   faq3_a:
-    "Landing pages vanaf $600, websites vanaf $1.200, web-apps vanaf $3.000.",
+    "Landing pages vanaf 25 €, websites vanaf 75 €, web-apps vanaf 125 €.",
   faq4_q: "Wat als ik na de launch wijzigingen nodig heb?",
   faq4_a: "Elk project bevat een revisievenster na levering.",
   faq5_q: "Is de code van mij?",
@@ -197,7 +197,7 @@ const nl = {
   faq8_a:
     "Een globaal idee van wat je bouwt, voor wie en hoeveel je wilt uitgeven.",
   faq9_q: "Doe je ook design?",
-  faq9_a: "Ja — design is onderdeel van de bouw. Ik werk eerst in Figma.",
+  faq9_a: "Ja - design is onderdeel van de bouw. Ik werk eerst in Figma.",
   faq10_q: "Wat gebeurt er als er iets kapot gaat na de launch?",
   faq10_a: "Elk project bevat twee weken post-launch ondersteuning voor bugs.",
   cta_title: "Heb je een project <em>in gedachten?</em>",
@@ -220,7 +220,7 @@ const nl = {
   hire_std_label: "Standaard",
   hire_std_title_1: "Wat is inbegrepen",
   hire_std_title_2: "in elk project",
-  hire_std_sub: "Ongeacht omvang of prijs. Geen extra's — dit is de basis.",
+  hire_std_sub: "Ongeacht omvang of prijs. Geen extra's - dit is de basis.",
   hire_pricing_label: "Prijzen",
   hire_pricing_title_1: "Pakketten",
   hire_pricing_title_2: "& wat ze kosten",
@@ -243,7 +243,7 @@ const nl = {
   hire_limits_label: "Grenzen",
   hire_limits_title_1: "Wat ik",
   hire_limits_title_2: "niet doe",
-  hire_limits_sub: "Geen excuses — dingen die projecten betrouwbaar ruïneren.",
+  hire_limits_sub: "Geen excuses - dingen die projecten betrouwbaar ruïneren.",
   hire_start_label: "Start",
   hire_start_title_1: "Klaar om",
   hire_start_title_2: "te beginnen?",
@@ -258,30 +258,30 @@ const nl = {
   hire_total_label: "Totaal",
   hire_select_addons: "Selecteer een pakket voor automatische totaalprijs",
   hire_pkg1_name: "Landingspagina",
-  hire_pkg1_price: "vanaf $600",
+  hire_pkg1_price: "vanaf 25 €",
   hire_pkg1_timeline: "1 – 2 weken",
   hire_pkg1_desc:
     "Snel, gefocust, conversiegericht. Eén pagina die één taak goed uitvoert.",
   hire_pkg2_name: "Webapplicatie",
-  hire_pkg2_price: "vanaf $3.000",
+  hire_pkg2_price: "vanaf 125 €",
   hire_pkg2_timeline: "4 – 8 weken",
   hire_pkg2_desc:
     "SaaS, boekingssystemen, dashboards, interne tools. Full stack van begin tot eind.",
   hire_pkg2_tag: "Meest geboekt",
   hire_pkg3_name: "Bedrijfswebsite",
-  hire_pkg3_price: "vanaf $1.200",
+  hire_pkg3_price: "vanaf 75 €",
   hire_pkg3_timeline: "2 – 3 weken",
   hire_pkg3_desc:
     "Meerzijdig met structuur, SEO en iets waardoor je bedrijf er serieus uitziet online.",
   hire_step1_title: "Jij neemt contact op",
   hire_step1_body:
-    "Vul het formulier in of mail me direct. Vertel me ruwweg wat je nodig hebt — een alinea is genoeg.",
+    "Vul het formulier in of mail me direct. Vertel me ruwweg wat je nodig hebt - een alinea is genoeg.",
   hire_step2_title: "Ontdekkingsgesprek",
   hire_step2_body:
     "15 – 30 minuten. Gratis. Geen pitch. We bepalen samen of het een match is.",
   hire_step3_title: "Schriftelijk voorstel",
   hire_step3_body:
-    "Scope, tijdlijn, prijs — alles schriftelijk, voordat iets begint.",
+    "Scope, tijdlijn, prijs - alles schriftelijk, voordat iets begint.",
   hire_step4_title: "Kickoff",
   hire_step4_body:
     "50% vooraf, dan begint het werk. Je krijgt vroeg een privé preview-link.",
@@ -319,7 +319,7 @@ const nl = {
   hire_email: "jouw@email.com",
   hire_budget: "Budgetbereik",
   hire_message:
-    "Vertel me over je project — wat het doet, voor wie het is, is er een deadline.",
+    "Vertel me over je project - wat het doet, voor wie het is, is er een deadline.",
   hire_std1_title: "Directe toegang",
   hire_std1_body:
     "Je praat met mij. Niet met een accountmanager. Ik beantwoord berichten zelf.",
@@ -334,7 +334,7 @@ const nl = {
     "Gestructureerde reviewrondes zodat feedback gefocust blijft.",
   hire_std5_title: "Volledig eigendom",
   hire_std5_body:
-    "Code, domein, accounts — alles van jou na overdracht. Ik behoud niets.",
+    "Code, domein, accounts - alles van jou na overdracht. Ik behoud niets.",
   hire_std6_title: "Post-launch venster",
   hire_std6_body:
     "2 weken inbegrepen fixes na levering. Echte bugs, geen scope creep.",
@@ -384,7 +384,7 @@ const nl = {
   blog_page_label: "Schrijven",
   blog_page_title: "Van de blog",
   blog_page_sub:
-    "Dingen die ik heb uitgevogeld en besloten te delen. Geen nieuwsbrief — alleen posts als er iets te zeggen is.",
+    "Dingen die ik heb uitgevogeld en besloten te delen. Geen nieuwsbrief - alleen posts als er iets te zeggen is.",
   blog_back: "Terug naar portfolio",
   post_building: "Bouw je iets?",
   post_building_sub:
@@ -433,10 +433,10 @@ const nl = {
   uses_node_desc: "Solide keuze als ik volledige controle nodig heb.",
   uses_clerk_desc: "Auth in minuten opgelost, niet in dagen.",
   uses_figma_desc:
-    "Wireframes, design tokens, componentspecificaties — alles op één plek.",
+    "Wireframes, design tokens, componentspecificaties - alles op één plek.",
   uses_notion_desc: "Projectnotities, klantdocumenten en contentplanning.",
   uses_arc_desc:
-    "Ruimtes voor werk en privé — heeft mijn manier van browsen veranderd.",
+    "Ruimtes voor werk en privé - heeft mijn manier van browsen veranderd.",
   uses_vercel_desc: "Zero-config deploys voor het Next.js-ecosysteem.",
   uses_cloudflare_desc: "DNS, CDN en edge workers. Snel en goedkoop.",
   uses_macbook_desc:
@@ -460,7 +460,7 @@ const nl = {
     "Klik op een pakket voor de exacte uitsplitsing regel voor regel.",
   pricing_page_title: "Prijslijst",
   pricing_page_desc:
-    "Paketten en prijzen voor websites. Starter vanaf 100 €, Business vanaf 200 €, Premium vanaf 325 €.",
+    "Paketten en prijzen voor websites. Starter vanaf 25 €, Business vanaf 75 €, Premium vanaf 125 €.",
   pricing_cta_title: "Klaar om te beginnen?",
   pricing_cta_title2: "Laten we praten.",
   pricing_cta_sub: "Vul een kort formulier in. Ik reageer binnen 24 uur.",
@@ -618,20 +618,20 @@ const nl = {
     "Wekelijkse automatische back-ups met herstel met één klik.",
   addon_multisite_name: "Meertalig / multi-regio",
   addon_multisite_desc:
-    "Volledige meertalige opzet — aparte pagina's per taal.",
+    "Volledige meertalige opzet - aparte pagina's per taal.",
   referral_title_1: "Verwijs iemand door.",
   referral_title_2: "Jullie krijgen allebei korting.",
   referral_sub:
-    "Als je iemand doorverwijst die een project bestelt, krijg jij 10% korting op je volgende project — en je vriend krijgt meteen 10% korting.",
+    "Als je iemand doorverwijst die een project bestelt, krijg jij 10% korting op je volgende project - en je vriend krijgt meteen 10% korting.",
   ref_step1_title: "Jij verwijst door",
   ref_step1_body:
-    "Stuur een e-mail of bericht — geen formele aanmelding nodig.",
+    "Stuur een e-mail of bericht - geen formele aanmelding nodig.",
   ref_step2_title: "Zij bestellen",
-  ref_step2_body: "Je vriend noemt jouw naam — hij krijgt meteen 10% korting.",
+  ref_step2_body: "Je vriend noemt jouw naam - hij krijgt meteen 10% korting.",
   ref_step3_title: "Jij krijgt korting",
-  ref_step3_body: "Op je volgende project — automatisch, geen papierwerk.",
+  ref_step3_body: "Op je volgende project - automatisch, geen papierwerk.",
   referral_example:
-    "Je raadt het Business-pakket aan (400 KM / 200 €). Vriend betaalt 180 €. Jouw volgend project is 10% goedkoper — automatisch.",
+    "Je raadt het Business-pakket aan (75 €). Vriend betaalt 67,50 €. Jouw volgend project is 10% goedkoper - automatisch.",
   footer_github: "GitHub",
   footer_linkedin: "LinkedIn",
   footer_start_project: "Project starten",
@@ -646,11 +646,11 @@ const nl = {
   curr_tz_sub: "EU & US Oost vriendelijk",
   curr_next_slot_value: "Juli 2026",
   form_pkg_starter: "Starter",
-  form_pkg_starter_price: "100 €",
+  form_pkg_starter_price: "25 €",
   form_pkg_business: "Business",
-  form_pkg_business_price: "200 €",
+  form_pkg_business_price: "75 €",
   form_pkg_premium: "Premium",
-  form_pkg_premium_price: "325 €",
+  form_pkg_premium_price: "125 €",
   form_pkg_custom: "Maatwerk / Op aanvraag",
   form_pkg_placeholder: "Selecteer een pakket",
   form_or: "of",
@@ -681,7 +681,7 @@ const nl = {
   mob_hire_btn: "Project starten",
   pkg_popular_badge: "Meest populair",
   pkg_note_click:
-    "Klik op een pakket om het formulier vooraf in te vullen — of bezoek de prijzenpagina voor alle details.",
+    "Klik op een pakket om het formulier vooraf in te vullen - of bezoek de prijzenpagina voor alle details.",
   error_boundary_msg: "Er is iets misgegaan.",
   error_boundary_link: "Terug naar home",
   admin_loading: "Laden...",
@@ -691,13 +691,13 @@ const nl = {
   admin_magic_link_sent: "We hebben een magic link gestuurd naar",
   admin_try_again: "Opnieuw proberen",
   // ─── PACKAGE PRICES (i18n) ────────────────────────────────────────────────
-  pkg_starter_price: "100 €",
-  pkg_business_price: "200 €",
-  pkg_premium_price: "325 €",
+  pkg_starter_price: "50 KM",
+  pkg_business_price: "150 KM",
+  pkg_premium_price: "250 KM",
   // ─── 404 PAGE ─────────────────────────────────────────────────────────────
   nf_error_label: "Fout",
   nf_title: "Pagina niet gevonden",
-  nf_sub_1: "Het lijkt erop dat deze pagina niet bestaat — of verplaatst is.",
+  nf_sub_1: "Het lijkt erop dat deze pagina niet bestaat - of verplaatst is.",
   nf_sub_2: "Laten we je ergens nuttige naartoe leiden.",
   nf_back_home: "Terug naar home",
   nf_start_project: "Project starten",
@@ -706,26 +706,26 @@ const nl = {
   example_label: "Voorbeeld",
   // ─── HOME PAGE SEO ────────────────────────────────────────────────────────
   home_page_title:
-    "Adis Klobodanović — Full-Stack Developer | React, Next.js, Node.js",
+    "Adis Klobodanović - Full-Stack Developer | React, Next.js, Node.js",
   home_page_desc:
     "Full-stack developer gespecialiseerd in React, Next.js en Node.js. Ik bouw snelle webapps en SaaS-producten die op tijd worden opgeleverd.",
   // ─── PAGE SEO TITLES ─────────────────────────────────────────────────────
-  blog_seo_title: "Blog — Adis Klobodanović | Webontwikkeling",
+  blog_seo_title: "Blog - Adis Klobodanović | Webontwikkeling",
   blog_seo_desc:
     "Artikelen over React, Next.js, Node.js en freelance ontwikkeling. Echte ervaring, geen fluff.",
-  uses_seo_title: "Tools — Stack & Setup | Adis Klobodanović",
+  uses_seo_title: "Tools - Stack & Setup | Adis Klobodanović",
   uses_seo_desc:
     "De tools, hardware en software die ik dagelijks gebruik als full-stack developer.",
-  hire_seo_title: "Project Starten — Adis Klobodanović | Full-Stack Developer",
+  hire_seo_title: "Project Starten - Adis Klobodanović | Full-Stack Developer",
   hire_seo_desc:
-    "Klaar om iets te bouwen? Vaste prijzen — vanaf 100 € voor een landingspagina.",
-  projects_seo_title: "Projecten — Adis Klobodanović | Full-Stack Developer",
+    "Klaar om iets te bouwen? Vaste prijzen - vanaf 25 € voor een landingspagina.",
+  projects_seo_title: "Projecten - Adis Klobodanović | Full-Stack Developer",
   projects_seo_desc:
-    "Full-stack webprojecten — boekingsplatforms, vastgoedsites, SaaS-apps en meer.",
+    "Full-stack webprojecten - boekingsplatforms, vastgoedsites, SaaS-apps en meer.",
   // ─── ADDON/FORM TRANSLATIONS ──────────────────────────────────────────────
   addon_client_pays: "Klant betaalt jaarlijks",
   hire_addons_optional: "(optioneel)",
-  hire_addons_hint: "optioneel — klik om uit te vouwen",
+  hire_addons_hint: "optioneel - klik om uit te vouwen",
   addon_group_onetime: "Eenmalig",
   addon_group_yearly: "Jaarlijks (hosting & onderhoud)",
   addon_group_perpage: "Per pagina",
