@@ -1,4 +1,13 @@
 {
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "www.adiss.dev" }],
+      "destination": "https://adiss.dev/:path*",
+      "permanent": true
+    }
+  ],
+  "rewrites": [{ "source": "/((?!api/.*).*)", "destination": "/index.html" }],
   "headers": [
     {
       "source": "/(.*)",
@@ -11,18 +20,9 @@
           "key": "Strict-Transport-Security",
           "value": "max-age=63072000; includeSubDomains; preload"
         },
-        {
-          "key": "Cross-Origin-Opener-Policy",
-          "value": "same-origin"
-        },
-        {
-          "key": "X-Frame-Options",
-          "value": "DENY"
-        },
-        {
-          "key": "X-Content-Type-Options",
-          "value": "nosniff"
-        },
+        { "key": "Cross-Origin-Opener-Policy", "value": "same-origin" },
+        { "key": "X-Frame-Options", "value": "DENY" },
+        { "key": "X-Content-Type-Options", "value": "nosniff" },
         {
           "key": "Referrer-Policy",
           "value": "strict-origin-when-cross-origin"
@@ -51,10 +51,5 @@
         }
       ]
     }
-  ],
-  "rewrites": [{ "source": "/((?!api/.*).*)", "destination": "/index.html" }],
-  "routes": [
-    { "handle": "filesystem" },
-    { "src": "/(.*)", "dest": "/index.html" }
   ]
 }

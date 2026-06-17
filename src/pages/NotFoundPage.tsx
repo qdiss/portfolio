@@ -11,8 +11,10 @@ export default function NotFoundPage() {
 
   useSEO({
     title: `404 — ${t.nf_title || "Page not found"} · adiss.dev`,
-    description: t.nf_sub_1 || "The page you are looking for doesn't exist or has moved.",
+    description:
+      t.nf_sub_1 || "The page you are looking for doesn't exist or has moved.",
     canonical: "https://adiss.dev/404",
+    noIndex: true,
   });
 
   useEffect(() => {

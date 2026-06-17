@@ -111,9 +111,58 @@ export default function ProjectDetailPage() {
     title: project
       ? `${project.title} — Adis Klobodanovic`
       : "Project not found — Adis Klobodanovic",
-    description: project?.problem || "",
+    description: project
+      ? `${project.problem} ${project.solution}`.slice(0, 155)
+      : "",
     canonical: project
       ? `https://adiss.dev/contents/projects/${slug}`
+      : undefined,
+    ogImage: project ? `https://adiss.dev/projects/${slug}.webp` : undefined,
+    ogImageAlt: project?.title,
+    jsonLd: project
+      ? {
+          "@context": "https://schema.org",
+          "@type": "CreativeWork",
+          "@id": `https://adiss.dev/contents/projects/${slug}`,
+          name: project.title,
+          description: project.problem,
+          url: `https://adiss.dev/contents/projects/${slug}`,
+          sameAs: project.liveUrl,
+          keywords: project.tags.join(", "),
+          dateCreated: project.year,
+          creator: {
+            "@type": "Person",
+            "@id": "https://adiss.dev/#person",
+            name: "Adis Klobodanovic",
+            url: "https://adiss.dev",
+          },
+        }
+      : undefined,
+    breadcrumb: project
+      ? {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          itemListElement: [
+            {
+              "@type": "ListItem",
+              position: 1,
+              name: "Home",
+              item: "https://adiss.dev",
+            },
+            {
+              "@type": "ListItem",
+              position: 2,
+              name: "Projects",
+              item: "https://adiss.dev/contents/projects",
+            },
+            {
+              "@type": "ListItem",
+              position: 3,
+              name: project.title,
+              item: `https://adiss.dev/contents/projects/${slug}`,
+            },
+          ],
+        }
       : undefined,
   });
 

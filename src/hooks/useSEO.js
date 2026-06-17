@@ -17,7 +17,11 @@ import { useEffect } from "react";
  * @param {Object}   [opts.jsonLd]         — raw schema object, injected as-is
  * @param {string}   [opts.jsonLdId]       — id of the <script> tag (for updates)
  * @param {string}   [opts.breadcrumb]     — JSON string for BreadcrumbList
+<<<<<<< HEAD
  * @param {boolean}  [opts.onlyBs]         — true za blog postove (samo bosanski hreflang)
+=======
+ * @param {boolean}  [opts.noIndex]
+>>>>>>> 7b49ab8 (improved SEO for GSC crawling)
  */
 export function useSEO({
   title,
@@ -32,7 +36,11 @@ export function useSEO({
   jsonLd,
   jsonLdId = "page-jsonld",
   breadcrumb,
+<<<<<<< HEAD
   onlyBs = false,
+=======
+  noIndex = false,
+>>>>>>> 7b49ab8 (improved SEO for GSC crawling)
 }) {
   useEffect(() => {
     const pageLang = document.documentElement.lang || "en";
@@ -54,11 +62,13 @@ export function useSEO({
       el.setAttribute("content", content);
     };
 
-    // ── Basic ─────────────────────────────────────────────────────────
+    // ── Basic ─────────────────────────────────────────────────────────────
     setMeta('meta[name="description"]', description);
     setMeta(
       'meta[name="robots"]',
-      "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+      noIndex
+        ? "noindex, nofollow"
+        : "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
     );
 
     // ── Open Graph ────────────────────────────────────────────────────
@@ -76,6 +86,16 @@ export function useSEO({
       'meta[property="og:locale"]',
       pageLang === "en" ? "en_US" : pageLang,
     );
+<<<<<<< HEAD
+=======
+    setMeta('meta[property="og:image:alt"]', ogImageAlt || title, true);
+    setMeta('meta[property="og:site_name"]', "adiss.dev", true);
+    setMeta(
+      'meta[property="og:locale"]',
+      pageLang === "en" ? "en_US" : pageLang,
+      true,
+    );
+>>>>>>> 7b49ab8 (improved SEO for GSC crawling)
 
     // ── Twitter ───────────────────────────────────────────────────────
     setMeta('meta[name="twitter:title"]', title);
