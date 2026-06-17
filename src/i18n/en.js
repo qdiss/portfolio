@@ -81,42 +81,36 @@ const en = {
     "Built a full-stack booking platform with real-time availability, appointment management, and email confirmations.",
   p1_how:
     "Used App Router for server-side rendering, Prisma ORM for database access, and integrated a calendar system for availability management.",
-
   p2_problem:
     "A Croatian real estate agency needed a modern website to showcase luxury properties and generate leads.",
   p2_solution:
     "Delivered a performant, SEO-optimised marketing site with property listings, image galleries, and contact forms.",
   p2_how:
     "Built with static generation for fast page loads, optimised images via next/image, and a CMS-friendly content structure.",
-
   p5_problem:
     "A Sarajevo leather atelier needed a premium landing page that matched the quality of their handmade watch straps - most templates felt too generic.",
   p5_solution:
     "Designed and built a fully custom single-page site: hero, product collection, materials, process timeline, reviews, and contact - all from scratch.",
   p5_how:
     "No frameworks - pure HTML/CSS/JS. Scroll animations via IntersectionObserver, animated SVG strap illustrations, interactive colour swatches that update the product preview in real time, and a fixed parallax ticker.",
-
   p3_problem:
     "Travellers had no simple way to discover and plan trips in one place.",
   p3_solution:
     "A React-based travel discovery app with live flight and hotel data powered by external APIs.",
   p3_how:
     "Node.js backend proxies API calls to keep keys secure; React frontend handles state management and renders results dynamically.",
-
   p4_problem:
     "Wanted to deeply understand gamification mechanics and how platforms like Duolingo keep users engaged.",
   p4_solution:
     "Fully functional language learning app with streaks, hearts, XP system, and lesson progression.",
   p4_how:
     "Clerk handles authentication, Drizzle manages database schema, and Stripe is integrated for subscription tiers.",
-
   p6_problem:
     "Wanted to reverse-engineer how a social feed, stories, and engagement mechanics work at the component level.",
   p6_solution:
     "A pixel-faithful Instagram frontend clone with story bubbles, feed posts, likes, comments, and profile navigation.",
   p6_how:
     "Component-driven architecture with separate Feed, Stories, Post, and Profile components. Shared state for likes, follows, and active user context.",
-
   p1_r1: "Real-time slot availability",
   p1_r2: "Email confirmation flow",
   p1_r3: "Mobile-first design",
@@ -191,7 +185,8 @@ const en = {
   faq2_a:
     "Almost exclusively. Most of my clients are in Europe and the US. Remote work, good communication - timezone hasn't been an issue yet.",
   faq3_q: "How much does a project cost?",
-  faq3_a: "Landing pages from $30, websites from $85, web apps from $140. Every project gets a written quote.",
+  faq3_a:
+    "Landing pages from $30, websites from $85, web apps from $140. Every project gets a written quote - no vague hourly estimates that double by the end.",
   faq4_q: "What if I need changes after launch?",
   faq4_a:
     "Every project includes a revision window after delivery. For ongoing work we agree on a rate upfront. You won't be left with an orphaned codebase.",
@@ -290,7 +285,7 @@ const en = {
   hire_pkg1_desc:
     "Fast, focused, conversion-ready. One page that does one job well.",
   hire_pkg2_name: "Web Application",
-  hire_pkg2_price: "from hire_pkg2_price: 40",
+  hire_pkg2_price: "from $140",
   hire_pkg2_timeline: "4 – 8 weeks",
   hire_pkg2_desc:
     "SaaS, booking systems, dashboards, internal tools. Full stack end-to-end.",
@@ -411,7 +406,7 @@ const en = {
   form_pkg_business: "Business",
   form_pkg_business_price: "$85",
   form_pkg_premium: "Premium",
-  form_pkg_premium_price: "form_pkg_premium_price: 40",
+  form_pkg_premium_price: "$140",
   form_pkg_custom: "Custom / On request",
   form_pkg_placeholder: "Select a package",
   form_or: "or",
@@ -482,14 +477,12 @@ const en = {
   admin_check_email: "Check your email",
   admin_magic_link_sent: "We've sent a magic link to",
   admin_try_again: "Try again",
-
   uses_cat_editor: "Editor & Terminal",
   uses_cat_stack: "Stack",
   uses_cat_design: "Design",
   uses_cat_productivity: "Productivity",
   uses_cat_infra: "Deployment & Infra",
   uses_cat_hardware: "Hardware",
-
   uses_vscode_desc:
     "Daily driver for most projects. Lightweight, fast, endlessly extensible.",
   uses_webstorm_desc:
@@ -515,7 +508,6 @@ const en = {
   uses_macbook_desc: "Goes everywhere with me. Silent, all-day battery.",
   uses_asus_desc: "Second machine when I need Windows or a spare setup.",
   uses_pc_desc: "Desk workhorse for heavy builds and gaming after hours.",
-
   // ─── PRICING ──────────────────────────────────────────────────────────────
   nav_pricing: "Pricing",
   pricing_tag: "Transparent pricing",
@@ -530,8 +522,7 @@ const en = {
   pricing_pkgs_sub: "Click a package to see the exact breakdown line by line.",
   pricing_page_title: "Pricing",
   pricing_page_desc:
-    "Web development packages. Starter from $30, Business from $85, Premium from pricing_page_desc:
-    40.",
+    "Web development packages. Starter from $30, Business from $85, Premium from $140.",
   pricing_cta_title: "Ready to start?",
   pricing_cta_title2: "Let's talk.",
   pricing_cta_sub: "Fill in a short form. I respond within 24 hours.",
@@ -623,7 +614,6 @@ const en = {
   addon_hosting_desc: "Annual hosting on a reliable server.",
   addon_proemail_name: "Professional email address",
   addon_proemail_desc: "info@yourbusiness.com etc.",
-  // ─── NEW ADDONS ──────────────────────────────────────────────────────────
   addon_chatwidget_name: "WhatsApp / live chat button",
   addon_chatwidget_desc:
     "Floating chat button linked to WhatsApp or Messenger.",
@@ -688,9 +678,9 @@ const en = {
   referral_example:
     "You refer the Business package ($85). Friend pays $76.50. Your next project is 10% cheaper - automatically.",
   // ─── PACKAGE PRICES (i18n) ────────────────────────────────────────────────
-  pkg_starter_price: "50 KM",
-  pkg_business_price: "150 KM",
-  pkg_premium_price: "250 KM",
+  pkg_starter_price: "$30",
+  pkg_business_price: "$85",
+  pkg_premium_price: "$140",
   // ─── 404 PAGE ─────────────────────────────────────────────────────────────
   nf_error_label: "Error",
   nf_title: "Page not found",
