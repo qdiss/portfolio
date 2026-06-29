@@ -1,0 +1,798 @@
+<!DOCTYPE html><html lang="en" prefix="og: https://ogp.me/ns#" data-theme="dark"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- PRIMARY SEO -->
+    <title>
+      Adis Klobodanovic - Full-Stack Developer | React, Next.js, Node.js
+    </title>
+    <meta name="description" content="Full-stack developer specialising in React, Next.js &amp; Node.js. I build fast, clean web apps, SaaS products and landing pages that ship on time - available for new projects worldwide.">
+    <!-- FAVICON - both SVGs contain CSS @media(prefers-color-scheme) internally -->
+    <!-- Browsers pick the last matching <link rel="icon"> so light goes first -->
+    <link rel="icon" type="image/svg+xml" href="blob:http://localhost:45678/59fb99e0-30ac-458b-98f6-b339e6e25d41" media="(prefers-color-scheme: light)">
+    <link rel="icon" type="image/svg+xml" href="/favicon-terminal.svg" media="(prefers-color-scheme: dark)">
+    <link rel="icon" type="image/png" sizes="48x48" href="/favicon.png">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <!-- Fallback for browsers that ignore media on rel=icon (reads first match) -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <!-- FIX 1: apple-touch-icon mora biti PNG, ne SVG -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon.png">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="adiss.dev">
+    <meta name="author" content="Adis Klobodanovic">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <meta name="theme-color" content="#c8f060">
+    <meta name="color-scheme" content="dark light">
+    <meta name="geo.region" content="BA">
+    <meta name="geo.placename" content="Bosnia and Herzegovina">
+    <meta name="language" content="English">
+    <meta name="keywords" content="full-stack developer, React developer, Next.js developer, Node.js developer, web app development, SaaS development, freelance developer, landing page developer, Adis Klobodanovic, adiss.dev, Bosnia developer">
+
+    <!-- OPEN GRAPH -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="adiss.dev">
+    
+    <meta property="og:locale" content="en_US">
+    
+    
+    <!-- FIX 2: og:image mora biti PNG, Facebook/LinkedIn ne podrzavaju SVG -->
+    <meta property="og:image" content="https://adiss.dev/og-image.png">
+    <meta property="og:image:secure_url" content="https://adiss.dev/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:alt" content="Adis Klobodanovic - Full-Stack Developer portfolio preview">
+    <meta property="profile:first_name" content="Adis">
+    <meta property="profile:last_name" content="Klobodanovic">
+
+    <!-- TWITTER CARD -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@adisklobodanovic">
+    <meta name="twitter:creator" content="@adisklobodanovic">
+    <meta name="twitter:title" content="Adis Klobodanovic - Full-Stack Developer">
+    <meta name="twitter:description" content="Full-stack developer. React, Next.js, Node.js. Building fast web apps and SaaS products that actually ship.">
+    <!-- FIX 2 (nastavak): Twitter image takodje treba PNG -->
+    <meta name="twitter:image" content="https://adiss.dev/og-image.png">
+    <meta name="twitter:image:alt" content="Adis Klobodanovic - Full-Stack Developer">
+
+    <!-- SECURITY -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+    <meta http-equiv="X-DNS-Prefetch-Control" content="on">
+    <!-- CSP is set via Vercel response headers (vercel.json) to avoid meta/header conflicts -->
+
+    <!-- PERFORMANCE -->
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://flagcdn.com">
+    <link rel="dns-prefetch" href="https://hrnxwmmcntastjpaavfo.supabase.co">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link rel="preconnect" href="https://flagcdn.com" crossorigin="">
+    <!-- FIX 3: Supabase preconnect - ubrzava sve API pozive -->
+    <link rel="preconnect" href="https://hrnxwmmcntastjpaavfo.supabase.co" crossorigin="">
+
+    <!-- FONT PRELOAD - sprječava FOUT za primarne fontove -->
+    <link rel="preload" as="font" type="font/woff2" crossorigin="" href="https://fonts.gstatic.com/s/syne/v22/8vIS7w4qzmVxsWxjBZRjr0FKM_04uQ.woff2">
+    <link rel="preload" as="font" type="font/woff2" crossorigin="" href="https://fonts.gstatic.com/s/dmsans/v14/rP2tp2ywxg089UriI5-g4vlH9VoD8Cmcqbu6-K6z9mXgjU0.woff2">
+
+    <!-- FONTS non-blocking -->
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&amp;family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&amp;display=swap" rel="stylesheet" media="print" onload="
+        this.media = 'all';
+        this.onload = null;
+      ">
+    <noscript>
+      <link
+        href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap"
+        rel="stylesheet"
+      />
+    </noscript>
+
+    <!-- SCHEMA: Person -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "@id": "https://adiss.dev/#person",
+        "name": "Adis Klobodanovic",
+        "url": "https://adiss.dev",
+        "email": "info@adiss.dev",
+        "jobTitle": "Full-Stack Developer",
+        "description": "Full-stack developer specialising in React, Next.js and Node.js. Building fast web apps, SaaS products and landing pages for clients worldwide.",
+        "image": "https://adiss.dev/og-image.png",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "adiss.dev",
+          "url": "https://adiss.dev"
+        },
+        "knowsAbout": [
+          "React",
+          "Next.js",
+          "Node.js",
+          "TypeScript",
+          "PostgreSQL",
+          "Supabase",
+          "Tailwind CSS",
+          "Full-Stack Web Development",
+          "SaaS Development",
+          "Landing Pages"
+        ],
+        "knowsLanguage": ["English", "Bosnian"],
+        "nationality": "BA",
+        "sameAs": [
+          "https://linkedin.com/in/adis-klobodanovic",
+          "https://github.com/adisklobodanovic"
+        ]
+      }
+    </script>
+
+    <!-- SCHEMA: WebSite + Sitelinks Search -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "@id": "https://adiss.dev/#website",
+        "name": "Adis Klobodanovic - Full-Stack Developer",
+        "url": "https://adiss.dev",
+        "description": "Portfolio and hire page for Adis Klobodanovic, full-stack developer specialising in React, Next.js and Node.js.",
+        "author": { "@id": "https://adiss.dev/#person" },
+        "inLanguage": "en-US",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": {
+            "@type": "EntryPoint",
+            "urlTemplate": "https://adiss.dev/blog?q={search_term_string}"
+          },
+          "query-input": "required name=search_term_string"
+        }
+      }
+    </script>
+
+    <!-- SCHEMA: ProfessionalService with offer catalog -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        "@id": "https://adiss.dev/#service",
+        "name": "adiss.dev - Web Development Services",
+        "url": "https://adiss.dev",
+        "image": "https://adiss.dev/og-image.png",
+        "telephone": "+387644335989",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Zenica",
+          "addressCountry": "BA",
+          "postalCode": "72000",
+          "streetAddress": "Zije Dizdarevica 14"
+        },
+        "description": "Full-stack web development services - React, Next.js, Node.js. Landing pages, business websites, and SaaS web applications built and shipped on time.",
+        "priceRange": "200 KM – 650 KM+",
+        "currenciesAccepted": "BAM, EUR, USD",
+        "paymentAccepted": "Bank Transfer, PayPal",
+        "areaServed": { "@type": "AdministrativeArea", "name": "Worldwide" },
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Web Development Packages",
+          "itemListElement": [
+            {
+              "@type": "Service",
+              "name": "Starter Package",
+              "serviceType": "Web Development",
+              "provider": { "@id": "https://adiss.dev/#person" },
+              "offers": {
+                "@type": "Offer",
+                "name": "Starter Package",
+                "description": "Single-page website with contact form, Google Maps, mobile-responsive. Delivered in 5 days.",
+                "price": "200",
+                "priceCurrency": "BAM"
+              }
+            },
+            {
+              "@type": "Service",
+              "name": "Business Package",
+              "serviceType": "Full-Stack Development",
+              "provider": { "@id": "https://adiss.dev/#person" },
+              "offers": {
+                "@type": "Offer",
+                "name": "Business Package",
+                "description": "Multi-page website with SEO, analytics, social media kit, email signature. Delivered in 7 days.",
+                "price": "400",
+                "priceCurrency": "BAM"
+              }
+            },
+            {
+              "@type": "Service",
+              "name": "Premium Package",
+              "serviceType": "SaaS Development",
+              "provider": { "@id": "https://adiss.dev/#person" },
+              "offers": {
+                "@type": "Offer",
+                "name": "Premium Package",
+                "description": "Full business website with custom design, blog/news section, booking system. Delivered in 14 days.",
+                "price": "650",
+                "priceCurrency": "BAM"
+              }
+            }
+          ]
+        }
+      }
+    </script>
+
+    <!-- SCHEMA: FAQPage (enables rich results in Google) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How much does a website cost?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Packages start at 200 KM for a Starter single-page site, 400 KM for a Business multi-page site, and 650 KM for a full Premium website. Every project gets a written quote before anything starts."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How long does it take to build a website?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The Starter package is delivered in 5 days, Business in 7 days, and Premium in 14 days. Timelines are fixed in writing before the project starts."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do I own the code after the project?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Once the project is paid in full, all code, assets, and access credentials are transferred to you. You own everything outright."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can you work with clients outside Bosnia?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, all projects are done remotely. I work with clients worldwide. Communication is handled via email, Slack, or WhatsApp - whatever works for you."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What technologies do you use?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "I primarily build with React, Next.js, Node.js, TypeScript, and Supabase/PostgreSQL. For styling I use Tailwind CSS or plain CSS. Stack is always chosen to fit the project, not the other way around."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How do we communicate during the project?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Email, Slack, WhatsApp - whatever works for you. I send progress updates proactively, share preview links early, and respond to messages quickly. You always know the status."
+            }
+          }
+        ]
+      }
+    </script>
+
+    <!-- SCHEMA: BreadcrumbList -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://adiss.dev"
+          }
+        ]
+      }
+    </script>
+
+    <!-- GOOGLE ANALYTICS -->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-6SR2FJDFZC"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-6SR2FJDFZC", {
+        page_path: window.location.pathname,
+        anonymize_ip: true,
+      });
+    </script>
+    <script type="module" crossorigin="" src="/assets/index-CkP4px7a.js"></script>
+    <link rel="modulepreload" crossorigin="" href="/assets/vendor-react-DArxELLs.js">
+    <link rel="stylesheet" crossorigin="" href="/assets/index-1lxdMI2m.css">
+  <link rel="modulepreload" as="script" crossorigin="" href="/assets/PricingPage-DWeFmDe9.js"><link rel="modulepreload" as="script" crossorigin="" href="/assets/packages-BbLQ7cAN.js"><link rel="modulepreload" as="script" crossorigin="" href="/assets/CursorWrapper-B_BedV1o.js"><link rel="modulepreload" as="script" crossorigin="" href="/assets/CustomCursor-CZWk4bDC.js"><link rel="modulepreload" as="script" crossorigin="" href="/assets/index-CkP4px7a.js"><link rel="canonical" href="https://adiss.dev/pricing">
+</head>
+  <body>
+    <div id="root"><div style="width: 8px; height: 8px; background: var(--accent); border-radius: 50%; position: fixed; top: 0px; left: 0px; pointer-events: none; z-index: 99999; will-change: transform; transition: width 0.15s, height 0.15s, background 0.15s; display: block;"></div><main><style>
+        @keyframes fadeIn { from{opacity:0} to{opacity:1} }
+        @keyframes slideUp { from{opacity:0;transform:translateY(24px)} to{opacity:1;transform:none} }
+
+        .pricing-hero {
+          padding: 5rem 0 3rem;
+          text-align: center;
+          position: relative;
+          overflow: hidden;
+        }
+        .pricing-hero::before {
+          content:'';
+          position:absolute;top:-80px;left:50%;transform:translateX(-50%);
+          width:560px;height:360px;
+          background:radial-gradient(ellipse, rgba(200,240,96,0.07) 0%, transparent 65%);
+          pointer-events:none;
+        }
+
+        .packages-grid {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          gap: 1.25rem;
+          margin-top: 3rem;
+        }
+        .pkg-card {
+          background: var(--bg2);
+          border: 1px solid var(--border);
+          border-radius: 22px;
+          padding: 2rem;
+          display: flex;
+          flex-direction: column;
+          position: relative;
+          cursor: pointer;
+          transition: border-color 0.25s, transform 0.25s, box-shadow 0.25s;
+        }
+        .pkg-card:hover {
+          border-color: var(--border2);
+          transform: translateY(-4px);
+          box-shadow: 0 24px 60px -12px rgba(0,0,0,0.4);
+        }
+        .pkg-card.featured {
+          border-color: rgba(200,240,96,0.3);
+          background: rgba(200,240,96,0.025);
+        }
+        .pkg-card.featured:hover {
+          border-color: rgba(200,240,96,0.5);
+          box-shadow: 0 24px 60px -12px rgba(200,240,96,0.12);
+        }
+        .pkg-badge {
+          position: absolute;
+          top: -12px; left: 50%; transform: translateX(-50%);
+          background: var(--accent); color: #0a0a0a;
+          font-family: var(--font-display); font-weight: 700;
+          font-size: 0.7rem; padding: 0.25rem 0.9rem;
+          border-radius: 100px; white-space: nowrap;
+          letter-spacing: 0.06em; text-transform: uppercase;
+        }
+        .pkg-icon {
+          width: 42px; height: 42px; border-radius: 11px;
+          background: rgba(200,240,96,0.08);
+          border: 1px solid rgba(200,240,96,0.18);
+          display: flex; align-items: center; justify-content: center;
+          color: var(--accent); margin-bottom: 0.85rem;
+        }
+        .pkg-name {
+          font-family: var(--font-display); font-size: 1.2rem;
+          font-weight: 700; letter-spacing: -0.02em; margin-bottom: 0.4rem;
+        }
+        .pkg-desc {
+          color: var(--muted); font-size: 0.85rem;
+          font-weight: 300; line-height: 1.65; margin-bottom: 1.1rem;
+        }
+        .pkg-price {
+          font-family: var(--font-display);
+          font-size: 2.4rem; font-weight: 800;
+          color: var(--accent); letter-spacing: -0.04em;
+          line-height: 1; margin-bottom: 0.3rem;
+        }
+        .pkg-price-note { font-size: 0.78rem; color: var(--muted); margin-bottom: 1.1rem; }
+        .pkg-features { list-style: none; flex: 1; margin-bottom: 1.25rem; }
+        .pkg-features li {
+          display: flex; align-items: flex-start; gap: 0.6rem;
+          font-size: 0.85rem; color: var(--muted);
+          padding: 0.4rem 0; border-bottom: 1px solid var(--border);
+          line-height: 1.5; font-weight: 300;
+        }
+        .pkg-features li:last-child { border-bottom: none; }
+        .pkg-check { color: var(--accent); font-size: 0.85rem; flex-shrink: 0; margin-top: 0.1rem; }
+        .pkg-footer {
+          padding-top: 1.25rem;
+          border-top: 1px solid var(--border);
+          margin-top: auto;
+        }
+        .pkg-cta-btn {
+          display: block; text-align: center;
+          padding: 0.75rem;
+          font-family: var(--font-display); font-weight: 700;
+          font-size: 0.875rem; border-radius: 100px;
+          cursor: pointer; transition: opacity 0.2s, background 0.2s;
+          text-decoration: none;
+        }
+        .pkg-cta-btn.solid { background: var(--accent); color: #0a0a0a; }
+        .pkg-cta-btn.solid:hover { opacity: 0.85; }
+        .pkg-cta-btn.outline { background: none; border: 1px solid var(--border2); color: var(--text); }
+        .pkg-cta-btn.outline:hover { border-color: var(--accent); color: var(--accent); }
+        .pkg-details-hint {
+          text-align: center; font-size: 0.72rem;
+          color: var(--muted); margin-top: 0.65rem;
+          opacity: 0.6;
+        }
+        .pkg-timeline {
+          display: inline-flex; align-items: center; gap: 0.35rem;
+          font-size: 0.72rem; color: var(--muted);
+          border: 1px solid var(--border); border-radius: 100px;
+          padding: 0.2rem 0.6rem; margin-bottom: 1.5rem;
+        }
+
+        /* ADDONS */
+        .addons-grid {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          gap: 0.85rem;
+          margin-top: 2.5rem;
+        }
+        .addon-card {
+          background: var(--bg2); border: 1px solid var(--border);
+          border-radius: 14px; padding: 1rem 1.15rem;
+          display: flex; align-items: center;
+          justify-content: space-between; gap: 1rem;
+          transition: border-color 0.2s;
+        }
+        .addon-card:hover { border-color: var(--border2); }
+        .addon-icon {
+          width: 36px; height: 36px; border-radius: 9px;
+          background: rgba(200,240,96,0.07);
+          border: 1px solid rgba(200,240,96,0.12);
+          display: flex; align-items: center;
+          justify-content: center; color: var(--accent); flex-shrink: 0;
+        }
+        .addon-name { font-size: 0.88rem; font-weight: 500; margin-bottom: 0.15rem; }
+        .addon-desc { font-size: 0.76rem; color: var(--muted); font-weight: 300; line-height: 1.4; }
+        .addon-price {
+          font-family: var(--font-display); font-weight: 700;
+          color: var(--accent); font-size: 0.95rem;
+          white-space: nowrap; text-align: right;
+          flex-shrink: 0;
+        }
+        .addon-per { display: block; font-size: 0.65rem; color: var(--muted); font-family: var(--font-body); font-weight: 300; }
+        .addon-badge {
+          margin-top: 0.25rem;
+          display: inline-block;
+          font-size: 0.62rem;
+          padding: 0.1rem 0.45rem;
+          border-radius: 999px;
+          border: 1px solid rgba(200,240,96,0.25);
+          background: rgba(200,240,96,0.1);
+          color: var(--accent);
+          letter-spacing: 0.06em;
+          text-transform: uppercase;
+          font-weight: 700;
+        }
+
+        /* REFERRAL */
+        .referral-box {
+          background: rgba(200,240,96,0.03);
+          border: 1px solid rgba(200,240,96,0.16);
+          border-radius: 22px; padding: 2.5rem;
+        }
+        .ref-steps {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          gap: 1rem; margin: 1.75rem 0 1.25rem;
+        }
+        .ref-step {
+          background: var(--bg2); border: 1px solid var(--border);
+          border-radius: 14px; padding: 1.25rem;
+        }
+        .ref-step-num {
+          font-family: var(--font-display);
+          font-size: 2rem; font-weight: 800;
+          color: var(--border2); line-height: 1;
+          margin-bottom: 0.5rem; letter-spacing: -0.04em;
+        }
+
+        [data-theme="light"] .pkg-card { background: #fff; border-color: rgba(0,0,0,0.08); }
+        [data-theme="light"] .pkg-card.featured { border-color: rgba(77,105,0,0.2); }
+        [data-theme="light"] .addon-card { background: #fff; border-color: rgba(0,0,0,0.08); }
+        [data-theme="light"] .referral-box { background: rgba(77,105,0,0.03); border-color: rgba(77,105,0,0.14); }
+        [data-theme="light"] .ref-step { background: rgba(0,0,0,0.03); }
+
+        @media (max-width: 860px) {
+          .packages-grid { grid-template-columns: 1fr; }
+          .addons-grid { grid-template-columns: 1fr; }
+          .ref-steps { grid-template-columns: 1fr; }
+        }
+
+        /* Reveal */
+        .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.55s ease, transform 0.55s ease; }
+        .reveal.visible { opacity: 1; transform: none; }
+        .reveal-delay-1 { transition-delay: 0.05s; }
+        .reveal-delay-2 { transition-delay: 0.12s; }
+        .reveal-delay-3 { transition-delay: 0.19s; }
+      </style><style>
+        nav {
+          transition: box-shadow 0.3s, background 0.3s;
+        }
+        nav.nav--scrolled {
+          box-shadow: 0 1px 0 var(--border);
+        }
+
+        .nav-links a.nav-active { color: var(--accent); }
+        .nav-links a.nav-active::after { width: 100% !important; background: var(--accent); }
+
+        /* ── LANG DROPDOWN ── */
+        .lang-dropdown { position: relative; display: inline-block; }
+        .lang-current {
+          background: var(--bg2);
+          border: 1px solid var(--border);
+          color: var(--text);
+          font-size: 0.78rem;
+          padding: 0.4rem 0.8rem;
+          border-radius: 10px;
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+          gap: 6px;
+          transition: all 0.2s;
+          font-family: inherit;
+          font-weight: 500;
+        }
+        .lang-current:hover { border-color: var(--accent); background: var(--bg3, var(--bg2)); }
+        .lang-flag-img { width: 16px; height: 11px; object-fit: cover; border-radius: 1px; display: block; }
+        .lang-code { font-size: 0.72rem; letter-spacing: 0.04em; font-weight: 600; text-transform: uppercase; }
+        .lang-arrow { font-size: 0.55rem; opacity: 0.5; transition: transform 0.2s; }
+        .lang-arrow.open { transform: rotate(180deg); }
+        .lang-menu {
+          position: absolute;
+          top: calc(100% + 8px);
+          right: 0;
+          background: var(--bg2);
+          border: 1px solid var(--border);
+          border-radius: 14px;
+          padding: 6px;
+          box-shadow: 0 16px 40px -4px rgba(0,0,0,0.35);
+          z-index: 1100;
+          min-width: 165px;
+          display: flex;
+          flex-direction: column;
+          gap: 2px;
+          animation: dropIn 0.18s ease;
+        }
+        @keyframes dropIn {
+          from { opacity:0; transform: translateY(-6px); }
+          to   { opacity:1; transform: none; }
+        }
+        .lang-option {
+          background: none; border: none; width: 100%; text-align: left;
+          padding: 9px 12px; color: var(--text); font-size: 0.82rem;
+          border-radius: 9px; cursor: pointer; transition: background 0.15s;
+          display: flex; align-items: center; gap: 10px;
+          font-family: inherit; font-weight: 400;
+        }
+        .lang-option:hover { background: rgba(200,240,96,0.1); }
+        .lang-option.active { background: rgba(200,240,96,0.18); color: var(--accent); font-weight: 600; }
+        .lang-option-label { flex: 1; }
+        .lang-option-check { color: var(--accent); font-size: 0.7rem; }
+        [data-theme="light"] .lang-current { background: #fff; border-color: rgba(0,0,0,0.12); color: #111; }
+        [data-theme="light"] .lang-menu { background: #fff; border-color: rgba(0,0,0,0.1); box-shadow: 0 16px 40px -4px rgba(0,0,0,0.15); }
+        [data-theme="light"] .lang-option { color: #111; }
+        [data-theme="light"] .lang-option:hover { background: rgba(0,0,0,0.05); }
+        [data-theme="light"] .lang-option.active { background: rgba(200,240,96,0.25); color: #5a7000; }
+
+        /* ── FULLSCREEN MOBILE MENU ── */
+        .mob-overlay {
+          position: fixed;
+          inset: 0;
+          z-index: 98;
+          background: var(--bg);
+          display: flex;
+          flex-direction: column;
+          overflow: hidden;
+          opacity: 0;
+          clip-path: inset(0 0 100% 0);
+          transition:
+            opacity 0.45s cubic-bezier(0.16,1,0.3,1),
+            clip-path 0.45s cubic-bezier(0.16,1,0.3,1);
+          pointer-events: none;
+        }
+        .mob-overlay.open {
+          opacity: 1;
+          clip-path: inset(0 0 0% 0);
+          pointer-events: all;
+        }
+        .mob-glow {
+          position: absolute;
+          top: 15%;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 520px;
+          height: 520px;
+          background: radial-gradient(ellipse, rgba(200,240,96,0.07) 0%, transparent 70%);
+          pointer-events: none;
+        }
+
+        /* top bar inside overlay */
+        .mob-bar {
+          position: relative;
+          z-index: 2;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding: 1.1rem 1.5rem;
+          flex-shrink: 0;
+        }
+        .mob-logo {
+          font-family: var(--font-display);
+          font-size: 1.05rem;
+          font-weight: 700;
+          letter-spacing: -0.02em;
+          color: var(--text);
+          text-decoration: none;
+        }
+        .mob-logo span { color: var(--accent); }
+        .mob-close {
+          width: 38px; height: 38px; border-radius: 50%;
+          border: 1px solid var(--border2); background: none;
+          cursor: pointer; display: flex; align-items: center;
+          justify-content: center; color: var(--text); font-size: 1rem;
+          transition: background 0.2s, border-color 0.2s;
+        }
+        .mob-close:hover { background: var(--bg2); border-color: var(--accent); color: var(--accent); }
+
+        /* ── NAV LINKS CONTAINER ── */
+        .mob-links {
+          position: relative;
+          z-index: 2;
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;  /* ← centrira vertikalno */
+          align-items: stretch;
+          padding: 0 4.5rem;
+          gap: 0;
+        }
+
+        /* ── INDIVIDUAL LINK ROW ── */
+        .mob-link {
+          display: flex;
+          align-items: center;
+          gap: 0;
+          padding: 0.6rem 0;
+          border-bottom: 1px solid var(--border);
+          text-decoration: none;
+          color: var(--text);
+          font-family: var(--font-display);
+          font-size: clamp(1.5rem, 6vw, 2.1rem);
+          font-weight: 700;
+          letter-spacing: -0.03em;
+          opacity: 0;
+          transform: translateY(18px);
+          transition: color 0.2s, opacity 0.4s ease, transform 0.4s ease;
+        }
+        .mob-link:first-child { border-top: 1px solid var(--border); }
+        .mob-overlay.open .mob-link:nth-child(1) { opacity:1; transform:none; transition-delay: 0.10s; }
+        .mob-overlay.open .mob-link:nth-child(2) { opacity:1; transform:none; transition-delay: 0.16s; }
+        .mob-overlay.open .mob-link:nth-child(3) { opacity:1; transform:none; transition-delay: 0.22s; }
+        .mob-overlay.open .mob-link:nth-child(4) { opacity:1; transform:none; transition-delay: 0.28s; }
+        .mob-overlay.open .mob-link:nth-child(5) { opacity:1; transform:none; transition-delay: 0.34s; }
+        .mob-overlay.open .mob-link:nth-child(6) { opacity:1; transform:none; transition-delay: 0.40s; }
+        .mob-overlay.open .mob-link:nth-child(7) { opacity:1; transform:none; transition-delay: 0.46s; }
+        .mob-link:hover { color: var(--accent); }
+        .mob-link.mob-active { color: var(--accent); }
+
+        .mob-link-num {
+          width: 3.5rem;
+          min-width: 3.5rem;
+          flex-shrink: 0;
+          font-size: 0.68rem;
+          color: var(--muted2);
+          font-family: var(--font-body);
+          font-weight: 400;
+          letter-spacing: 0.06em;
+          font-variant-numeric: tabular-nums;
+          line-height: 1;
+          /* dodaj ovo: */
+          text-align: left;
+        }
+        .mob-link-text {
+          flex: 1;
+        }
+        .mob-link-arrow {
+          flex-shrink: 0;
+          width: 2rem;
+          text-align: right;
+          font-size: 1.1rem;
+          color: var(--muted2);
+          transition: color 0.2s, transform 0.2s;
+        }
+        .mob-link:hover .mob-link-arrow {
+          color: var(--accent);
+          transform: translate(3px, -3px);
+        }
+
+        /* bottom bar */
+        .mob-bottom {
+          position: relative;
+          z-index: 2;
+          padding: 1.25rem 2rem 2rem;
+          border-top: 1px solid var(--border);
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          flex-wrap: wrap;
+          gap: 1rem;
+          opacity: 0;
+          transform: translateY(12px);
+          transition: opacity 0.4s ease 0.4s, transform 0.4s ease 0.4s;
+        }
+        .mob-overlay.open .mob-bottom { opacity: 1; transform: none; }
+        .mob-bottom-langs {
+          display: flex;
+          gap: 6px;
+          flex-wrap: wrap;
+        }
+        .mob-lang-btn {
+          background: var(--bg2);
+          border: 1px solid var(--border);
+          color: var(--muted);
+          padding: 5px 10px;
+          border-radius: 8px;
+          cursor: pointer;
+          font-size: 0.72rem;
+          font-weight: 500;
+          text-transform: uppercase;
+          letter-spacing: 0.04em;
+          display: flex;
+          align-items: center;
+          gap: 5px;
+          transition: all 0.15s;
+        }
+        .mob-lang-btn.active {
+          background: rgba(200,240,96,0.12);
+          border-color: rgba(200,240,96,0.3);
+          color: var(--accent);
+        }
+        .mob-theme-btn {
+          display: flex;
+          align-items: center;
+          gap: 0.5rem;
+          background: none;
+          border: 1px solid var(--border2);
+          border-radius: 10px;
+          padding: 0.5rem 0.9rem;
+          color: var(--muted);
+          font-size: 0.8rem;
+          cursor: pointer;
+          font-family: inherit;
+          transition: color 0.2s, border-color 0.2s;
+        }
+        .mob-theme-btn:hover { color: var(--text); border-color: var(--border2); }
+        .mob-hire-btn {
+          display: inline-flex;
+          align-items: center;
+          gap: 0.4rem;
+          background: var(--accent);
+          color: #0a0a0a;
+          border-radius: 100px;
+          padding: 0.6rem 1.25rem;
+          font-size: 0.85rem;
+          font-weight: 700;
+          font-family: var(--font-display);
+          text-decoration: none;
+          transition: opacity 0.2s;
+        }
+        .mob-hire-btn:hover { opacity: 0.85; }
+        [data-theme="light"] .mob-overlay { background: var(--bg); }
+        [data-theme="light"] .mob-hire-btn { color: #fff; }
+      </style><nav class=""><a class="nav-logo" href="/">adiss<span>.</span>dev</a><ul class="nav-links"><li><a href="/#about" class="">About</a></li><li><a href="/#services" class="">Services</a></li><li><a href="/pricing" class="">Pricing</a></li><li><a href="/#work" class="">Work</a></li><li><a href="/blog" class="">Blog</a></li><li><a href="/#contact" class="">Contact</a></li><li><a href="/uses" class="">Uses</a></li></ul><div class="nav-right"><div class="lang-dropdown"><button class="lang-current"><img class="lang-flag-img" src="https://flagcdn.com/gb.svg" alt="English"><span class="lang-code">en</span><span class="lang-arrow">▼</span></button></div><button class="theme-toggle" aria-label="Toggle theme"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><line x1="12" y1="2" x2="12" y2="6"></line><line x1="12" y1="18" x2="12" y2="22"></line><line x1="4.93" y1="4.93" x2="7.76" y2="7.76"></line><line x1="16.24" y1="16.24" x2="19.07" y2="19.07"></line><line x1="2" y1="12" x2="6" y2="12"></line><line x1="18" y1="12" x2="22" y2="12"></line><line x1="4.93" y1="19.07" x2="7.76" y2="16.24"></line><line x1="16.24" y1="7.76" x2="19.07" y2="4.93"></line></svg></button><a class="nav-cta" href="/hire">Let's talk  </a><button class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button></div></nav><div class="mob-overlay" aria-hidden="true" inert=""><div class="mob-glow"></div><div class="mob-bar"><a class="mob-logo" href="/">adiss<span>.</span>dev</a><button class="mob-close" aria-label="Close menu"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></button></div><div class="mob-links"><a href="/#about" class="mob-link"><span class="mob-link-num">01</span><span class="mob-link-text">About</span><span class="mob-link-arrow">↗</span></a><a href="/#services" class="mob-link"><span class="mob-link-num">02</span><span class="mob-link-text">Services</span><span class="mob-link-arrow">↗</span></a><a href="/pricing" class="mob-link"><span class="mob-link-num">03</span><span class="mob-link-text">Pricing</span><span class="mob-link-arrow">↗</span></a><a href="/#work" class="mob-link"><span class="mob-link-num">04</span><span class="mob-link-text">Work</span><span class="mob-link-arrow">↗</span></a><a href="/blog" class="mob-link"><span class="mob-link-num">05</span><span class="mob-link-text">Blog</span><span class="mob-link-arrow">↗</span></a><a href="/#contact" class="mob-link"><span class="mob-link-num">06</span><span class="mob-link-text">Contact</span><span class="mob-link-arrow">↗</span></a><a href="/uses" class="mob-link"><span class="mob-link-num">07</span><span class="mob-link-text">Uses</span><span class="mob-link-arrow">↗</span></a></div><div class="mob-bottom"><div style="display: flex; gap: 0.65rem; align-items: center; flex-wrap: wrap;"><a class="mob-hire-btn" href="/hire">Start a project<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="" aria-hidden="true"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg></a></div></div></div><main style="max-width: 1200px; margin: 0px auto; padding: 0px 2rem 6rem;"><div class="pricing-hero reveal"><div style="display: inline-flex; align-items: center; gap: 0.5rem; font-size: 0.72rem; color: var(--accent); letter-spacing: 0.1em; text-transform: uppercase; font-weight: 500; margin-bottom: 1.25rem;"><span style="width: 7px; height: 7px; border-radius: 50%; background: var(--accent); animation: 2.2s ease 0s infinite normal none running pulse;"></span>Transparent pricing</div><h1 style="font-family: var(--font-display); font-size: clamp(2.2rem, 5vw, 3.6rem); font-weight: 800; letter-spacing: -0.04em; line-height: 1.05; margin-bottom: 1rem;">Packages <em style="font-style: italic; color: var(--muted); font-weight: 400;">&amp; pricing.</em></h1><p style="color: var(--muted); font-size: 1rem; font-weight: 300; max-width: 460px; margin: 0px auto 1rem; line-height: 1.8;">Fixed price, not hourly. You know the number before anything starts.</p><div style="display: inline-block; margin-top: 0.75rem; font-size: 0.82rem; color: var(--muted); border: 1px solid var(--border2); border-radius: 100px; padding: 0.35rem 1rem;"><strong style="color: var(--accent);">Click a package</strong> to see a detailed breakdown</div></div><section style="margin-bottom: 0.75rem;"><div class="section-label reveal">Packages</div><h2 class="section-title reveal">What each package includes</h2><p class="section-sub reveal">Click a package to see the exact breakdown line by line.</p><div class="packages-grid"><div class="pkg-card reveal reveal-delay-1" role="button" tabindex="0"><div class="pkg-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg></div><div class="pkg-name">Starter</div><p class="pkg-desc">Fast and focused. One page that does one job well.</p><div class="pkg-timeline"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0;"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>5 days</div><div class="pkg-price">$30</div><div class="pkg-price-note">/ one-time</div><ul class="pkg-features"><li><span class="pkg-check">✓</span><span>Single-page website (Landing page)</span></li><li><span class="pkg-check">✓</span><span>Contact form<span style="margin-left: 0.4rem; font-size: 0.6rem; background: rgba(200, 240, 96, 0.12); border: 1px solid rgba(200, 240, 96, 0.25); color: var(--accent); border-radius: 100px; padding: 0.1rem 0.4rem; font-weight: 700; letter-spacing: 0.06em; vertical-align: middle;">FREE</span></span></li><li><span class="pkg-check">✓</span><span>Google Maps embed<span style="margin-left: 0.4rem; font-size: 0.6rem; background: rgba(200, 240, 96, 0.12); border: 1px solid rgba(200, 240, 96, 0.25); color: var(--accent); border-radius: 100px; padding: 0.1rem 0.4rem; font-weight: 700; letter-spacing: 0.06em; vertical-align: middle;">FREE</span></span></li><li><span class="pkg-check">✓</span><span>Mobile-responsive</span></li><li><span class="pkg-check">✓</span><span>3 ready-to-publish social posts</span></li><li style="color: var(--accent); font-size: 0.78rem; border-bottom-width: medium; border-bottom-style: none; border-bottom-color: currentcolor;">+ 1 more items...</li></ul><div class="pkg-footer"><div class="pkg-cta-btn outline">Start project ↗</div><div class="pkg-details-hint">Click card for details</div></div></div><div class="pkg-card featured reveal reveal-delay-2" role="button" tabindex="0"><div class="pkg-badge">Most popular</div><div class="pkg-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg></div><div class="pkg-name">Business</div><p class="pkg-desc">Multi-page site for serious businesses. SEO, analytics, WhatsApp.</p><div class="pkg-timeline"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0;"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>7 days</div><div class="pkg-price">$85</div><div class="pkg-price-note">/ one-time</div><ul class="pkg-features"><li><span class="pkg-check">✓</span><span>Multi-page website (up to 5 pages)</span></li><li><span class="pkg-check">✓</span><span>Contact form<span style="margin-left: 0.4rem; font-size: 0.6rem; background: rgba(200, 240, 96, 0.12); border: 1px solid rgba(200, 240, 96, 0.25); color: var(--accent); border-radius: 100px; padding: 0.1rem 0.4rem; font-weight: 700; letter-spacing: 0.06em; vertical-align: middle;">FREE</span></span></li><li><span class="pkg-check">✓</span><span>Google Maps embed<span style="margin-left: 0.4rem; font-size: 0.6rem; background: rgba(200, 240, 96, 0.12); border: 1px solid rgba(200, 240, 96, 0.25); color: var(--accent); border-radius: 100px; padding: 0.1rem 0.4rem; font-weight: 700; letter-spacing: 0.06em; vertical-align: middle;">FREE</span></span></li><li><span class="pkg-check">✓</span><span>Social Media Kit (10 Canva posts + captions)</span></li><li><span class="pkg-check">✓</span><span>Email signature</span></li><li style="color: var(--accent); font-size: 0.78rem; border-bottom-width: medium; border-bottom-style: none; border-bottom-color: currentcolor;">+ 5 more items...</li></ul><div class="pkg-footer"><div class="pkg-cta-btn solid">Start project ↗</div><div class="pkg-details-hint">Click card for details</div></div></div><div class="pkg-card reveal reveal-delay-3" role="button" tabindex="0"><div class="pkg-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"></path><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"></path><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"></path><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"></path></svg></div><div class="pkg-name">Premium</div><p class="pkg-desc">Complete digital presence. Logo, brand, SEO, booking, support.</p><div class="pkg-timeline"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0;"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>10 days</div><div class="pkg-price">$140</div><div class="pkg-price-note">/ one-time</div><ul class="pkg-features"><li><span class="pkg-check">✓</span><span>Up to 10 pages</span></li><li><span class="pkg-check">✓</span><span>Google Business setup &amp; optimization</span></li><li><span class="pkg-check">✓</span><span>Basic logo design</span></li><li><span class="pkg-check">✓</span><span>Brand color palette &amp; fonts</span></li><li><span class="pkg-check">✓</span><span>20 Canva posts + Story template</span></li><li style="color: var(--accent); font-size: 0.78rem; border-bottom-width: medium; border-bottom-style: none; border-bottom-color: currentcolor;">+ 6 more items...</li></ul><div class="pkg-footer"><div class="pkg-cta-btn outline">Start project ↗</div><div class="pkg-details-hint">Click card for details</div></div></div></div><p style="margin-top: 1.5rem; text-align: center; font-size: 0.82rem; color: var(--muted); border: 1px solid var(--border); border-radius: 100px; display: inline-block; padding: 0.4rem 1.25rem;">Every project gets a written proposal. These are starting points, not caps.</p></section><div style="height: 1px; background: var(--border); margin: 0px 0px 4rem;"></div><section style="margin-bottom: 0.75rem;"><div class="section-label reveal">Add-ons</div><h2 class="section-title reveal">Additional services</h2><p class="section-sub reveal">Can be added to any package.</p><div class="addons-grid"><div class="addon-card reveal"><div style="display: flex; align-items: center; gap: 0.85rem;"><div class="addon-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg></div><div><div class="addon-name">Google Business setup</div><div class="addon-desc">Google profile setup and optimization.</div></div></div><div class="addon-price">$30<span class="addon-per">/ one-time</span></div></div><div class="addon-card reveal"><div style="display: flex; align-items: center; gap: 0.85rem;"><div class="addon-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg></div><div><div class="addon-name">Email signature</div><div class="addon-desc">Professional HTML email signature.</div></div></div><div class="addon-price">$20<span class="addon-per">/ one-time</span></div></div><div class="addon-card reveal"><div style="display: flex; align-items: center; gap: 0.85rem;"><div class="addon-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="13.5" cy="6.5" r=".5" fill="currentColor"></circle><circle cx="17.5" cy="10.5" r=".5" fill="currentColor"></circle><circle cx="8.5" cy="7.5" r=".5" fill="currentColor"></circle><circle cx="6.5" cy="12.5" r=".5" fill="currentColor"></circle><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z"></path></svg></div><div><div class="addon-name">Logo design</div><div class="addon-desc">Basic logo in vector format.</div></div></div><div class="addon-price">$40<span class="addon-per">/ one-time</span></div></div><div class="addon-card reveal"><div style="display: flex; align-items: center; gap: 0.85rem;"><div class="addon-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12.01" y2="18"></line></svg></div><div><div class="addon-name">Social Media Kit</div><div class="addon-desc">10 Canva posts + captions.</div></div></div><div class="addon-price">$25<span class="addon-per">/ one-time</span></div></div><div class="addon-card reveal"><div style="display: flex; align-items: center; gap: 0.85rem;"><div class="addon-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg></div><div><div class="addon-name">Online booking / appointments</div><div class="addon-desc">Appointment booking system.</div></div></div><div class="addon-price">$35<span class="addon-per">/ one-time</span></div></div><div class="addon-card reveal"><div style="display: flex; align-items: center; gap: 0.85rem;"><div class="addon-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="m5 8 6 6"></path><path d="m4 14 6-6 2-3"></path><path d="M2 5h12"></path><path d="M7 2h1"></path><path d="m22 22-5-10-5 10"></path><path d="M14 18h6"></path></svg></div><div><div class="addon-name">English translation</div><div class="addon-desc">Full translation of all page content.</div></div></div><div class="addon-price">$30<span class="addon-per">/ one-time</span></div></div><div class="addon-card reveal"><div style="display: flex; align-items: center; gap: 0.85rem;"><div class="addon-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M17 3a2.85 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5Z"></path><path d="m15 5 4 4"></path></svg></div><div><div class="addon-name">Copywriting</div><div class="addon-desc">Professional copy per page.</div></div></div><div class="addon-price">$35<span class="addon-per">/ per page</span></div></div><div class="addon-card reveal"><div style="display: flex; align-items: center; gap: 0.85rem;"><div class="addon-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg></div><div><div class="addon-name">Image gallery / portfolio section</div><div class="addon-desc">Visual gallery with lightbox.</div></div></div><div class="addon-price">$20<span class="addon-per">/ one-time</span></div></div><div class="addon-card reveal"><div style="display: flex; align-items: center; gap: 0.85rem;"><div class="addon-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></div><div><div class="addon-name">Reviews / testimonials section</div><div class="addon-desc">Showcase for reviews and referrals.</div></div></div><div class="addon-price">$18<span class="addon-per">/ one-time</span></div></div><div class="addon-card reveal"><div style="display: flex; align-items: center; gap: 0.85rem;"><div class="addon-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="5" height="5"></rect><rect x="4" y="4" width="3" height="3"></rect><rect x="16" y="3" width="5" height="5"></rect><rect x="17" y="4" width="3" height="3"></rect><rect x="3" y="16" width="5" height="5"></rect><rect x="4" y="17" width="3" height="3"></rect><path d="M21 16h-3a2 2 0 0 0-2 2v3"></path><path d="M21 21v.01"></path><path d="M12 7v3a2 2 0 0 1-2 2H7"></path><path d="M3 12h.01"></path><path d="M12 3h.01"></path><path d="M12 16v.01"></path><path d="M16 12h1"></path><path d="M21 12v.01"></path><path d="M12 21v-1"></path></svg></div><div><div class="addon-name">QR code for page</div><div class="addon-desc">Printed or digital QR code.</div></div></div><div class="addon-price">$8<span class="addon-per">/ one-time</span></div></div><div class="addon-card reveal"><div style="display: flex; align-items: center; gap: 0.85rem;"><div class="addon-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="20" x2="12" y2="10"></line><line x1="18" y1="20" x2="18" y2="4"></line><line x1="6" y1="20" x2="6" y2="16"></line></svg></div><div><div class="addon-name">Google Analytics setup</div><div class="addon-desc">Visitor and conversion tracking.</div></div></div><div class="addon-price">$15<span class="addon-per">/ one-time</span></div></div><div class="addon-card reveal"><div style="display: flex; align-items: center; gap: 0.85rem;"><div class="addon-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"></path><path d="M7 2v20"></path><path d="M21 15V2v0a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7"></path></svg></div><div><div class="addon-name">Digital menu / price list</div><div class="addon-desc">Clean digital menu or price list.</div></div></div><div class="addon-price">$28<span class="addon-per">/ one-time</span></div></div><div class="addon-card reveal"><div style="display: flex; align-items: center; gap: 0.85rem;"><div class="addon-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg></div><div><div class="addon-name">SSL certificate + security</div><div class="addon-desc">HTTPS protection and security settings.</div></div></div><div class="addon-price">$10<span class="addon-per">/ year</span><span class="addon-badge">Client pays yearly</span></div></div><div class="addon-card reveal"><div style="display: flex; align-items: center; gap: 0.85rem;"><div class="addon-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg></div><div><div class="addon-name">Domain (.ba, .com, .rs, .hr)</div><div class="addon-desc">Domain registration of your choice.</div></div></div><div class="addon-price">$15<span class="addon-per">/ year</span><span class="addon-badge">Client pays yearly</span></div></div><div class="addon-card reveal"><div style="display: flex; align-items: center; gap: 0.85rem;"><div class="addon-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg></div><div><div class="addon-name">Hosting</div><div class="addon-desc">Annual hosting on a reliable server.</div></div></div><div class="addon-price">$25<span class="addon-per">/ year</span><span class="addon-badge">Client pays yearly</span></div></div><div class="addon-card reveal"><div style="display: flex; align-items: center; gap: 0.85rem;"><div class="addon-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"></circle><path d="M16 8v5a3 3 0 0 0 6 0v-1a10 10 0 1 0-3.92 7.94"></path></svg></div><div><div class="addon-name">Professional email address</div><div class="addon-desc">info@yourbusiness.com etc.</div></div></div><div class="addon-price">$13<span class="addon-per">/ year</span><span class="addon-badge">Client pays yearly</span></div></div><div class="addon-card reveal"><div style="display: flex; align-items: center; gap: 0.85rem;"><div class="addon-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg></div><div><div class="addon-name">WhatsApp / live chat button</div><div class="addon-desc">Floating chat button linked to WhatsApp or Messenger.</div></div></div><div class="addon-price">$13<span class="addon-per">/ one-time</span></div></div><div class="addon-card reveal"><div style="display: flex; align-items: center; gap: 0.85rem;"><div class="addon-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><line x1="12" y1="17" x2="12.01" y2="17"></line></svg></div><div><div class="addon-name">FAQ section</div><div class="addon-desc">Accordion FAQ section with your most common questions.</div></div></div><div class="addon-price">$20<span class="addon-per">/ one-time</span></div></div><div class="addon-card reveal"><div style="display: flex; align-items: center; gap: 0.85rem;"><div class="addon-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><line x1="10" y1="2" x2="14" y2="2"></line><line x1="12" y1="14" x2="12" y2="8"></line><path d="M4.93 4.93l1.41 1.41"></path><path d="M17.66 6.34l1.41-1.41"></path><circle cx="12" cy="14" r="8"></circle></svg></div><div><div class="addon-name">Countdown timer</div><div class="addon-desc">Launch countdown or limited-offer timer on any page.</div></div></div><div class="addon-price">$15<span class="addon-per">/ one-time</span></div></div><div class="addon-card reveal"><div style="display: flex; align-items: center; gap: 0.85rem;"><div class="addon-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 1 0 10 10 4 4 0 0 1-5-5 4 4 0 0 1-5-5"></path><path d="M8.5 8.5v.01"></path><path d="M16 15.5v.01"></path><path d="M12 12v.01"></path><path d="M11 17v.01"></path><path d="M7 14v.01"></path></svg></div><div><div class="addon-name">Cookie banner (GDPR)</div><div class="addon-desc">GDPR-compliant cookie consent banner with preferences.</div></div></div><div class="addon-price">$18<span class="addon-per">/ one-time</span></div></div><div class="addon-card reveal"><div style="display: flex; align-items: center; gap: 0.85rem;"><div class="addon-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg></div><div><div class="addon-name">Performance optimization</div><div class="addon-desc">Image compression, lazy loading, and Core Web Vitals fixes.</div></div></div><div class="addon-price">$30<span class="addon-per">/ one-time</span></div></div><div class="addon-card reveal"><div style="display: flex; align-items: center; gap: 0.85rem;"><div class="addon-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg></div><div><div class="addon-name">Dark / light mode toggle</div><div class="addon-desc">Toggle switch that remembers the visitor's preference.</div></div></div><div class="addon-price">$20<span class="addon-per">/ one-time</span></div></div><div class="addon-card reveal"><div style="display: flex; align-items: center; gap: 0.85rem;"><div class="addon-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><polygon points="23 7 16 12 23 17 23 7"></polygon><rect x="1" y="5" width="15" height="14" rx="2" ry="2"></rect></svg></div><div><div class="addon-name">Promo video / background video</div><div class="addon-desc">Embedded or background video section (YouTube, Vimeo, or upload).</div></div></div><div class="addon-price">$18<span class="addon-per">/ one-time</span></div></div><div class="addon-card reveal"><div style="display: flex; align-items: center; gap: 0.85rem;"><div class="addon-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="21" x2="4" y2="14"></line><line x1="4" y1="10" x2="4" y2="3"></line><line x1="12" y1="21" x2="12" y2="12"></line><line x1="12" y1="8" x2="12" y2="3"></line><line x1="20" y1="21" x2="20" y2="16"></line><line x1="20" y1="12" x2="20" y2="3"></line><line x1="1" y1="14" x2="7" y2="14"></line><line x1="9" y1="8" x2="15" y2="8"></line><line x1="17" y1="16" x2="23" y2="16"></line></svg></div><div><div class="addon-name">Image / testimonial slider</div><div class="addon-desc">Smooth swipeable carousel for photos or testimonials.</div></div></div><div class="addon-price">$18<span class="addon-per">/ one-time</span></div></div><div class="addon-card reveal"><div style="display: flex; align-items: center; gap: 0.85rem;"><div class="addon-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg></div><div><div class="addon-name">Newsletter signup</div><div class="addon-desc">Email capture form connected to Mailchimp, ConvertKit, or similar.</div></div></div><div class="addon-price">$23<span class="addon-per">/ one-time</span></div></div><div class="addon-card reveal"><div style="display: flex; align-items: center; gap: 0.85rem;"><div class="addon-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg></div><div><div class="addon-name">PDF brochure download</div><div class="addon-desc">Downloadable PDF menu, catalog, or brochure on your site.</div></div></div><div class="addon-price">$20<span class="addon-per">/ one-time</span></div></div><div class="addon-card reveal"><div style="display: flex; align-items: center; gap: 0.85rem;"><div class="addon-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg></div><div><div class="addon-name">Pricing table section</div><div class="addon-desc">Clean pricing cards with feature comparison.</div></div></div><div class="addon-price">$23<span class="addon-per">/ one-time</span></div></div><div class="addon-card reveal"><div style="display: flex; align-items: center; gap: 0.85rem;"><div class="addon-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg></div><div><div class="addon-name">Blog / news section</div><div class="addon-desc">Full blog setup with CMS so you can publish posts yourself.</div></div></div><div class="addon-price">$40<span class="addon-per">/ one-time</span></div></div><div class="addon-card reveal"><div style="display: flex; align-items: center; gap: 0.85rem;"><div class="addon-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg></div><div><div class="addon-name">Careers / job openings page</div><div class="addon-desc">Jobs page listing open positions with application form.</div></div></div><div class="addon-price">$25<span class="addon-per">/ one-time</span></div></div><div class="addon-card reveal"><div style="display: flex; align-items: center; gap: 0.85rem;"><div class="addon-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="20" height="12" rx="2"></rect><path d="M12 12h.01"></path><path d="M17 12h.01"></path><path d="M7 12h.01"></path></svg></div><div><div class="addon-name">Multi-step / advanced form</div><div class="addon-desc">Multi-step quote form, calculator, or wizard.</div></div></div><div class="addon-price">$28<span class="addon-per">/ one-time</span></div></div><div class="addon-card reveal"><div style="display: flex; align-items: center; gap: 0.85rem;"><div class="addon-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg></div><div><div class="addon-name">Custom interactive map</div><div class="addon-desc">Custom Google Maps with branded pins and info popups.</div></div></div><div class="addon-price">$25<span class="addon-per">/ one-time</span></div></div><div class="addon-card reveal"><div style="display: flex; align-items: center; gap: 0.85rem;"><div class="addon-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="m3 11 19-9-9 19-2-8-8-2z"></path></svg></div><div><div class="addon-name">Announcement / promo bar</div><div class="addon-desc">Top banner for promotions, announcements, or alerts.</div></div></div><div class="addon-price">$13<span class="addon-per">/ one-time</span></div></div><div class="addon-card reveal"><div style="display: flex; align-items: center; gap: 0.85rem;"><div class="addon-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="2" width="8" height="4" rx="1"></rect><rect x="2" y="16" width="5" height="4" rx="1"></rect><rect x="9.5" y="16" width="5" height="4" rx="1"></rect><rect x="17" y="16" width="5" height="4" rx="1"></rect><line x1="12" y1="6" x2="12" y2="10"></line><line x1="4.5" y1="16" x2="4.5" y2="13"></line><line x1="12" y1="16" x2="12" y2="13"></line><line x1="19.5" y1="16" x2="19.5" y2="13"></line><line x1="4.5" y1="13" x2="19.5" y2="13"></line><line x1="12" y1="10" x2="12" y2="13"></line></svg></div><div><div class="addon-name">XML sitemap + structured data</div><div class="addon-desc">SEO-ready sitemap and schema markup for better indexing.</div></div></div><div class="addon-price">$15<span class="addon-per">/ one-time</span></div></div><div class="addon-card reveal"><div style="display: flex; align-items: center; gap: 0.85rem;"><div class="addon-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg></div><div><div class="addon-name">Monthly maintenance (1h)</div><div class="addon-desc">One hour of updates, fixes, or content changes per month.</div></div></div><div class="addon-price">$20<span class="addon-per">/ year</span></div></div><div class="addon-card reveal"><div style="display: flex; align-items: center; gap: 0.85rem;"><div class="addon-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="12" x2="2" y2="12"></line><path d="M5.45 5.11 2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"></path><line x1="6" y1="16" x2="6.01" y2="16"></line><line x1="10" y1="16" x2="10.01" y2="16"></line></svg></div><div><div class="addon-name">Automated backups</div><div class="addon-desc">Weekly automated backups with one-click restore.</div></div></div><div class="addon-price">$15<span class="addon-per">/ year</span></div></div><div class="addon-card reveal"><div style="display: flex; align-items: center; gap: 0.85rem;"><div class="addon-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="m5 8 6 6"></path><path d="m4 14 6-6 2-3"></path><path d="M2 5h12"></path><path d="M7 2h1"></path><path d="m22 22-5-10-5 10"></path><path d="M14 18h6"></path></svg></div><div><div class="addon-name">Multilingual / multi-region</div><div class="addon-desc">Full multilingual setup - separate pages per language.</div></div></div><div class="addon-price">$40<span class="addon-per">/ one-time</span></div></div></div></section><div style="height: 1px; background: var(--border); margin: 0px 0px 4rem;"></div><section style="margin-bottom: 1rem;"><div class="referral-box reveal"><div style="font-family: var(--font-display); font-size: 1.4rem; font-weight: 700; letter-spacing: -0.03em; margin-bottom: 0.5rem;">Refer someone. <span style="color: var(--accent);">You both get a discount.</span></div><p style="color: var(--muted); font-size: 0.9rem; font-weight: 300; line-height: 1.75; max-width: 480px;">If you refer someone who orders a project, you get 10% off your next project - and your friend gets 10% off from the start.</p><div class="ref-steps"><div class="ref-step"><div class="ref-step-num">01</div><h4 style="font-family: var(--font-display); font-size: 0.95rem; font-weight: 600; margin-bottom: 0.4rem;">You refer</h4><p style="font-size: 0.82rem; color: var(--muted); font-weight: 300; line-height: 1.65;">Send an email or message - no formal signup needed.</p></div><div class="ref-step"><div class="ref-step-num">02</div><h4 style="font-family: var(--font-display); font-size: 0.95rem; font-weight: 600; margin-bottom: 0.4rem;">They order</h4><p style="font-size: 0.82rem; color: var(--muted); font-weight: 300; line-height: 1.65;">Your friend mentions your name - they immediately get 10% off.</p></div><div class="ref-step"><div class="ref-step-num">03</div><h4 style="font-family: var(--font-display); font-size: 0.95rem; font-weight: 600; margin-bottom: 0.4rem;">You get a discount</h4><p style="font-size: 0.82rem; color: var(--muted); font-weight: 300; line-height: 1.65;">On your next project - automatically, no paperwork.</p></div></div><div style="background: var(--bg2); border: 1px solid var(--border); border-radius: 12px; padding: 1rem 1.25rem; font-size: 0.85rem; color: var(--muted); line-height: 1.8; font-weight: 300;"><strong style="color: var(--text);">Example:</strong> You refer the Business package ($85). Friend pays $76.50. Your next project is 10% cheaper - automatically.</div></div></section><section class="reveal" style="text-align: center; padding: 3rem 0px 2rem;"><h2 style="font-family: var(--font-display); font-size: clamp(1.5rem, 3vw, 2.2rem); font-weight: 700; letter-spacing: -0.03em; margin-bottom: 0.75rem;">Ready to start? <em style="font-style: italic; color: var(--muted); font-weight: 400;">Let's talk.</em></h2><p style="color: var(--muted); font-size: 0.9rem; font-weight: 300; margin-bottom: 1.75rem;">Fill in a short form. I respond within 24 hours.</p><div style="display: flex; gap: 0.85rem; justify-content: center; flex-wrap: wrap;"><a href="/hire" style="display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.8rem 1.75rem; background: var(--accent); color: rgb(10, 10, 10); border-radius: 100px; font-family: var(--font-display); font-weight: 700; font-size: 0.9rem; text-decoration: none;">Start a project ↗</a><a href="/" style="display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.8rem 1.5rem; border: 1px solid var(--border2); color: var(--text); border-radius: 100px; font-family: var(--font-display); font-weight: 500; font-size: 0.9rem; text-decoration: none;">← Back to portfolio</a></div></section></main></main></div>
+  
+
+</body></html>

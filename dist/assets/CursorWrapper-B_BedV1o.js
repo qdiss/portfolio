@@ -1,0 +1,2 @@
+const __vite__mapDeps=(i,m=__vite__mapDeps,d=(m.f||(m.f=["assets/CustomCursor-CZWk4bDC.js","assets/index-CkP4px7a.js","assets/vendor-react-DArxELLs.js","assets/index-1lxdMI2m.css"])))=>i.map(i=>d[i]);
+import{j as r,_ as o}from"./index-CkP4px7a.js";import{r as s}from"./vendor-react-DArxELLs.js";const e=s.lazy(()=>o(()=>import("./CustomCursor-CZWk4bDC.js"),__vite__mapDeps([0,1,2,3])));function u({children:t}){return r.jsxs(r.Fragment,{children:[t,r.jsx(s.Suspense,{fallback:null,children:r.jsx(e,{})})]})}export{u as default};

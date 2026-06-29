@@ -1,0 +1,715 @@
+<!DOCTYPE html><html lang="en" prefix="og: https://ogp.me/ns#" data-theme="dark"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- PRIMARY SEO -->
+    <title>
+      Adis Klobodanovic - Full-Stack Developer | React, Next.js, Node.js
+    </title>
+    <meta name="description" content="Full-stack developer specialising in React, Next.js &amp; Node.js. I build fast, clean web apps, SaaS products and landing pages that ship on time - available for new projects worldwide.">
+    <!-- FAVICON - both SVGs contain CSS @media(prefers-color-scheme) internally -->
+    <!-- Browsers pick the last matching <link rel="icon"> so light goes first -->
+    <link rel="icon" type="image/svg+xml" href="blob:http://localhost:45678/2891ce0b-049b-4856-90f1-572702972cd1" media="(prefers-color-scheme: light)">
+    <link rel="icon" type="image/svg+xml" href="/favicon-terminal.svg" media="(prefers-color-scheme: dark)">
+    <link rel="icon" type="image/png" sizes="48x48" href="/favicon.png">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <!-- Fallback for browsers that ignore media on rel=icon (reads first match) -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <!-- FIX 1: apple-touch-icon mora biti PNG, ne SVG -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon.png">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="adiss.dev">
+    <meta name="author" content="Adis Klobodanovic">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <meta name="theme-color" content="#c8f060">
+    <meta name="color-scheme" content="dark light">
+    <meta name="geo.region" content="BA">
+    <meta name="geo.placename" content="Bosnia and Herzegovina">
+    <meta name="language" content="English">
+    <meta name="keywords" content="full-stack developer, React developer, Next.js developer, Node.js developer, web app development, SaaS development, freelance developer, landing page developer, Adis Klobodanovic, adiss.dev, Bosnia developer">
+
+    <!-- OPEN GRAPH -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="adiss.dev">
+    
+    <meta property="og:locale" content="en_US">
+    
+    
+    <!-- FIX 2: og:image mora biti PNG, Facebook/LinkedIn ne podrzavaju SVG -->
+    <meta property="og:image" content="https://adiss.dev/og-image.png">
+    <meta property="og:image:secure_url" content="https://adiss.dev/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:alt" content="Adis Klobodanovic - Full-Stack Developer portfolio preview">
+    <meta property="profile:first_name" content="Adis">
+    <meta property="profile:last_name" content="Klobodanovic">
+
+    <!-- TWITTER CARD -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@adisklobodanovic">
+    <meta name="twitter:creator" content="@adisklobodanovic">
+    <meta name="twitter:title" content="Adis Klobodanovic - Full-Stack Developer">
+    <meta name="twitter:description" content="Full-stack developer. React, Next.js, Node.js. Building fast web apps and SaaS products that actually ship.">
+    <!-- FIX 2 (nastavak): Twitter image takodje treba PNG -->
+    <meta name="twitter:image" content="https://adiss.dev/og-image.png">
+    <meta name="twitter:image:alt" content="Adis Klobodanovic - Full-Stack Developer">
+
+    <!-- SECURITY -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+    <meta http-equiv="X-DNS-Prefetch-Control" content="on">
+    <!-- CSP is set via Vercel response headers (vercel.json) to avoid meta/header conflicts -->
+
+    <!-- PERFORMANCE -->
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://flagcdn.com">
+    <link rel="dns-prefetch" href="https://hrnxwmmcntastjpaavfo.supabase.co">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link rel="preconnect" href="https://flagcdn.com" crossorigin="">
+    <!-- FIX 3: Supabase preconnect - ubrzava sve API pozive -->
+    <link rel="preconnect" href="https://hrnxwmmcntastjpaavfo.supabase.co" crossorigin="">
+
+    <!-- FONT PRELOAD - sprječava FOUT za primarne fontove -->
+    <link rel="preload" as="font" type="font/woff2" crossorigin="" href="https://fonts.gstatic.com/s/syne/v22/8vIS7w4qzmVxsWxjBZRjr0FKM_04uQ.woff2">
+    <link rel="preload" as="font" type="font/woff2" crossorigin="" href="https://fonts.gstatic.com/s/dmsans/v14/rP2tp2ywxg089UriI5-g4vlH9VoD8Cmcqbu6-K6z9mXgjU0.woff2">
+
+    <!-- FONTS non-blocking -->
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&amp;family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&amp;display=swap" rel="stylesheet" media="print" onload="
+        this.media = 'all';
+        this.onload = null;
+      ">
+    <noscript>
+      <link
+        href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap"
+        rel="stylesheet"
+      />
+    </noscript>
+
+    <!-- SCHEMA: Person -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "@id": "https://adiss.dev/#person",
+        "name": "Adis Klobodanovic",
+        "url": "https://adiss.dev",
+        "email": "info@adiss.dev",
+        "jobTitle": "Full-Stack Developer",
+        "description": "Full-stack developer specialising in React, Next.js and Node.js. Building fast web apps, SaaS products and landing pages for clients worldwide.",
+        "image": "https://adiss.dev/og-image.png",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "adiss.dev",
+          "url": "https://adiss.dev"
+        },
+        "knowsAbout": [
+          "React",
+          "Next.js",
+          "Node.js",
+          "TypeScript",
+          "PostgreSQL",
+          "Supabase",
+          "Tailwind CSS",
+          "Full-Stack Web Development",
+          "SaaS Development",
+          "Landing Pages"
+        ],
+        "knowsLanguage": ["English", "Bosnian"],
+        "nationality": "BA",
+        "sameAs": [
+          "https://linkedin.com/in/adis-klobodanovic",
+          "https://github.com/adisklobodanovic"
+        ]
+      }
+    </script>
+
+    <!-- SCHEMA: WebSite + Sitelinks Search -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "@id": "https://adiss.dev/#website",
+        "name": "Adis Klobodanovic - Full-Stack Developer",
+        "url": "https://adiss.dev",
+        "description": "Portfolio and hire page for Adis Klobodanovic, full-stack developer specialising in React, Next.js and Node.js.",
+        "author": { "@id": "https://adiss.dev/#person" },
+        "inLanguage": "en-US",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": {
+            "@type": "EntryPoint",
+            "urlTemplate": "https://adiss.dev/blog?q={search_term_string}"
+          },
+          "query-input": "required name=search_term_string"
+        }
+      }
+    </script>
+
+    <!-- SCHEMA: ProfessionalService with offer catalog -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        "@id": "https://adiss.dev/#service",
+        "name": "adiss.dev - Web Development Services",
+        "url": "https://adiss.dev",
+        "image": "https://adiss.dev/og-image.png",
+        "telephone": "+387644335989",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Zenica",
+          "addressCountry": "BA",
+          "postalCode": "72000",
+          "streetAddress": "Zije Dizdarevica 14"
+        },
+        "description": "Full-stack web development services - React, Next.js, Node.js. Landing pages, business websites, and SaaS web applications built and shipped on time.",
+        "priceRange": "200 KM – 650 KM+",
+        "currenciesAccepted": "BAM, EUR, USD",
+        "paymentAccepted": "Bank Transfer, PayPal",
+        "areaServed": { "@type": "AdministrativeArea", "name": "Worldwide" },
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Web Development Packages",
+          "itemListElement": [
+            {
+              "@type": "Service",
+              "name": "Starter Package",
+              "serviceType": "Web Development",
+              "provider": { "@id": "https://adiss.dev/#person" },
+              "offers": {
+                "@type": "Offer",
+                "name": "Starter Package",
+                "description": "Single-page website with contact form, Google Maps, mobile-responsive. Delivered in 5 days.",
+                "price": "200",
+                "priceCurrency": "BAM"
+              }
+            },
+            {
+              "@type": "Service",
+              "name": "Business Package",
+              "serviceType": "Full-Stack Development",
+              "provider": { "@id": "https://adiss.dev/#person" },
+              "offers": {
+                "@type": "Offer",
+                "name": "Business Package",
+                "description": "Multi-page website with SEO, analytics, social media kit, email signature. Delivered in 7 days.",
+                "price": "400",
+                "priceCurrency": "BAM"
+              }
+            },
+            {
+              "@type": "Service",
+              "name": "Premium Package",
+              "serviceType": "SaaS Development",
+              "provider": { "@id": "https://adiss.dev/#person" },
+              "offers": {
+                "@type": "Offer",
+                "name": "Premium Package",
+                "description": "Full business website with custom design, blog/news section, booking system. Delivered in 14 days.",
+                "price": "650",
+                "priceCurrency": "BAM"
+              }
+            }
+          ]
+        }
+      }
+    </script>
+
+    <!-- SCHEMA: FAQPage (enables rich results in Google) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How much does a website cost?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Packages start at 200 KM for a Starter single-page site, 400 KM for a Business multi-page site, and 650 KM for a full Premium website. Every project gets a written quote before anything starts."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How long does it take to build a website?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The Starter package is delivered in 5 days, Business in 7 days, and Premium in 14 days. Timelines are fixed in writing before the project starts."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do I own the code after the project?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Once the project is paid in full, all code, assets, and access credentials are transferred to you. You own everything outright."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can you work with clients outside Bosnia?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, all projects are done remotely. I work with clients worldwide. Communication is handled via email, Slack, or WhatsApp - whatever works for you."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What technologies do you use?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "I primarily build with React, Next.js, Node.js, TypeScript, and Supabase/PostgreSQL. For styling I use Tailwind CSS or plain CSS. Stack is always chosen to fit the project, not the other way around."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How do we communicate during the project?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Email, Slack, WhatsApp - whatever works for you. I send progress updates proactively, share preview links early, and respond to messages quickly. You always know the status."
+            }
+          }
+        ]
+      }
+    </script>
+
+    <!-- SCHEMA: BreadcrumbList -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://adiss.dev"
+          }
+        ]
+      }
+    </script>
+
+    <!-- GOOGLE ANALYTICS -->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-6SR2FJDFZC"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-6SR2FJDFZC", {
+        page_path: window.location.pathname,
+        anonymize_ip: true,
+      });
+    </script>
+    <script type="module" crossorigin="" src="/assets/index-CkP4px7a.js"></script>
+    <link rel="modulepreload" crossorigin="" href="/assets/vendor-react-DArxELLs.js">
+    <link rel="stylesheet" crossorigin="" href="/assets/index-1lxdMI2m.css">
+  <link rel="modulepreload" as="script" crossorigin="" href="/assets/HirePage-CotDly-L.js"><link rel="modulepreload" as="script" crossorigin="" href="/assets/packages-BbLQ7cAN.js"><link rel="modulepreload" as="script" crossorigin="" href="/assets/emailjs-CossPJmi.js"><link rel="modulepreload" as="script" crossorigin="" href="/assets/CursorWrapper-B_BedV1o.js"><link rel="modulepreload" as="script" crossorigin="" href="/assets/CustomCursor-CZWk4bDC.js"><link rel="modulepreload" as="script" crossorigin="" href="/assets/index-CkP4px7a.js"><link rel="canonical" href="https://adiss.dev/hire">
+</head>
+  <body>
+    <div id="root"><div style="width: 8px; height: 8px; background: var(--accent); border-radius: 50%; position: fixed; top: 0px; left: 0px; pointer-events: none; z-index: 99999; will-change: transform; transition: width 0.15s, height 0.15s, background 0.15s; display: block;"></div><main><div class="hire-page-root"><style>
+        .hire-section { padding: 5rem 2.5rem; max-width: 900px; margin: 0 auto; }
+        .hire-section-wide { padding: 5rem 2.5rem; max-width: 1100px; margin: 0 auto; }
+        .hire-page-root { overflow-x: hidden; }
+        .hire-divider { height: 1px; background: var(--border); margin: 0 2.5rem; }
+        .pkg-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.25rem; margin-top: 2.5rem; }
+        .pkg-card { background: var(--bg2); border: 1px solid var(--border); border-radius: 20px; padding: 2rem; position: relative; transition: border-color 0.2s, transform 0.2s; }
+        .pkg-card:hover { border-color: var(--border2); transform: translateY(-3px); }
+        .pkg-card.popular { border-color: rgba(200,240,96,0.35); background: rgba(200,240,96,0.03); }
+        .pkg-badge { position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: var(--accent); color: #0a0a0a; font-size: 0.68rem; font-weight: 700; padding: 0.2rem 0.75rem; border-radius: 100px; letter-spacing: 0.06em; text-transform: uppercase; white-space: nowrap; }
+        .pkg-name { font-family: var(--font-display); font-size: 1.1rem; font-weight: 700; letter-spacing: -0.02em; margin-bottom: 0.35rem; }
+        .pkg-price { font-family: var(--font-display); font-size: 1.85rem; font-weight: 800; color: var(--accent); letter-spacing: -0.04em; line-height: 1; margin-bottom: 0.3rem; }
+        .pkg-timeline { font-size: 0.78rem; color: var(--muted); margin-bottom: 1rem; }
+        .pkg-desc { font-size: 0.875rem; color: var(--muted); font-weight: 300; line-height: 1.65; margin-bottom: 1.25rem; }
+        .pkg-includes { list-style: none; display: flex; flex-direction: column; gap: 0.45rem; }
+        .pkg-includes li { font-size: 0.82rem; color: var(--muted); display: flex; align-items: center; gap: 0.5rem; }
+        .pkg-includes li::before { content: '✓'; color: var(--accent); font-weight: 700; flex-shrink: 0; }
+        .steps-list { display: flex; flex-direction: column; gap: 0; margin-top: 2.5rem; }
+        .step-row { display: grid; grid-template-columns: 56px 1fr; gap: 1.5rem; padding: 1.75rem 0; border-bottom: 1px solid var(--border); align-items: start; }
+        .step-row:last-child { border-bottom: none; }
+        .step-num { font-family: var(--font-display); font-size: 1rem; color: var(--accent); font-weight: 700; letter-spacing: 0.08em; padding-top: 0.3rem; }
+        .step-title { font-family: var(--font-display); font-size: 1.05rem; font-weight: 600; letter-spacing: -0.02em; margin-bottom: 0.4rem; }
+        .step-body { color: var(--muted); font-size: 0.9rem; font-weight: 300; line-height: 1.75; }
+        .needs-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; margin-top: 2.5rem; }
+        .need-card { background: var(--bg2); border: 1px solid var(--border); border-radius: 16px; padding: 1.5rem; }
+        .need-icon { font-size: 1.4rem; margin-bottom: 0.65rem; display: block; }
+        .need-icon-svg { width:36px; height:36px; border-radius:8px; background:rgba(200,240,96,0.1); display:flex; align-items:center; justify-content:center; color:var(--accent); margin-bottom:0.65rem; }
+        .need-title { font-family: var(--font-display); font-size: 0.95rem; font-weight: 600; letter-spacing: -0.02em; margin-bottom: 0.4rem; }
+        .need-body { color: var(--muted); font-size: 0.875rem; font-weight: 300; line-height: 1.65; }
+        .wont-list { list-style: none; display: flex; flex-direction: column; gap: 0.6rem; margin-top: 1.5rem; }
+        .wont-list li { color: var(--muted); font-size: 0.9rem; display: flex; align-items: center; gap: 0.65rem; font-weight: 300; }
+        .wont-list li::before { content: '-'; color: var(--muted2); flex-shrink: 0; }
+        .hire-form-wrap { background: var(--bg2); border: 1px solid var(--border); border-radius: 24px; padding: 2.5rem; }
+        .hire-hero-glow { position: absolute; top: -100px; right: -80px; width: 500px; height: 500px; background: radial-gradient(circle, rgba(200,240,96,0.07) 0%, transparent 65%); pointer-events: none; }
+        /* Light mode input fixes */
+        [data-theme="light"] input, [data-theme="light"] select, [data-theme="light"] textarea {
+          background: #fff !important;
+          color: #111 !important;
+          border-color: rgba(0,0,0,0.15) !important;
+        }
+        [data-theme="light"] input::placeholder, [data-theme="light"] textarea::placeholder { color: #888 !important; }
+        [data-theme="light"] .need-card, [data-theme="light"] .hire-form-wrap, [data-theme="light"] .pkg-card { background: #fff; border-color: rgba(0,0,0,0.1); }
+        @media(max-width: 768px) {
+          .pkg-grid { grid-template-columns: 1fr; }
+          .needs-grid { grid-template-columns: 1fr; }
+          .hire-section, .hire-section-wide { padding: 3.5rem 1.5rem; }
+          .hire-divider { margin: 0 1.5rem; }
+          .step-row { grid-template-columns: 42px 1fr; }
+        }
+          [data-theme="light"] .pkg-badge,
+          [data-theme="light"] button[type="submit"].btn-primary,
+          [data-theme="light"] a.btn-primary {
+            color: #ffffff !important;
+          }
+      </style><div style="position: fixed; top: 0px; left: 0px; z-index: 9999; height: 2px; width: 0%; background: var(--accent); pointer-events: none; box-shadow: rgba(200, 240, 96, 0.6) 0px 0px 10px, rgba(200, 240, 96, 0.4) 0px 0px 4px; will-change: width;"></div><style>
+        nav {
+          transition: box-shadow 0.3s, background 0.3s;
+        }
+        nav.nav--scrolled {
+          box-shadow: 0 1px 0 var(--border);
+        }
+
+        .nav-links a.nav-active { color: var(--accent); }
+        .nav-links a.nav-active::after { width: 100% !important; background: var(--accent); }
+
+        /* ── LANG DROPDOWN ── */
+        .lang-dropdown { position: relative; display: inline-block; }
+        .lang-current {
+          background: var(--bg2);
+          border: 1px solid var(--border);
+          color: var(--text);
+          font-size: 0.78rem;
+          padding: 0.4rem 0.8rem;
+          border-radius: 10px;
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+          gap: 6px;
+          transition: all 0.2s;
+          font-family: inherit;
+          font-weight: 500;
+        }
+        .lang-current:hover { border-color: var(--accent); background: var(--bg3, var(--bg2)); }
+        .lang-flag-img { width: 16px; height: 11px; object-fit: cover; border-radius: 1px; display: block; }
+        .lang-code { font-size: 0.72rem; letter-spacing: 0.04em; font-weight: 600; text-transform: uppercase; }
+        .lang-arrow { font-size: 0.55rem; opacity: 0.5; transition: transform 0.2s; }
+        .lang-arrow.open { transform: rotate(180deg); }
+        .lang-menu {
+          position: absolute;
+          top: calc(100% + 8px);
+          right: 0;
+          background: var(--bg2);
+          border: 1px solid var(--border);
+          border-radius: 14px;
+          padding: 6px;
+          box-shadow: 0 16px 40px -4px rgba(0,0,0,0.35);
+          z-index: 1100;
+          min-width: 165px;
+          display: flex;
+          flex-direction: column;
+          gap: 2px;
+          animation: dropIn 0.18s ease;
+        }
+        @keyframes dropIn {
+          from { opacity:0; transform: translateY(-6px); }
+          to   { opacity:1; transform: none; }
+        }
+        .lang-option {
+          background: none; border: none; width: 100%; text-align: left;
+          padding: 9px 12px; color: var(--text); font-size: 0.82rem;
+          border-radius: 9px; cursor: pointer; transition: background 0.15s;
+          display: flex; align-items: center; gap: 10px;
+          font-family: inherit; font-weight: 400;
+        }
+        .lang-option:hover { background: rgba(200,240,96,0.1); }
+        .lang-option.active { background: rgba(200,240,96,0.18); color: var(--accent); font-weight: 600; }
+        .lang-option-label { flex: 1; }
+        .lang-option-check { color: var(--accent); font-size: 0.7rem; }
+        [data-theme="light"] .lang-current { background: #fff; border-color: rgba(0,0,0,0.12); color: #111; }
+        [data-theme="light"] .lang-menu { background: #fff; border-color: rgba(0,0,0,0.1); box-shadow: 0 16px 40px -4px rgba(0,0,0,0.15); }
+        [data-theme="light"] .lang-option { color: #111; }
+        [data-theme="light"] .lang-option:hover { background: rgba(0,0,0,0.05); }
+        [data-theme="light"] .lang-option.active { background: rgba(200,240,96,0.25); color: #5a7000; }
+
+        /* ── FULLSCREEN MOBILE MENU ── */
+        .mob-overlay {
+          position: fixed;
+          inset: 0;
+          z-index: 98;
+          background: var(--bg);
+          display: flex;
+          flex-direction: column;
+          overflow: hidden;
+          opacity: 0;
+          clip-path: inset(0 0 100% 0);
+          transition:
+            opacity 0.45s cubic-bezier(0.16,1,0.3,1),
+            clip-path 0.45s cubic-bezier(0.16,1,0.3,1);
+          pointer-events: none;
+        }
+        .mob-overlay.open {
+          opacity: 1;
+          clip-path: inset(0 0 0% 0);
+          pointer-events: all;
+        }
+        .mob-glow {
+          position: absolute;
+          top: 15%;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 520px;
+          height: 520px;
+          background: radial-gradient(ellipse, rgba(200,240,96,0.07) 0%, transparent 70%);
+          pointer-events: none;
+        }
+
+        /* top bar inside overlay */
+        .mob-bar {
+          position: relative;
+          z-index: 2;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding: 1.1rem 1.5rem;
+          flex-shrink: 0;
+        }
+        .mob-logo {
+          font-family: var(--font-display);
+          font-size: 1.05rem;
+          font-weight: 700;
+          letter-spacing: -0.02em;
+          color: var(--text);
+          text-decoration: none;
+        }
+        .mob-logo span { color: var(--accent); }
+        .mob-close {
+          width: 38px; height: 38px; border-radius: 50%;
+          border: 1px solid var(--border2); background: none;
+          cursor: pointer; display: flex; align-items: center;
+          justify-content: center; color: var(--text); font-size: 1rem;
+          transition: background 0.2s, border-color 0.2s;
+        }
+        .mob-close:hover { background: var(--bg2); border-color: var(--accent); color: var(--accent); }
+
+        /* ── NAV LINKS CONTAINER ── */
+        .mob-links {
+          position: relative;
+          z-index: 2;
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;  /* ← centrira vertikalno */
+          align-items: stretch;
+          padding: 0 4.5rem;
+          gap: 0;
+        }
+
+        /* ── INDIVIDUAL LINK ROW ── */
+        .mob-link {
+          display: flex;
+          align-items: center;
+          gap: 0;
+          padding: 0.6rem 0;
+          border-bottom: 1px solid var(--border);
+          text-decoration: none;
+          color: var(--text);
+          font-family: var(--font-display);
+          font-size: clamp(1.5rem, 6vw, 2.1rem);
+          font-weight: 700;
+          letter-spacing: -0.03em;
+          opacity: 0;
+          transform: translateY(18px);
+          transition: color 0.2s, opacity 0.4s ease, transform 0.4s ease;
+        }
+        .mob-link:first-child { border-top: 1px solid var(--border); }
+        .mob-overlay.open .mob-link:nth-child(1) { opacity:1; transform:none; transition-delay: 0.10s; }
+        .mob-overlay.open .mob-link:nth-child(2) { opacity:1; transform:none; transition-delay: 0.16s; }
+        .mob-overlay.open .mob-link:nth-child(3) { opacity:1; transform:none; transition-delay: 0.22s; }
+        .mob-overlay.open .mob-link:nth-child(4) { opacity:1; transform:none; transition-delay: 0.28s; }
+        .mob-overlay.open .mob-link:nth-child(5) { opacity:1; transform:none; transition-delay: 0.34s; }
+        .mob-overlay.open .mob-link:nth-child(6) { opacity:1; transform:none; transition-delay: 0.40s; }
+        .mob-overlay.open .mob-link:nth-child(7) { opacity:1; transform:none; transition-delay: 0.46s; }
+        .mob-link:hover { color: var(--accent); }
+        .mob-link.mob-active { color: var(--accent); }
+
+        .mob-link-num {
+          width: 3.5rem;
+          min-width: 3.5rem;
+          flex-shrink: 0;
+          font-size: 0.68rem;
+          color: var(--muted2);
+          font-family: var(--font-body);
+          font-weight: 400;
+          letter-spacing: 0.06em;
+          font-variant-numeric: tabular-nums;
+          line-height: 1;
+          /* dodaj ovo: */
+          text-align: left;
+        }
+        .mob-link-text {
+          flex: 1;
+        }
+        .mob-link-arrow {
+          flex-shrink: 0;
+          width: 2rem;
+          text-align: right;
+          font-size: 1.1rem;
+          color: var(--muted2);
+          transition: color 0.2s, transform 0.2s;
+        }
+        .mob-link:hover .mob-link-arrow {
+          color: var(--accent);
+          transform: translate(3px, -3px);
+        }
+
+        /* bottom bar */
+        .mob-bottom {
+          position: relative;
+          z-index: 2;
+          padding: 1.25rem 2rem 2rem;
+          border-top: 1px solid var(--border);
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          flex-wrap: wrap;
+          gap: 1rem;
+          opacity: 0;
+          transform: translateY(12px);
+          transition: opacity 0.4s ease 0.4s, transform 0.4s ease 0.4s;
+        }
+        .mob-overlay.open .mob-bottom { opacity: 1; transform: none; }
+        .mob-bottom-langs {
+          display: flex;
+          gap: 6px;
+          flex-wrap: wrap;
+        }
+        .mob-lang-btn {
+          background: var(--bg2);
+          border: 1px solid var(--border);
+          color: var(--muted);
+          padding: 5px 10px;
+          border-radius: 8px;
+          cursor: pointer;
+          font-size: 0.72rem;
+          font-weight: 500;
+          text-transform: uppercase;
+          letter-spacing: 0.04em;
+          display: flex;
+          align-items: center;
+          gap: 5px;
+          transition: all 0.15s;
+        }
+        .mob-lang-btn.active {
+          background: rgba(200,240,96,0.12);
+          border-color: rgba(200,240,96,0.3);
+          color: var(--accent);
+        }
+        .mob-theme-btn {
+          display: flex;
+          align-items: center;
+          gap: 0.5rem;
+          background: none;
+          border: 1px solid var(--border2);
+          border-radius: 10px;
+          padding: 0.5rem 0.9rem;
+          color: var(--muted);
+          font-size: 0.8rem;
+          cursor: pointer;
+          font-family: inherit;
+          transition: color 0.2s, border-color 0.2s;
+        }
+        .mob-theme-btn:hover { color: var(--text); border-color: var(--border2); }
+        .mob-hire-btn {
+          display: inline-flex;
+          align-items: center;
+          gap: 0.4rem;
+          background: var(--accent);
+          color: #0a0a0a;
+          border-radius: 100px;
+          padding: 0.6rem 1.25rem;
+          font-size: 0.85rem;
+          font-weight: 700;
+          font-family: var(--font-display);
+          text-decoration: none;
+          transition: opacity 0.2s;
+        }
+        .mob-hire-btn:hover { opacity: 0.85; }
+        [data-theme="light"] .mob-overlay { background: var(--bg); }
+        [data-theme="light"] .mob-hire-btn { color: #fff; }
+      </style><nav class=""><a class="nav-logo" href="/">adiss<span>.</span>dev</a><ul class="nav-links"><li><a href="/#about" class="">About</a></li><li><a href="/#services" class="">Services</a></li><li><a href="/pricing" class="">Pricing</a></li><li><a href="/#work" class="">Work</a></li><li><a href="/blog" class="">Blog</a></li><li><a href="/#contact" class="">Contact</a></li><li><a href="/uses" class="">Uses</a></li></ul><div class="nav-right"><div class="lang-dropdown"><button class="lang-current"><img class="lang-flag-img" src="https://flagcdn.com/gb.svg" alt="English"><span class="lang-code">en</span><span class="lang-arrow">▼</span></button></div><button class="theme-toggle" aria-label="Toggle theme"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><line x1="12" y1="2" x2="12" y2="6"></line><line x1="12" y1="18" x2="12" y2="22"></line><line x1="4.93" y1="4.93" x2="7.76" y2="7.76"></line><line x1="16.24" y1="16.24" x2="19.07" y2="19.07"></line><line x1="2" y1="12" x2="6" y2="12"></line><line x1="18" y1="12" x2="22" y2="12"></line><line x1="4.93" y1="19.07" x2="7.76" y2="16.24"></line><line x1="16.24" y1="7.76" x2="19.07" y2="4.93"></line></svg></button><a class="nav-cta" href="/hire">Let's talk  </a><button class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button></div></nav><div class="mob-overlay" aria-hidden="true" inert=""><div class="mob-glow"></div><div class="mob-bar"><a class="mob-logo" href="/">adiss<span>.</span>dev</a><button class="mob-close" aria-label="Close menu"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></button></div><div class="mob-links"><a href="/#about" class="mob-link"><span class="mob-link-num">01</span><span class="mob-link-text">About</span><span class="mob-link-arrow">↗</span></a><a href="/#services" class="mob-link"><span class="mob-link-num">02</span><span class="mob-link-text">Services</span><span class="mob-link-arrow">↗</span></a><a href="/pricing" class="mob-link"><span class="mob-link-num">03</span><span class="mob-link-text">Pricing</span><span class="mob-link-arrow">↗</span></a><a href="/#work" class="mob-link"><span class="mob-link-num">04</span><span class="mob-link-text">Work</span><span class="mob-link-arrow">↗</span></a><a href="/blog" class="mob-link"><span class="mob-link-num">05</span><span class="mob-link-text">Blog</span><span class="mob-link-arrow">↗</span></a><a href="/#contact" class="mob-link"><span class="mob-link-num">06</span><span class="mob-link-text">Contact</span><span class="mob-link-arrow">↗</span></a><a href="/uses" class="mob-link"><span class="mob-link-num">07</span><span class="mob-link-text">Uses</span><span class="mob-link-arrow">↗</span></a></div><div class="mob-bottom"><div style="display: flex; gap: 0.65rem; align-items: center; flex-wrap: wrap;"><a class="mob-hire-btn" href="/hire">Start a project<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="" aria-hidden="true"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg></a></div></div></div><section style="min-height: 60vh; display: flex; flex-direction: column; justify-content: center; padding: 8rem 2.5rem 4rem; position: relative; overflow: hidden; max-width: 900px; margin: 0px auto;"><div class="hire-hero-glow"></div><div class="hero-tag reveal"><div class="pulse-dot"></div><span>Currently taking new projects</span></div><h1 class="reveal" style="font-family: var(--font-display); font-size: clamp(2.6rem, 6vw, 5rem); font-weight: 800; line-height: 1.05; letter-spacing: -0.04em; margin-bottom: 1.5rem;">Let's build<br><em style="font-style: italic; color: var(--muted); font-weight: 400;">something real.</em></h1><p class="reveal" style="font-size: 1.05rem; color: var(--muted); font-weight: 300; line-height: 1.85; max-width: 520px; margin-bottom: 2.5rem;">This page is for people who want to understand how I work before reaching out. Scroll through, see if it fits. The form is at the bottom.</p><div class="reveal"><a href="#form" class="btn-primary">Skip to form</a></div></section><div class="hire-divider"></div><div class="hire-section"><div class="section-label reveal">Standard</div><h2 class="section-title reveal">What's included<br><em>in every project</em></h2><p class="reveal" style="color: var(--muted); font-weight: 300; line-height: 1.85; margin-bottom: 2.5rem; max-width: 520px;">Regardless of scope or price. These aren't upsells - they're the baseline.</p><div class="reveal" style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;"><div style="background: var(--bg2); border: 1px solid var(--border); border-radius: 14px; padding: 1.35rem;"><div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.45rem;"><span style="color: var(--accent); font-weight: 700; display: flex; align-items: center;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg></span><span style="font-family: var(--font-display); font-size: 0.95rem; font-weight: 600; letter-spacing: -0.01em;">Direct access</span></div><p style="color: var(--muted); font-size: 0.855rem; font-weight: 300; line-height: 1.65;">You talk to me. Not an account manager, not a junior. I answer messages myself.</p></div><div style="background: var(--bg2); border: 1px solid var(--border); border-radius: 14px; padding: 1.35rem;"><div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.45rem;"><span style="color: var(--accent); font-weight: 700; display: flex; align-items: center;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg></span><span style="font-family: var(--font-display); font-size: 0.95rem; font-weight: 600; letter-spacing: -0.01em;">Written scope</span></div><p style="color: var(--muted); font-size: 0.855rem; font-weight: 300; line-height: 1.65;">Scope, price, and timeline agreed in writing before anything starts. No surprises.</p></div><div style="background: var(--bg2); border: 1px solid var(--border); border-radius: 14px; padding: 1.35rem;"><div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.45rem;"><span style="color: var(--accent); font-weight: 700; display: flex; align-items: center;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg></span><span style="font-family: var(--font-display); font-size: 0.95rem; font-weight: 600; letter-spacing: -0.01em;">Live preview link</span></div><p style="color: var(--muted); font-size: 0.855rem; font-weight: 300; line-height: 1.65;">You see the project early. Real progress you can click through, not status updates.</p></div><div style="background: var(--bg2); border: 1px solid var(--border); border-radius: 14px; padding: 1.35rem;"><div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.45rem;"><span style="color: var(--accent); font-weight: 700; display: flex; align-items: center;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg></span><span style="font-family: var(--font-display); font-size: 0.95rem; font-weight: 600; letter-spacing: -0.01em;">Feedback rounds</span></div><p style="color: var(--muted); font-size: 0.855rem; font-weight: 300; line-height: 1.65;">Structured review rounds so feedback stays focused and iteration doesn't go in circles.</p></div><div style="background: var(--bg2); border: 1px solid var(--border); border-radius: 14px; padding: 1.35rem;"><div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.45rem;"><span style="color: var(--accent); font-weight: 700; display: flex; align-items: center;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg></span><span style="font-family: var(--font-display); font-size: 0.95rem; font-weight: 600; letter-spacing: -0.01em;">Full ownership</span></div><p style="color: var(--muted); font-size: 0.855rem; font-weight: 300; line-height: 1.65;">Code, domain, accounts - all yours after handover. I retain nothing.</p></div><div style="background: var(--bg2); border: 1px solid var(--border); border-radius: 14px; padding: 1.35rem;"><div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.45rem;"><span style="color: var(--accent); font-weight: 700; display: flex; align-items: center;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg></span><span style="font-family: var(--font-display); font-size: 0.95rem; font-weight: 600; letter-spacing: -0.01em;">Post-launch window</span></div><p style="color: var(--muted); font-size: 0.855rem; font-weight: 300; line-height: 1.65;">2 weeks of included fixes after delivery. Real bugs, not scope creep.</p></div></div></div><div class="hire-divider"></div><div class="hire-section-wide"><div class="section-label reveal">Pricing</div><h2 class="section-title reveal">Packages<br><em>&amp; what they cost</em></h2><p class="reveal" style="color: var(--muted); font-weight: 300; line-height: 1.85; max-width: 520px;">Fixed-price, not hourly. You know the number before anything starts. Scope changes get a change order - no silent billing.</p><div class="pkg-grid reveal"><div class="pkg-card"><div class="pkg-name">Starter</div><div class="pkg-price">$30</div><div class="pkg-timeline"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="" aria-hidden="true" style="margin-right: 0.3rem; vertical-align: middle;"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>5 days</div><p class="pkg-desc">One page. Contact form. Mobile-ready. Delivered in 5 days.</p><ul class="pkg-includes"><li>Single-page website (Landing page)</li><li>Contact form</li><li>Google Maps embed</li><li>Mobile-responsive</li><li>3 ready-to-publish social posts</li><li>Delivered in 5 days</li></ul></div><div class="pkg-card popular"><div class="pkg-badge">Most booked</div><div class="pkg-name">Business</div><div class="pkg-price">$85</div><div class="pkg-timeline"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="" aria-hidden="true" style="margin-right: 0.3rem; vertical-align: middle;"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>7 days</div><p class="pkg-desc">Up to 5 pages. SEO. Google Analytics. WhatsApp button.</p><ul class="pkg-includes"><li>Multi-page website (up to 5 pages)</li><li>Contact form</li><li>Google Maps embed</li><li>Social Media Kit (10 Canva posts + captions)</li><li>Email signature</li><li>Basic SEO optimization</li><li>Google Analytics setup</li><li>WhatsApp direct contact button</li><li>Mobile-responsive</li><li>Delivered in 7 days</li></ul></div><div class="pkg-card"><div class="pkg-name">Premium</div><div class="pkg-price">$140</div><div class="pkg-timeline"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="" aria-hidden="true" style="margin-right: 0.3rem; vertical-align: middle;"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>10 days</div><p class="pkg-desc">Up to 10 pages. Logo. Brand. Online booking. 1 month support.</p><ul class="pkg-includes"><li>Up to 10 pages</li><li>Google Business setup &amp; optimization</li><li>Basic logo design</li><li>Brand color palette &amp; fonts</li><li>20 Canva posts + Story template</li><li>Professional email address (info@yourbusiness.com)</li><li>Cookie banner &amp; privacy policy</li><li>Online booking / appointment system</li><li>Advanced SEO optimization</li><li>1 month free support</li><li>Delivered in 10 days</li></ul></div></div><p style="margin-top: 1.5rem; color: var(--muted); font-size: 0.82rem; font-weight: 300;">Every project gets a written quote. These are starting points, not ceilings or floors.</p></div><div class="hire-divider"></div><div class="hire-section-wide"><div class="section-label reveal">Work</div><h2 class="section-title reveal">Things I've<br><em>actually built</em></h2><p class="reveal" style="color: var(--muted); font-weight: 300; line-height: 1.85; max-width: 520px;">Not side projects. Client work and shipped products.</p><div class="reveal" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.25rem; margin-top: 2.5rem;"><a href="https://medibook-pi.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-card"><div class="project-img" style="background: var(--bg3);"><span style="font-size: 2.5rem;">🏥</span></div><div class="project-body"><div class="project-tags"><span class="tag">Next.js</span><span class="tag">TypeScript</span><span class="tag">Full-stack</span></div><h3>MediBook - Appointment Booking</h3><p>Patients were calling to book appointments. Built a self-scheduling system with real-time availability, confirmation emails, and a UI that works on any phone.</p><div class="project-link">View project  </div></div></a><a href="https://dalmatinske-vizure.com" target="_blank" rel="noopener noreferrer" class="project-card"><div class="project-img" style="background: var(--bg3);"><span style="font-size: 2.5rem;">🏠</span></div><div class="project-body"><div class="project-tags"><span class="tag">Next.js</span><span class="tag">TailwindCSS</span><span class="tag">Client project</span></div><h3>Dalmatinske Vizure</h3><p>Real estate client. Needed a site as good-looking as the properties. Built for speed, visual clarity, and converting visitors into enquiries.</p><div class="project-link">View live  </div></div></a></div><div style="margin-top: 1.5rem; text-align: center;"><a href="/" style="font-size: 0.85rem; color: var(--muted); text-decoration: none; border-bottom: 1px solid var(--border);">See all projects on the portfolio</a></div></div><div class="hire-divider"></div><div class="hire-section"><div class="section-label reveal">Process</div><h2 class="section-title reveal">How it actually<br><em>works</em></h2><p class="reveal" style="color: var(--muted); font-weight: 300; line-height: 1.85; max-width: 520px;">Seven steps. Each one is designed to remove a thing that makes working with developers annoying.</p><div class="steps-list"><div class="step-row reveal reveal-delay-1"><div class="step-num">01</div><div><div class="step-title">You reach out</div><div class="step-body">Fill the form below or email me directly. Tell me roughly what you need - doesn't have to be a full brief. A paragraph is enough to start.</div></div></div><div class="step-row reveal reveal-delay-2"><div class="step-num">02</div><div><div class="step-title">Discovery call</div><div class="step-body">15 – 30 minutes. Free. I ask questions, you talk through the project. No pitch, no deck. We figure out together if it's a fit.</div></div></div><div class="step-row reveal reveal-delay-3"><div class="step-num">03</div><div><div class="step-title">Written proposal</div><div class="step-body">Scope, timeline, price - all in writing, before anything starts. You can say no. If the scope changes later, we discuss it before the price does.</div></div></div><div class="step-row reveal reveal-delay-4"><div class="step-num">04</div><div><div class="step-title">Kickoff</div><div class="step-body">50% upfront, then work starts. You get a private preview link early - usually within the first few days. Real progress you can see, not status updates.</div></div></div><div class="step-row reveal reveal-delay-1"><div class="step-num">05</div><div><div class="step-title">Build phase</div><div class="step-body">Weekly updates without you having to ask. Feedback rounds are structured, not open-ended. Each round has a clear scope to avoid endless iteration.</div></div></div><div class="step-row reveal reveal-delay-2"><div class="step-num">06</div><div><div class="step-title">Launch</div><div class="step-body">I handle deployment. We test together. Once you're happy, remaining payment is due.</div></div></div><div class="step-row reveal reveal-delay-3"><div class="step-num">07</div><div><div class="step-title">Handover</div><div class="step-body">You get everything: code, credentials, documentation. I don't retain access to anything. If you need ongoing help, we agree a rate upfront.</div></div></div></div></div><div class="hire-divider"></div><div class="hire-section"><div class="section-label reveal">Expectations</div><h2 class="section-title reveal">What I need<br><em>from you</em></h2><p class="reveal" style="color: var(--muted); font-weight: 300; line-height: 1.85; max-width: 520px;">Projects go wrong on both sides. Here's what makes things go right on yours.</p><div class="needs-grid"><div class="need-card reveal reveal-delay-1"><div class="need-icon-svg"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg></div><div class="need-title">A clear brief</div><p class="need-body">What it does, who it's for, what success looks like. Doesn't need to be perfect - but the vaguer the brief, the wider the scope estimate.</p></div><div class="need-card reveal reveal-delay-2"><div class="need-icon-svg"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="" aria-hidden="true"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg></div><div class="need-title">Fast feedback</div><p class="need-body">48h to respond to preview links and questions during the build. Projects stall when feedback takes a week. Your deadline is mine.</p></div><div class="need-card reveal reveal-delay-3"><div class="need-icon-svg"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg></div><div class="need-title">Content ready</div><p class="need-body">Text, logos, photos. If you don't have them, say so upfront - we can plan around it or add copywriting to scope.</p></div><div class="need-card reveal reveal-delay-1"><div class="need-icon-svg"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg></div><div class="need-title">One decision-maker</div><p class="need-body">One person who can approve things. Not a committee. Design-by-committee is where projects go to die and budgets go to grow.</p></div></div></div><div class="hire-divider"></div><div class="hire-section"><div class="section-label reveal">Limits</div><h2 class="section-title reveal">What I<br><em>won't do</em></h2><p class="reveal" style="color: var(--muted); font-weight: 300; line-height: 1.85; max-width: 520px; margin-bottom: 0.5rem;">Not a list of excuses - a list of things that reliably ruin projects. I've learned these the hard way so you don't have to.</p><ul class="wont-list reveal"><li>Hourly billing with no cap or scope</li><li>Starting work without a signed brief</li><li>Rush jobs that skip QA and testing</li><li>Taking on more than I can deliver well</li></ul></div><div class="hire-divider"></div><div id="form" class="hire-section"><div class="section-label reveal">Start</div><h2 class="section-title reveal">Ready to<br><em>get started?</em></h2><p class="reveal" style="color: var(--muted); font-weight: 300; line-height: 1.85; max-width: 520px; margin-bottom: 2.5rem;">Fill this in. I'll reply within 24 hours with either a time to talk or an honest "not a fit" if the project isn't right for me.</p><div class="hire-form-wrap reveal"><style>
+        .hire-form-inner { display:flex; flex-direction:column; gap:1rem; }
+        .hire-form-row { display:grid; grid-template-columns:1fr 1fr; gap:1rem; }
+        .hire-input {
+          width:100%; padding:0.8rem 1rem; border-radius:10px;
+          border:1px solid var(--border); background:var(--bg2);
+          color:var(--text); font-size:0.9rem; font-family:inherit;
+          transition:border-color 0.2s,box-shadow 0.2s; box-sizing:border-box;
+        }
+        .hire-input:focus { outline:none; border-color:var(--accent); box-shadow:0 0 0 3px rgba(200,240,96,0.1); }
+        .hire-field-label { font-size:0.72rem; color:var(--muted); text-transform:uppercase; letter-spacing:0.1em; font-weight:500; margin-bottom:0.55rem; display:block; }
+        .hire-pkg-grid { display:grid; grid-template-columns:1fr 1fr; gap:0.6rem; }
+        .hire-pkg-pill {
+          position:relative; display:flex; align-items:center; gap:0.45rem;
+          padding:0.65rem 0.9rem; border-radius:10px; border:1px solid var(--border);
+          background:var(--bg2); color:var(--muted); font-size:0.82rem; font-family:inherit;
+          cursor:pointer; transition:border-color 0.18s,background 0.18s,color 0.18s; text-align:left; width:100%;
+        }
+        .hire-pkg-pill:hover { border-color:rgba(200,240,96,0.4); color:var(--text); }
+        .hire-pkg-pill.selected { border-color:var(--accent); background:rgba(200,240,96,0.07); color:var(--text); }
+        .hire-pkg-pill-icon { color:var(--muted); display:flex; align-items:center; flex-shrink:0; transition:color 0.18s; }
+        .hire-pkg-pill.selected .hire-pkg-pill-icon { color:var(--accent); }
+        .hire-pkg-pill-label { font-weight:500; flex:1; }
+        .hire-pkg-pill-price { font-size:0.75rem; color:var(--accent); font-weight:600; }
+        .hire-pkg-pill-check { color:var(--accent); display:flex; align-items:center; }
+        .hire-addons-grid { display:grid; grid-template-columns:1fr 1fr; gap:0.5rem; }
+        .hire-addon-chip {
+          display:flex; align-items:center; gap:0.5rem; padding:0.55rem 0.65rem;
+          border-radius:10px; border:1px solid var(--border); background:var(--bg2);
+          cursor:pointer; transition:border-color 0.15s,background 0.15s; text-align:left; width:100%;
+        }
+        .hire-addon-chip:hover { border-color:rgba(200,240,96,0.3); }
+        .hire-addon-chip.checked { border-color:rgba(200,240,96,0.5); background:rgba(200,240,96,0.07); }
+        .hire-addon-chip-icon { color:var(--muted); display:flex; align-items:center; flex-shrink:0; }
+        .hire-addon-chip.checked .hire-addon-chip-icon { color:var(--accent); }
+        .hire-addon-chip-check { color:var(--accent); display:flex; align-items:center; margin-left:auto; }
+        .hire-total-bar {
+          display:flex; align-items:center; justify-content:space-between;
+          border:1px solid var(--border); border-radius:10px;
+          padding:0.7rem 0.9rem; font-size:0.84rem;
+        }
+        [data-theme="light"] .hire-input { background:#fff; color:#111; border-color:rgba(0,0,0,0.15); }
+        [data-theme="light"] .hire-pkg-pill,[data-theme="light"] .hire-addon-chip { background:#fff; border-color:rgba(0,0,0,0.12); }
+        [data-theme="light"] .hire-pkg-pill.selected { background:rgba(200,240,96,0.12); }
+        [data-theme="light"] .hire-addon-chip.checked { background:rgba(200,240,96,0.12); }
+        @media(max-width:500px) { .hire-form-row,.hire-pkg-grid,.hire-addons-grid{grid-template-columns:1fr} }
+        /* Accordion */
+        .addon-accordion { border:1px solid var(--border); border-radius:10px; overflow:hidden; }
+        .addon-accordion-trigger {
+          width:100%; display:flex; align-items:center; gap:0.5rem;
+          padding:0.75rem 0.9rem; background:var(--bg2); border:none;
+          cursor:pointer; text-align:left; transition:background 0.15s;
+        }
+        .addon-accordion-trigger:hover { background:var(--bg3,var(--bg2)); }
+        .addon-accordion-trigger.open { border-bottom:1px solid var(--border); }
+        .addon-accordion-label { font-size:0.78rem; font-weight:600; color:var(--text); text-transform:uppercase; letter-spacing:0.08em; white-space:nowrap; display:flex; align-items:center; gap:0.4rem; }
+        .addon-accordion-badge { display:inline-flex; align-items:center; justify-content:center; background:var(--accent); color:#0a0a0a; border-radius:99px; width:17px; height:17px; font-size:0.65rem; font-weight:700; }
+        .addon-accordion-hint { flex:1; font-size:0.75rem; color:var(--muted); overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+        .addon-accordion-chevron { color:var(--muted); display:flex; transition:transform 0.2s; flex-shrink:0; }
+        .addon-accordion-chevron.rotated { transform:rotate(180deg); }
+        .addon-accordion-body { padding:0.75rem 0.9rem; display:flex; flex-direction:column; gap:0.85rem; background:var(--bg2); }
+        .addon-group-label { font-size:0.69rem; color:var(--muted); text-transform:uppercase; letter-spacing:0.1em; font-weight:500; margin-bottom:0.4rem; }
+        .addon-chips-grid { display:grid; grid-template-columns:1fr 1fr; gap:0.45rem; }
+        [data-theme="light"] .addon-accordion-trigger,[data-theme="light"] .addon-accordion-body { background:#fff; }
+        @media(max-width:500px) { .addon-chips-grid{grid-template-columns:1fr} }
+      </style><form class="hire-form-inner"><div class="hire-form-row"><input name="name" type="text" placeholder="Your name" aria-label="Your name" required="" autocomplete="name" class="hire-input"><input name="from_email" type="email" placeholder="your@email.com" aria-label="your@email.com" required="" autocomplete="email" class="hire-input"></div><div><span class="hire-field-label">Select a package</span><div class="hire-pkg-grid"><button type="button" class="hire-pkg-pill" aria-pressed="false"><span class="hire-pkg-pill-icon"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="" aria-hidden="true"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg></span><span class="hire-pkg-pill-label">Starter</span><span class="hire-pkg-pill-price">$100</span></button><button type="button" class="hire-pkg-pill" aria-pressed="false"><span class="hire-pkg-pill-icon"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg></span><span class="hire-pkg-pill-label">Business</span><span class="hire-pkg-pill-price">$200</span></button><button type="button" class="hire-pkg-pill" aria-pressed="false"><span class="hire-pkg-pill-icon"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="" aria-hidden="true"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"></path><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"></path><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"></path><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"></path></svg></span><span class="hire-pkg-pill-label">Premium</span><span class="hire-pkg-pill-price">$325</span></button><button type="button" class="hire-pkg-pill" aria-pressed="false"><span class="hire-pkg-pill-icon"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="" aria-hidden="true"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg></span><span class="hire-pkg-pill-label">Custom / On request</span></button></div><input type="hidden" name="paket" readonly="" value=""></div><div class="addon-accordion"><button type="button" class="addon-accordion-trigger" aria-expanded="false"><span class="addon-accordion-label">Add-ons</span><span class="addon-accordion-hint">optional - click to expand</span><span class="addon-accordion-chevron"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></span></button></div><div class="hire-total-bar"><span style="color: var(--muted);">Total estimate</span><strong style="color: var(--text); font-size: 0.95rem;">-</strong></div><textarea name="message" placeholder="Tell me about your project - what it does, who it's for, any deadline." aria-label="Tell me about your project - what it does, who it's for, any deadline." required="" class="hire-input" style="min-height: 130px; resize: vertical;"></textarea><button type="submit" class="btn-primary" style="cursor: pointer; opacity: 1; display: flex; align-items: center; justify-content: center; gap: 0.5rem;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="" aria-hidden="true"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>Send message  </button></form></div><p style="margin-top: 1rem; color: var(--muted); font-size: 0.82rem; font-weight: 300; text-align: center;">Prefer email? <a href="mailto:info@adiss.dev" style="color: var(--accent);">info@adiss.dev</a></p></div><div style="border-top: 1px solid var(--border); padding: 2rem 2.5rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; color: var(--muted); font-size: 0.8rem;"><a href="/" style="font-family: var(--font-display); font-weight: 700; color: var(--text); text-decoration: none; letter-spacing: -0.02em;">adiss<span style="color: var(--accent);">.</span>dev</a><span>© 2026 Adis Klobodanovic</span><a href="/" style="color: var(--muted); text-decoration: none;">Back to portfolio</a></div></div></main></div>
+  
+
+</body></html>
