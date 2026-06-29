@@ -6,9 +6,9 @@
     "dev": "vite",
     "prebuild": "node scripts/generate-sitemap.js && node scripts/get-snap-routes.js",
     "build": "node node_modules/vite/bin/vite.js build",
-    "postbuild": "react-snap && node scripts/inject-canonicals.js",
+    "postbuild": "node scripts/inject-canonicals.js",
     "preview": "vite preview",
-    "vercel-build": "npm install && npm run prebuild && npm run build && npm run postbuild"
+    "vercel-build": "npm run prebuild && npm run build && npm run postbuild"
   },
   "reactSnap": {
     "source": "dist",
