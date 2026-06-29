@@ -4,7 +4,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "prebuild": "node --env-file=.env scripts/generate-sitemap.js && node --env-file=.env scripts/get-snap-routes.js",
+    "prebuild": "node scripts/generate-sitemap.js && node scripts/get-snap-routes.js",
     "build": "node node_modules/vite/bin/vite.js build",
     "postbuild": "react-snap && node scripts/inject-canonicals.js",
     "preview": "vite preview",
