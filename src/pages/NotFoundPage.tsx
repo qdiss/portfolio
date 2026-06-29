@@ -9,7 +9,7 @@ export default function NotFoundPage() {
   const navigate = useNavigate();
   const [countdown, setCountdown] = useState(10);
 
-  useSEO({
+  const seo = useSEO({
     title: `404 - ${t.nf_title || "Page not found"} · adiss.dev`,
     description:
       t.nf_sub_1 || "The page you are looking for doesn't exist or has moved.",
@@ -36,6 +36,7 @@ export default function NotFoundPage() {
 
   return (
     <>
+      {seo}
       <style>{`
         .nf-wrap {
           min-height: 100vh;

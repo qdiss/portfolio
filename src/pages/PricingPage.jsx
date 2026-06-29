@@ -785,7 +785,7 @@ export default function PricingPage() {
   const [selectedPkg, setSelectedPkg] = useState(null);
   usePageReveal("pricing-page");
 
-  useSEO({
+  const seo = useSEO({
     title: `${t.pricing_page_title || "Cjenovnik"} - Adis Klobodanović`,
     description:
       t.pricing_page_desc ||
@@ -813,6 +813,7 @@ export default function PricingPage() {
 
   return (
     <>
+      {seo}
       <style>{`
         @keyframes fadeIn { from{opacity:0} to{opacity:1} }
         @keyframes slideUp { from{opacity:0;transform:translateY(24px)} to{opacity:1;transform:none} }

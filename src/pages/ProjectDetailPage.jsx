@@ -107,7 +107,7 @@ export default function ProjectDetailPage() {
   const { t } = useLang();
   const project = PROJECT_DATA[slug];
 
-  useSEO({
+  const seo = useSEO({
     title: project
       ? `${project.title} - Adis Klobodanovic`
       : "Project not found - Adis Klobodanovic",
@@ -219,6 +219,7 @@ export default function ProjectDetailPage() {
 
   return (
     <>
+      {seo}
       <style>{`
         .pd-page {
           min-height: 100vh;

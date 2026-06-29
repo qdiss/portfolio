@@ -144,7 +144,7 @@ function GlobalReveal() {
 // ─── HOME PAGE SEO ────────────────────────────────────────────────────────────
 function HomePageSEO() {
   const { t, lang } = useLang();
-  useSEO({
+  return useSEO({
     title:
       t.home_page_title ||
       "Adis Klobodanović - Full-Stack Developer | React, Next.js, Node.js",
@@ -160,14 +160,13 @@ function HomePageSEO() {
       name: "Adis Klobodanovic",
       url: "https://adiss.dev",
       jobTitle: "Full-Stack Developer",
-      image: "https://adiss.dev/og-image.svg",
+      image: "https://adiss.dev/og-image.png",
       sameAs: [
         "https://linkedin.com/in/adis-klobodanovic",
         "https://github.com/adisklobodanovic",
       ],
     },
   });
-  return null;
 }
 
 function PortfolioContent() {

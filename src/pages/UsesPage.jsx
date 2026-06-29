@@ -81,7 +81,7 @@ const USES_DATA = [
 export default function UsesPage() {
   const { t } = useLang();
 
-  useSEO({
+  const seo = useSEO({
     title: t.uses_seo_title || "Uses - Tools & Stack | Adis Klobodanović",
     description:
       t.uses_seo_desc ||
@@ -112,6 +112,7 @@ export default function UsesPage() {
 
   return (
     <>
+      {seo}
       <style>{`
         /* ─── Page shell ─── */
         .uses-page {

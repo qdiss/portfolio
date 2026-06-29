@@ -18,7 +18,7 @@ export default function BlogPage() {
   const [posts, setPosts] = useState([]);
   const [loading, setLoading] = useState(true);
 
-  useSEO({
+  const seo = useSEO({
     title:
       t.blog_seo_title || "Blog - Adis Klobodanović | Web Development Articles",
     description:
@@ -99,9 +99,11 @@ export default function BlogPage() {
   }
 
   return (
-    <div
-      style={{ display: "flex", flexDirection: "column", minHeight: "100vh" }}
-    >
+    <>
+      {seo}
+      <div
+        style={{ display: "flex", flexDirection: "column", minHeight: "100vh" }}
+      >
       <style>{`
         .blog-page { max-width: 900px; margin: 0 auto; padding: 8rem 2.5rem 5rem; }
         .post-card { display: block; padding: 2rem 0; border-bottom: 1px solid var(--border); text-decoration: none; color: inherit; }
@@ -207,5 +209,6 @@ export default function BlogPage() {
         </Link>
       </div>
     </div>
+    </>
   );
 }

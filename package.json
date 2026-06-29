@@ -4,20 +4,22 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "node --env-file=.env scripts/generate-sitemap.js && node node_modules/vite/bin/vite.js build",
+    "prebuild": "node --env-file=.env scripts/generate-sitemap.js && node --env-file=.env scripts/get-snap-routes.js",
+    "build": "node node_modules/vite/bin/vite.js build",
+    "postbuild": "react-snap && node scripts/inject-canonicals.js",
     "preview": "vite preview",
-    "vercel-build": "npm install && npm run build",
-    "postbuild": "react-snap"
+    "vercel-build": "npm install && npm run prebuild && npm run build && npm run postbuild"
   },
   "reactSnap": {
     "source": "dist",
     "destination": "dist",
+    "fallback": "index.html",
     "puppeteerArgs": [
       "--no-sandbox",
       "--disable-setuid-sandbox"
     ],
     "puppeteerExecutablePath": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
-    "crawl": true,
+    "crawl": false,
     "include": [
       "/",
       "/hire",
@@ -30,18 +32,27 @@
       "/contents/projects/korijen",
       "/contents/projects/travel-app",
       "/contents/projects/duolingo-clone",
-      "/contents/projects/instagram-clone"
+      "/contents/projects/instagram-clone",
+      "/blog/sta-je-landing-page",
+      "/blog/zasto-je-tvoj-landing-page-spor-i-kako-to-popraviti",
+      "/blog/5-gresaka-koje-ubijaju-konverzije",
+      "/blog/roi-investicija-u-web-stranicu",
+      "/blog/koliko-kosta-web-stranica-bih-2026",
+      "/blog/profesionalna-email-adresa-firma",
+      "/blog/5-znakova-treba-nova-web-stranica",
+      "/blog/google-business-profil-besplatno",
+      "/blog/wordpress-vs-custom-web-stranica-bih",
+      "/blog/medibook-case-study-zakazivanje-termina-nextjs",
+      "/blog/web-stranica-za-restoran-bih",
+      "/blog/zasto-svaki-mali-biznis-treba-web-stranicu"
     ],
-    "skipThirdPartyRequests": false,
+    "skipThirdPartyRequests": true,
     "headless": true,
     "viewport": {
       "width": 1440,
       "height": 900
     },
-    "minifyHtml": {
-      "collapseWhitespace": false,
-      "removeComments": false
-    }
+    "minifyHtml": false
   },
   "dependencies": {
     "@emailjs/browser": "^4.3.3",

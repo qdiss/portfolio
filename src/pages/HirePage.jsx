@@ -819,7 +819,7 @@ export default function HirePage() {
     window.scrollTo(0, 0);
   }, []);
 
-  useSEO({
+  const seo = useSEO({
     title:
       t.hire_seo_title ||
       "Start a Project - Adis Klobodanović | Full-Stack Developer",
@@ -984,7 +984,9 @@ export default function HirePage() {
   ];
 
   return (
-    <div className="hire-page-root">
+    <>
+      {seo}
+      <div className="hire-page-root">
       <style>{`
         .hire-section { padding: 5rem 2.5rem; max-width: 900px; margin: 0 auto; }
         .hire-section-wide { padding: 5rem 2.5rem; max-width: 1100px; margin: 0 auto; }
@@ -1530,5 +1532,6 @@ export default function HirePage() {
         </Link>
       </div>
     </div>
+    </>
   );
 }

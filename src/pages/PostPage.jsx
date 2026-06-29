@@ -432,7 +432,7 @@ export default function PostPage() {
   const [loading, setLoading] = useState(true);
 
   // ── SEO via hook (updates whenever post changes) ───────────────────
-  useSEO(
+  const seo = useSEO(
     post
       ? {
           title: `${post.title} - Adis Klobodanovic`,
@@ -583,6 +583,7 @@ export default function PostPage() {
 
   return (
     <>
+      {seo}
       <style>{`
         .post-page { max-width: 720px; margin: 0 auto; padding: 8rem 2.5rem 5rem; }
         @media(max-width: 600px) { .post-page { padding: 7rem 1.5rem 4rem; } }

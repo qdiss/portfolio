@@ -69,7 +69,7 @@ const PROJECTS = [
 export default function ProjectsListingPage() {
   const { t } = useLang();
 
-  useSEO({
+  const seo = useSEO({
     title:
       t.projects_seo_title ||
       "Projects - Adis Klobodanović | Full-Stack Developer",
@@ -101,6 +101,7 @@ export default function ProjectsListingPage() {
 
   return (
     <>
+      {seo}
       <Nav />
       <div className="projects-listing">
         <div className="projects-listing-hero reveal">
