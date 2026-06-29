@@ -18,7 +18,6 @@
       "--no-sandbox",
       "--disable-setuid-sandbox"
     ],
-    "puppeteerExecutablePath": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
     "crawl": false,
     "include": [
       "/",
